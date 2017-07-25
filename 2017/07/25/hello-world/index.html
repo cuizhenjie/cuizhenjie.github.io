@@ -21,7 +21,7 @@
 <meta property="og:image" content="http://cuizhenjie.oschina.io/img/article/ac-img2.jpg">
 <meta property="og:image" content="http://cuizhenjie.oschina.io/img/article/ac-img4.jpg">
 <meta property="og:image" content="http://cuizhenjie.oschina.io/img/article/ac-img5.jpg">
-<meta property="og:updated_time" content="2017-07-25T14:47:36.000Z">
+<meta property="og:updated_time" content="2017-07-25T14:51:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于Hexo+oschina的pages服务搭建个人博客">
 <meta name="twitter:description" content="hexo是一个基于Node.js的静态博客程序，可以方便的生成静态网页托管在github和Heroku,oschina上。由于github博客在国内访问非常慢而且经常不稳定，百度爬虫也无法抓取github博客内容，所以这里使用码云oschina的pages服务搭建博客。">
@@ -201,7 +201,7 @@
 <p><a href="http://cuizhenjie.oschina.com/2017/07/25/nodejs-settings/" target="_blank" rel="external">nodejs环境安装以及yarn安装详细配置看这篇文章</a></p>
 <hr>
 <h3 id="Hexo安装与设置"><a href="#Hexo安装与设置" class="headerlink" title="Hexo安装与设置"></a>Hexo安装与设置</h3><p>1.nodejs、yarn、git都安装成功后, 开始安装hexo<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">yarn global add hexo #使用yarn全局安装hexo</div><div class="line"></div><div class="line">hexo --version #信息正常输出则表示安装完成</div></pre></td></tr></table></figure></p>
-<p>2.hexo构建博客项目<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">hexo init &lt;项目名称&gt;  #在工作目录下，执行命令初始化hexo项目</div><div class="line"></div><div class="line">hexo g == hexo generate #生成构建项目</div><div class="line"></div><div class="line">hexo s == hexo server #启动服务预览项目</div><div class="line"></div><div class="line">hexo d == hexo deploy #部署项目</div><div class="line"></div><div class="line">hexo s --watch #开发模式下使用，启动服务并监视文件变动</div><div class="line"></div><div class="line">hexo new "postName" #新建文章</div><div class="line">hexo new page "pageName" #新建页面</div></pre></td></tr></table></figure></p>
+<p>2.hexo构建博客项目<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">hexo init &lt;项目名称&gt;  #在工作目录下，执行命令初始化hexo项目</div><div class="line"></div><div class="line">hexo g == hexo generate #生成构建项目</div><div class="line"></div><div class="line">hexo s == hexo server #启动服务预览项目</div><div class="line"></div><div class="line">hexo d == hexo deploy #部署项目</div><div class="line"></div><div class="line">hexo s --watch #开发模式下使用，启动服务并监视文件变动</div><div class="line"></div><div class="line">hexo g -d #构建项目完成后，部署项目</div><div class="line"></div><div class="line">hexo new "postName" #新建文章</div><div class="line">hexo new page "pageName" #新建页面</div></pre></td></tr></table></figure></p>
 <p>初始化hexo项目后的目录为：<br><img src="/img/article/ac-img3.jpg" alt="hexo项目目录"></p>
 <hr>
 <h3 id="创建码云账号及项目配置"><a href="#创建码云账号及项目配置" class="headerlink" title="创建码云账号及项目配置"></a>创建码云账号及项目配置</h3><p>1.首先注册一个码云账号，配置git的ssh秘钥，这个配置不属于本章节内容，如有疑问可参考<a href="">git秘钥生成与配置</a>教程。</p>
@@ -214,7 +214,7 @@
 <p><img src="/img/article/ac-img4.jpg" alt="修改_config.yml文件的deploy值"></p>
 <p>修改后，注意repo的地址是之前码云新建的git项目地址，如下图</p>
 <p><img src="/img/article/ac-img5.jpg" alt="修改_config.yml文件后"></p>
-<p>3.完成配置后，上传项目<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">hexo d #一键部署到码云</div></pre></td></tr></table></figure></p>
+<p>3.完成配置后，上传项目<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">hexo g -d #一键部署到码云</div></pre></td></tr></table></figure></p>
 <p>至此，博客已经部署成功，访问提供的地址：<a href="http://cuizhenjie.oschina.io">http://cuizhenjie.oschina.io</a> 即可查看到我的博客。</p>
 
       
