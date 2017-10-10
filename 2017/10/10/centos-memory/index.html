@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://cuizhenjie.oschina.io">
-  <title>Tag: java | cuizhenjie`blog</title>
+  <title>CentOS下查看cpu、磁盘、内存使用情况以及如何清理内存 | cuizhenjie`blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本博客主要记录分享日常工作中所见所得">
-<meta property="og:type" content="website">
-<meta property="og:title" content="cuizhenjie`blog">
-<meta property="og:url" content="http://cuizhenjie.oschina.io/tags/java/index.html">
+  <meta name="description" content="系统在长时间运行下，可用内存会逐渐越来越少，如果没有一定机制做监控以及定期清理人物的话服务器就会存在很大隐患，如下操作来手动核查以及清理：">
+<meta name="keywords" content="centos,cpu,memory,清理内存,free">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CentOS下查看cpu、磁盘、内存使用情况以及如何清理内存">
+<meta property="og:url" content="http://cuizhenjie.oschina.io/2017/10/10/centos-memory/index.html">
 <meta property="og:site_name" content="cuizhenjie`blog">
-<meta property="og:description" content="本博客主要记录分享日常工作中所见所得">
+<meta property="og:description" content="系统在长时间运行下，可用内存会逐渐越来越少，如果没有一定机制做监控以及定期清理人物的话服务器就会存在很大隐患，如下操作来手动核查以及清理：">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-10-10T02:42:13.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="cuizhenjie`blog">
-<meta name="twitter:description" content="本博客主要记录分享日常工作中所见所得">
+<meta name="twitter:title" content="CentOS下查看cpu、磁盘、内存使用情况以及如何清理内存">
+<meta name="twitter:description" content="系统在长时间运行下，可用内存会逐渐越来越少，如果没有一定机制做监控以及定期清理人物的话服务器就会存在很大隐患，如下操作来手动核查以及清理：">
   
     <link rel="alternative" href="/atom.xml" title="cuizhenjie`blog" type="application/atom+xml">
   
@@ -167,79 +169,212 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-centos-memory" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/04/maven-settings-md/" class="archive-article-date">
-  	<time datetime="2017-08-04T02:24:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-04</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/04/maven-settings-md/">maven的下载安装及基本配置</a>
+    <h1 class="article-title" itemprop="name">
+      CentOS下查看cpu、磁盘、内存使用情况以及如何清理内存
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/10/10/centos-memory/" class="archive-article-date">
+  	<time datetime="2017-10-10T02:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>系统在长时间运行下，可用内存会逐渐越来越少，如果没有一定机制做监控以及定期清理人物的话服务器就会存在很大隐患，如下操作来手动核查以及清理：<br><a id="more"></a> </p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="核查服务器基本情况"><a href="#核查服务器基本情况" class="headerlink" title="核查服务器基本情况"></a>核查服务器基本情况</h3><h3 id="查看内存使用情况"><a href="#查看内存使用情况" class="headerlink" title="查看内存使用情况"></a>查看内存使用情况</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">free -m</div></pre></td></tr></table></figure>
+<hr>
+<h3 id="查看cpu使用情况"><a href="#查看cpu使用情况" class="headerlink" title="查看cpu使用情况"></a>查看cpu使用情况</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">top #查看进程运行情况</div></pre></td></tr></table></figure>
+<hr>
+<h3 id="查看磁盘以及分区情况"><a href="#查看磁盘以及分区情况" class="headerlink" title="查看磁盘以及分区情况"></a>查看磁盘以及分区情况</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">df -h</div></pre></td></tr></table></figure>
+<hr>
+<h3 id="查看网络情况"><a href="#查看网络情况" class="headerlink" title="查看网络情况"></a>查看网络情况</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ifconfig</div></pre></td></tr></table></figure>
+<hr>
+<h3 id="查看端口使用情况"><a href="#查看端口使用情况" class="headerlink" title="查看端口使用情况"></a>查看端口使用情况</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span>1.方法一</div><div class="line">   lsof -i:端口号</div><div class="line"></div><div class="line"><span class="meta">   #</span>2.方法二</div><div class="line">   netstat -apn|grep 端口号</div></pre></td></tr></table></figure>
+<hr>
+<h3 id="服务器排查以及优化"><a href="#服务器排查以及优化" class="headerlink" title="服务器排查以及优化"></a>服务器排查以及优化</h3><ul>
+<li>清理内存</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span>1.【推荐】释放网页缓存(To free pagecache),</div><div class="line">   sync</div><div class="line">   echo 1 &gt; /proc/sys/vm/drop_caches</div><div class="line"></div><div class="line"><span class="meta">   #</span>2.释放目录项和索引(To free dentries and inodes)</div><div class="line">   sync</div><div class="line">   echo 2 &gt; /proc/sys/vm/drop_caches</div><div class="line"><span class="meta">   #</span>3.释放网页缓存，目录项和索引（To free pagecache, dentries and inodes）:</div><div class="line">   sync</div><div class="line">   echo 3 &gt; /proc/sys/vm/drop_caches</div></pre></td></tr></table></figure>
+<hr>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wxpay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">maven</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">centos</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">项目搭建</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">cpu</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">memory</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">清理内存</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">free</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/maven/" class="article-tag-list-link color1">maven</a>
+        			<a href="/categories/centos/" class="article-tag-list-link color2">centos</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://cuizhenjie.oschina.io/2017/10/10/centos-memory/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/09/21/tomcat-conf/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">tomcat开发相关配置</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
 
 
           </div>
@@ -262,9 +397,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
