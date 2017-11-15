@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://cuizhenjie.oschina.io">
   <title>CentOS下查看cpu、磁盘、内存使用情况以及如何清理内存 | cuizhenjie`blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="系统在长时间运行下，可用内存会逐渐越来越少，如果没有一定机制做监控以及定期清理人物的话服务器就会存在很大隐患，如下操作来手动核查以及清理：">
-<meta name="keywords" content="centos,cpu,memory,清理内存,free">
+  <meta name="description" content="CentOS系统运行状态管理，查看内存、cpu，磁盘、网速及带宽等情况">
+<meta name="keywords" content="centos,cpu,memory,查看内存,free,cpu,带宽,磁盘使用情况,磁盘使用情况">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CentOS下查看cpu、磁盘、内存使用情况以及如何清理内存">
 <meta property="og:url" content="http://cuizhenjie.oschina.io/2017/10/10/centos-memory/index.html">
 <meta property="og:site_name" content="cuizhenjie`blog">
-<meta property="og:description" content="系统在长时间运行下，可用内存会逐渐越来越少，如果没有一定机制做监控以及定期清理人物的话服务器就会存在很大隐患，如下操作来手动核查以及清理：">
+<meta property="og:description" content="CentOS系统运行状态管理，查看内存、cpu，磁盘、网速及带宽等情况">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-10-10T02:42:13.000Z">
+<meta property="og:updated_time" content="2017-11-13T04:00:31.807Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS下查看cpu、磁盘、内存使用情况以及如何清理内存">
-<meta name="twitter:description" content="系统在长时间运行下，可用内存会逐渐越来越少，如果没有一定机制做监控以及定期清理人物的话服务器就会存在很大隐患，如下操作来手动核查以及清理：">
+<meta name="twitter:description" content="CentOS系统运行状态管理，查看内存、cpu，磁盘、网速及带宽等情况">
   
     <link rel="alternative" href="/atom.xml" title="cuizhenjie`blog" type="application/atom+xml">
   
@@ -189,7 +189,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>系统在长时间运行下，可用内存会逐渐越来越少，如果没有一定机制做监控以及定期清理人物的话服务器就会存在很大隐患，如下操作来手动核查以及清理：<br><a id="more"></a> </p>
+        <p>CentOS系统运行状态管理，查看内存、cpu，磁盘、网速及带宽等情况<br><a id="more"></a> </p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="核查服务器基本情况"><a href="#核查服务器基本情况" class="headerlink" title="核查服务器基本情况"></a>核查服务器基本情况</h3><h3 id="查看内存使用情况"><a href="#查看内存使用情况" class="headerlink" title="查看内存使用情况"></a>查看内存使用情况</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">free -m</div></pre></td></tr></table></figure>
 <hr>
 <h3 id="查看cpu使用情况"><a href="#查看cpu使用情况" class="headerlink" title="查看cpu使用情况"></a>查看cpu使用情况</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">top #查看进程运行情况</div></pre></td></tr></table></figure>
@@ -197,6 +197,10 @@
 <h3 id="查看磁盘以及分区情况"><a href="#查看磁盘以及分区情况" class="headerlink" title="查看磁盘以及分区情况"></a>查看磁盘以及分区情况</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">df -h</div></pre></td></tr></table></figure>
 <hr>
 <h3 id="查看网络情况"><a href="#查看网络情况" class="headerlink" title="查看网络情况"></a>查看网络情况</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ifconfig</div></pre></td></tr></table></figure>
+<hr>
+<h3 id="安装测网速、带宽工具、speedtest-cli工具"><a href="#安装测网速、带宽工具、speedtest-cli工具" class="headerlink" title="安装测网速、带宽工具、speedtest-cli工具"></a>安装测网速、带宽工具、speedtest-cli工具</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span>下载python测速脚本</div><div class="line">wget https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py --no-check-certificate</div><div class="line"><span class="meta"></span></div><div class="line">#赋权限</div><div class="line">chmod +rx speedtest.py</div><div class="line"><span class="meta"></span></div><div class="line">#执行测试</div><div class="line">./speedtest.py</div></pre></td></tr></table></figure>
+<hr>
+<h3 id="至此已经可以看到网络及带宽情况"><a href="#至此已经可以看到网络及带宽情况" class="headerlink" title="至此已经可以看到网络及带宽情况"></a>至此已经可以看到网络及带宽情况</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta"></span></div><div class="line">#Retrieving speedtest.net configuration...</div><div class="line"><span class="meta">#</span>Testing from HuaBei Oil Communication CO. Information Center (175.5.1.1)...</div><div class="line"><span class="meta">#</span>Retrieving speedtest.net server list...</div><div class="line"><span class="meta">#</span>Selecting best server based on ping...</div><div class="line"><span class="meta">#</span>Hosted by China Unicom (Tianjin) [111.69 km]: 6.83 ms</div><div class="line"><span class="meta">#</span>Testing download speed................................................................................</div><div class="line"><span class="meta">#</span>Download: 2.40 Mbit/s</div><div class="line"><span class="meta">#</span>Testing upload speed................................................................................................</div><div class="line"><span class="meta">#</span>Upload: 3.93 Mbit/s</div></pre></td></tr></table></figure>
 <hr>
 <h3 id="查看端口使用情况"><a href="#查看端口使用情况" class="headerlink" title="查看端口使用情况"></a>查看端口使用情况</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span>1.方法一</div><div class="line">   lsof -i:端口号</div><div class="line"></div><div class="line"><span class="meta">   #</span>2.方法二</div><div class="line">   netstat -apn|grep 端口号</div></pre></td></tr></table></figure>
 <hr>
@@ -256,11 +260,23 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">清理内存</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">查看内存</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">free</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">网速</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">带宽</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">磁盘使用情况</a>
         		</li>
       		
 		</ul>
@@ -340,6 +356,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2017/11/13/centos-secuity/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          CentOS系统常规安全配置
+        
+      </div>
+    </a>
   
   
     <a href="/2017/09/21/tomcat-conf/" id="article-nav-older" class="article-nav-link-wrap">
@@ -493,11 +518,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">清理内存</a>
+                <a href="javascript:void(0)" class="js-tag color5">查看内存</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">free</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">网速</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">带宽</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">磁盘使用情况</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -553,18 +590,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">nodejs</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">yarn</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">nodejs环境配置</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
@@ -578,6 +603,26 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">博客搭建</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">项目搭建</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">nodejs</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">yarn</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">nodejs环境配置</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -613,11 +658,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">项目搭建</a>
+                <a href="javascript:void(0)" class="js-tag color3">linux安全</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
+                <a href="javascript:void(0)" class="js-tag color4">centos安全</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">linux安全配置</a>
               </li>
             
             <div class="clearfix"></div>
