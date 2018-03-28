@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="cuizhenjie`blog">
 <meta property="og:description" content="近期服务器频繁有被暴力破解，大致分析了一下入侵行为，整理了常用的安全策略：最小的权限+最少的服务=最大的安全">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-15T11:55:01.220Z">
+<meta property="og:updated_time" content="2018-03-27T03:19:31.996Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS系统常规安全配置">
 <meta name="twitter:description" content="近期服务器频繁有被暴力破解，大致分析了一下入侵行为，整理了常用的安全策略：最小的权限+最少的服务=最大的安全">
@@ -203,7 +203,7 @@
 <hr>
 <h2 id="防止一般的网络攻击"><a href="#防止一般的网络攻击" class="headerlink" title="防止一般的网络攻击"></a>防止一般的网络攻击</h2><h3 id="1、禁ping"><a href="#1、禁ping" class="headerlink" title="1、禁ping"></a>1、禁ping</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">vi /etc/rc.d/rc.local</div><div class="line"><span class="meta"></span></div><div class="line">#增加一行设置</div><div class="line">echo 1 &gt; /proc/sys/net/ipv4/icmp_echo_ignore_all</div></pre></td></tr></table></figure>
 <h3 id="2、防止IP欺骗"><a href="#2、防止IP欺骗" class="headerlink" title="2、防止IP欺骗"></a>2、防止IP欺骗</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">vi /etc/host.conf</div><div class="line"><span class="meta"></span></div><div class="line">#增加设置</div><div class="line">order hosts,bind    #名称解释顺序</div><div class="line">multi on           #允许主机拥有多个IP地址</div><div class="line">nospoof on         #禁止IP地址欺骗</div></pre></td></tr></table></figure>
-<h3 id="3、防止DoS攻击"><a href="#3、防止DoS攻击" class="headerlink" title="3、防止DoS攻击"></a>3、防止DoS攻击</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">    vi /etc/security/limits.conf</div><div class="line"></div><div class="line">    #增加设置</div><div class="line">    #core 0 表示禁止创建core文件</div><div class="line">*    soft    core    0</div><div class="line">    #nproc 128 把最多的进程数限制到20</div><div class="line">*    soft    nproc   2048</div><div class="line">*    hard    nproc   16384</div><div class="line">    #nofile 64 表示把一个用户同时打开的最大文件数限制为64</div><div class="line">*    soft    nofile 1024</div><div class="line">*    hard    nofile  65536</div><div class="line">    #* 表示登录到系统的所有用户，不包括root</div><div class="line"></div><div class="line">    #最后编辑/etc/pam.d/login</div><div class="line">    vi /etc/pam.d/login</div><div class="line">    #检查如下代码是否存在，不存在新增</div><div class="line">    session    required     pam_limits.so</div></pre></td></tr></table></figure>
+<h3 id="3、防止DDoS攻击"><a href="#3、防止DDoS攻击" class="headerlink" title="3、防止DDoS攻击"></a>3、防止DDoS攻击</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">    vi /etc/security/limits.conf</div><div class="line"></div><div class="line">    #增加设置</div><div class="line">    #core 0 表示禁止创建core文件</div><div class="line">*    soft    core    0</div><div class="line">    #nproc 128 把最多的进程数限制到20</div><div class="line">*    soft    nproc   2048</div><div class="line">*    hard    nproc   16384</div><div class="line">    #nofile 64 表示把一个用户同时打开的最大文件数限制为64</div><div class="line">*    soft    nofile 1024</div><div class="line">*    hard    nofile  65536</div><div class="line">    #* 表示登录到系统的所有用户，不包括root</div><div class="line"></div><div class="line">    #最后编辑/etc/pam.d/login</div><div class="line">    vi /etc/pam.d/login</div><div class="line">    #检查如下代码是否存在，不存在新增</div><div class="line">    session    required     pam_limits.so</div></pre></td></tr></table></figure>
 
       
 
@@ -336,6 +336,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2018/03/26/centos-lrzsz/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          CentOS下使用lrzsz，代替ftp上传、下载
+        
+      </div>
+    </a>
+  
   
     <a href="/2017/10/16/centos-mysql/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">CentOS6.5安装mysql及常规配置</div>
@@ -379,7 +388,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 cuizhenjie
+    		&copy; 2018 cuizhenjie
     	</div>
       	<div class="footer-right">
       		<!-- <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten -->
@@ -480,6 +489,70 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">date</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">时区</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">修改时间</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">修改时区</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">lrzsz</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">rz</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">sz</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">代替ftp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">linux安全</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">centos安全</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">linux安全配置</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">mysql6.5</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">mysql安装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">mysql配置</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">yum安装mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">cpu</a>
               </li>
              
@@ -508,54 +581,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">mysql6.5</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">mysql安装</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">mysql配置</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">yum安装mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">linux安全</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">centos安全</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">linux安全配置</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">vim安装</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">docker镜像</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">安装vim</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
@@ -577,6 +602,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">mac</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">vim安装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">docker镜像</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">安装vim</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -616,15 +657,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">nodejs</a>
+                <a href="javascript:void(0)" class="js-tag color4">vim</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">yarn</a>
+                <a href="javascript:void(0)" class="js-tag color1">vim入门</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">nodejs环境配置</a>
+                <a href="javascript:void(0)" class="js-tag color1">vim配置</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -648,15 +689,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vim</a>
+                <a href="javascript:void(0)" class="js-tag color2">nodejs</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">vim入门</a>
+                <a href="javascript:void(0)" class="js-tag color5">yarn</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">vim配置</a>
+                <a href="javascript:void(0)" class="js-tag color1">nodejs环境配置</a>
               </li>
             
             <div class="clearfix"></div>

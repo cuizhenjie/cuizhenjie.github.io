@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="cuizhenjie`blog">
 <meta property="og:description" content="vim的安装配置及常用快捷键用法。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-07-28T02:13:24.000Z">
+<meta property="og:updated_time" content="2018-03-27T03:18:01.318Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vim入门教程">
 <meta name="twitter:description" content="vim的安装配置及常用快捷键用法。">
@@ -190,8 +190,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>vim的安装配置及常用快捷键用法。<br><a id="more"></a></p>
-<h2 id="开始使用vim"><a href="#开始使用vim" class="headerlink" title="开始使用vim"></a>开始使用vim</h2><h3 id="vim安装配置"><a href="#vim安装配置" class="headerlink" title="vim安装配置"></a>vim安装配置</h3><hr>
-<h3 id="vim常用快捷键"><a href="#vim常用快捷键" class="headerlink" title="vim常用快捷键"></a>vim常用快捷键</h3><hr>
+<h2 id="开始使用vim"><a href="#开始使用vim" class="headerlink" title="开始使用vim"></a>开始使用vim</h2><h3 id="vim安装配置"><a href="#vim安装配置" class="headerlink" title="vim安装配置"></a>vim安装配置</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta"></span></div><div class="line"># centos下安装方法 </div><div class="line">yum -y install vim-enhanced</div></pre></td></tr></table></figure>
+<hr>
+<h3 id="vim常用快捷键及基本命令"><a href="#vim常用快捷键及基本命令" class="headerlink" title="vim常用快捷键及基本命令"></a>vim常用快捷键及基本命令</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="meta"></span></div><div class="line">#文件操作</div><div class="line">:w #保存</div><div class="line">:wq #保存退出</div><div class="line">:q! #强制不保存退出</div><div class="line">:wa!#强制保存退出(文件所有者，root用户) </div><div class="line">:w + 新名字  #另存为指定文件</div><div class="line">:set nu  #显示行数</div><div class="line">:set nonu #不显示行数</div><div class="line"><span class="meta"></span></div><div class="line">#进入编辑模式命令</div><div class="line">i     #光标所在字前插入</div><div class="line">I     #光标所在行前插入</div><div class="line">a     #光标所在字后面插入</div><div class="line">A     #光标所在行后插入</div><div class="line">o     #光标所在行下插入新行</div><div class="line">O     #光标所在行上插入新行</div><div class="line"><span class="meta"></span></div><div class="line">#常用编辑命令</div><div class="line">gg    #跳到第一行</div><div class="line">G     #跳到最后一行</div><div class="line">nG    #到第几行 n为行数</div><div class="line">:n    #到第几行 n为行数</div><div class="line"><span class="meta">$</span>     #行首</div><div class="line">0     #行首</div><div class="line">x     #删除光标处字</div><div class="line">nx    #删除光标后n个字</div><div class="line">dd    #删除光标处行</div><div class="line">ndd   #删除n行</div><div class="line">dG    #删除光标处至文件末尾</div><div class="line">n1,n2d #删除n1至n2行</div><div class="line">yy    #复制行</div><div class="line">nyy   #复制行下n行</div><div class="line">p     #黏贴到光标行下</div><div class="line">P     #黏贴到光标行上</div><div class="line">r     #替换光标文字</div><div class="line">R     #从光标处开始一直替换，Esc结束</div><div class="line">u     #取消上一步操作</div></pre></td></tr></table></figure>
+<hr>
 
       
 
@@ -376,7 +378,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 cuizhenjie
+    		&copy; 2018 cuizhenjie
     	</div>
       	<div class="footer-right">
       		<!-- <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten -->
@@ -477,6 +479,70 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">date</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">时区</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">修改时间</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">修改时区</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">lrzsz</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">rz</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">sz</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">代替ftp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">linux安全</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">centos安全</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">linux安全配置</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">mysql6.5</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">mysql安装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">mysql配置</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">yum安装mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">cpu</a>
               </li>
              
@@ -505,54 +571,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">mysql6.5</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">mysql安装</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">mysql配置</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">yum安装mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">linux安全</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">centos安全</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">linux安全配置</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">vim安装</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">docker镜像</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">安装vim</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
@@ -574,6 +592,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">mac</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">vim安装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">docker镜像</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">安装vim</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -613,15 +647,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">nodejs</a>
+                <a href="javascript:void(0)" class="js-tag color4">vim</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">yarn</a>
+                <a href="javascript:void(0)" class="js-tag color1">vim入门</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">nodejs环境配置</a>
+                <a href="javascript:void(0)" class="js-tag color1">vim配置</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -645,15 +679,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vim</a>
+                <a href="javascript:void(0)" class="js-tag color2">nodejs</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">vim入门</a>
+                <a href="javascript:void(0)" class="js-tag color5">yarn</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">vim配置</a>
+                <a href="javascript:void(0)" class="js-tag color1">nodejs环境配置</a>
               </li>
             
             <div class="clearfix"></div>
