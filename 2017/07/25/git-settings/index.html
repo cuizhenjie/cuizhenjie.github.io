@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://cuizhenjie.oschina.io">
   <title>git安装、ssh秘钥生成及github配置 | cuizhenjie`blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="从零开始安装配置git环境，以及生成git的ssh秘钥，最后配置到github等git代码托管平台上。">
+  <meta name="description" content="从零开始安装配置git环境，以及生成git的ssh秘钥，最后配置到gitlab等git代码托管平台上。">
 <meta name="keywords" content="git,git秘钥,github配置,git安装,git环境配置,mac">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git安装、ssh秘钥生成及github配置">
 <meta property="og:url" content="http://cuizhenjie.oschina.io/2017/07/25/git-settings/index.html">
 <meta property="og:site_name" content="cuizhenjie`blog">
-<meta property="og:description" content="从零开始安装配置git环境，以及生成git的ssh秘钥，最后配置到github等git代码托管平台上。">
+<meta property="og:description" content="从零开始安装配置git环境，以及生成git的ssh秘钥，最后配置到gitlab等git代码托管平台上。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-07-25T14:50:06.000Z">
+<meta property="og:updated_time" content="2018-09-18T11:03:50.229Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git安装、ssh秘钥生成及github配置">
-<meta name="twitter:description" content="从零开始安装配置git环境，以及生成git的ssh秘钥，最后配置到github等git代码托管平台上。">
+<meta name="twitter:description" content="从零开始安装配置git环境，以及生成git的ssh秘钥，最后配置到gitlab等git代码托管平台上。">
   
     <link rel="alternative" href="/atom.xml" title="cuizhenjie`blog" type="application/atom+xml">
   
@@ -96,6 +96,8 @@
 		        
 					<a class="mail" target="_blank" href="mailto:517686251@qq.com" title="mail"><i class="icon-mail"></i></a>
 		        
+					<a class="facebook" target="_blank" href="https://www.facebook.com/cuizhenjie" title="facebook"><i class="icon-facebook"></i></a>
+		        
 			</div>
 		</nav>
 	</header>		
@@ -143,6 +145,8 @@
 			        
 						<a class="mail" target="_blank" href="mailto:517686251@qq.com" title="mail"><i class="icon-mail"></i></a>
 			        
+						<a class="facebook" target="_blank" href="https://www.facebook.com/cuizhenjie" title="facebook"><i class="icon-facebook"></i></a>
+			        
 				</div>
 			</nav>
 
@@ -189,24 +193,31 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>从零开始安装配置git环境，以及生成git的ssh秘钥，最后配置到github等git代码托管平台上。<br><a id="more"></a> </p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="安装git客户端"><a href="#安装git客户端" class="headerlink" title="安装git客户端"></a>安装git客户端</h3><ul>
-<li><a href="https://git-scm.com/downloads" target="_blank" rel="external">git下载地址</a> 根据系统环境安装合适git版本</li>
-<li><a href="https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git" target="_blank" rel="external">git安装教程</a> 不同系统环境git安装方法</li>
+        <p>从零开始安装配置git环境，以及生成git的ssh秘钥，最后配置到gitlab等git代码托管平台上。<br><a id="more"></a></p>
+<h1 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h1><h2 id="安装git客户端"><a href="#安装git客户端" class="headerlink" title="安装git客户端"></a>安装git客户端</h2><ul>
+<li><p><a href="https://git-scm.com/downloads" target="_blank" rel="external">git下载地址</a> 根据系统环境安装合适git版本</p>
+</li>
+<li><p><a href="https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git" target="_blank" rel="external">git安装教程</a> 不同系统环境git安装方法</p>
+</li>
+<li><p><a href="http://pan.baidu.com/s/1nvjvb8t" target="_blank" rel="external">windows下git下载地址</a> 如果下载速度较慢，window可选择此地址下载</p>
+</li>
+<li><p><a href="http://blog.csdn.net/zzfenglin/article/details/53147604" target="_blank" rel="external">windows下安装方法</a> git在windows下安装步骤</p>
+</li>
 </ul>
 <hr>
-<ul>
-<li><a href="http://pan.baidu.com/s/1nvjvb8t" target="_blank" rel="external">windows下git下载地址</a> 如果下载速度较慢，window可选择此地址下载</li>
-<li><a href="http://blog.csdn.net/zzfenglin/article/details/53147604" target="_blank" rel="external">windows下安装方法</a> git在windows下安装步骤</li>
-</ul>
+<h2 id="生成ssh秘钥，以windows系统为例"><a href="#生成ssh秘钥，以windows系统为例" class="headerlink" title="生成ssh秘钥，以windows系统为例"></a>生成ssh秘钥，以windows系统为例</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">1）首先打开dos，查看是否已经存在ssh秘钥(没有密钥则不会有这个文件夹，有则备份删除)</div><div class="line">cd ~/.ssh</div><div class="line"></div><div class="line">2）生成密钥</div><div class="line">ssh-keygen -t rsa -C "cuizhenjie@gmail.com"</div><div class="line"></div><div class="line">3）直接按3个回车，密码为空。</div><div class="line"></div><div class="line">4）最后得到了两个文件：id_rsa和id_rsa.pub</div><div class="line"></div><div class="line">5）将生成秘钥设置为全局默认,（此处的用户名和邮箱填写刚生成秘钥所输入内容）</div><div class="line"></div><div class="line">git config --global user.name  "cuizhenjie"</div><div class="line">git config --global user.email  "cuizhenjie@gmail.com"</div><div class="line"></div><div class="line">设置windows对大小写敏感</div><div class="line">git config core.ignorecase false</div><div class="line">git config --global gui.encoding utf-8</div><div class="line"></div><div class="line">避免git status显示的中文文件名乱码</div><div class="line">git config --global core.quotepath off</div></pre></td></tr></table></figure>
 <hr>
-<h3 id="生成ssh秘钥，以windows系统为例"><a href="#生成ssh秘钥，以windows系统为例" class="headerlink" title="生成ssh秘钥，以windows系统为例"></a>生成ssh秘钥，以windows系统为例</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">1）首先打开dos，查看是否已经存在ssh秘钥(没有密钥则不会有这个文件夹，有则备份删除)</div><div class="line"><span class="meta"></span></div><div class="line">	$ cd ~/.ssh</div><div class="line"></div><div class="line">2）、生成密钥</div><div class="line"><span class="meta"></span></div><div class="line">	$ ssh-keygen -t rsa -C "cuizhenjie@gmail.com"</div><div class="line"></div><div class="line">3）、直接按3个回车，密码为空。</div><div class="line"></div><div class="line">4）、最后得到了两个文件：id_rsa和id_rsa.pub</div><div class="line"></div><div class="line">5）、将生成秘钥设置为全局默认,（此处的用户名和邮箱填写刚生成秘钥所输入内容）</div><div class="line"><span class="meta"></span></div><div class="line">	$ git config --global user.name  "username"</div><div class="line"><span class="meta">	$</span> git config --global user.email  "useremail@xxx.xxx"</div></pre></td></tr></table></figure>
+<h2 id="将生成秘钥配置到gitlab或github等平台"><a href="#将生成秘钥配置到gitlab或github等平台" class="headerlink" title="将生成秘钥配置到gitlab或github等平台"></a>将生成秘钥配置到gitlab或github等平台</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">1）获取id_rsa.pub公钥内容，并复制</div><div class="line">cat ~/.ssh/id_rsa.pub</div><div class="line"></div><div class="line">2）打开http://github.com,登录后打开用户设置-》SSH密钥-》增加密钥，添加id_rsa.pub内容-》保存就设置完成了</div></pre></td></tr></table></figure>
 <hr>
-<h3 id="将生成秘钥配置到github平台"><a href="#将生成秘钥配置到github平台" class="headerlink" title="将生成秘钥配置到github平台"></a>将生成秘钥配置到github平台</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">1）、获取id_rsa.pub公钥内容，并复制</div><div class="line"><span class="meta"></span></div><div class="line">	$ cat ~/.ssh/id_rsa.pub</div><div class="line"></div><div class="line">2）、打开http://github.com,登录后打开用户设置-》SSH密钥-》增加密钥，添加id_rsa.pub内容-》保存就设置完成了</div></pre></td></tr></table></figure>
+<h2 id="从svn迁移到git"><a href="#从svn迁移到git" class="headerlink" title="从svn迁移到git"></a>从svn迁移到git</h2><h3 id="svn不包含多各分支处理办法"><a href="#svn不包含多各分支处理办法" class="headerlink" title="svn不包含多各分支处理办法"></a>svn不包含多各分支处理办法</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">1）首先进入电脑工作目录</div><div class="line">cd ~/dev/workspace</div><div class="line"></div><div class="line">2) 定义svn提交记录作者映射到新的名字，比如定义到users.txt文件</div><div class="line">格式为： svn username = New User &lt;New User@example.com&gt;</div><div class="line">如果有多个，那就多行，不需要符号换行，将所有的提交者都做一次映射。</div><div class="line"></div><div class="line">3) 执行转换命令（如果）,projectname 为项目名称</div><div class="line">git svn clone svn://192.168.1.111/dev/projects/projectname --authors-file=users.txt --no-metadata --no-minimize-url projectname</div><div class="line"></div><div class="line">4）执行成功以后，进入projectname项目</div><div class="line">cd projectname</div><div class="line"></div><div class="line">5）关联到git远程仓库</div><div class="line">git remote add origin https://github.com/cuizhenjie/projectname.git</div><div class="line"></div><div class="line">6）执行push到git仓库</div><div class="line">git push origin master</div></pre></td></tr></table></figure>
 <hr>
-<h3 id="others"><a href="#others" class="headerlink" title="others"></a>others</h3><ul>
-<li><a href="http://www.bootcss.com/p/git-guide/" target="_blank" rel="external">git基本用法</a> git常见命令及基本的用法</li>
-<li><a href="http://www.cnblogs.com/haiq/archive/2012/12/26/2833746.html" target="_blank" rel="external">.gitignore 过滤文件用法</a> .gitignore配置文件</li>
+<h3 id="svn包含多个分支的处理办法"><a href="#svn包含多个分支的处理办法" class="headerlink" title="svn包含多个分支的处理办法"></a>svn包含多个分支的处理办法</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">1）首先进入电脑工作目录</div><div class="line">cd ~/dev/workspace</div><div class="line"></div><div class="line">2) 定义svn提交记录作者映射到新的名字，比如定义到users.txt文件</div><div class="line">格式为： svn username = New User &lt;New User@example.com&gt;</div><div class="line">如果有多个，那就多行，不需要符号换行，将所有的提交者都做一次映射。</div><div class="line"></div><div class="line">3) 执行转换命令（如果）,projectname 为项目名称</div><div class="line">git svn clone svn://192.168.1.111/dev/projects/projectname --authors-file=users.txt --no-metadata --no-minimize-url projectname</div><div class="line"></div><div class="line">4）执行成功以后，进入projectname项目</div><div class="line">cd projectname</div><div class="line"></div><div class="line">5）将svn commit都抓取下来</div><div class="line">git svn fetch</div><div class="line"></div><div class="line">6）在git中查看svn commit记录信息</div><div class="line">git log --pretty=oneline</div><div class="line"></div><div class="line">7）查看分支 -- svn tag的被解析为git分支 ，需转换一下</div><div class="line">git branch -r</div><div class="line"></div><div class="line">8）转换分支-tag</div><div class="line">git tag tags_testtag origin/tags/tags_testtag</div><div class="line"></div><div class="line">9）删除远程的分支（tags）</div><div class="line">git branch -r -d origin/tags/tags_testtag</div><div class="line"></div><div class="line">10）关联远程git项目地址</div><div class="line">git remote add origin https://github.com/cuizhenjie/projectname.git</div><div class="line"></div><div class="line">11）推送到远端的git的仓库中</div><div class="line">git push origin master --tags</div><div class="line"></div><div class="line">12）切换到分支</div><div class="line">git checkout tags_testtag</div><div class="line"></div><div class="line">13）提交分支到远程的仓库中</div><div class="line">git push origin tags_testtag</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="others"><a href="#others" class="headerlink" title="others"></a>others</h2><ul>
+<li><p><a href="http://www.bootcss.com/p/git-guide/" target="_blank" rel="external">git基本用法</a> git常见命令及基本的用法</p>
+</li>
+<li><p><a href="http://www.cnblogs.com/haiq/archive/2012/12/26/2833746.html" target="_blank" rel="external">.gitignore 过滤文件用法</a> .gitignore配置文件</p>
+</li>
 </ul>
 
       
@@ -523,6 +534,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">go环境安装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CentOS下go环境安装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">lrzsz</a>
               </li>
              
@@ -603,6 +622,30 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">docker下镜像时间</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">docker镜像修改时区</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">gitlab</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">docker安装gitlab</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">centos7</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">docker安装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">vim安装</a>
               </li>
              
@@ -639,15 +682,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">idea</a>
+                <a href="javascript:void(0)" class="js-tag color2">gradle</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">maven</a>
+                <a href="javascript:void(0)" class="js-tag color4">gradle安装</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">maven项目搭建</a>
+                <a href="javascript:void(0)" class="js-tag color4">gradle配置</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -667,11 +710,35 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">idea</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">maven</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">maven项目搭建</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">项目搭建</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">nodejs</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">yarn</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">nodejs环境配置</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -692,18 +759,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">utf-8</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">nodejs</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">yarn</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">nodejs环境配置</a>
               </li>
              
               <li class="article-tag-list-item">
