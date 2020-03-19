@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="cuizhenjie`blog">
 <meta property="og:description" content="tomcat开发配置，utf-8编码设置，tomcatmanager，设置项目目录等">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-21T09:52:23.000Z">
+<meta property="og:updated_time" content="2020-03-19T09:04:09.627Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="tomcat开发相关配置">
 <meta name="twitter:description" content="tomcat开发配置，utf-8编码设置，tomcatmanager，设置项目目录等">
@@ -88,11 +88,7 @@
 				
 					<a class="github" target="_blank" href="https://github.com/cuizhenjie" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="weibo" target="_blank" href="http://weibo.com/cuizhenjie/" title="weibo"><i class="icon-weibo"></i></a>
-		        
 					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/cuizhenjie/activities" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
 					<a class="mail" target="_blank" href="mailto:517686251@qq.com" title="mail"><i class="icon-mail"></i></a>
 		        
@@ -137,11 +133,7 @@
 					
 						<a class="github" target="_blank" href="https://github.com/cuizhenjie" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="weibo" target="_blank" href="http://weibo.com/cuizhenjie/" title="weibo"><i class="icon-weibo"></i></a>
-			        
 						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/cuizhenjie/activities" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
 						<a class="mail" target="_blank" href="mailto:517686251@qq.com" title="mail"><i class="icon-mail"></i></a>
 			        
@@ -193,7 +185,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>tomcat开发配置，utf-8编码设置，tomcatmanager，设置项目目录等<br><a id="more"></a> </p>
+        <p>tomcat开发配置，utf-8编码设置，tomcatmanager，设置项目目录等<br><a id="more"></a></p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="tomcat线上环境基本配置"><a href="#tomcat线上环境基本配置" class="headerlink" title="tomcat线上环境基本配置"></a>tomcat线上环境基本配置</h3><hr>
 <h3 id="首先，修改tomcat的字符编码"><a href="#首先，修改tomcat的字符编码" class="headerlink" title="首先，修改tomcat的字符编码"></a>首先，修改tomcat的字符编码</h3><blockquote>
 <p>主要解决get请求参数中文乱码问题</p>
@@ -209,9 +201,12 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> 进入conf/Catalina/localhost/manager.xml ,如果不存在manager.xml则新建，加入以下代码</div><div class="line">&lt;Context privileged="true" antiResourceLocking="false"</div><div class="line">      docBase="$&#123;catalina.home&#125;/webapps/manager"&gt;</div><div class="line">  &lt;Valve className="org.apache.catalina.valves.RemoteAddrValve" allow="^.*$" /&gt;</div><div class="line">&lt;/Context&gt;</div></pre></td></tr></table></figure>
 <p>然后重启服务，重试查看效果</p>
 <h3 id="配置tomcat运行目录"><a href="#配置tomcat运行目录" class="headerlink" title="配置tomcat运行目录"></a>配置tomcat运行目录</h3><blockquote>
-<p>tomcat默认目录是在tomcat/webapps/ROOT下，如果以war包方式或者想改到其他目录下就需要做下修改<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> 修改conf/server.xml，host节点之间增加如下代码</div><div class="line"></div><div class="line">&lt;Context path="" docBase="/home/www/webapps/ROOT" debug="0" reloadable="true" /&gt;</div></pre></td></tr></table></figure></p>
+<p>tomcat默认目录是在tomcat/webapps/ROOT下，如果以war包方式或者想改到其他目录下就需要做下修改</p>
 </blockquote>
-<h2 id="重启即可"><a href="#重启即可" class="headerlink" title="重启即可"></a>重启即可</h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> 修改conf/server.xml，host节点之间增加如下代码</div><div class="line"></div><div class="line">&lt;Context path="" docBase="/home/www/webapps/ROOT" debug="0" reloadable="true" /&gt;</div></pre></td></tr></table></figure>
+<p>重启即可</p>
+<hr>
+
       
 
       
@@ -410,7 +405,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 cuizhenjie
+    		&copy; 2020 cuizhenjie
     	</div>
       	<div class="footer-right">
       		<!-- <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten -->
@@ -651,6 +646,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">fastdfs安装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
@@ -687,6 +686,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">idea</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">maven</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">maven项目搭建</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
@@ -703,15 +714,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">idea</a>
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">maven</a>
+                <a href="javascript:void(0)" class="js-tag color5">100%</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">maven项目搭建</a>
+                <a href="javascript:void(0)" class="js-tag color1">jvm优化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">show-busy-java-threads</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Arthas</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -719,7 +738,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
+                <a href="javascript:void(0)" class="js-tag color1">kubernates</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">kubernates安装</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -732,6 +755,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">nodejs环境配置</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">python环境安装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Mac下python3环境安装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">python环境卸载</a>
               </li>
              
               <li class="article-tag-list-item">

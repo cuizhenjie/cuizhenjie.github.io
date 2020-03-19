@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="cuizhenjie`blog">
 <meta property="og:description" content="近期服务器频繁有被暴力破解，大致分析了一下入侵行为，整理了常用的安全策略：最小的权限+最少的服务=最大的安全">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-27T03:19:31.996Z">
+<meta property="og:updated_time" content="2018-11-13T12:48:47.623Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS系统常规安全配置">
 <meta name="twitter:description" content="近期服务器频繁有被暴力破解，大致分析了一下入侵行为，整理了常用的安全策略：最小的权限+最少的服务=最大的安全">
@@ -88,11 +88,7 @@
 				
 					<a class="github" target="_blank" href="https://github.com/cuizhenjie" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="weibo" target="_blank" href="http://weibo.com/cuizhenjie/" title="weibo"><i class="icon-weibo"></i></a>
-		        
 					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/cuizhenjie/activities" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
 					<a class="mail" target="_blank" href="mailto:517686251@qq.com" title="mail"><i class="icon-mail"></i></a>
 		        
@@ -137,11 +133,7 @@
 					
 						<a class="github" target="_blank" href="https://github.com/cuizhenjie" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="weibo" target="_blank" href="http://weibo.com/cuizhenjie/" title="weibo"><i class="icon-weibo"></i></a>
-			        
 						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/cuizhenjie/activities" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
 						<a class="mail" target="_blank" href="mailto:517686251@qq.com" title="mail"><i class="icon-mail"></i></a>
 			        
@@ -194,9 +186,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>近期服务器频繁有被暴力破解，大致分析了一下入侵行为，整理了常用的安全策略：最小的权限+最少的服务=最大的安全<br><a id="more"></a></p>
-<h2 id="修改默认连接22端口、及增加防火墙过滤规则"><a href="#修改默认连接22端口、及增加防火墙过滤规则" class="headerlink" title="修改默认连接22端口、及增加防火墙过滤规则"></a>修改默认连接22端口、及增加防火墙过滤规则</h2><h3 id="1、修改ssh的默认端口22："><a href="#1、修改ssh的默认端口22：" class="headerlink" title="1、修改ssh的默认端口22："></a>1、修改ssh的默认端口22：</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">vim /etc/ssh/sshd_config</div><div class="line"><span class="meta"></span></div><div class="line">#找到port这一样，去掉注释修改22为自定义44422端口</div><div class="line">Port 44422</div></pre></td></tr></table></figure>
-<h3 id="2、修改防火墙通过这个端口："><a href="#2、修改防火墙通过这个端口：" class="headerlink" title="2、修改防火墙通过这个端口："></a>2、修改防火墙通过这个端口：</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">vim /etc/sysconfig/iptables</div><div class="line"><span class="meta"></span></div><div class="line">#增加过滤规则</div><div class="line">-A INPUT -p tcp -m state --state NEW -m tcp --dport 44422 -j ACCEPT</div></pre></td></tr></table></figure>
-<h3 id="3、重启sshd、防火墙服务"><a href="#3、重启sshd、防火墙服务" class="headerlink" title="3、重启sshd、防火墙服务"></a>3、重启sshd、防火墙服务</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta"></span></div><div class="line">#重启ssd服务</div><div class="line">service sshd restart</div><div class="line"><span class="meta"></span></div><div class="line">#重启iptables服务</div><div class="line">service iptables restart</div></pre></td></tr></table></figure>
+<h1 id="修改默认连接22端口、及增加防火墙过滤规则"><a href="#修改默认连接22端口、及增加防火墙过滤规则" class="headerlink" title="修改默认连接22端口、及增加防火墙过滤规则"></a>修改默认连接22端口、及增加防火墙过滤规则</h1><h2 id="1、修改ssh的默认端口22："><a href="#1、修改ssh的默认端口22：" class="headerlink" title="1、修改ssh的默认端口22："></a>1、修改ssh的默认端口22：</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">vim /etc/ssh/sshd_config</div><div class="line"><span class="meta"></span></div><div class="line">#找到port这一样，去掉注释修改22为自定义44422端口</div><div class="line">Port 44422</div></pre></td></tr></table></figure>
+<h2 id="2、修改防火墙通过这个端口："><a href="#2、修改防火墙通过这个端口：" class="headerlink" title="2、修改防火墙通过这个端口："></a>2、修改防火墙通过这个端口：</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">vim /etc/sysconfig/iptables</div><div class="line"><span class="meta"></span></div><div class="line">#增加过滤规则</div><div class="line">-A INPUT -p tcp -m state --state NEW -m tcp --dport 44422 -j ACCEPT</div></pre></td></tr></table></figure>
+<h2 id="3、重启sshd、防火墙服务"><a href="#3、重启sshd、防火墙服务" class="headerlink" title="3、重启sshd、防火墙服务"></a>3、重启sshd、防火墙服务</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta"></span></div><div class="line">#重启ssd服务</div><div class="line">service sshd restart</div><div class="line"><span class="meta"></span></div><div class="line">#重启iptables服务</div><div class="line">service iptables restart</div></pre></td></tr></table></figure>
 <hr>
 <h2 id="禁止root直接登录"><a href="#禁止root直接登录" class="headerlink" title="禁止root直接登录"></a>禁止root直接登录</h2><h3 id="1、新建帐户和设置帐户密码"><a href="#1、新建帐户和设置帐户密码" class="headerlink" title="1、新建帐户和设置帐户密码"></a>1、新建帐户和设置帐户密码</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">useradd testuser</div><div class="line"></div><div class="line">passwd testuser</div></pre></td></tr></table></figure>
 <h3 id="2、不允许以root账号登录"><a href="#2、不允许以root账号登录" class="headerlink" title="2、不允许以root账号登录"></a>2、不允许以root账号登录</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">vi /etc/ssh/sshd_config</div><div class="line"><span class="meta"></span></div><div class="line">#查找PermitRootLogin yes，改为no，并去掉#注释</div><div class="line">PermitRootLogin no</div></pre></td></tr></table></figure>
@@ -340,11 +332,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/03/26/centos-date/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/03/26/java-cpu-overflow/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          CentOS下修改时间、时区
+          Java 程序 CPU 100% 排查
         
       </div>
     </a>
@@ -403,7 +395,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 cuizhenjie
+    		&copy; 2020 cuizhenjie
     	</div>
       	<div class="footer-right">
       		<!-- <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten -->
@@ -644,6 +636,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">fastdfs安装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
@@ -680,6 +676,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">idea</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">maven</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">maven项目搭建</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
@@ -696,15 +704,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">idea</a>
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">maven</a>
+                <a href="javascript:void(0)" class="js-tag color5">100%</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">maven项目搭建</a>
+                <a href="javascript:void(0)" class="js-tag color1">jvm优化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">show-busy-java-threads</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Arthas</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -712,7 +728,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
+                <a href="javascript:void(0)" class="js-tag color1">kubernates</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">kubernates安装</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -725,6 +745,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">nodejs环境配置</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">python环境安装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Mac下python3环境安装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">python环境卸载</a>
               </li>
              
               <li class="article-tag-list-item">

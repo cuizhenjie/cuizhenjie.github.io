@@ -2,16 +2,65 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://cuizhenjie.oschina.io/2018/11/01/docker-datetime/</loc>
+    <loc>http://cuizhenjie.oschina.io/2020/02/27/kubernates-install-mac/</loc>
     
-    <lastmod>2018-11-01T13:29:32.992Z</lastmod>
+    <lastmod>2020-03-19T11:20:15.521Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://cuizhenjie.oschina.io/2018/03/26/java-cpu-overflow/</loc>
+    
+    <lastmod>2020-03-19T11:17:44.114Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://cuizhenjie.oschina.io/2017/09/21/tomcat-conf/</loc>
+    
+    <lastmod>2020-03-19T09:04:09.627Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://cuizhenjie.oschina.io/2017/07/25/hello-world/</loc>
+    
+    <lastmod>2020-03-19T09:02:36.446Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://cuizhenjie.oschina.io/2020/03/17/python3-install/</loc>
+    
+    <lastmod>2020-03-17T05:20:33.244Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://cuizhenjie.oschina.io/2019/12/05/fastdfs-install/</loc>
+    
+    <lastmod>2019-12-06T09:22:31.850Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://cuizhenjie.oschina.io/2018/09/26/centos-go/</loc>
     
-    <lastmod>2018-11-01T13:14:41.539Z</lastmod>
+    <lastmod>2018-11-13T18:07:41.740Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://cuizhenjie.oschina.io/2017/11/13/centos-secuity/</loc>
+    
+    <lastmod>2018-11-13T12:48:47.623Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://cuizhenjie.oschina.io/2018/11/01/docker-datetime/</loc>
+    
+    <lastmod>2018-11-01T13:29:32.992Z</lastmod>
     
   </url>
   
@@ -58,13 +107,6 @@
   </url>
   
   <url>
-    <loc>http://cuizhenjie.oschina.io/2017/11/13/centos-secuity/</loc>
-    
-    <lastmod>2018-03-27T03:19:31.996Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://cuizhenjie.oschina.io/2017/07/28/vim-learn/</loc>
     
     <lastmod>2018-03-27T03:18:01.318Z</lastmod>
@@ -82,13 +124,6 @@
     <loc>http://cuizhenjie.oschina.io/2017/10/10/centos-memory/</loc>
     
     <lastmod>2017-11-13T04:00:31.807Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://cuizhenjie.oschina.io/2017/09/21/tomcat-conf/</loc>
-    
-    <lastmod>2017-09-21T09:52:23.000Z</lastmod>
     
   </url>
   
@@ -117,13 +152,6 @@
     <loc>http://cuizhenjie.oschina.io/2017/07/25/nodejs-settings/</loc>
     
     <lastmod>2017-08-04T02:24:59.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://cuizhenjie.oschina.io/2017/07/25/hello-world/</loc>
-    
-    <lastmod>2017-07-27T03:33:36.000Z</lastmod>
     
   </url>
   

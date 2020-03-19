@@ -21,7 +21,7 @@
 <meta property="og:image" content="http://cuizhenjie.oschina.io/img/article/ac-img2.jpg">
 <meta property="og:image" content="http://cuizhenjie.oschina.io/img/article/ac-img4.jpg">
 <meta property="og:image" content="http://cuizhenjie.oschina.io/img/article/ac-img5.jpg">
-<meta property="og:updated_time" content="2017-07-27T03:33:36.000Z">
+<meta property="og:updated_time" content="2020-03-19T09:02:36.446Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于Hexo+oschina的pages服务搭建个人博客">
 <meta name="twitter:description" content="hexo是一个基于Node.js的静态博客程序，可以方便的生成静态网页托管在github和Heroku,oschina上。由于github博客在国内访问非常慢而且经常不稳定，百度爬虫也无法抓取github博客内容，所以这里使用码云oschina的pages服务搭建博客。">
@@ -94,11 +94,7 @@
 				
 					<a class="github" target="_blank" href="https://github.com/cuizhenjie" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="weibo" target="_blank" href="http://weibo.com/cuizhenjie/" title="weibo"><i class="icon-weibo"></i></a>
-		        
 					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/cuizhenjie/activities" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
 					<a class="mail" target="_blank" href="mailto:517686251@qq.com" title="mail"><i class="icon-mail"></i></a>
 		        
@@ -143,11 +139,7 @@
 					
 						<a class="github" target="_blank" href="https://github.com/cuizhenjie" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="weibo" target="_blank" href="http://weibo.com/cuizhenjie/" title="weibo"><i class="icon-weibo"></i></a>
-			        
 						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/cuizhenjie/activities" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
 						<a class="mail" target="_blank" href="mailto:517686251@qq.com" title="mail"><i class="icon-mail"></i></a>
 			        
@@ -204,21 +196,25 @@
 <p><a href="http://cuizhenjie.oschina.com/2017/07/25/git-settings/" target="_blank" rel="external">git操作及配置github的ssh秘钥设置看这篇文章</a></p>
 <p><a href="http://cuizhenjie.oschina.com/2017/07/25/nodejs-settings/" target="_blank" rel="external">nodejs环境安装以及yarn安装详细配置看这篇文章</a></p>
 <hr>
-<h3 id="Hexo安装与设置"><a href="#Hexo安装与设置" class="headerlink" title="Hexo安装与设置"></a>Hexo安装与设置</h3><p>1.nodejs、yarn、git都安装成功后, 开始安装hexo<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">yarn global add hexo #使用yarn全局安装hexo</div><div class="line"></div><div class="line">hexo --version #信息正常输出则表示安装完成</div></pre></td></tr></table></figure></p>
-<p>2.hexo构建博客项目<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">hexo init &lt;项目名称&gt;  #在工作目录下，执行命令初始化hexo项目</div><div class="line"></div><div class="line">hexo g == hexo generate #生成构建项目</div><div class="line"></div><div class="line">hexo s == hexo server #启动服务预览项目</div><div class="line"></div><div class="line">hexo d == hexo deploy #部署项目</div><div class="line"></div><div class="line">hexo s --watch #开发模式下使用，启动服务并监视文件变动</div><div class="line"></div><div class="line">hexo g -d #构建项目完成后，部署项目</div><div class="line"></div><div class="line">hexo new "postName" #新建文章</div><div class="line">hexo new page "pageName" #新建页面</div></pre></td></tr></table></figure></p>
+<h3 id="Hexo安装与设置"><a href="#Hexo安装与设置" class="headerlink" title="Hexo安装与设置"></a>Hexo安装与设置</h3><p>1.nodejs、yarn、git都安装成功后, 开始安装hexo</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">yarn global add hexo #使用yarn全局安装hexo</div><div class="line"></div><div class="line">hexo --version #信息正常输出则表示安装完成</div></pre></td></tr></table></figure>
+<p>2.hexo构建博客项目</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">hexo init &lt;项目名称&gt;  #在工作目录下，执行命令初始化hexo项目</div><div class="line"></div><div class="line">hexo g == hexo generate #生成构建项目</div><div class="line"></div><div class="line">hexo s == hexo server #启动服务预览项目</div><div class="line"></div><div class="line">hexo d == hexo deploy #部署项目</div><div class="line"></div><div class="line">hexo s --watch #开发模式下使用，启动服务并监视文件变动</div><div class="line"></div><div class="line">hexo g -d #构建项目完成后，部署项目</div><div class="line"></div><div class="line">hexo new "postName" #新建文章</div><div class="line">hexo new page "pageName" #新建页面</div></pre></td></tr></table></figure>
 <p>初始化hexo项目后的目录为：<br><img src="/img/article/ac-img3.jpg" alt="hexo项目目录"></p>
 <hr>
-<h3 id="创建码云账号及项目配置"><a href="#创建码云账号及项目配置" class="headerlink" title="创建码云账号及项目配置"></a>创建码云账号及项目配置</h3><p>1.首先注册一个码云账号，配置git的ssh秘钥，这个配置不属于本章节内容，如有疑问可参考<a href="">git秘钥生成与配置</a>教程。</p>
+<h3 id="创建码云账号及项目配置"><a href="#创建码云账号及项目配置" class="headerlink" title="创建码云账号及项目配置"></a>创建码云账号及项目配置</h3><p>1.首先注册一个码云账号，配置git的ssh秘钥，这个配置不属于本章节内容，如有疑问可参考 [git秘钥生成与配置] () 教程。</p>
 <p><img src="/img/article/ac-img1.jpg" alt="码云平台下新建项目"></p>
 <p>2.开启pages服务<br>创建项目成功后，点击菜单栏的Pages,码云默认的Pages服务分支是master，但是你也已选择创建自己的分支，这里我的博客项目的静态页面分支是master，选择master并点击启动服务。</p>
 <p><img src="/img/article/ac-img2.jpg" alt="码云平台下开启pages服务"></p>
 <hr>
-<h3 id="最后将hexo项目连接到码云oschina平台"><a href="#最后将hexo项目连接到码云oschina平台" class="headerlink" title="最后将hexo项目连接到码云oschina平台"></a>最后将hexo项目连接到码云oschina平台</h3><p>1.安装hexo-deployer-git插件帮忙我们完成代码上传的工作<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">yarn add hexo-deployer-git --save #将插件安装到项目</div></pre></td></tr></table></figure></p>
+<h3 id="最后将hexo项目连接到码云oschina平台"><a href="#最后将hexo项目连接到码云oschina平台" class="headerlink" title="最后将hexo项目连接到码云oschina平台"></a>最后将hexo项目连接到码云oschina平台</h3><p>1.安装hexo-deployer-git插件帮忙我们完成代码上传的工作</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">yarn add hexo-deployer-git --save #将插件安装到项目</div></pre></td></tr></table></figure>
 <p>2.配置项目根目录下的_config.yml文件，修改deploy的值，如下图</p>
 <p><img src="/img/article/ac-img4.jpg" alt="修改_config.yml文件的deploy值"></p>
 <p>修改后，注意repo的地址是之前码云新建的git项目地址，如下图</p>
 <p><img src="/img/article/ac-img5.jpg" alt="修改_config.yml文件后"></p>
-<p>3.完成配置后，上传项目<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">hexo g -d #一键部署到码云</div></pre></td></tr></table></figure></p>
+<p>3.完成配置后，上传项目</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">hexo g -d #一键部署到码云</div></pre></td></tr></table></figure>
 <p>至此，博客已经部署成功，访问提供的地址：<a href="http://cuizhenjie.oschina.io">http://cuizhenjie.oschina.io</a> 即可查看到我的博客。</p>
 
       
@@ -352,20 +348,15 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/07/25/nodejs-settings/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/07/25/git-settings/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          nodejs环境配置及yarn包管理工具安装配置
+          git安装、ssh秘钥生成及github配置
         
       </div>
     </a>
   
-  
-    <a href="/2017/07/25/git-settings/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">git安装、ssh秘钥生成及github配置</div>
-      <i class="icon-circle-right"></i>
-    </a>
   
 </nav>
 
@@ -415,7 +406,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 cuizhenjie
+    		&copy; 2020 cuizhenjie
     	</div>
       	<div class="footer-right">
       		<!-- <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten -->
@@ -656,6 +647,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">fastdfs安装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
@@ -692,6 +687,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">idea</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">maven</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">maven项目搭建</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
@@ -708,15 +715,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">idea</a>
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">maven</a>
+                <a href="javascript:void(0)" class="js-tag color5">100%</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">maven项目搭建</a>
+                <a href="javascript:void(0)" class="js-tag color1">jvm优化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">show-busy-java-threads</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Arthas</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -724,7 +739,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
+                <a href="javascript:void(0)" class="js-tag color1">kubernates</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">kubernates安装</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -737,6 +756,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">nodejs环境配置</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">python环境安装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Mac下python3环境安装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">python环境卸载</a>
               </li>
              
               <li class="article-tag-list-item">
