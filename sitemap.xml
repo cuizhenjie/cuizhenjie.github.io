@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://cuizhenjie.github.io/2017/08/04/maven-settings/</loc>
+    
+    <lastmod>2020-03-24T14:22:18.199Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://cuizhenjie.github.io/2017/09/21/tomcat-conf/</loc>
     
     <lastmod>2020-03-24T14:15:53.578Z</lastmod>
@@ -152,13 +159,6 @@
     <loc>http://cuizhenjie.github.io/2017/09/21/docker-vim/</loc>
     
     <lastmod>2017-09-21T09:44:02.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://cuizhenjie.github.io/2017/08/04/maven-settings/</loc>
-    
-    <lastmod>2017-08-04T03:24:51.000Z</lastmod>
     
   </url>
   
