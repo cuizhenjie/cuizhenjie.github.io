@@ -2,6 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://cuizhenjie.github.io/2017/11/13/centos-secuity/</loc>
+    
+    <lastmod>2020-03-24T14:07:08.033Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://cuizhenjie.github.io/2017/10/16/centos-mysql/</loc>
+    
+    <lastmod>2020-03-24T14:07:00.640Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://cuizhenjie.github.io/2017/10/10/centos-memory/</loc>
+    
+    <lastmod>2020-03-24T14:06:55.615Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://cuizhenjie.github.io/2018/03/26/centos-lrzsz/</loc>
+    
+    <lastmod>2020-03-24T14:06:49.355Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://cuizhenjie.github.io/2018/09/26/centos-go/</loc>
+    
+    <lastmod>2020-03-24T14:06:44.410Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://cuizhenjie.github.io/2018/03/26/centos-date/</loc>
+    
+    <lastmod>2020-03-24T14:06:38.688Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://cuizhenjie.github.io/2020/03/24/markdown-style-guide/</loc>
     
     <lastmod>2020-03-24T12:04:09.734Z</lastmod>
@@ -58,30 +100,9 @@
   </url>
   
   <url>
-    <loc>http://cuizhenjie.github.io/2018/09/26/centos-go/</loc>
-    
-    <lastmod>2018-11-13T18:07:41.740Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://cuizhenjie.github.io/2017/11/13/centos-secuity/</loc>
-    
-    <lastmod>2018-11-13T12:48:47.623Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://cuizhenjie.github.io/2018/11/01/docker-datetime/</loc>
     
     <lastmod>2018-11-01T13:29:32.992Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://cuizhenjie.github.io/2018/03/26/centos-date/</loc>
-    
-    <lastmod>2018-10-12T02:06:07.028Z</lastmod>
     
   </url>
   
@@ -114,30 +135,9 @@
   </url>
   
   <url>
-    <loc>http://cuizhenjie.github.io/2018/03/26/centos-lrzsz/</loc>
-    
-    <lastmod>2018-03-27T05:41:58.943Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://cuizhenjie.github.io/2017/07/28/vim-learn/</loc>
     
     <lastmod>2018-03-27T03:18:01.318Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://cuizhenjie.github.io/2017/10/16/centos-mysql/</loc>
-    
-    <lastmod>2017-11-16T04:03:10.353Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://cuizhenjie.github.io/2017/10/10/centos-memory/</loc>
-    
-    <lastmod>2017-11-13T04:00:31.807Z</lastmod>
     
   </url>
   
