@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://cuizhenjie.github.io">
   <title>gradle安装及常规配置 | cuizhenjie`blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -49,7 +49,7 @@
 
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -207,19 +207,19 @@
 <li>gradle是一个基于Apache Ant和Apache Maven概念的项目自动化构建开源工具。</li>
 <li>它使用一种基于Groovy的特定领域语言(DSL)来声明项目设置，抛弃了基于XML的各种繁琐配置。</li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="meta"></span></div><div class="line">#安装之前，先确认依赖环境。</div><div class="line">java -version</div><div class="line"><span class="meta"></span></div><div class="line">#通过brew方式安装</div><div class="line">brew install gradle</div><div class="line"><span class="meta"></span></div><div class="line">#或者在线下载安装http://www.gradle.org/downloads </div><div class="line">访问http://www.gradle.org/downloads,并确保gradle加入到环境变量</div><div class="line"><span class="meta"></span></div><div class="line">#安装完成后，测试</div><div class="line">gradle -v</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">安装之前，先确认依赖环境。</span></span><br><span class="line">java -version</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">通过brew方式安装</span></span><br><span class="line">brew install gradle</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">或者在线下载安装http://www.gradle.org/downloads </span></span><br><span class="line">访问http://www.gradle.org/downloads,并确保gradle加入到环境变量</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">安装完成后，测试</span></span><br><span class="line">gradle -v</span><br></pre></td></tr></table></figure>
 <hr>
 <h3 id="其他配置"><a href="#其他配置" class="headerlink" title="其他配置"></a>其他配置</h3><ul>
 <li>gradle没有maven那样的全局配置文件，如果想要配置gradle默认仓库保存位置，则设置方式为：</li>
 <li>编辑用户配置文件~/.bash_profile,新增环境变量GRADLE_USER_HOME</li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta"></span></div><div class="line"># 编辑配置文件 </div><div class="line">vim ~/.bash_profile</div><div class="line"><span class="meta"></span></div><div class="line">#新增一行环境变量</div><div class="line">export GRADLE_USER_HOME=$GRADLE_HOME/.gradle</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 编辑配置文件 </span></span><br><span class="line">vim ~/.bash_profile</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">新增一行环境变量</span></span><br><span class="line">export GRADLE_USER_HOME=$GRADLE_HOME/.gradle</span><br></pre></td></tr></table></figure>
 <hr>
 <h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><ul>
 <li>设置好时区后，使用ntp同步标准时间。</li>
 <li></li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta"></span></div><div class="line">#安装ntp</div><div class="line">yum install ntp</div><div class="line"><span class="meta"></span></div><div class="line">#同步时间命令</div><div class="line">ntpdate pool.ntp.org</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">安装ntp</span></span><br><span class="line">yum install ntp</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">同步时间命令</span></span><br><span class="line">ntpdate pool.ntp.org</span><br></pre></td></tr></table></figure>
 <hr>
 
       
@@ -390,27 +390,9 @@
 
 
   
-
+ 
   
-    <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script type="text/javascript">
-
-if(true){
-	var gitalk = new Gitalk({
-  	clientID: '4236ed6e8c0c8635b1fb',
-  	clientSecret: 'abcd28135b716c4700ef03ace3ef2d7a0e9d6a80',
-  	repo: 'undefined',
-  	owner: 'undefined',
-  	admin: ['undefined'],
-  	id: 'Tue Jul 10 2018 10:30:00 GMT+0800',
-  	distractionFreeMode: 'true'
-})
-gitalk.render('gitalk-container') 
-}
-</script>
+    
   
   
   
@@ -648,14 +630,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker下镜像时间</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">docker镜像修改时区</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">gitlab</a>
               </li>
              
@@ -664,11 +638,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">docker下镜像时间</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">docker镜像修改时区</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">centos7</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">docker安装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">fastdfs安装</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -681,10 +667,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">安装vim</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">fastdfs安装</a>
               </li>
              
               <li class="article-tag-list-item">

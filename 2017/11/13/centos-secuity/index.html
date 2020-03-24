@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://cuizhenjie.github.io">
   <title>CentOS系统常规安全配置 | cuizhenjie`blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -49,7 +49,7 @@
 
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -203,20 +203,20 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>近期服务器频繁有被暴力破解，大致分析了一下入侵行为，整理了常用的安全策略：最小的权限+最少的服务=最大的安全<br><a id="more"></a></p>
-<h1 id="修改默认连接22端口、及增加防火墙过滤规则"><a href="#修改默认连接22端口、及增加防火墙过滤规则" class="headerlink" title="修改默认连接22端口、及增加防火墙过滤规则"></a>修改默认连接22端口、及增加防火墙过滤规则</h1><h2 id="1、修改ssh的默认端口22："><a href="#1、修改ssh的默认端口22：" class="headerlink" title="1、修改ssh的默认端口22："></a>1、修改ssh的默认端口22：</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">vim /etc/ssh/sshd_config</div><div class="line"><span class="meta"></span></div><div class="line">#找到port这一样，去掉注释修改22为自定义44422端口</div><div class="line">Port 44422</div></pre></td></tr></table></figure>
-<h2 id="2、修改防火墙通过这个端口："><a href="#2、修改防火墙通过这个端口：" class="headerlink" title="2、修改防火墙通过这个端口："></a>2、修改防火墙通过这个端口：</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">vim /etc/sysconfig/iptables</div><div class="line"><span class="meta"></span></div><div class="line">#增加过滤规则</div><div class="line">-A INPUT -p tcp -m state --state NEW -m tcp --dport 44422 -j ACCEPT</div></pre></td></tr></table></figure>
-<h2 id="3、重启sshd、防火墙服务"><a href="#3、重启sshd、防火墙服务" class="headerlink" title="3、重启sshd、防火墙服务"></a>3、重启sshd、防火墙服务</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta"></span></div><div class="line">#重启ssd服务</div><div class="line">service sshd restart</div><div class="line"><span class="meta"></span></div><div class="line">#重启iptables服务</div><div class="line">service iptables restart</div></pre></td></tr></table></figure>
+<h1 id="修改默认连接22端口、及增加防火墙过滤规则"><a href="#修改默认连接22端口、及增加防火墙过滤规则" class="headerlink" title="修改默认连接22端口、及增加防火墙过滤规则"></a>修改默认连接22端口、及增加防火墙过滤规则</h1><h2 id="1、修改ssh的默认端口22："><a href="#1、修改ssh的默认端口22：" class="headerlink" title="1、修改ssh的默认端口22："></a>1、修改ssh的默认端口22：</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">vim /etc/ssh/sshd_config</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">找到port这一样，去掉注释修改22为自定义44422端口</span></span><br><span class="line">Port 44422</span><br></pre></td></tr></table></figure>
+<h2 id="2、修改防火墙通过这个端口："><a href="#2、修改防火墙通过这个端口：" class="headerlink" title="2、修改防火墙通过这个端口："></a>2、修改防火墙通过这个端口：</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">vim /etc/sysconfig/iptables</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">增加过滤规则</span></span><br><span class="line">-A INPUT -p tcp -m state --state NEW -m tcp --dport 44422 -j ACCEPT</span><br></pre></td></tr></table></figure>
+<h2 id="3、重启sshd、防火墙服务"><a href="#3、重启sshd、防火墙服务" class="headerlink" title="3、重启sshd、防火墙服务"></a>3、重启sshd、防火墙服务</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">重启ssd服务</span></span><br><span class="line">service sshd restart</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">重启iptables服务</span></span><br><span class="line">service iptables restart</span><br></pre></td></tr></table></figure>
 <hr>
-<h2 id="禁止root直接登录"><a href="#禁止root直接登录" class="headerlink" title="禁止root直接登录"></a>禁止root直接登录</h2><h3 id="1、新建帐户和设置帐户密码"><a href="#1、新建帐户和设置帐户密码" class="headerlink" title="1、新建帐户和设置帐户密码"></a>1、新建帐户和设置帐户密码</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">useradd testuser</div><div class="line"></div><div class="line">passwd testuser</div></pre></td></tr></table></figure>
-<h3 id="2、不允许以root账号登录"><a href="#2、不允许以root账号登录" class="headerlink" title="2、不允许以root账号登录"></a>2、不允许以root账号登录</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">vi /etc/ssh/sshd_config</div><div class="line"><span class="meta"></span></div><div class="line">#查找PermitRootLogin yes，改为no，并去掉#注释</div><div class="line">PermitRootLogin no</div></pre></td></tr></table></figure>
-<h3 id="3、重启sshd服务，测试登录"><a href="#3、重启sshd服务，测试登录" class="headerlink" title="3、重启sshd服务，测试登录"></a>3、重启sshd服务，测试登录</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">service sshd restart</div><div class="line"><span class="meta"></span></div><div class="line">#测试登录</div><div class="line">ssh testuser@x.x.x.x -p 44422</div><div class="line"><span class="meta"></span></div><div class="line">#连接成功以后，su切换到root</div><div class="line">su root</div></pre></td></tr></table></figure>
+<h2 id="禁止root直接登录"><a href="#禁止root直接登录" class="headerlink" title="禁止root直接登录"></a>禁止root直接登录</h2><h3 id="1、新建帐户和设置帐户密码"><a href="#1、新建帐户和设置帐户密码" class="headerlink" title="1、新建帐户和设置帐户密码"></a>1、新建帐户和设置帐户密码</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">useradd testuser</span><br><span class="line"></span><br><span class="line">passwd testuser</span><br></pre></td></tr></table></figure>
+<h3 id="2、不允许以root账号登录"><a href="#2、不允许以root账号登录" class="headerlink" title="2、不允许以root账号登录"></a>2、不允许以root账号登录</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">vi /etc/ssh/sshd_config</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">查找PermitRootLogin yes，改为no，并去掉<span class="comment">#注释</span></span></span><br><span class="line">PermitRootLogin no</span><br></pre></td></tr></table></figure>
+<h3 id="3、重启sshd服务，测试登录"><a href="#3、重启sshd服务，测试登录" class="headerlink" title="3、重启sshd服务，测试登录"></a>3、重启sshd服务，测试登录</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">service sshd restart</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">测试登录</span></span><br><span class="line">ssh testuser@x.x.x.x -p 44422</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">连接成功以后，su切换到root</span></span><br><span class="line">su root</span><br></pre></td></tr></table></figure>
 <hr>
-<h2 id="登录ip限制"><a href="#登录ip限制" class="headerlink" title="登录ip限制"></a>登录ip限制</h2><h3 id="1、设置登录ip限制"><a href="#1、设置登录ip限制" class="headerlink" title="1、设置登录ip限制"></a>1、设置登录ip限制</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">vi /etc/hosts.deny</div><div class="line"><span class="meta"></span></div><div class="line">#设置允许登录ip</div><div class="line">sshd:172.29.73.23</div></pre></td></tr></table></figure>
-<h3 id="2、重启sshd的服务"><a href="#2、重启sshd的服务" class="headerlink" title="2、重启sshd的服务"></a>2、重启sshd的服务</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">service sshd restart</div></pre></td></tr></table></figure>
+<h2 id="登录ip限制"><a href="#登录ip限制" class="headerlink" title="登录ip限制"></a>登录ip限制</h2><h3 id="1、设置登录ip限制"><a href="#1、设置登录ip限制" class="headerlink" title="1、设置登录ip限制"></a>1、设置登录ip限制</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">vi /etc/hosts.deny</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">设置允许登录ip</span></span><br><span class="line">sshd:172.29.73.23</span><br></pre></td></tr></table></figure>
+<h3 id="2、重启sshd的服务"><a href="#2、重启sshd的服务" class="headerlink" title="2、重启sshd的服务"></a>2、重启sshd的服务</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">service sshd restart</span><br></pre></td></tr></table></figure>
 <hr>
-<h2 id="防止一般的网络攻击"><a href="#防止一般的网络攻击" class="headerlink" title="防止一般的网络攻击"></a>防止一般的网络攻击</h2><h3 id="1、禁ping"><a href="#1、禁ping" class="headerlink" title="1、禁ping"></a>1、禁ping</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">vi /etc/rc.d/rc.local</div><div class="line"><span class="meta"></span></div><div class="line">#增加一行设置</div><div class="line">echo 1 &gt; /proc/sys/net/ipv4/icmp_echo_ignore_all</div></pre></td></tr></table></figure>
-<h3 id="2、防止IP欺骗"><a href="#2、防止IP欺骗" class="headerlink" title="2、防止IP欺骗"></a>2、防止IP欺骗</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">vi /etc/host.conf</div><div class="line"><span class="meta"></span></div><div class="line">#增加设置</div><div class="line">order hosts,bind    #名称解释顺序</div><div class="line">multi on           #允许主机拥有多个IP地址</div><div class="line">nospoof on         #禁止IP地址欺骗</div></pre></td></tr></table></figure>
-<h3 id="3、防止DDoS攻击"><a href="#3、防止DDoS攻击" class="headerlink" title="3、防止DDoS攻击"></a>3、防止DDoS攻击</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">    vi /etc/security/limits.conf</div><div class="line"></div><div class="line">    #增加设置</div><div class="line">    #core 0 表示禁止创建core文件</div><div class="line">*    soft    core    0</div><div class="line">    #nproc 128 把最多的进程数限制到20</div><div class="line">*    soft    nproc   2048</div><div class="line">*    hard    nproc   16384</div><div class="line">    #nofile 64 表示把一个用户同时打开的最大文件数限制为64</div><div class="line">*    soft    nofile 1024</div><div class="line">*    hard    nofile  65536</div><div class="line">    #* 表示登录到系统的所有用户，不包括root</div><div class="line"></div><div class="line">    #最后编辑/etc/pam.d/login</div><div class="line">    vi /etc/pam.d/login</div><div class="line">    #检查如下代码是否存在，不存在新增</div><div class="line">    session    required     pam_limits.so</div></pre></td></tr></table></figure>
+<h2 id="防止一般的网络攻击"><a href="#防止一般的网络攻击" class="headerlink" title="防止一般的网络攻击"></a>防止一般的网络攻击</h2><h3 id="1、禁ping"><a href="#1、禁ping" class="headerlink" title="1、禁ping"></a>1、禁ping</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">vi /etc/rc.d/rc.local</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">增加一行设置</span></span><br><span class="line">echo 1 &gt; /proc/sys/net/ipv4/icmp_echo_ignore_all</span><br></pre></td></tr></table></figure>
+<h3 id="2、防止IP欺骗"><a href="#2、防止IP欺骗" class="headerlink" title="2、防止IP欺骗"></a>2、防止IP欺骗</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">vi /etc/host.conf</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">增加设置</span></span><br><span class="line">order hosts,bind    #名称解释顺序</span><br><span class="line">multi on           #允许主机拥有多个IP地址</span><br><span class="line">nospoof on         #禁止IP地址欺骗</span><br></pre></td></tr></table></figure>
+<h3 id="3、防止DDoS攻击"><a href="#3、防止DDoS攻击" class="headerlink" title="3、防止DDoS攻击"></a>3、防止DDoS攻击</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    vi /etc/security/limits.conf</span><br><span class="line"></span><br><span class="line">    #增加设置</span><br><span class="line">    #core 0 表示禁止创建core文件</span><br><span class="line">*    soft    core    0</span><br><span class="line">    #nproc 128 把最多的进程数限制到20</span><br><span class="line">*    soft    nproc   2048</span><br><span class="line">*    hard    nproc   16384</span><br><span class="line">    #nofile 64 表示把一个用户同时打开的最大文件数限制为64</span><br><span class="line">*    soft    nofile 1024</span><br><span class="line">*    hard    nofile  65536</span><br><span class="line">    #* 表示登录到系统的所有用户，不包括root</span><br><span class="line"></span><br><span class="line">    #最后编辑/etc/pam.d/login</span><br><span class="line">    vi /etc/pam.d/login</span><br><span class="line">    #检查如下代码是否存在，不存在新增</span><br><span class="line">    session    required     pam_limits.so</span><br></pre></td></tr></table></figure>
 
       
 
@@ -390,27 +390,9 @@
 
 
   
-
+ 
   
-    <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script type="text/javascript">
-
-if(true){
-	var gitalk = new Gitalk({
-  	clientID: '4236ed6e8c0c8635b1fb',
-  	clientSecret: 'abcd28135b716c4700ef03ace3ef2d7a0e9d6a80',
-  	repo: 'undefined',
-  	owner: 'undefined',
-  	admin: ['undefined'],
-  	id: 'Mon Nov 13 2017 10:30:00 GMT+0800',
-  	distractionFreeMode: 'true'
-})
-gitalk.render('gitalk-container') 
-}
-</script>
+    
   
   
   
@@ -648,14 +630,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker下镜像时间</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">docker镜像修改时区</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">gitlab</a>
               </li>
              
@@ -664,11 +638,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">docker下镜像时间</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">docker镜像修改时区</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">centos7</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">docker安装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">fastdfs安装</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -681,10 +667,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">安装vim</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">fastdfs安装</a>
               </li>
              
               <li class="article-tag-list-item">

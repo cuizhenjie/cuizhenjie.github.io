@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://cuizhenjie.github.io">
   <title>tomcat开发相关配置 | cuizhenjie`blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -49,7 +49,7 @@
 
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -207,20 +207,20 @@
 <h3 id="首先，修改tomcat的字符编码"><a href="#首先，修改tomcat的字符编码" class="headerlink" title="首先，修改tomcat的字符编码"></a>首先，修改tomcat的字符编码</h3><blockquote>
 <p>主要解决get请求参数中文乱码问题</p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> 进入tomcat根目录文件夹，编辑server.xml 增加URIEncoding="UTF-8"</div><div class="line"></div><div class="line">vim conf/server.xml</div><div class="line"></div><div class="line">&lt;Connector port="8080" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443" URIEncoding="UTF-8"/&gt;</div><div class="line"><span class="meta"></span></div><div class="line">#修改配置后重启即可</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 进入tomcat根目录文件夹，编辑server.xml 增加URIEncoding=<span class="string">"UTF-8"</span></span></span><br><span class="line"></span><br><span class="line">vim conf/server.xml</span><br><span class="line"></span><br><span class="line">&lt;Connector port="8080" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443" URIEncoding="UTF-8"/&gt;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">修改配置后重启即可</span></span><br></pre></td></tr></table></figure>
 <hr>
 <h3 id="打开tomcat的远程部署，服务监控功能权限"><a href="#打开tomcat的远程部署，服务监控功能权限" class="headerlink" title="打开tomcat的远程部署，服务监控功能权限"></a>打开tomcat的远程部署，服务监控功能权限</h3><blockquote>
 <p>启动tomcat服务后，可以看到三个控制台：Server Status、Manager App、Host Manager<br>Server Status：用于监控服务器状态<br>Manager App：可以部署、监控Web应用</p>
 </blockquote>
 <p>点击打开发现都出现403错误，解决办法以Tomcat8为例<br>权限作用：<br>  manager-gui     #允许访问html接口(即URL路径为/manager/html/<em>)<br>  manager-script   #允许访问纯文本接口(即URL路径为/manager/text/</em>)<br>  manager-jmx   #允许访问JMX代理接口(即URL路径为/manager/jmxproxy/<em>)<br>  manager-status   #允许访问Tomcat只读状态页面(即URL路径为/manager/status/</em>)</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> 第一步编辑conf下的tomcat-users.xml文件，底部增加代码</div><div class="line">&lt;role rolename="admin"/&gt;</div><div class="line">&lt;role rolename="admin-gui"/&gt;</div><div class="line">&lt;role rolename="admin-script"/&gt;</div><div class="line">&lt;role rolename="manager-gui"/&gt;</div><div class="line">&lt;role rolename="manager-script"/&gt;</div><div class="line">&lt;role rolename="manager-jmx"/&gt;</div><div class="line">&lt;role rolename="manager-status"/&gt;</div><div class="line">&lt;user username="admin" password="admin" roles="admin,admin-gui,admin-script,manager-gui,manager-script,manager-jmx,manager-status"/&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 第一步编辑conf下的tomcat-users.xml文件，底部增加代码</span></span><br><span class="line">&lt;role rolename="admin"/&gt;</span><br><span class="line">&lt;role rolename="admin-gui"/&gt;</span><br><span class="line">&lt;role rolename="admin-script"/&gt;</span><br><span class="line">&lt;role rolename="manager-gui"/&gt;</span><br><span class="line">&lt;role rolename="manager-script"/&gt;</span><br><span class="line">&lt;role rolename="manager-jmx"/&gt;</span><br><span class="line">&lt;role rolename="manager-status"/&gt;</span><br><span class="line">&lt;user username="admin" password="admin" roles="admin,admin-gui,admin-script,manager-gui,manager-script,manager-jmx,manager-status"/&gt;</span><br></pre></td></tr></table></figure>
 <p>经过以上配置,重启后发现还有403错误，需要继续进行配置</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> 进入conf/Catalina/localhost/manager.xml ,如果不存在manager.xml则新建，加入以下代码</div><div class="line">&lt;Context privileged="true" antiResourceLocking="false"</div><div class="line">      docBase="$&#123;catalina.home&#125;/webapps/manager"&gt;</div><div class="line">  &lt;Valve className="org.apache.catalina.valves.RemoteAddrValve" allow="^.*$" /&gt;</div><div class="line">&lt;/Context&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 进入conf/Catalina/localhost/manager.xml ,如果不存在manager.xml则新建，加入以下代码</span></span><br><span class="line">&lt;Context privileged="true" antiResourceLocking="false"</span><br><span class="line">      docBase="$&#123;catalina.home&#125;/webapps/manager"&gt;</span><br><span class="line">  &lt;Valve className="org.apache.catalina.valves.RemoteAddrValve" allow="^.*$" /&gt;</span><br><span class="line">&lt;/Context&gt;</span><br></pre></td></tr></table></figure>
 <p>然后重启服务，重试查看效果</p>
 <h3 id="配置tomcat运行目录"><a href="#配置tomcat运行目录" class="headerlink" title="配置tomcat运行目录"></a>配置tomcat运行目录</h3><blockquote>
 <p>tomcat默认目录是在tomcat/webapps/ROOT下，如果以war包方式或者想改到其他目录下就需要做下修改</p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> 修改conf/server.xml，host节点之间增加如下代码</div><div class="line"></div><div class="line">&lt;Context path="" docBase="/home/www/webapps/ROOT" debug="0" reloadable="true" /&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 修改conf/server.xml，host节点之间增加如下代码</span></span><br><span class="line"></span><br><span class="line">&lt;Context path="" docBase="/home/www/webapps/ROOT" debug="0" reloadable="true" /&gt;</span><br></pre></td></tr></table></figure>
 <p>重启即可</p>
 <hr>
 
@@ -400,27 +400,9 @@
 
 
   
-
+ 
   
-    <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script type="text/javascript">
-
-if(true){
-	var gitalk = new Gitalk({
-  	clientID: '4236ed6e8c0c8635b1fb',
-  	clientSecret: 'abcd28135b716c4700ef03ace3ef2d7a0e9d6a80',
-  	repo: 'undefined',
-  	owner: 'undefined',
-  	admin: ['undefined'],
-  	id: 'Thu Sep 21 2017 17:00:00 GMT+0800',
-  	distractionFreeMode: 'true'
-})
-gitalk.render('gitalk-container') 
-}
-</script>
+    
   
   
   
@@ -658,14 +640,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker下镜像时间</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">docker镜像修改时区</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">gitlab</a>
               </li>
              
@@ -674,11 +648,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">docker下镜像时间</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">docker镜像修改时区</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">centos7</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">docker安装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">fastdfs安装</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -691,10 +677,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">安装vim</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">fastdfs安装</a>
               </li>
              
               <li class="article-tag-list-item">

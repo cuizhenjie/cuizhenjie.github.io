@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://cuizhenjie.github.io">
   <title>Mac下安装Python3环境 | cuizhenjie`blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -49,7 +49,7 @@
 
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -204,39 +204,39 @@
       
         <p>Mac下安装Python3环境，并配置开发环境及如何卸载<br><a id="more"></a></p>
 <h1 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h1><h2 id="下载Python3环境包"><a href="#下载Python3环境包" class="headerlink" title="下载Python3环境包"></a>下载Python3环境包</h2><blockquote>
-<p>安装包下载地址，当前配置环境时的最新稳定版为3.8.1：<br>  <a href="https://www.python.org/ftp/python/3.8.1/python-3.8.1.exe" target="_blank" rel="external">windows:下载地址</a><br>  <a href="https://www.python.org/ftp/python/3.8.1/python-3.8.1-macosx10.9.pkg" target="_blank" rel="external">mac:</a><br>  <a href="https://www.python.org/ftp/python/3.8.1/Python-3.8.1.tgz" target="_blank" rel="external">linux:</a></p>
+<p>安装包下载地址，当前配置环境时的最新稳定版为3.8.1：<br>  <a href="https://www.python.org/ftp/python/3.8.1/python-3.8.1.exe" target="_blank" rel="noopener">windows:下载地址</a><br>  <a href="https://www.python.org/ftp/python/3.8.1/python-3.8.1-macosx10.9.pkg" target="_blank" rel="noopener">mac:</a><br>  <a href="https://www.python.org/ftp/python/3.8.1/Python-3.8.1.tgz" target="_blank" rel="noopener">linux:</a></p>
 </blockquote>
 <hr>
-<h2 id="检查系统是否已经安装-Mac系统为例"><a href="#检查系统是否已经安装-Mac系统为例" class="headerlink" title="检查系统是否已经安装, Mac系统为例"></a>检查系统是否已经安装, Mac系统为例</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> 打开控制台, 查看安装的python版本</div><div class="line">python --version</div><div class="line"><span class="meta"></span></div><div class="line"># 默认正常输出版本，应该是系统默认的python2版本，可忽略继续安装python3</div></pre></td></tr></table></figure>
+<h2 id="检查系统是否已经安装-Mac系统为例"><a href="#检查系统是否已经安装-Mac系统为例" class="headerlink" title="检查系统是否已经安装, Mac系统为例"></a>检查系统是否已经安装, Mac系统为例</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 打开控制台, 查看安装的python版本</span></span><br><span class="line">python --version</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 默认正常输出版本，应该是系统默认的python2版本，可忽略继续安装python3</span></span><br></pre></td></tr></table></figure>
 <hr>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><blockquote>
 <p>Mac系统两种安装方式，第一种基于以上下载的安装包直接安装即可；<br>  第二种方式使用brew方式，看个人喜好（为了统一管理mac系统依赖，我们使用第二种）；</p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span>1) 安装</div><div class="line">brew install python3</div><div class="line"><span class="meta"></span></div><div class="line"># 2) 手动执行一下安装时未完成的创建连接：</div><div class="line">brew link python3</div><div class="line"><span class="meta"></span></div><div class="line"></div><div class="line"># 3）配置环境变量</div><div class="line">vim ~/.bash_profile</div><div class="line"></div><div class="line">export PYTHONPATH=/usr/local/Cellar/python/3.8.1 #设置为python3安装的路径</div><div class="line">export PATH=$PATH:$PYTHONPATH/bin</div><div class="line"><span class="meta"></span></div><div class="line"># 4) 重命名python</div><div class="line">alias python="/usr/local/Cellar/python/3.7.5/bin/python3.7"</div><div class="line"><span class="meta"></span></div><div class="line"># 5) 查看安装配置情况</div><div class="line">python3 -V</div><div class="line">python -V</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">1) 安装</span></span><br><span class="line">brew install python3</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 2) 手动执行一下安装时未完成的创建连接：</span></span><br><span class="line">brew link python3</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 3）配置环境变量</span></span><br><span class="line">vim ~/.bash_profile</span><br><span class="line"></span><br><span class="line">export PYTHONPATH=/usr/local/Cellar/python/3.8.1 #设置为python3安装的路径</span><br><span class="line">export PATH=$PATH:$PYTHONPATH/bin</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 4) 重命名python</span></span><br><span class="line">alias python="/usr/local/Cellar/python/3.7.5/bin/python3.7"</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 5) 查看安装配置情况</span></span><br><span class="line">python3 -V</span><br><span class="line">python -V</span><br></pre></td></tr></table></figure>
 <h2 id="使用虚拟环境（可选）"><a href="#使用虚拟环境（可选）" class="headerlink" title="使用虚拟环境（可选）"></a>使用虚拟环境（可选）</h2><blockquote>
 <p>因系统可能同时存在多个python版本，便于分开管理依赖, 并加以限制非虚拟环境外部使用pip情况</p>
 </blockquote>
-<h3 id="配置并初始化虚拟环境："><a href="#配置并初始化虚拟环境：" class="headerlink" title="配置并初始化虚拟环境："></a>配置并初始化虚拟环境：</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> 用户目录新建python文件夹</div><div class="line">mkdir ~/python</div><div class="line"><span class="meta"></span></div><div class="line"># 新建两个虚拟环境所在目录</div><div class="line">mkdir ~/python/python2</div><div class="line">mkdir ~/python/python3</div><div class="line"><span class="meta"></span></div><div class="line"># 进入管理python2虚拟环境</div><div class="line">cd ~/python/python2</div><div class="line">sudo pip2 install virtualenv</div><div class="line">virtualenv venv_py2</div><div class="line">. venv_py2/bin/activate   #启动虚拟环境</div><div class="line"><span class="meta"></span></div><div class="line"># 进入管理python3虚拟环境</div><div class="line">cd ~/python/python3</div><div class="line">sudo pip3 install virtualenv</div><div class="line">virtualenv venv_py3</div><div class="line">. venv_py3/bin/activate   #启动虚拟环境</div><div class="line"><span class="meta"></span></div><div class="line"># 退出虚拟环境命令</div><div class="line">deactivate</div></pre></td></tr></table></figure>
-<h3 id="对虚拟环境外部限制pip使用"><a href="#对虚拟环境外部限制pip使用" class="headerlink" title="对虚拟环境外部限制pip使用:"></a>对虚拟环境外部限制pip使用:</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="meta"></span></div><div class="line"># 1）bash下的配置</div><div class="line">vim ~/.bash_profile</div><div class="line"><span class="meta">#</span> 添加内容：</div><div class="line">export PIP_REQUIRE_VIRTUALENV=true</div><div class="line"><span class="meta">#</span> 使配置生效</div><div class="line">source ~/.bash_profile</div><div class="line"><span class="meta"></span></div><div class="line"># 2）zsh下的配置</div><div class="line">vim ~/.zshrc</div><div class="line"><span class="meta">#</span> 添加内容</div><div class="line">export PIP_REQUIRE_VIRTUALENV=true</div><div class="line"><span class="meta">#</span> 使配置生效</div><div class="line">source ~/.zshrc</div></pre></td></tr></table></figure>
-<h3 id="测试安装，看限制是否生效"><a href="#测试安装，看限制是否生效" class="headerlink" title="测试安装，看限制是否生效"></a>测试安装，看限制是否生效</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">pip2 install requests</div><div class="line"><span class="meta"></span></div><div class="line"># 此时应该会报错</div></pre></td></tr></table></figure>
+<h3 id="配置并初始化虚拟环境："><a href="#配置并初始化虚拟环境：" class="headerlink" title="配置并初始化虚拟环境："></a>配置并初始化虚拟环境：</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 用户目录新建python文件夹</span></span><br><span class="line">mkdir ~/python</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 新建两个虚拟环境所在目录</span></span><br><span class="line">mkdir ~/python/python2</span><br><span class="line">mkdir ~/python/python3</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 进入管理python2虚拟环境</span></span><br><span class="line">cd ~/python/python2</span><br><span class="line">sudo pip2 install virtualenv</span><br><span class="line">virtualenv venv_py2</span><br><span class="line">. venv_py2/bin/activate   #启动虚拟环境</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 进入管理python3虚拟环境</span></span><br><span class="line">cd ~/python/python3</span><br><span class="line">sudo pip3 install virtualenv</span><br><span class="line">virtualenv venv_py3</span><br><span class="line">. venv_py3/bin/activate   #启动虚拟环境</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 退出虚拟环境命令</span></span><br><span class="line">deactivate</span><br></pre></td></tr></table></figure>
+<h3 id="对虚拟环境外部限制pip使用"><a href="#对虚拟环境外部限制pip使用" class="headerlink" title="对虚拟环境外部限制pip使用:"></a>对虚拟环境外部限制pip使用:</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 1）bash下的配置</span></span><br><span class="line">vim ~/.bash_profile</span><br><span class="line"><span class="meta">#</span><span class="bash"> 添加内容：</span></span><br><span class="line">export PIP_REQUIRE_VIRTUALENV=true</span><br><span class="line"><span class="meta">#</span><span class="bash"> 使配置生效</span></span><br><span class="line">source ~/.bash_profile</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 2）zsh下的配置</span></span><br><span class="line">vim ~/.zshrc</span><br><span class="line"><span class="meta">#</span><span class="bash"> 添加内容</span></span><br><span class="line">export PIP_REQUIRE_VIRTUALENV=true</span><br><span class="line"><span class="meta">#</span><span class="bash"> 使配置生效</span></span><br><span class="line">source ~/.zshrc</span><br></pre></td></tr></table></figure>
+<h3 id="测试安装，看限制是否生效"><a href="#测试安装，看限制是否生效" class="headerlink" title="测试安装，看限制是否生效"></a>测试安装，看限制是否生效</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">pip2 install requests</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 此时应该会报错</span></span><br></pre></td></tr></table></figure>
 <hr>
 <h2 id="配置pip安装源"><a href="#配置pip安装源" class="headerlink" title="配置pip安装源"></a>配置pip安装源</h2><blockquote>
-<p>国内的pip源有：<br>  阿里云 <a href="http://mirrors.aliyun.com/pypi/simple/" target="_blank" rel="external">http://mirrors.aliyun.com/pypi/simple/</a><br>  中国科技大学 <a href="https://pypi.mirrors.ustc.edu.cn/simple/" target="_blank" rel="external">https://pypi.mirrors.ustc.edu.cn/simple/</a><br>  豆瓣 <a href="http://pypi.douban.com/simple/" target="_blank" rel="external">http://pypi.douban.com/simple/</a><br>  清华大学 <a href="https://pypi.tuna.tsinghua.edu.cn/simple/" target="_blank" rel="external">https://pypi.tuna.tsinghua.edu.cn/simple/</a><br>  中国科学技术大学 <a href="http://pypi.mirrors.ustc.edu.cn/simple/" target="_blank" rel="external">http://pypi.mirrors.ustc.edu.cn/simple/</a></p>
+<p>国内的pip源有：<br>  阿里云 <a href="http://mirrors.aliyun.com/pypi/simple/" target="_blank" rel="noopener">http://mirrors.aliyun.com/pypi/simple/</a><br>  中国科技大学 <a href="https://pypi.mirrors.ustc.edu.cn/simple/" target="_blank" rel="noopener">https://pypi.mirrors.ustc.edu.cn/simple/</a><br>  豆瓣 <a href="http://pypi.douban.com/simple/" target="_blank" rel="noopener">http://pypi.douban.com/simple/</a><br>  清华大学 <a href="https://pypi.tuna.tsinghua.edu.cn/simple/" target="_blank" rel="noopener">https://pypi.tuna.tsinghua.edu.cn/simple/</a><br>  中国科学技术大学 <a href="http://pypi.mirrors.ustc.edu.cn/simple/" target="_blank" rel="noopener">http://pypi.mirrors.ustc.edu.cn/simple/</a></p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> 首次先创建</div><div class="line">mkdir ~/.pip</div><div class="line">cd ~/.pip</div><div class="line">vim pip.conf</div><div class="line"><span class="meta"></span></div><div class="line"># 把以下复制到文件中</div><div class="line">[global]</div><div class="line">timeout = 60</div><div class="line">index-url = http://mirrors.aliyun.com/pypi/simple/</div><div class="line">trusted-host = mirrors.aliyun.com</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 首次先创建</span></span><br><span class="line">mkdir ~/.pip</span><br><span class="line">cd ~/.pip</span><br><span class="line">vim pip.conf</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 把以下复制到文件中</span></span><br><span class="line">[global]</span><br><span class="line">timeout = 60</span><br><span class="line">index-url = http://mirrors.aliyun.com/pypi/simple/</span><br><span class="line">trusted-host = mirrors.aliyun.com</span><br></pre></td></tr></table></figure>
 <h2 id="安装过程遇到问题"><a href="#安装过程遇到问题" class="headerlink" title="安装过程遇到问题"></a>安装过程遇到问题</h2><ul>
 <li>错误:</li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Error: Permission denied @ dir_s_mkdir - /usr/local/Frameworks</div><div class="line"></div><div class="line">/usr/local/Frameworks</div><div class="line">ls: /usr/local/Frameworks: No such file or directory</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Error: Permission denied @ dir_s_mkdir - /usr/local/Frameworks</span><br><span class="line"></span><br><span class="line">/usr/local/Frameworks</span><br><span class="line">ls: /usr/local/Frameworks: No such file or directory</span><br></pre></td></tr></table></figure>
 <p>  错误分析：以上错误主要是因为/usr/local/Frameworks不存在或权限不允许造成<br>  解决办法：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span>创建目录</div><div class="line">sudo mkdir /usr/local/Frameworks</div><div class="line"><span class="meta"></span></div><div class="line"># 赋予权限</div><div class="line">sudo chown $(whoami):admin /usr/local/Frameworks</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">创建目录</span></span><br><span class="line">sudo mkdir /usr/local/Frameworks</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 赋予权限</span></span><br><span class="line">sudo chown $(whoami):admin /usr/local/Frameworks</span><br></pre></td></tr></table></figure>
 <hr>
 <h2 id="卸载指定Python版本-pkg包安装方式"><a href="#卸载指定Python版本-pkg包安装方式" class="headerlink" title="卸载指定Python版本 (pkg包安装方式)"></a>卸载指定Python版本 (pkg包安装方式)</h2><blockquote>
 <p>一般多次升级更新python后，会出现多个python版本，如当前使用3.8.1之前的3.7.5版本不再使用就可以卸载</p>
 </blockquote>
-<h3 id="删除安装目录文件"><a href="#删除安装目录文件" class="headerlink" title="删除安装目录文件"></a>删除安装目录文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> 3.7.5为你想要卸载的版本号</div><div class="line">sudo rm -rf /Library/Frameworks/Python.framework/Versions/3.7.5</div></pre></td></tr></table></figure>
-<h3 id="删除应用程序文件"><a href="#删除应用程序文件" class="headerlink" title="删除应用程序文件"></a>删除应用程序文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> 3.7为你想要卸载的版本号</div><div class="line">sudo rm -rf "/Applications/Python 3.7.5"</div></pre></td></tr></table></figure>
-<h3 id="删除程序间的链接"><a href="#删除程序间的链接" class="headerlink" title="删除程序间的链接"></a>删除程序间的链接</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta"></span></div><div class="line"># 查看存在的链接情况 （3.7.5为你想要卸载的版本号）</div><div class="line">ls -l /usr/local/bin | grep '/Library/Frameworks/Python.framework/Versions/3.7.5'</div><div class="line"><span class="meta"></span></div><div class="line"># 如存在，则执行删除 （3.7.5为你想要卸载的版本号）</div><div class="line">ls -l /usr/local/bin | grep '/Library/Frameworks/Python.framework/Versions/3.7.5' | awk '&#123;print $9&#125;' | tr -d @ | xargs rm</div></pre></td></tr></table></figure>
+<h3 id="删除安装目录文件"><a href="#删除安装目录文件" class="headerlink" title="删除安装目录文件"></a>删除安装目录文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 3.7.5为你想要卸载的版本号</span></span><br><span class="line">sudo rm -rf /Library/Frameworks/Python.framework/Versions/3.7.5</span><br></pre></td></tr></table></figure>
+<h3 id="删除应用程序文件"><a href="#删除应用程序文件" class="headerlink" title="删除应用程序文件"></a>删除应用程序文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 3.7为你想要卸载的版本号</span></span><br><span class="line">sudo rm -rf "/Applications/Python 3.7.5"</span><br></pre></td></tr></table></figure>
+<h3 id="删除程序间的链接"><a href="#删除程序间的链接" class="headerlink" title="删除程序间的链接"></a>删除程序间的链接</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看存在的链接情况 （3.7.5为你想要卸载的版本号）</span></span><br><span class="line">ls -l /usr/local/bin | grep '/Library/Frameworks/Python.framework/Versions/3.7.5'</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 如存在，则执行删除 （3.7.5为你想要卸载的版本号）</span></span><br><span class="line">ls -l /usr/local/bin | grep '/Library/Frameworks/Python.framework/Versions/3.7.5' | awk '&#123;print $9&#125;' | tr -d @ | xargs rm</span><br></pre></td></tr></table></figure>
 <hr>
 
       
@@ -403,27 +403,9 @@
 
 
   
-
+ 
   
-    <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script type="text/javascript">
-
-if(true){
-	var gitalk = new Gitalk({
-  	clientID: '4236ed6e8c0c8635b1fb',
-  	clientSecret: 'abcd28135b716c4700ef03ace3ef2d7a0e9d6a80',
-  	repo: 'undefined',
-  	owner: 'undefined',
-  	admin: ['undefined'],
-  	id: 'Tue Mar 17 2020 10:30:00 GMT+0800',
-  	distractionFreeMode: 'true'
-})
-gitalk.render('gitalk-container') 
-}
-</script>
+    
   
   
   
@@ -661,14 +643,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker下镜像时间</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">docker镜像修改时区</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">gitlab</a>
               </li>
              
@@ -677,11 +651,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">docker下镜像时间</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">docker镜像修改时区</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">centos7</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">docker安装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">fastdfs安装</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -694,10 +680,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">安装vim</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">fastdfs安装</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://cuizhenjie.github.io">
   <title>基于Hexo+oschina的pages服务搭建个人博客 | cuizhenjie`blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -55,7 +55,7 @@
 
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -208,15 +208,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>hexo是一个基于Node.js的静态博客程序，可以方便的生成静态网页托管在github和Heroku,oschina上。<br>由于github博客在国内访问非常慢而且经常不稳定，百度爬虫也无法抓取github博客内容，所以这里使用<a href="http://git.oschina.net/" target="_blank" rel="external">码云oschina</a>的pages服务搭建博客。<br><a id="more"></a></p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="依赖环境配置，此处以mac系统为例"><a href="#依赖环境配置，此处以mac系统为例" class="headerlink" title="依赖环境配置，此处以mac系统为例"></a>依赖环境配置，此处以mac系统为例</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">brew install git        #Mac电脑使用brew安装git</div><div class="line">brew install node       #Mac电脑node.js环境安装</div><div class="line"></div><div class="line">node -v                 #使用以下命令验证是否安装成功</div><div class="line"></div><div class="line">brew install yarn       #优化版的npm包管理器</div></pre></td></tr></table></figure>
-<p><a href="http://cuizhenjie.oschina.com/2017/07/25/git-settings/" target="_blank" rel="external">git操作及配置github的ssh秘钥设置看这篇文章</a></p>
-<p><a href="http://cuizhenjie.oschina.com/2017/07/25/nodejs-settings/" target="_blank" rel="external">nodejs环境安装以及yarn安装详细配置看这篇文章</a></p>
+        <p>hexo是一个基于Node.js的静态博客程序，可以方便的生成静态网页托管在github和Heroku,oschina上。<br>由于github博客在国内访问非常慢而且经常不稳定，百度爬虫也无法抓取github博客内容，所以这里使用<a href="http://git.oschina.net/" target="_blank" rel="noopener">码云oschina</a>的pages服务搭建博客。<br><a id="more"></a></p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="依赖环境配置，此处以mac系统为例"><a href="#依赖环境配置，此处以mac系统为例" class="headerlink" title="依赖环境配置，此处以mac系统为例"></a>依赖环境配置，此处以mac系统为例</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">brew install git        #Mac电脑使用brew安装git</span><br><span class="line">brew install node       #Mac电脑node.js环境安装</span><br><span class="line"></span><br><span class="line">node -v                 #使用以下命令验证是否安装成功</span><br><span class="line"></span><br><span class="line">brew install yarn       #优化版的npm包管理器</span><br></pre></td></tr></table></figure>
+<p><a href="http://cuizhenjie.oschina.com/2017/07/25/git-settings/" target="_blank" rel="noopener">git操作及配置github的ssh秘钥设置看这篇文章</a></p>
+<p><a href="http://cuizhenjie.oschina.com/2017/07/25/nodejs-settings/" target="_blank" rel="noopener">nodejs环境安装以及yarn安装详细配置看这篇文章</a></p>
 <hr>
 <h3 id="Hexo安装与设置"><a href="#Hexo安装与设置" class="headerlink" title="Hexo安装与设置"></a>Hexo安装与设置</h3><p>1.nodejs、yarn、git都安装成功后, 开始安装hexo</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">yarn global add hexo #使用yarn全局安装hexo</div><div class="line"></div><div class="line">hexo --version #信息正常输出则表示安装完成</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">yarn global add hexo #使用yarn全局安装hexo</span><br><span class="line"></span><br><span class="line">hexo --version #信息正常输出则表示安装完成</span><br></pre></td></tr></table></figure>
 <p>2.hexo构建博客项目</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">hexo init &lt;项目名称&gt;  #在工作目录下，执行命令初始化hexo项目</div><div class="line"></div><div class="line">hexo g == hexo generate #生成构建项目</div><div class="line"></div><div class="line">hexo s == hexo server #启动服务预览项目</div><div class="line"></div><div class="line">hexo d == hexo deploy #部署项目</div><div class="line"></div><div class="line">hexo s --watch #开发模式下使用，启动服务并监视文件变动</div><div class="line"></div><div class="line">hexo g -d #构建项目完成后，部署项目</div><div class="line"></div><div class="line">hexo new "postName" #新建文章</div><div class="line">hexo new page "pageName" #新建页面</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">hexo init &lt;项目名称&gt;  #在工作目录下，执行命令初始化hexo项目</span><br><span class="line"></span><br><span class="line">hexo g == hexo generate #生成构建项目</span><br><span class="line"></span><br><span class="line">hexo s == hexo server #启动服务预览项目</span><br><span class="line"></span><br><span class="line">hexo d == hexo deploy #部署项目</span><br><span class="line"></span><br><span class="line">hexo s --watch #开发模式下使用，启动服务并监视文件变动</span><br><span class="line"></span><br><span class="line">hexo g -d #构建项目完成后，部署项目</span><br><span class="line"></span><br><span class="line">hexo new "postName" #新建文章</span><br><span class="line">hexo new page "pageName" #新建页面</span><br></pre></td></tr></table></figure>
 <p>初始化hexo项目后的目录为：<br><img src="/img/article/ac-img3.jpg" alt="hexo项目目录"></p>
 <hr>
 <h3 id="创建码云账号及项目配置"><a href="#创建码云账号及项目配置" class="headerlink" title="创建码云账号及项目配置"></a>创建码云账号及项目配置</h3><p>1.首先注册一个码云账号，配置git的ssh秘钥，这个配置不属于本章节内容，如有疑问可参考 [git秘钥生成与配置] () 教程。</p>
@@ -225,14 +225,14 @@
 <p><img src="/img/article/ac-img2.jpg" alt="码云平台下开启pages服务"></p>
 <hr>
 <h3 id="最后将hexo项目连接到码云oschina平台"><a href="#最后将hexo项目连接到码云oschina平台" class="headerlink" title="最后将hexo项目连接到码云oschina平台"></a>最后将hexo项目连接到码云oschina平台</h3><p>1.安装hexo-deployer-git插件帮忙我们完成代码上传的工作</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">yarn add hexo-deployer-git --save #将插件安装到项目</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">yarn add hexo-deployer-git --save #将插件安装到项目</span><br></pre></td></tr></table></figure>
 <p>2.配置项目根目录下的_config.yml文件，修改deploy的值，如下图</p>
 <p><img src="/img/article/ac-img4.jpg" alt="修改_config.yml文件的deploy值"></p>
 <p>修改后，注意repo的地址是之前码云新建的git项目地址，如下图</p>
 <p><img src="/img/article/ac-img5.jpg" alt="修改_config.yml文件后"></p>
 <p>3.完成配置后，上传项目</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">hexo g -d #一键部署到码云</div></pre></td></tr></table></figure>
-<p>至此，博客已经部署成功，访问提供的地址：<a href="http://cuizhenjie.oschina.io" target="_blank" rel="external">http://cuizhenjie.oschina.io</a> 即可查看到我的博客。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">hexo g -d #一键部署到码云</span><br></pre></td></tr></table></figure>
+<p>至此，博客已经部署成功，访问提供的地址：<a href="http://cuizhenjie.oschina.io" target="_blank" rel="noopener">http://cuizhenjie.oschina.io</a> 即可查看到我的博客。</p>
 
       
 
@@ -397,27 +397,9 @@
 
 
   
-
+ 
   
-    <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script type="text/javascript">
-
-if(true){
-	var gitalk = new Gitalk({
-  	clientID: '4236ed6e8c0c8635b1fb',
-  	clientSecret: 'abcd28135b716c4700ef03ace3ef2d7a0e9d6a80',
-  	repo: 'undefined',
-  	owner: 'undefined',
-  	admin: ['undefined'],
-  	id: 'Tue Jul 25 2017 21:28:35 GMT+0800',
-  	distractionFreeMode: 'true'
-})
-gitalk.render('gitalk-container') 
-}
-</script>
+    
   
   
   
@@ -655,14 +637,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker下镜像时间</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">docker镜像修改时区</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">gitlab</a>
               </li>
              
@@ -671,11 +645,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">docker下镜像时间</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">docker镜像修改时区</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">centos7</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">docker安装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">fastdfs安装</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -688,10 +674,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">安装vim</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">fastdfs安装</a>
               </li>
              
               <li class="article-tag-list-item">

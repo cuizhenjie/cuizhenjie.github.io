@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://cuizhenjie.github.io">
   <title>docker镜像下安装vim | cuizhenjie`blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -49,7 +49,7 @@
 
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -204,17 +204,17 @@
       
         <p>在docker镜像下安装vim，通过apt-get方式同时使用国内镜像安装<br><a id="more"></a> </p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="在docker镜像运行以后发现没办法编辑一些配置文件，解决步骤如下："><a href="#在docker镜像运行以后发现没办法编辑一些配置文件，解决步骤如下：" class="headerlink" title="在docker镜像运行以后发现没办法编辑一些配置文件，解决步骤如下："></a>在docker镜像运行以后发现没办法编辑一些配置文件，解决步骤如下：</h3><hr>
-<h3 id="首先，进入docker镜像"><a href="#首先，进入docker镜像" class="headerlink" title="首先，进入docker镜像"></a>首先，进入docker镜像</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span>进入镜像命令</div><div class="line">docker exec -it 镜像Id或镜像name /bin/bash</div></pre></td></tr></table></figure>
+<h3 id="首先，进入docker镜像"><a href="#首先，进入docker镜像" class="headerlink" title="首先，进入docker镜像"></a>首先，进入docker镜像</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">进入镜像命令</span></span><br><span class="line">docker exec -it 镜像Id或镜像name /bin/bash</span><br></pre></td></tr></table></figure>
 <hr>
 <h3 id="配置国内镜像源"><a href="#配置国内镜像源" class="headerlink" title="配置国内镜像源"></a>配置国内镜像源</h3><blockquote>
 <p>实际在使用过程中，运行 apt-get update，然后执行 apt-get install -y vim，下载地址由于是海外地址，下载速度异常慢而且可能中断更新流程，所以做下面配置：</p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">mv /etc/apt/sources.list /etc/apt/sources.list.bak</div><div class="line">echo "deb http://mirrors.163.com/debian/ jessie main non-free contrib" &gt;/etc/apt/sources.list</div><div class="line">echo "deb http://mirrors.163.com/debian/ jessie-proposed-updates main non-free contrib" &gt;&gt;/etc/apt/sources.list</div><div class="line">echo "deb-src http://mirrors.163.com/debian/ jessie main non-free contrib" &gt;&gt;/etc/apt/sources.list</div><div class="line">echo "deb-src http://mirrors.163.com/debian/ jessie-proposed-updates main non-free contrib" &gt;&gt;/etc/apt/sources.list</div><div class="line"><span class="meta">#</span>更新安装源</div><div class="line">apt-get update</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mv /etc/apt/sources.list /etc/apt/sources.list.bak</span><br><span class="line">echo "deb http://mirrors.163.com/debian/ jessie main non-free contrib" &gt;/etc/apt/sources.list</span><br><span class="line">echo "deb http://mirrors.163.com/debian/ jessie-proposed-updates main non-free contrib" &gt;&gt;/etc/apt/sources.list</span><br><span class="line">echo "deb-src http://mirrors.163.com/debian/ jessie main non-free contrib" &gt;&gt;/etc/apt/sources.list</span><br><span class="line">echo "deb-src http://mirrors.163.com/debian/ jessie-proposed-updates main non-free contrib" &gt;&gt;/etc/apt/sources.list</span><br><span class="line"><span class="meta">#</span><span class="bash">更新安装源</span></span><br><span class="line">apt-get update</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="安装vim"><a href="#安装vim" class="headerlink" title="安装vim"></a>安装vim</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span>安装命令</div><div class="line">apt-get install -y vim</div></pre></td></tr></table></figure>
+<h3 id="安装vim"><a href="#安装vim" class="headerlink" title="安装vim"></a>安装vim</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">安装命令</span></span><br><span class="line">apt-get install -y vim</span><br></pre></td></tr></table></figure>
 <hr>
 <h3 id="others"><a href="#others" class="headerlink" title="others"></a>others</h3><ul>
-<li><a href="http://blog.csdn.net/xiaolong2w/article/details/8224839" target="_blank" rel="external">vim基本用法</a> vim基本配置及用法</li>
+<li><a href="http://blog.csdn.net/xiaolong2w/article/details/8224839" target="_blank" rel="noopener">vim基本用法</a> vim基本配置及用法</li>
 </ul>
 
       
@@ -385,27 +385,9 @@
 
 
   
-
+ 
   
-    <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script type="text/javascript">
-
-if(true){
-	var gitalk = new Gitalk({
-  	clientID: '4236ed6e8c0c8635b1fb',
-  	clientSecret: 'abcd28135b716c4700ef03ace3ef2d7a0e9d6a80',
-  	repo: 'undefined',
-  	owner: 'undefined',
-  	admin: ['undefined'],
-  	id: 'Thu Sep 21 2017 16:00:00 GMT+0800',
-  	distractionFreeMode: 'true'
-})
-gitalk.render('gitalk-container') 
-}
-</script>
+    
   
   
   
@@ -643,14 +625,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker下镜像时间</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">docker镜像修改时区</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">gitlab</a>
               </li>
              
@@ -659,11 +633,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">docker下镜像时间</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">docker镜像修改时区</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">centos7</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">docker安装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">fastdfs安装</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -676,10 +662,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">安装vim</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">fastdfs安装</a>
               </li>
              
               <li class="article-tag-list-item">

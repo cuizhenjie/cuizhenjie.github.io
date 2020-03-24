@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://cuizhenjie.github.io">
   <title>Mac 安装使用 Kubernates | cuizhenjie`blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -49,7 +49,7 @@
 
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -204,23 +204,23 @@
       
         <p>Mac下 安装 kubernates，以docker desktop方式安装为例<br><a id="more"></a></p>
 <h1 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h1><h2 id="安装kubernates前准备工作，以Mac为例"><a href="#安装kubernates前准备工作，以Mac为例" class="headerlink" title="安装kubernates前准备工作，以Mac为例"></a>安装kubernates前准备工作，以Mac为例</h2><h2 id="首先，下载安装Docker-Desktop-for-Mac"><a href="#首先，下载安装Docker-Desktop-for-Mac" class="headerlink" title="首先，下载安装Docker Desktop for Mac"></a>首先，下载安装Docker Desktop for Mac</h2><p><a href="下载地址">https://hub.docker.com/editions/community/docker-ce-desktop-mac</a></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta"></span></div><div class="line">#查看当前内核版本</div><div class="line">uname -r</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">查看当前内核版本</span></span><br><span class="line">uname -r</span><br></pre></td></tr></table></figure>
 <hr>
-<h2 id="使用root登录系统，更新yum数据源为最新"><a href="#使用root登录系统，更新yum数据源为最新" class="headerlink" title="使用root登录系统，更新yum数据源为最新"></a>使用root登录系统，更新yum数据源为最新</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta"></span></div><div class="line">#更新yum源</div><div class="line">sudo yum update</div></pre></td></tr></table></figure>
+<h2 id="使用root登录系统，更新yum数据源为最新"><a href="#使用root登录系统，更新yum数据源为最新" class="headerlink" title="使用root登录系统，更新yum数据源为最新"></a>使用root登录系统，更新yum数据源为最新</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">更新yum源</span></span><br><span class="line">sudo yum update</span><br></pre></td></tr></table></figure>
 <hr>
-<h2 id="卸载旧版本-如果安装过旧版本的话"><a href="#卸载旧版本-如果安装过旧版本的话" class="headerlink" title="卸载旧版本(如果安装过旧版本的话)"></a>卸载旧版本(如果安装过旧版本的话)</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="meta"></span></div><div class="line">#卸载</div><div class="line">sudo yum remove docker \</div><div class="line">                docker-client \</div><div class="line">                docker-client-latest \</div><div class="line">                docker-common \</div><div class="line">                docker-latest \</div><div class="line">                docker-latest-logrotate \</div><div class="line">                docker-logrotate \</div><div class="line">                docker-selinux \</div><div class="line">                docker-engine-selinux \</div><div class="line">                docker-engine</div></pre></td></tr></table></figure>
+<h2 id="卸载旧版本-如果安装过旧版本的话"><a href="#卸载旧版本-如果安装过旧版本的话" class="headerlink" title="卸载旧版本(如果安装过旧版本的话)"></a>卸载旧版本(如果安装过旧版本的话)</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">卸载</span></span><br><span class="line">sudo yum remove docker \</span><br><span class="line">                docker-client \</span><br><span class="line">                docker-client-latest \</span><br><span class="line">                docker-common \</span><br><span class="line">                docker-latest \</span><br><span class="line">                docker-latest-logrotate \</span><br><span class="line">                docker-logrotate \</span><br><span class="line">                docker-selinux \</span><br><span class="line">                docker-engine-selinux \</span><br><span class="line">                docker-engine</span><br></pre></td></tr></table></figure>
 <hr>
-<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="meta"></span></div><div class="line">#工具集： yum-utils 用于 yum-config-manager</div><div class="line"><span class="meta">#</span>device-mapper-persistent-data 和  lvm2 用于 devicemapper 存储驱动</div><div class="line">yum install -y yum-utils device-mapper-persistent-data lvm2</div><div class="line"><span class="meta">#</span>安装docker官方源</div><div class="line">sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</div><div class="line"><span class="meta">#</span>更新yum缓存</div><div class="line">sudo yum makecache fast</div><div class="line"><span class="meta">#</span>安装docker</div><div class="line">sudo yum install docker-ce</div><div class="line"><span class="meta">#</span>启动 Docker 后台服务</div><div class="line">sudo systemctl start docker</div><div class="line"><span class="meta">#</span>验证docker是否成功安装</div><div class="line">docker version</div></pre></td></tr></table></figure>
+<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">工具集： yum-utils 用于 yum-config-manager</span></span><br><span class="line"><span class="meta">#</span><span class="bash">device-mapper-persistent-data 和  lvm2 用于 devicemapper 存储驱动</span></span><br><span class="line">yum install -y yum-utils device-mapper-persistent-data lvm2</span><br><span class="line"><span class="meta">#</span><span class="bash">安装docker官方源</span></span><br><span class="line">sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</span><br><span class="line"><span class="meta">#</span><span class="bash">更新yum缓存</span></span><br><span class="line">sudo yum makecache fast</span><br><span class="line"><span class="meta">#</span><span class="bash">安装docker</span></span><br><span class="line">sudo yum install docker-ce</span><br><span class="line"><span class="meta">#</span><span class="bash">启动 Docker 后台服务</span></span><br><span class="line">sudo systemctl start docker</span><br><span class="line"><span class="meta">#</span><span class="bash">验证docker是否成功安装</span></span><br><span class="line">docker version</span><br></pre></td></tr></table></figure>
 <hr>
-<h2 id="配置docker用户"><a href="#配置docker用户" class="headerlink" title="配置docker用户"></a>配置docker用户</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta"></span></div><div class="line">#新建用户组</div><div class="line">groupadd docker</div><div class="line"><span class="meta">#</span>新建用户并放入docker用户组中</div><div class="line">useradd -g docker docker</div><div class="line"><span class="meta">#</span>设置docker用户密码</div><div class="line">passwd docker</div><div class="line"><span class="meta">#</span>重启docker服务</div><div class="line">sudo service docker restart</div><div class="line"><span class="meta">#</span>切换用户并测试执行</div><div class="line">docker ps</div><div class="line"><span class="meta">#</span>如果普通用户执行docker命令，如果提示get …… dial unix /var/run/docker.sock权限不够，则修改/var/run/docker.sock权限 </div><div class="line">sudo chmod a+rw /var/run/docker.sock</div></pre></td></tr></table></figure>
+<h2 id="配置docker用户"><a href="#配置docker用户" class="headerlink" title="配置docker用户"></a>配置docker用户</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">新建用户组</span></span><br><span class="line">groupadd docker</span><br><span class="line"><span class="meta">#</span><span class="bash">新建用户并放入docker用户组中</span></span><br><span class="line">useradd -g docker docker</span><br><span class="line"><span class="meta">#</span><span class="bash">设置docker用户密码</span></span><br><span class="line">passwd docker</span><br><span class="line"><span class="meta">#</span><span class="bash">重启docker服务</span></span><br><span class="line">sudo service docker restart</span><br><span class="line"><span class="meta">#</span><span class="bash">切换用户并测试执行</span></span><br><span class="line">docker ps</span><br><span class="line"><span class="meta">#</span><span class="bash">如果普通用户执行docker命令，如果提示get …… dial unix /var/run/docker.sock权限不够，则修改/var/run/docker.sock权限 </span></span><br><span class="line">sudo chmod a+rw /var/run/docker.sock</span><br></pre></td></tr></table></figure>
 <hr>
-<h2 id="修改docker默认配置"><a href="#修改docker默认配置" class="headerlink" title="修改docker默认配置"></a>修改docker默认配置</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta"></span></div><div class="line">  #设置镜像</div><div class="line">  vi /etc/docker/daemon.json</div><div class="line"></div><div class="line">&#123;</div><div class="line">"registry-mirrors": ["https://registry.docker-cn.com"],</div><div class="line">"graph": "/home/docker/lib/docker",</div><div class="line">"storage-driver": "devicemapper"</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="修改docker默认配置"><a href="#修改docker默认配置" class="headerlink" title="修改docker默认配置"></a>修改docker默认配置</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">  #</span><span class="bash">设置镜像</span></span><br><span class="line">  vi /etc/docker/daemon.json</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">"registry-mirrors": ["https://registry.docker-cn.com"],</span><br><span class="line">"graph": "/home/docker/lib/docker",</span><br><span class="line">"storage-driver": "devicemapper"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
-<h2 id="修改docker默认根目录"><a href="#修改docker默认根目录" class="headerlink" title="修改docker默认根目录"></a>修改docker默认根目录</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta"></span></div><div class="line">#查看docker默认根目录</div><div class="line">sudo docker info | grep "Docker Root Dir"</div><div class="line"><span class="meta">#</span>首先停掉Docker服务：</div><div class="line">sudo systemctl restart docker</div><div class="line"><span class="meta">#</span>然后移动整个/var/lib/docker目录到目的路径：</div><div class="line">mv /var/lib/docker /home/docker/lib/docker</div><div class="line"><span class="meta">#</span>创建软链接</div><div class="line"><span class="meta">#</span>这时候启动Docker时发现存储目录依旧是/var/lib/docker，但是实际上是存储在数据盘的，你可以在数据盘上看到容量变化。</div><div class="line">ln -s /home/docker/lib/docker /var/lib/docker</div></pre></td></tr></table></figure>
+<h2 id="修改docker默认根目录"><a href="#修改docker默认根目录" class="headerlink" title="修改docker默认根目录"></a>修改docker默认根目录</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">查看docker默认根目录</span></span><br><span class="line">sudo docker info | grep "Docker Root Dir"</span><br><span class="line"><span class="meta">#</span><span class="bash">首先停掉Docker服务：</span></span><br><span class="line">sudo systemctl restart docker</span><br><span class="line"><span class="meta">#</span><span class="bash">然后移动整个/var/lib/docker目录到目的路径：</span></span><br><span class="line">mv /var/lib/docker /home/docker/lib/docker</span><br><span class="line"><span class="meta">#</span><span class="bash">创建软链接</span></span><br><span class="line"><span class="meta">#</span><span class="bash">这时候启动Docker时发现存储目录依旧是/var/lib/docker，但是实际上是存储在数据盘的，你可以在数据盘上看到容量变化。</span></span><br><span class="line">ln -s /home/docker/lib/docker /var/lib/docker</span><br></pre></td></tr></table></figure>
 <hr>
-<h2 id="安装docker-compose"><a href="#安装docker-compose" class="headerlink" title="安装docker-compose"></a>安装docker-compose</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="meta"></span></div><div class="line">#安装依赖</div><div class="line">yum -y install certbot libevent-devel gcc libffi-devel python-devel openssl-devel python-pip</div><div class="line"><span class="meta"></span></div><div class="line">#开始</div><div class="line">sudo curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose</div><div class="line"><span class="meta"></span></div><div class="line">#赋予运行权限</div><div class="line">sudo chmod +x /usr/local/bin/docker-compose</div><div class="line"><span class="meta"></span></div><div class="line">#查看安装情况</div><div class="line">docker-compose version</div><div class="line"><span class="meta"></span></div><div class="line">#卸载方式（rm /usr/local/bin/docker-compose）</div></pre></td></tr></table></figure>
+<h2 id="安装docker-compose"><a href="#安装docker-compose" class="headerlink" title="安装docker-compose"></a>安装docker-compose</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">安装依赖</span></span><br><span class="line">yum -y install certbot libevent-devel gcc libffi-devel python-devel openssl-devel python-pip</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">开始</span></span><br><span class="line">sudo curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">赋予运行权限</span></span><br><span class="line">sudo chmod +x /usr/local/bin/docker-compose</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">查看安装情况</span></span><br><span class="line">docker-compose version</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">卸载方式（rm /usr/<span class="built_in">local</span>/bin/docker-compose）</span></span><br></pre></td></tr></table></figure>
 <hr>
-<h2 id="卸载docker"><a href="#卸载docker" class="headerlink" title="卸载docker"></a>卸载docker</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta"></span></div><div class="line">#卸载</div><div class="line">sudo yum remove docker-ce</div><div class="line"><span class="meta">#</span>删除所有镜像，容器，卷，或者自定义配置文件</div><div class="line">sudo rm -rf /var/lib/docker</div></pre></td></tr></table></figure>
+<h2 id="卸载docker"><a href="#卸载docker" class="headerlink" title="卸载docker"></a>卸载docker</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">卸载</span></span><br><span class="line">sudo yum remove docker-ce</span><br><span class="line"><span class="meta">#</span><span class="bash">删除所有镜像，容器，卷，或者自定义配置文件</span></span><br><span class="line">sudo rm -rf /var/lib/docker</span><br></pre></td></tr></table></figure>
 <hr>
 
       
@@ -387,27 +387,9 @@
 
 
   
-
+ 
   
-    <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script type="text/javascript">
-
-if(true){
-	var gitalk = new Gitalk({
-  	clientID: '4236ed6e8c0c8635b1fb',
-  	clientSecret: 'abcd28135b716c4700ef03ace3ef2d7a0e9d6a80',
-  	repo: 'undefined',
-  	owner: 'undefined',
-  	admin: ['undefined'],
-  	id: 'Thu Feb 27 2020 16:00:00 GMT+0800',
-  	distractionFreeMode: 'true'
-})
-gitalk.render('gitalk-container') 
-}
-</script>
+    
   
   
   
@@ -645,14 +627,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker下镜像时间</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">docker镜像修改时区</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">gitlab</a>
               </li>
              
@@ -661,11 +635,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">docker下镜像时间</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">docker镜像修改时区</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">centos7</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">docker安装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">fastdfs安装</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -678,10 +664,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">安装vim</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">fastdfs安装</a>
               </li>
              
               <li class="article-tag-list-item">

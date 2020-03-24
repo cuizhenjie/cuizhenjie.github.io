@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://cuizhenjie.github.io">
   <title>CentOS下使用lrzsz，代替ftp上传、下载 | cuizhenjie`blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -49,7 +49,7 @@
 
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -207,15 +207,15 @@
 <li>lrzsz是一个unix通信套件提供的X，Y，和ZModem文件传输协议</li>
 <li>文件传输可解脱对ftp工具的依赖，直接命令行窗口即可解决文件上传下载相关工作</li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span>首先在centos下安装 lrzsz</div><div class="line">yum  -y install lrzsz </div><div class="line"><span class="meta"></span></div><div class="line">#上传文件命令，执行后在跳出文件选择窗口选择好文件，点击确认即可。</div><div class="line">rz</div><div class="line"><span class="meta"></span></div><div class="line">#下载文件命令,执行后跳出文件选择窗口选择好要下载地址，点击确认即可</div><div class="line">sz 文件名</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">首先在centos下安装 lrzsz</span></span><br><span class="line">yum  -y install lrzsz </span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">上传文件命令，执行后在跳出文件选择窗口选择好文件，点击确认即可。</span></span><br><span class="line">rz</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">下载文件命令,执行后跳出文件选择窗口选择好要下载地址，点击确认即可</span></span><br><span class="line">sz 文件名</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="修改时间"><a href="#修改时间" class="headerlink" title="修改时间"></a>修改时间</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> MM:月份、DD：日、hh:24小时制、mm:分、YYYY:年份</div><div class="line">date MMDDhhmmYYYY</div><div class="line"><span class="meta"></span></div><div class="line">#另外一种格式</div><div class="line">date -s "2018-03-26 10:30:00"</div></pre></td></tr></table></figure>
+<h3 id="修改时间"><a href="#修改时间" class="headerlink" title="修改时间"></a>修改时间</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> MM:月份、DD：日、hh:24小时制、mm:分、YYYY:年份</span></span><br><span class="line">date MMDDhhmmYYYY</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">另外一种格式</span></span><br><span class="line">date -s "2018-03-26 10:30:00"</span><br></pre></td></tr></table></figure>
 <hr>
 <h3 id="网络时间同步"><a href="#网络时间同步" class="headerlink" title="网络时间同步"></a>网络时间同步</h3><ul>
 <li>设置好时区后，使用ntp同步标准时间。</li>
 <li></li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta"></span></div><div class="line">#安装ntp</div><div class="line">yum install ntp</div><div class="line"><span class="meta"></span></div><div class="line">#同步时间命令</div><div class="line">ntpdate pool.ntp.org</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">安装ntp</span></span><br><span class="line">yum install ntp</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">同步时间命令</span></span><br><span class="line">ntpdate pool.ntp.org</span><br></pre></td></tr></table></figure>
 <hr>
 
       
@@ -394,27 +394,9 @@
 
 
   
-
+ 
   
-    <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script type="text/javascript">
-
-if(true){
-	var gitalk = new Gitalk({
-  	clientID: '4236ed6e8c0c8635b1fb',
-  	clientSecret: 'abcd28135b716c4700ef03ace3ef2d7a0e9d6a80',
-  	repo: 'undefined',
-  	owner: 'undefined',
-  	admin: ['undefined'],
-  	id: 'Mon Mar 26 2018 10:30:00 GMT+0800',
-  	distractionFreeMode: 'true'
-})
-gitalk.render('gitalk-container') 
-}
-</script>
+    
   
   
   
@@ -652,14 +634,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker下镜像时间</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">docker镜像修改时区</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">gitlab</a>
               </li>
              
@@ -668,11 +642,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">docker下镜像时间</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">docker镜像修改时区</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">centos7</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">docker安装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">fastdfs安装</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -685,10 +671,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">安装vim</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">fastdfs安装</a>
               </li>
              
               <li class="article-tag-list-item">

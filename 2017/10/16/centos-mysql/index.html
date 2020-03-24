@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://cuizhenjie.github.io">
   <title>CentOS6.5安装mysql及常规配置 | cuizhenjie`blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -49,7 +49,7 @@
 
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -203,15 +203,15 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>CentOS6.5系统下使用yum安装mysql5.6<br><a id="more"></a></p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="添加mysql6-5的yum源"><a href="#添加mysql6-5的yum源" class="headerlink" title="添加mysql6.5的yum源"></a>添加mysql6.5的yum源</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta"></span></div><div class="line"># 下载rpm包</div><div class="line">wget http://dev.mysql.com/get/mysql-community-release-el6-5.noarch.rpm</div><div class="line"><span class="meta">#</span> 安装Mysql源</div><div class="line">sudo rpm -Uvh mysql-community-release-el6-5.noarch.rpm</div><div class="line"><span class="meta">#</span> 查看mysql源,如果正常就能看到mysql6.5</div><div class="line">yum repolist all | grep mysql</div></pre></td></tr></table></figure>
-<h3 id="编辑下载源"><a href="#编辑下载源" class="headerlink" title="编辑下载源"></a>编辑下载源</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="meta"></span></div><div class="line"># 编辑文件/etc/yum.repos.d/mysql-community.repo</div><div class="line">vi /etc/yum.repos.d/mysql-community.repo</div><div class="line"><span class="meta"></span></div><div class="line"># 可看到如下mysql版本设置</div><div class="line"><span class="meta">#</span> 通过配置 enable等于1或者0 来决定启用那个版本。</div><div class="line">[mysql56-community]</div><div class="line">name=MySQL 5.6 Community Server</div><div class="line">baseurl=http://repo.mysql.com/yum/mysql-5.6-community/el/5/$basearch/</div><div class="line">enabled=1</div><div class="line">gpgcheck=1</div><div class="line">gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mysql</div></pre></td></tr></table></figure>
-<h3 id="安装mysql"><a href="#安装mysql" class="headerlink" title="安装mysql"></a>安装mysql</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta"></span></div><div class="line"># 安装</div><div class="line">yum install mysql-community-server</div><div class="line"><span class="meta"></span></div><div class="line"># 启动mysql</div><div class="line">service mysqld start</div></pre></td></tr></table></figure>
-<h3 id="修改root账户密码"><a href="#修改root账户密码" class="headerlink" title="修改root账户密码"></a>修改root账户密码</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta"></span></div><div class="line"># 连接登录mysql后，设置密码</div><div class="line"> set password for yourname@localhost = password('yourpassword');</div><div class="line"><span class="meta">#</span> 退出后，使用新设置密码登录</div><div class="line"><span class="meta"></span></div><div class="line"></div><div class="line">#如果忘记root密码，则通过如下手段修改密码</div><div class="line">mysqld_safe --skip-grant-tables&amp;</div><div class="line">mysql -u root mysql</div><div class="line"><span class="meta">mysql&gt;</span> UPDATE user SET password=PASSWORD("new password") WHERE user='root';</div><div class="line"><span class="meta">mysql&gt;</span> FLUSH PRIVILEGES;</div></pre></td></tr></table></figure>
-<h3 id="设置mysql编码"><a href="#设置mysql编码" class="headerlink" title="设置mysql编码"></a>设置mysql编码</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="meta"></span></div><div class="line"># 连接登录mysql服务后，查看编码</div><div class="line">SHOW VARIABLES LIKE 'character%';</div><div class="line"><span class="meta"></span></div><div class="line"># 设置编码为utf8</div><div class="line">vi /etc/my.cnf</div><div class="line"><span class="meta"></span></div><div class="line"># 在my.cnf文件的[mysqld]字段里面增加一行character-set-server=utf8</div><div class="line">[mysqld]</div><div class="line">port = 3306</div><div class="line">socket = /var/lib/mysql/mysql.sock</div><div class="line">character-set-server=utf8</div><div class="line"><span class="meta"></span></div><div class="line"># 修改完成后，重启mysql服务</div><div class="line">service mysqld restart</div><div class="line"><span class="meta"></span></div><div class="line"># 然后连接mysql后，再次查看编码</div><div class="line">SHOW VARIABLES LIKE 'character%';</div></pre></td></tr></table></figure>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="添加mysql6-5的yum源"><a href="#添加mysql6-5的yum源" class="headerlink" title="添加mysql6.5的yum源"></a>添加mysql6.5的yum源</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 下载rpm包</span></span><br><span class="line">wget http://dev.mysql.com/get/mysql-community-release-el6-5.noarch.rpm</span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装Mysql源</span></span><br><span class="line">sudo rpm -Uvh mysql-community-release-el6-5.noarch.rpm</span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看mysql源,如果正常就能看到mysql6.5</span></span><br><span class="line">yum repolist all | grep mysql</span><br></pre></td></tr></table></figure>
+<h3 id="编辑下载源"><a href="#编辑下载源" class="headerlink" title="编辑下载源"></a>编辑下载源</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 编辑文件/etc/yum.repos.d/mysql-community.repo</span></span><br><span class="line">vi /etc/yum.repos.d/mysql-community.repo</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 可看到如下mysql版本设置</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 通过配置 <span class="built_in">enable</span>等于1或者0 来决定启用那个版本。</span></span><br><span class="line">[mysql56-community]</span><br><span class="line">name=MySQL 5.6 Community Server</span><br><span class="line">baseurl=http://repo.mysql.com/yum/mysql-5.6-community/el/5/$basearch/</span><br><span class="line">enabled=1</span><br><span class="line">gpgcheck=1</span><br><span class="line">gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mysql</span><br></pre></td></tr></table></figure>
+<h3 id="安装mysql"><a href="#安装mysql" class="headerlink" title="安装mysql"></a>安装mysql</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装</span></span><br><span class="line">yum install mysql-community-server</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 启动mysql</span></span><br><span class="line">service mysqld start</span><br></pre></td></tr></table></figure>
+<h3 id="修改root账户密码"><a href="#修改root账户密码" class="headerlink" title="修改root账户密码"></a>修改root账户密码</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 连接登录mysql后，设置密码</span></span><br><span class="line"> set password for yourname@localhost = password('yourpassword');</span><br><span class="line"><span class="meta">#</span><span class="bash"> 退出后，使用新设置密码登录</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">如果忘记root密码，则通过如下手段修改密码</span></span><br><span class="line">mysqld_safe --skip-grant-tables&amp;</span><br><span class="line">mysql -u root mysql</span><br><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> UPDATE user SET password=PASSWORD(<span class="string">"new password"</span>) WHERE user=<span class="string">'root'</span>;</span></span><br><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> FLUSH PRIVILEGES;</span></span><br></pre></td></tr></table></figure>
+<h3 id="设置mysql编码"><a href="#设置mysql编码" class="headerlink" title="设置mysql编码"></a>设置mysql编码</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 连接登录mysql服务后，查看编码</span></span><br><span class="line">SHOW VARIABLES LIKE 'character%';</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 设置编码为utf8</span></span><br><span class="line">vi /etc/my.cnf</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 在my.cnf文件的[mysqld]字段里面增加一行character-set-server=utf8</span></span><br><span class="line">[mysqld]</span><br><span class="line">port = 3306</span><br><span class="line">socket = /var/lib/mysql/mysql.sock</span><br><span class="line">character-set-server=utf8</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改完成后，重启mysql服务</span></span><br><span class="line">service mysqld restart</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 然后连接mysql后，再次查看编码</span></span><br><span class="line">SHOW VARIABLES LIKE 'character%';</span><br></pre></td></tr></table></figure>
 <hr>
-<h2 id="开始使用mysql"><a href="#开始使用mysql" class="headerlink" title="开始使用mysql"></a>开始使用mysql</h2><h3 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"># 创建utf8格式数据库</div><div class="line">CREATE DATABASE IF NOT EXISTS yourdbname DEFAULT CHARSET utf8 COLLATE utf8_general_ci;</div></pre></td></tr></table></figure>
-<h3 id="创建mysql数据库用户及赋权"><a href="#创建mysql数据库用户及赋权" class="headerlink" title="创建mysql数据库用户及赋权"></a>创建mysql数据库用户及赋权</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="meta"></span></div><div class="line"># 创建用户</div><div class="line">CREATE USER 'yourname'@'%' IDENTIFIED BY 'yourpwd';</div><div class="line"><span class="meta"></span></div><div class="line"># 配置远程连接权限，并将新建的数据库权限赋权给当前用户</div><div class="line">GRANT ALL PRIVILEGES ON dbname.* TO 'yourname'@'%' IDENTIFIED BY 'yourpwd' WITH GRANT OPTION;</div><div class="line"><span class="meta"></span></div><div class="line"># 刷新权限</div><div class="line">flush privileges;</div><div class="line"><span class="meta"></span></div><div class="line"># 远程测试登录</div><div class="line">mysql -h x.x.x.x -u yourname -p</div></pre></td></tr></table></figure>
-<h3 id="管理数据库常用命令"><a href="#管理数据库常用命令" class="headerlink" title="管理数据库常用命令"></a>管理数据库常用命令</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="meta"></span></div><div class="line"># 登录成功后，查看所有数据库</div><div class="line">show databases;</div><div class="line"><span class="meta"></span></div><div class="line"># 进入某个数据库：yourdb为你的数据库名</div><div class="line">use yourdb;</div><div class="line"><span class="meta"></span></div><div class="line"># 查看当前数据库所有表</div><div class="line">show tables;</div><div class="line"><span class="meta"></span></div><div class="line"># 查看表结构: yourtable为你想查看的实际表名</div><div class="line">desc yourtable;</div><div class="line"><span class="meta"></span></div><div class="line"># 导入数据库结构数据</div><div class="line">    # 方法一：链接mysql后，选择使用的mysql数据库，然后导入完整路径的sql文件</div><div class="line">    mysql -h x.x.x.x  -u yourname -p</div><div class="line">    use yourdb;</div><div class="line">    source /xxxx/db.sql</div><div class="line">    # 方法二：</div><div class="line">    mysql -u yourname -p yourdb &lt;./db.sql</div><div class="line"><span class="meta"></span></div><div class="line"># 备份数据库结构及数据</div><div class="line">mysqldump -u yourname -p yourdb &gt;./db.sql</div></pre></td></tr></table></figure>
+<h2 id="开始使用mysql"><a href="#开始使用mysql" class="headerlink" title="开始使用mysql"></a>开始使用mysql</h2><h3 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 创建utf8格式数据库</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> <span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> yourdbname <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span> utf8 <span class="keyword">COLLATE</span> utf8_general_ci;</span><br></pre></td></tr></table></figure>
+<h3 id="创建mysql数据库用户及赋权"><a href="#创建mysql数据库用户及赋权" class="headerlink" title="创建mysql数据库用户及赋权"></a>创建mysql数据库用户及赋权</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 创建用户</span></span><br><span class="line">CREATE USER 'yourname'@'%' IDENTIFIED BY 'yourpwd';</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 配置远程连接权限，并将新建的数据库权限赋权给当前用户</span></span><br><span class="line">GRANT ALL PRIVILEGES ON dbname.* TO 'yourname'@'%' IDENTIFIED BY 'yourpwd' WITH GRANT OPTION;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 刷新权限</span></span><br><span class="line">flush privileges;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 远程测试登录</span></span><br><span class="line">mysql -h x.x.x.x -u yourname -p</span><br></pre></td></tr></table></figure>
+<h3 id="管理数据库常用命令"><a href="#管理数据库常用命令" class="headerlink" title="管理数据库常用命令"></a>管理数据库常用命令</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 登录成功后，查看所有数据库</span></span><br><span class="line">show databases;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 进入某个数据库：yourdb为你的数据库名</span></span><br><span class="line">use yourdb;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看当前数据库所有表</span></span><br><span class="line">show tables;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看表结构: yourtable为你想查看的实际表名</span></span><br><span class="line">desc yourtable;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 导入数据库结构数据</span></span><br><span class="line">    # 方法一：链接mysql后，选择使用的mysql数据库，然后导入完整路径的sql文件</span><br><span class="line">    mysql -h x.x.x.x  -u yourname -p</span><br><span class="line">    use yourdb;</span><br><span class="line">    source /xxxx/db.sql</span><br><span class="line">    # 方法二：</span><br><span class="line">    mysql -u yourname -p yourdb &lt;./db.sql</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 备份数据库结构及数据</span></span><br><span class="line">mysqldump -u yourname -p yourdb &gt;./db.sql</span><br></pre></td></tr></table></figure>
 <hr>
 
       
@@ -394,27 +394,9 @@
 
 
   
-
+ 
   
-    <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script type="text/javascript">
-
-if(true){
-	var gitalk = new Gitalk({
-  	clientID: '4236ed6e8c0c8635b1fb',
-  	clientSecret: 'abcd28135b716c4700ef03ace3ef2d7a0e9d6a80',
-  	repo: 'undefined',
-  	owner: 'undefined',
-  	admin: ['undefined'],
-  	id: 'Mon Oct 16 2017 10:30:00 GMT+0800',
-  	distractionFreeMode: 'true'
-})
-gitalk.render('gitalk-container') 
-}
-</script>
+    
   
   
   
@@ -652,14 +634,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker下镜像时间</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">docker镜像修改时区</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">gitlab</a>
               </li>
              
@@ -668,11 +642,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">docker下镜像时间</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">docker镜像修改时区</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">centos7</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">docker安装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">fastdfs安装</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -685,10 +671,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">安装vim</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">fastdfs安装</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://cuizhenjie.github.io">
   <title>CentOS下查看cpu、磁盘、内存使用情况以及如何清理内存 | cuizhenjie`blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -49,7 +49,7 @@
 
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -203,24 +203,24 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>CentOS系统运行状态管理，查看内存、cpu，磁盘、网速及带宽等情况<br><a id="more"></a> </p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="核查服务器基本情况"><a href="#核查服务器基本情况" class="headerlink" title="核查服务器基本情况"></a>核查服务器基本情况</h3><h3 id="查看内存使用情况"><a href="#查看内存使用情况" class="headerlink" title="查看内存使用情况"></a>查看内存使用情况</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">free -m</div></pre></td></tr></table></figure>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="核查服务器基本情况"><a href="#核查服务器基本情况" class="headerlink" title="核查服务器基本情况"></a>核查服务器基本情况</h3><h3 id="查看内存使用情况"><a href="#查看内存使用情况" class="headerlink" title="查看内存使用情况"></a>查看内存使用情况</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">free -m</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="查看cpu使用情况"><a href="#查看cpu使用情况" class="headerlink" title="查看cpu使用情况"></a>查看cpu使用情况</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">top #查看进程运行情况</div></pre></td></tr></table></figure>
+<h3 id="查看cpu使用情况"><a href="#查看cpu使用情况" class="headerlink" title="查看cpu使用情况"></a>查看cpu使用情况</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">top #查看进程运行情况</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="查看磁盘以及分区情况"><a href="#查看磁盘以及分区情况" class="headerlink" title="查看磁盘以及分区情况"></a>查看磁盘以及分区情况</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">df -h</div></pre></td></tr></table></figure>
+<h3 id="查看磁盘以及分区情况"><a href="#查看磁盘以及分区情况" class="headerlink" title="查看磁盘以及分区情况"></a>查看磁盘以及分区情况</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df -h</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="查看网络情况"><a href="#查看网络情况" class="headerlink" title="查看网络情况"></a>查看网络情况</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ifconfig</div></pre></td></tr></table></figure>
+<h3 id="查看网络情况"><a href="#查看网络情况" class="headerlink" title="查看网络情况"></a>查看网络情况</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifconfig</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="安装测网速、带宽工具、speedtest-cli工具"><a href="#安装测网速、带宽工具、speedtest-cli工具" class="headerlink" title="安装测网速、带宽工具、speedtest-cli工具"></a>安装测网速、带宽工具、speedtest-cli工具</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span>下载python测速脚本</div><div class="line">wget https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py --no-check-certificate</div><div class="line"><span class="meta"></span></div><div class="line">#赋权限</div><div class="line">chmod +rx speedtest.py</div><div class="line"><span class="meta"></span></div><div class="line">#执行测试</div><div class="line">./speedtest.py</div></pre></td></tr></table></figure>
+<h3 id="安装测网速、带宽工具、speedtest-cli工具"><a href="#安装测网速、带宽工具、speedtest-cli工具" class="headerlink" title="安装测网速、带宽工具、speedtest-cli工具"></a>安装测网速、带宽工具、speedtest-cli工具</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">下载python测速脚本</span></span><br><span class="line">wget https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py --no-check-certificate</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">赋权限</span></span><br><span class="line">chmod +rx speedtest.py</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">执行测试</span></span><br><span class="line">./speedtest.py</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="至此已经可以看到网络及带宽情况"><a href="#至此已经可以看到网络及带宽情况" class="headerlink" title="至此已经可以看到网络及带宽情况"></a>至此已经可以看到网络及带宽情况</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta"></span></div><div class="line">#Retrieving speedtest.net configuration...</div><div class="line"><span class="meta">#</span>Testing from HuaBei Oil Communication CO. Information Center (175.5.1.1)...</div><div class="line"><span class="meta">#</span>Retrieving speedtest.net server list...</div><div class="line"><span class="meta">#</span>Selecting best server based on ping...</div><div class="line"><span class="meta">#</span>Hosted by China Unicom (Tianjin) [111.69 km]: 6.83 ms</div><div class="line"><span class="meta">#</span>Testing download speed................................................................................</div><div class="line"><span class="meta">#</span>Download: 2.40 Mbit/s</div><div class="line"><span class="meta">#</span>Testing upload speed................................................................................................</div><div class="line"><span class="meta">#</span>Upload: 3.93 Mbit/s</div></pre></td></tr></table></figure>
+<h3 id="至此已经可以看到网络及带宽情况"><a href="#至此已经可以看到网络及带宽情况" class="headerlink" title="至此已经可以看到网络及带宽情况"></a>至此已经可以看到网络及带宽情况</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">Retrieving speedtest.net configuration...</span></span><br><span class="line"><span class="meta">#</span><span class="bash">Testing from HuaBei Oil Communication CO. Information Center (175.5.1.1)...</span></span><br><span class="line"><span class="meta">#</span><span class="bash">Retrieving speedtest.net server list...</span></span><br><span class="line"><span class="meta">#</span><span class="bash">Selecting best server based on ping...</span></span><br><span class="line"><span class="meta">#</span><span class="bash">Hosted by China Unicom (Tianjin) [111.69 km]: 6.83 ms</span></span><br><span class="line"><span class="meta">#</span><span class="bash">Testing download speed................................................................................</span></span><br><span class="line"><span class="meta">#</span><span class="bash">Download: 2.40 Mbit/s</span></span><br><span class="line"><span class="meta">#</span><span class="bash">Testing upload speed................................................................................................</span></span><br><span class="line"><span class="meta">#</span><span class="bash">Upload: 3.93 Mbit/s</span></span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="查看端口使用情况"><a href="#查看端口使用情况" class="headerlink" title="查看端口使用情况"></a>查看端口使用情况</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span>1.方法一</div><div class="line">   lsof -i:端口号</div><div class="line"></div><div class="line"><span class="meta">   #</span>2.方法二</div><div class="line">   netstat -apn|grep 端口号</div></pre></td></tr></table></figure>
+<h3 id="查看端口使用情况"><a href="#查看端口使用情况" class="headerlink" title="查看端口使用情况"></a>查看端口使用情况</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">1.方法一</span></span><br><span class="line">   lsof -i:端口号</span><br><span class="line"></span><br><span class="line"><span class="meta">   #</span><span class="bash">2.方法二</span></span><br><span class="line">   netstat -apn|grep 端口号</span><br></pre></td></tr></table></figure>
 <hr>
 <h3 id="服务器排查以及优化"><a href="#服务器排查以及优化" class="headerlink" title="服务器排查以及优化"></a>服务器排查以及优化</h3><ul>
 <li>清理内存</li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span>1.【推荐】释放网页缓存(To free pagecache),</div><div class="line">   sync</div><div class="line">   echo 1 &gt; /proc/sys/vm/drop_caches</div><div class="line"></div><div class="line"><span class="meta">   #</span>2.释放目录项和索引(To free dentries and inodes)</div><div class="line">   sync</div><div class="line">   echo 2 &gt; /proc/sys/vm/drop_caches</div><div class="line"><span class="meta">   #</span>3.释放网页缓存，目录项和索引（To free pagecache, dentries and inodes）:</div><div class="line">   sync</div><div class="line">   echo 3 &gt; /proc/sys/vm/drop_caches</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">1.【推荐】释放网页缓存(To free pagecache),</span></span><br><span class="line">   sync</span><br><span class="line">   echo 1 &gt; /proc/sys/vm/drop_caches</span><br><span class="line"></span><br><span class="line"><span class="meta">   #</span><span class="bash">2.释放目录项和索引(To free dentries and inodes)</span></span><br><span class="line">   sync</span><br><span class="line">   echo 2 &gt; /proc/sys/vm/drop_caches</span><br><span class="line"><span class="meta">   #</span><span class="bash">3.释放网页缓存，目录项和索引（To free pagecache, dentries and inodes）:</span></span><br><span class="line">   sync</span><br><span class="line">   echo 3 &gt; /proc/sys/vm/drop_caches</span><br></pre></td></tr></table></figure>
 <hr>
 
       
@@ -411,27 +411,9 @@
 
 
   
-
+ 
   
-    <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script type="text/javascript">
-
-if(true){
-	var gitalk = new Gitalk({
-  	clientID: '4236ed6e8c0c8635b1fb',
-  	clientSecret: 'abcd28135b716c4700ef03ace3ef2d7a0e9d6a80',
-  	repo: 'undefined',
-  	owner: 'undefined',
-  	admin: ['undefined'],
-  	id: 'Tue Oct 10 2017 10:30:00 GMT+0800',
-  	distractionFreeMode: 'true'
-})
-gitalk.render('gitalk-container') 
-}
-</script>
+    
   
   
   
@@ -669,14 +651,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker下镜像时间</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">docker镜像修改时区</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">gitlab</a>
               </li>
              
@@ -685,11 +659,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">docker下镜像时间</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">docker镜像修改时区</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">centos7</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">docker安装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">fastdfs安装</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -702,10 +688,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">安装vim</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">fastdfs安装</a>
               </li>
              
               <li class="article-tag-list-item">

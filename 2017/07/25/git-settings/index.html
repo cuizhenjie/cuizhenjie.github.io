@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://cuizhenjie.github.io">
   <title>git安装、ssh秘钥生成及github配置 | cuizhenjie`blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -49,7 +49,7 @@
 
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -204,28 +204,28 @@
       
         <p>从零开始安装配置git环境，以及生成git的ssh秘钥，最后配置到gitlab等git代码托管平台上。<br><a id="more"></a></p>
 <h1 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h1><h2 id="安装git客户端"><a href="#安装git客户端" class="headerlink" title="安装git客户端"></a>安装git客户端</h2><ul>
-<li><p><a href="https://git-scm.com/downloads" target="_blank" rel="external">git下载地址</a> 根据系统环境安装合适git版本</p>
+<li><p><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">git下载地址</a> 根据系统环境安装合适git版本</p>
 </li>
-<li><p><a href="https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git" target="_blank" rel="external">git安装教程</a> 不同系统环境git安装方法</p>
+<li><p><a href="https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git" target="_blank" rel="noopener">git安装教程</a> 不同系统环境git安装方法</p>
 </li>
-<li><p><a href="http://pan.baidu.com/s/1nvjvb8t" target="_blank" rel="external">windows下git下载地址</a> 如果下载速度较慢，window可选择此地址下载</p>
+<li><p><a href="http://pan.baidu.com/s/1nvjvb8t" target="_blank" rel="noopener">windows下git下载地址</a> 如果下载速度较慢，window可选择此地址下载</p>
 </li>
-<li><p><a href="http://blog.csdn.net/zzfenglin/article/details/53147604" target="_blank" rel="external">windows下安装方法</a> git在windows下安装步骤</p>
+<li><p><a href="http://blog.csdn.net/zzfenglin/article/details/53147604" target="_blank" rel="noopener">windows下安装方法</a> git在windows下安装步骤</p>
 </li>
 </ul>
 <hr>
-<h2 id="生成ssh秘钥，以windows系统为例"><a href="#生成ssh秘钥，以windows系统为例" class="headerlink" title="生成ssh秘钥，以windows系统为例"></a>生成ssh秘钥，以windows系统为例</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">1）首先打开dos，查看是否已经存在ssh秘钥(没有密钥则不会有这个文件夹，有则备份删除)</div><div class="line">cd ~/.ssh</div><div class="line"></div><div class="line">2）生成密钥</div><div class="line">ssh-keygen -t rsa -C "cuizhenjie@gmail.com"</div><div class="line"></div><div class="line">3）直接按3个回车，密码为空。</div><div class="line"></div><div class="line">4）最后得到了两个文件：id_rsa和id_rsa.pub</div><div class="line"></div><div class="line">5）将生成秘钥设置为全局默认,（此处的用户名和邮箱填写刚生成秘钥所输入内容）</div><div class="line"></div><div class="line">git config --global user.name  "cuizhenjie"</div><div class="line">git config --global user.email  "cuizhenjie@gmail.com"</div><div class="line"></div><div class="line">设置windows对大小写敏感</div><div class="line">git config core.ignorecase false</div><div class="line">git config --global gui.encoding utf-8</div><div class="line"></div><div class="line">避免git status显示的中文文件名乱码</div><div class="line">git config --global core.quotepath off</div></pre></td></tr></table></figure>
+<h2 id="生成ssh秘钥，以windows系统为例"><a href="#生成ssh秘钥，以windows系统为例" class="headerlink" title="生成ssh秘钥，以windows系统为例"></a>生成ssh秘钥，以windows系统为例</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">1）首先打开dos，查看是否已经存在ssh秘钥(没有密钥则不会有这个文件夹，有则备份删除)</span><br><span class="line">cd ~/.ssh</span><br><span class="line"></span><br><span class="line">2）生成密钥</span><br><span class="line">ssh-keygen -t rsa -C "cuizhenjie@gmail.com"</span><br><span class="line"></span><br><span class="line">3）直接按3个回车，密码为空。</span><br><span class="line"></span><br><span class="line">4）最后得到了两个文件：id_rsa和id_rsa.pub</span><br><span class="line"></span><br><span class="line">5）将生成秘钥设置为全局默认,（此处的用户名和邮箱填写刚生成秘钥所输入内容）</span><br><span class="line"></span><br><span class="line">git config --global user.name  "cuizhenjie"</span><br><span class="line">git config --global user.email  "cuizhenjie@gmail.com"</span><br><span class="line"></span><br><span class="line">设置windows对大小写敏感</span><br><span class="line">git config core.ignorecase false</span><br><span class="line">git config --global gui.encoding utf-8</span><br><span class="line"></span><br><span class="line">避免git status显示的中文文件名乱码</span><br><span class="line">git config --global core.quotepath off</span><br></pre></td></tr></table></figure>
 <hr>
-<h2 id="将生成秘钥配置到gitlab或github等平台"><a href="#将生成秘钥配置到gitlab或github等平台" class="headerlink" title="将生成秘钥配置到gitlab或github等平台"></a>将生成秘钥配置到gitlab或github等平台</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">1）获取id_rsa.pub公钥内容，并复制</div><div class="line">cat ~/.ssh/id_rsa.pub</div><div class="line"></div><div class="line">2）打开http://github.com,登录后打开用户设置-》SSH密钥-》增加密钥，添加id_rsa.pub内容-》保存就设置完成了</div></pre></td></tr></table></figure>
+<h2 id="将生成秘钥配置到gitlab或github等平台"><a href="#将生成秘钥配置到gitlab或github等平台" class="headerlink" title="将生成秘钥配置到gitlab或github等平台"></a>将生成秘钥配置到gitlab或github等平台</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">1）获取id_rsa.pub公钥内容，并复制</span><br><span class="line">cat ~/.ssh/id_rsa.pub</span><br><span class="line"></span><br><span class="line">2）打开http://github.com,登录后打开用户设置-》SSH密钥-》增加密钥，添加id_rsa.pub内容-》保存就设置完成了</span><br></pre></td></tr></table></figure>
 <hr>
-<h2 id="从svn迁移到git"><a href="#从svn迁移到git" class="headerlink" title="从svn迁移到git"></a>从svn迁移到git</h2><h3 id="svn不包含多各分支处理办法"><a href="#svn不包含多各分支处理办法" class="headerlink" title="svn不包含多各分支处理办法"></a>svn不包含多各分支处理办法</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">1）首先进入电脑工作目录</div><div class="line">cd ~/dev/workspace</div><div class="line"></div><div class="line">2) 定义svn提交记录作者映射到新的名字，比如定义到users.txt文件</div><div class="line">格式为： svn username = New User &lt;New User@example.com&gt;</div><div class="line">如果有多个，那就多行，不需要符号换行，将所有的提交者都做一次映射。</div><div class="line"></div><div class="line">3) 执行转换命令（如果）,projectname 为项目名称</div><div class="line">git svn clone svn://192.168.1.111/dev/projects/projectname --authors-file=users.txt --no-metadata --no-minimize-url projectname</div><div class="line"></div><div class="line">4）执行成功以后，进入projectname项目</div><div class="line">cd projectname</div><div class="line"></div><div class="line">5）关联到git远程仓库</div><div class="line">git remote add origin https://github.com/cuizhenjie/projectname.git</div><div class="line"></div><div class="line">6）执行push到git仓库</div><div class="line">git push origin master</div></pre></td></tr></table></figure>
+<h2 id="从svn迁移到git"><a href="#从svn迁移到git" class="headerlink" title="从svn迁移到git"></a>从svn迁移到git</h2><h3 id="svn不包含多各分支处理办法"><a href="#svn不包含多各分支处理办法" class="headerlink" title="svn不包含多各分支处理办法"></a>svn不包含多各分支处理办法</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">1）首先进入电脑工作目录</span><br><span class="line">cd ~/dev/workspace</span><br><span class="line"></span><br><span class="line">2) 定义svn提交记录作者映射到新的名字，比如定义到users.txt文件</span><br><span class="line">格式为： svn username = New User &lt;New User@example.com&gt;</span><br><span class="line">如果有多个，那就多行，不需要符号换行，将所有的提交者都做一次映射。</span><br><span class="line"></span><br><span class="line">3) 执行转换命令（如果）,projectname 为项目名称</span><br><span class="line">git svn clone svn://192.168.1.111/dev/projects/projectname --authors-file=users.txt --no-metadata --no-minimize-url projectname</span><br><span class="line"></span><br><span class="line">4）执行成功以后，进入projectname项目</span><br><span class="line">cd projectname</span><br><span class="line"></span><br><span class="line">5）关联到git远程仓库</span><br><span class="line">git remote add origin https://github.com/cuizhenjie/projectname.git</span><br><span class="line"></span><br><span class="line">6）执行push到git仓库</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="svn包含多个分支的处理办法"><a href="#svn包含多个分支的处理办法" class="headerlink" title="svn包含多个分支的处理办法"></a>svn包含多个分支的处理办法</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">1）首先进入电脑工作目录</div><div class="line">cd ~/dev/workspace</div><div class="line"></div><div class="line">2) 定义svn提交记录作者映射到新的名字，比如定义到users.txt文件</div><div class="line">格式为： svn username = New User &lt;New User@example.com&gt;</div><div class="line">如果有多个，那就多行，不需要符号换行，将所有的提交者都做一次映射。</div><div class="line"></div><div class="line">3) 执行转换命令（如果）,projectname 为项目名称</div><div class="line">git svn clone svn://192.168.1.111/dev/projects/projectname --authors-file=users.txt --no-metadata --no-minimize-url projectname</div><div class="line"></div><div class="line">4）执行成功以后，进入projectname项目</div><div class="line">cd projectname</div><div class="line"></div><div class="line">5）将svn commit都抓取下来</div><div class="line">git svn fetch</div><div class="line"></div><div class="line">6）在git中查看svn commit记录信息</div><div class="line">git log --pretty=oneline</div><div class="line"></div><div class="line">7）查看分支 -- svn tag的被解析为git分支 ，需转换一下</div><div class="line">git branch -r</div><div class="line"></div><div class="line">8）转换分支-tag</div><div class="line">git tag tags_testtag origin/tags/tags_testtag</div><div class="line"></div><div class="line">9）删除远程的分支（tags）</div><div class="line">git branch -r -d origin/tags/tags_testtag</div><div class="line"></div><div class="line">10）关联远程git项目地址</div><div class="line">git remote add origin https://github.com/cuizhenjie/projectname.git</div><div class="line"></div><div class="line">11）推送到远端的git的仓库中</div><div class="line">git push origin master --tags</div><div class="line"></div><div class="line">12）切换到分支</div><div class="line">git checkout tags_testtag</div><div class="line"></div><div class="line">13）提交分支到远程的仓库中</div><div class="line">git push origin tags_testtag</div></pre></td></tr></table></figure>
+<h3 id="svn包含多个分支的处理办法"><a href="#svn包含多个分支的处理办法" class="headerlink" title="svn包含多个分支的处理办法"></a>svn包含多个分支的处理办法</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">1）首先进入电脑工作目录</span><br><span class="line">cd ~/dev/workspace</span><br><span class="line"></span><br><span class="line">2) 定义svn提交记录作者映射到新的名字，比如定义到users.txt文件</span><br><span class="line">格式为： svn username = New User &lt;New User@example.com&gt;</span><br><span class="line">如果有多个，那就多行，不需要符号换行，将所有的提交者都做一次映射。</span><br><span class="line"></span><br><span class="line">3) 执行转换命令（如果）,projectname 为项目名称</span><br><span class="line">git svn clone svn://192.168.1.111/dev/projects/projectname --authors-file=users.txt --no-metadata --no-minimize-url projectname</span><br><span class="line"></span><br><span class="line">4）执行成功以后，进入projectname项目</span><br><span class="line">cd projectname</span><br><span class="line"></span><br><span class="line">5）将svn commit都抓取下来</span><br><span class="line">git svn fetch</span><br><span class="line"></span><br><span class="line">6）在git中查看svn commit记录信息</span><br><span class="line">git log --pretty=oneline</span><br><span class="line"></span><br><span class="line">7）查看分支 -- svn tag的被解析为git分支 ，需转换一下</span><br><span class="line">git branch -r</span><br><span class="line"></span><br><span class="line">8）转换分支-tag</span><br><span class="line">git tag tags_testtag origin/tags/tags_testtag</span><br><span class="line"></span><br><span class="line">9）删除远程的分支（tags）</span><br><span class="line">git branch -r -d origin/tags/tags_testtag</span><br><span class="line"></span><br><span class="line">10）关联远程git项目地址</span><br><span class="line">git remote add origin https://github.com/cuizhenjie/projectname.git</span><br><span class="line"></span><br><span class="line">11）推送到远端的git的仓库中</span><br><span class="line">git push origin master --tags</span><br><span class="line"></span><br><span class="line">12）切换到分支</span><br><span class="line">git checkout tags_testtag</span><br><span class="line"></span><br><span class="line">13）提交分支到远程的仓库中</span><br><span class="line">git push origin tags_testtag</span><br></pre></td></tr></table></figure>
 <hr>
 <h2 id="others"><a href="#others" class="headerlink" title="others"></a>others</h2><ul>
-<li><p><a href="http://www.bootcss.com/p/git-guide/" target="_blank" rel="external">git基本用法</a> git常见命令及基本的用法</p>
+<li><p><a href="http://www.bootcss.com/p/git-guide/" target="_blank" rel="noopener">git基本用法</a> git常见命令及基本的用法</p>
 </li>
-<li><p><a href="http://www.cnblogs.com/haiq/archive/2012/12/26/2833746.html" target="_blank" rel="external">.gitignore 过滤文件用法</a> .gitignore配置文件</p>
+<li><p><a href="http://www.cnblogs.com/haiq/archive/2012/12/26/2833746.html" target="_blank" rel="noopener">.gitignore 过滤文件用法</a> .gitignore配置文件</p>
 </li>
 </ul>
 
@@ -405,27 +405,9 @@
 
 
   
-
+ 
   
-    <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script type="text/javascript">
-
-if(true){
-	var gitalk = new Gitalk({
-  	clientID: '4236ed6e8c0c8635b1fb',
-  	clientSecret: 'abcd28135b716c4700ef03ace3ef2d7a0e9d6a80',
-  	repo: 'undefined',
-  	owner: 'undefined',
-  	admin: ['undefined'],
-  	id: 'Tue Jul 25 2017 21:28:35 GMT+0800',
-  	distractionFreeMode: 'true'
-})
-gitalk.render('gitalk-container') 
-}
-</script>
+    
   
   
   
@@ -663,14 +645,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker下镜像时间</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">docker镜像修改时区</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">gitlab</a>
               </li>
              
@@ -679,11 +653,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">docker下镜像时间</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">docker镜像修改时区</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">centos7</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">docker安装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">fastdfs安装</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -696,10 +682,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">安装vim</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">fastdfs安装</a>
               </li>
              
               <li class="article-tag-list-item">
