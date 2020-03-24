@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://cuizhenjie.github.io/2017/09/21/tomcat-conf/</loc>
+    
+    <lastmod>2020-03-24T14:15:53.578Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://cuizhenjie.github.io/2017/08/04/idea-maven-project/</loc>
+    
+    <lastmod>2020-03-24T14:15:45.439Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://cuizhenjie.github.io/2018/07/10/gradle/</loc>
+    
+    <lastmod>2020-03-24T14:15:33.336Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://cuizhenjie.github.io/2017/11/13/centos-secuity/</loc>
     
     <lastmod>2020-03-24T14:07:08.033Z</lastmod>
@@ -72,13 +93,6 @@
   </url>
   
   <url>
-    <loc>http://cuizhenjie.github.io/2017/09/21/tomcat-conf/</loc>
-    
-    <lastmod>2020-03-19T09:04:09.627Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://cuizhenjie.github.io/2017/07/25/hello-world/</loc>
     
     <lastmod>2020-03-19T09:02:36.446Z</lastmod>
@@ -128,13 +142,6 @@
   </url>
   
   <url>
-    <loc>http://cuizhenjie.github.io/2018/07/10/gradle/</loc>
-    
-    <lastmod>2018-07-12T04:08:36.457Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://cuizhenjie.github.io/2017/07/28/vim-learn/</loc>
     
     <lastmod>2018-03-27T03:18:01.318Z</lastmod>
@@ -145,13 +152,6 @@
     <loc>http://cuizhenjie.github.io/2017/09/21/docker-vim/</loc>
     
     <lastmod>2017-09-21T09:44:02.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://cuizhenjie.github.io/2017/08/04/idea-maven-project/</loc>
-    
-    <lastmod>2017-08-04T03:26:53.000Z</lastmod>
     
   </url>
   
