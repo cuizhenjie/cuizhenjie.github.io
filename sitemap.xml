@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://cuizhenjie.github.io/2020/04/06/china-unicom-cat/</loc>
+    
+    <lastmod>2020-04-06T16:21:45.257Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://cuizhenjie.github.io/2017/07/25/nodejs-settings/</loc>
+    
+    <lastmod>2020-04-06T16:21:25.945Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://cuizhenjie.github.io/2018/09/17/docker-install/</loc>
+    
+    <lastmod>2020-04-06T16:20:28.397Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://cuizhenjie.github.io/2017/08/04/maven-settings/</loc>
     
     <lastmod>2020-03-24T14:22:18.199Z</lastmod>
@@ -128,13 +149,6 @@
   </url>
   
   <url>
-    <loc>http://cuizhenjie.github.io/2018/09/17/docker-install/</loc>
-    
-    <lastmod>2018-09-20T10:16:26.253Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://cuizhenjie.github.io/2017/07/25/git-settings/</loc>
     
     <lastmod>2018-09-18T11:03:50.229Z</lastmod>
@@ -159,13 +173,6 @@
     <loc>http://cuizhenjie.github.io/2017/09/21/docker-vim/</loc>
     
     <lastmod>2017-09-21T09:44:02.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://cuizhenjie.github.io/2017/07/25/nodejs-settings/</loc>
-    
-    <lastmod>2017-08-04T02:24:59.000Z</lastmod>
     
   </url>
   
