@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://cuizhenjie.github.io">
-  <title>Archives: 2017/10 | cuizhenjie`blog</title>
+  <title>Mac 安装使用 Docker | cuizhenjie`blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我不是知识的创造者，我只是知识搬运工">
-<meta property="og:type" content="website">
-<meta property="og:title" content="cuizhenjie`blog">
-<meta property="og:url" content="http://cuizhenjie.github.io/archives/2017/10/index.html">
+  <meta name="description" content="Mac下 安装 Docker，以docker desktop方式安装为例">
+<meta name="keywords" content="mac,Docker,Docker安装">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mac 安装使用 Docker">
+<meta property="og:url" content="http://cuizhenjie.github.io/2020/02/27/docker-install-mac/index.html">
 <meta property="og:site_name" content="cuizhenjie`blog">
-<meta property="og:description" content="我不是知识的创造者，我只是知识搬运工">
+<meta property="og:description" content="Mac下 安装 Docker，以docker desktop方式安装为例">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-04-07T06:49:25.692Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="cuizhenjie`blog">
-<meta name="twitter:description" content="我不是知识的创造者，我只是知识搬运工">
+<meta name="twitter:title" content="Mac 安装使用 Docker">
+<meta name="twitter:description" content="Mac下 安装 Docker，以docker desktop方式安装为例">
   
     <link rel="alternative" href="/atom.xml" title="cuizhenjie`blog" type="application/atom+xml">
   
@@ -180,176 +182,243 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-docker-install-mac" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/16/centos-mysql/" class="archive-article-date">
-  	<time datetime="2017-10-16T02:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-16</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/16/centos-mysql/">CentOS6.5安装mysql及常规配置</a>
+    <h1 class="article-title" itemprop="name">
+      Mac 安装使用 Docker
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/02/27/docker-install-mac/" class="archive-article-date">
+  	<time datetime="2020-02-27T08:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Mac下 安装 Docker，以docker desktop方式安装为例<br><a id="more"></a></p>
+<h1 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h1><h2 id="安装Docker前准备工作，以Mac为例"><a href="#安装Docker前准备工作，以Mac为例" class="headerlink" title="安装Docker前准备工作，以Mac为例"></a>安装Docker前准备工作，以Mac为例</h2><p><a href="http://cuizhenjie.github.io/2018/09/17/docker-install-centos7/">Centos7 下 Docker 安装方式</a></p>
+<h2 id="首先，下载安装Docker-Desktop-for-Mac"><a href="#首先，下载安装Docker-Desktop-for-Mac" class="headerlink" title="首先，下载安装Docker Desktop for Mac"></a>首先，下载安装Docker Desktop for Mac</h2><p><a href="下载地址">https://hub.docker.com/editions/community/docker-ce-desktop-mac</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">查看当前内核版本</span></span><br><span class="line">uname -r</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="使用root登录系统，更新yum数据源为最新"><a href="#使用root登录系统，更新yum数据源为最新" class="headerlink" title="使用root登录系统，更新yum数据源为最新"></a>使用root登录系统，更新yum数据源为最新</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">更新yum源</span></span><br><span class="line">sudo yum update</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="卸载旧版本-如果安装过旧版本的话"><a href="#卸载旧版本-如果安装过旧版本的话" class="headerlink" title="卸载旧版本(如果安装过旧版本的话)"></a>卸载旧版本(如果安装过旧版本的话)</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">卸载</span></span><br><span class="line">sudo yum remove docker \</span><br><span class="line">                docker-client \</span><br><span class="line">                docker-client-latest \</span><br><span class="line">                docker-common \</span><br><span class="line">                docker-latest \</span><br><span class="line">                docker-latest-logrotate \</span><br><span class="line">                docker-logrotate \</span><br><span class="line">                docker-selinux \</span><br><span class="line">                docker-engine-selinux \</span><br><span class="line">                docker-engine</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">工具集： yum-utils 用于 yum-config-manager</span></span><br><span class="line"><span class="meta">#</span><span class="bash">device-mapper-persistent-data 和  lvm2 用于 devicemapper 存储驱动</span></span><br><span class="line">yum install -y yum-utils device-mapper-persistent-data lvm2</span><br><span class="line"><span class="meta">#</span><span class="bash">安装docker官方源</span></span><br><span class="line">sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</span><br><span class="line"><span class="meta">#</span><span class="bash">更新yum缓存</span></span><br><span class="line">sudo yum makecache fast</span><br><span class="line"><span class="meta">#</span><span class="bash">安装docker</span></span><br><span class="line">sudo yum install docker-ce</span><br><span class="line"><span class="meta">#</span><span class="bash">启动 Docker 后台服务</span></span><br><span class="line">sudo systemctl start docker</span><br><span class="line"><span class="meta">#</span><span class="bash">验证docker是否成功安装</span></span><br><span class="line">docker version</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="配置docker用户"><a href="#配置docker用户" class="headerlink" title="配置docker用户"></a>配置docker用户</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">新建用户组</span></span><br><span class="line">groupadd docker</span><br><span class="line"><span class="meta">#</span><span class="bash">新建用户并放入docker用户组中</span></span><br><span class="line">useradd -g docker docker</span><br><span class="line"><span class="meta">#</span><span class="bash">设置docker用户密码</span></span><br><span class="line">passwd docker</span><br><span class="line"><span class="meta">#</span><span class="bash">重启docker服务</span></span><br><span class="line">sudo service docker restart</span><br><span class="line"><span class="meta">#</span><span class="bash">切换用户并测试执行</span></span><br><span class="line">docker ps</span><br><span class="line"><span class="meta">#</span><span class="bash">如果普通用户执行docker命令，如果提示get …… dial unix /var/run/docker.sock权限不够，则修改/var/run/docker.sock权限 </span></span><br><span class="line">sudo chmod a+rw /var/run/docker.sock</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="修改docker默认配置"><a href="#修改docker默认配置" class="headerlink" title="修改docker默认配置"></a>修改docker默认配置</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">  #</span><span class="bash">设置镜像</span></span><br><span class="line">  vi /etc/docker/daemon.json</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">"registry-mirrors": ["https://registry.docker-cn.com"],</span><br><span class="line">"graph": "/home/docker/lib/docker",</span><br><span class="line">"storage-driver": "devicemapper"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="修改docker默认根目录"><a href="#修改docker默认根目录" class="headerlink" title="修改docker默认根目录"></a>修改docker默认根目录</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">查看docker默认根目录</span></span><br><span class="line">sudo docker info | grep "Docker Root Dir"</span><br><span class="line"><span class="meta">#</span><span class="bash">首先停掉Docker服务：</span></span><br><span class="line">sudo systemctl restart docker</span><br><span class="line"><span class="meta">#</span><span class="bash">然后移动整个/var/lib/docker目录到目的路径：</span></span><br><span class="line">mv /var/lib/docker /home/docker/lib/docker</span><br><span class="line"><span class="meta">#</span><span class="bash">创建软链接</span></span><br><span class="line"><span class="meta">#</span><span class="bash">这时候启动Docker时发现存储目录依旧是/var/lib/docker，但是实际上是存储在数据盘的，你可以在数据盘上看到容量变化。</span></span><br><span class="line">ln -s /home/docker/lib/docker /var/lib/docker</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="安装docker-compose"><a href="#安装docker-compose" class="headerlink" title="安装docker-compose"></a>安装docker-compose</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">安装依赖</span></span><br><span class="line">yum -y install certbot libevent-devel gcc libffi-devel python-devel openssl-devel python-pip</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">开始</span></span><br><span class="line">sudo curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">赋予运行权限</span></span><br><span class="line">sudo chmod +x /usr/local/bin/docker-compose</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">查看安装情况</span></span><br><span class="line">docker-compose version</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">卸载方式（rm /usr/<span class="built_in">local</span>/bin/docker-compose）</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="卸载docker"><a href="#卸载docker" class="headerlink" title="卸载docker"></a>卸载docker</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">卸载</span></span><br><span class="line">sudo yum remove docker-ce</span><br><span class="line"><span class="meta">#</span><span class="bash">删除所有镜像，容器，卷，或者自定义配置文件</span></span><br><span class="line">sudo rm -rf /var/lib/docker</span><br></pre></td></tr></table></figure>
+<hr>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wxpay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">mac</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">centos</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Docker</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">mysql6.5</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mysql安装</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mysql配置</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">yum安装mysql</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Docker安装</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/mysql/" class="article-tag-list-link color1">mysql</a>
+        			<a href="/categories/Docker/" class="article-tag-list-link color2">Docker</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://cuizhenjie.github.io/2020/02/27/docker-install-mac/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/10/centos-memory/" class="archive-article-date">
-  	<time datetime="2017-10-10T02:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-10</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2020/03/17/python3-install/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Mac下安装Python3环境
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/12/05/fastdfs-install/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CentOS7 安装 FastDFS</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/10/centos-memory/">CentOS下查看cpu、磁盘、内存使用情况以及如何清理内存</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">centos</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">cpu</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">memory</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">查看内存</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">free</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">网速</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">带宽</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">磁盘使用情况</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/centos/" class="article-tag-list-link color2">centos</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
+  
+ 
+  
+    <!-- Gitalk 评论框 -->
+<div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+<script>
+      var gitalk = new Gitalk({
+            clientID: '4236ed6e8c0c8635b1fb',
+            clientSecret: 'abcd28135b716c4700ef03ace3ef2d7a0e9d6a80',
+            repo: 'cuizhenjie.github.io',
+            owner: 'cuizhenjie',
+            admin: ['cuizhenjie'],
+            id: 'Thu Feb 27 2020 16:00:00 GMT+0800',
+            perPage: 15,
+            pagerDirection: last,
+            // facebook-like distraction free mode
+            distractionFreeMode: false,
+            createIssueManually: true
+        })
+      gitalk.render('gitalk-container')
+</script>
   
   
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -372,8 +441,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
