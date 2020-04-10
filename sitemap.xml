@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://cuizhenjie.github.io/2020/02/27/docker-install-mac/</loc>
+    <loc>http://cuizhenjie.github.io/2020/04/10/docker-redis/</loc>
     
-    <lastmod>2020-04-07T06:51:26.456Z</lastmod>
+    <lastmod>2020-04-10T12:05:17.764Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://cuizhenjie.github.io/2018/09/17/docker-install-centos7/</loc>
     
-    <lastmod>2020-04-07T06:48:26.736Z</lastmod>
+    <lastmod>2020-04-10T07:28:57.809Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://cuizhenjie.github.io/2020/02/27/docker-install-mac/</loc>
+    
+    <lastmod>2020-04-07T06:51:26.456Z</lastmod>
     
   </url>
   
