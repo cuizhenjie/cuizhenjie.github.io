@@ -1,0 +1,640 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>从零开始学Python（一）：Python简介与环境搭建 | cuizhenjie`blog</title><meta name="keywords" content="教程,编程入门,Python"><meta name="author" content="cuizhenjie"><meta name="copyright" content="cuizhenjie"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="从零开始学Python（一）：Python简介与环境搭建"><meta name="application-name" content="从零开始学Python（一）：Python简介与环境搭建"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="从零开始学Python（一）：Python简介与环境搭建"><meta property="og:url" content="http://cuizhenjie.github.io/2025/12/30/python-tutorial-01-intro/index.html"><meta property="og:site_name" content="cuizhenjie`blog"><meta property="og:description" content="从零开始学Python（一）：Python简介与环境搭建 本系列教程将带你从零开始学习Python编程，无需任何编程基础。  学习目标完成本章后，你将学会：  什么是Python以及为什么要学习它 如何在你的电脑上安装Python 如何运行Python代码（交互式模式和脚本模式） 编写你的第一个Py"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://hall.oss-cn-qingdao.aliyuncs.com/avatar.png"><meta property="article:author" content="cuizhenjie"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://hall.oss-cn-qingdao.aliyuncs.com/avatar.png"><meta name="description" content="从零开始学Python（一）：Python简介与环境搭建 本系列教程将带你从零开始学习Python编程，无需任何编程基础。  学习目标完成本章后，你将学会：  什么是Python以及为什么要学习它 如何在你的电脑上安装Python 如何运行Python代码（交互式模式和脚本模式） 编写你的第一个Py"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://cuizhenjie.github.io/2025/12/30/python-tutorial-01-intro/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@6.1.6/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2024/07/27/125766904/ba62475f396df9de3316a08ed9e65d86_5680958632268053399..png"},
+  postHeadAiDescription: undefined,
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好鸭👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋, 宝贝","startTime":12,"endTime":14},{"greeting":"🌈充实的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19点喽, 奖励一顿丰盛的大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚上好👋, 在属于自己的时间好好放松😌~","startTime":20,"endTime":24}]},
+  twikooEnvId: '',
+  commentBarrageConfig:{"enable":true,"maxBarrage":1,"barrageTime":4000,"accessToken":"","mailMd5":""},
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: {"apiurl":"https://puquan.wudl.cn/"},
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: {"skills":["🤖️ 数码科技爱好者","🔍 分享与热心帮助","🏠 AiCoding小能手","🔨 产品研发一条龙","🏃 脚踏实地行动派","💢 壮汉人狠话不多"]},
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: cuizhenjie","link":"链接: ","source":"来源: cuizhenjie`blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.2.0/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.2.0/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'cuizhenjie`blog',
+  title: '从零开始学Python（一）：Python简介与环境搭建',
+  postAI: '',
+  pageFillDescription: '从零开始学Python（一）：Python简介与环境搭建, 学习目标, 什么是Python？, 为什么选择Python？, Python的应用领域, 安装Python, 检查是否已安装Python, 安装Python（如果需要）, 验证安装, 运行Python代码, 交互式模式, 脚本模式, 实战示例：个人信息卡片, 场景说明, 完整代码, 运行结果, 代码解析, 常见错误, 错误1：忘记勾选 Add Python to PATH, 错误2：使用 python 而不是 python3, 错误3：中文显示乱码, 错误4：缩进问题, 本章小结, 下一章预告从零开始学一简介与环境搭建本系列教程将带你从零开始学习编程无需任何编程基础学习目标完成本章后你将学会什么是以及为什么要学习它如何在你的电脑上安装如何运行代码交互式模式和脚本模式编写你的第一个程序什么是是一种高级编程语言由荷兰程序员在年创建它的名字来源于英国喜剧团体蒙提派森而不是蟒蛇为什么选择想象一下如果你要用一种语言和世界各地的朋友交流你会选择哪种语言你会选择一种语法简单表达清晰容易学习的语言对吧就是编程世界的这种语言简单易学的语法接近英语即使没有编程基础也能快速理解功能强大从网站开发到人工智能从数据分析到自动化办公无所不能社区活跃全球有数百万开发者遇到问题很容易找到解决方案跨平台无论是还是都能运行的应用领域领域应用案例网站开发豆瓣都使用数据科学数据分析机器学习人工智能自动化自动化办公爬虫测试脚本游戏开发游戏逻辑服务器端安装在开始编写代码之前我们需要先在电脑上安装检查是否已安装你的电脑可能已经安装了让我们先检查一下用户按键输入按回车输入或如果看到版本号如说明已安装用户打开终端在应用程序实用工具中输入如果看到版本号说明已安装用户大多数系统默认已安装在终端输入检查如果看到类似的版本号恭喜你你可以跳过安装步骤安装如果需要安装步骤访问官网点击按钮会自动检测你的系统重要安装时勾选点击警告如果没有勾选后续需要手动配置环境变量会比较麻烦安装步骤推荐使用安装如果已安装或者从官网下载安装包安装步骤验证安装安装完成后打开终端或命令提示符输入应该看到类似的输出运行代码代码有两种运行方式交互式模式和脚本模式交互式模式交互式模式就像和对话一样你输入一条命令立即执行并显示结果启动交互式模式在终端输入你会看到是的提示符等待你输入命令试一试退出交互式模式输入或按或脚本模式脚本模式是将代码保存在文件中然后一次性运行整个文件这是编写实际程序的方式创建你的第一个脚本打开文本编辑器等输入以下代码我的第一个程序欢迎来到的世界保存为注意扩展名必须是在终端中导航到保存文件的目录运行程序输出欢迎来到的世界实战示例个人信息卡片让我们用一个实际的例子来练习刚学的知识我们将创建一个简单的程序显示你的个人信息卡片场景说明你需要在介绍自己的场合展示个人信息我们可以用创建一个简单的个人信息卡片程序完整代码创建文件个人信息卡片程序个人信息卡片姓名张三职业学习者目标掌握编程座右铭学而时习之不亦说乎感谢查看运行结果输出个人信息卡片姓名张三职业学习者目标掌握编程座右铭学而时习之不亦说乎感谢查看代码解析让我们逐行解释这段代码开头的行是注释不会执行它们注释用于说明代码的作用是一个函数用于在屏幕上显示内容表示将字符串重复次创建分隔线不带参数时输出一个空行用于增加可读性常见错误错误忘记勾选症状在命令提示符输入或时提示不是内部或外部命令解决方案重新运行安装程序这次务必勾选或手动将添加到系统错误使用而不是症状输入时启动的是旧版本或命令不存在正确做法推荐使用错误中文显示乱码症状运行程序时中文显示为乱码解决方案确保文件保存为编码大多数现代编辑器默认在脚本开头添加错误缩进问题症状程序报错或正确做法使用缩进表示代码块类似于段落使用个空格推荐或个键保持一致不要混用空格和正确的缩进错误不必要的缩进正确的缩进后续会学到这是正确的本章小结本章我们学习了是什么一种简单易学功能强大的编程语言安装在上安装运行代码交互式模式逐条执行和脚本模式运行文件编写第一个程序使用函数输出内容下一章预告在下一章中我们将学习基础语法这将帮助我们理解如何使用变量存储数据如何给代码添加注释以及如何从用户那里获取输入准备好了吗让我们继续之旅系列导航目录下一章基础语法',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-12-30 09:41:40',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="cuizhenjie`blog" type="application/atom+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">cuizhenjie`blog</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"/><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://hall.oss-cn-qingdao.aliyuncs.com/wechatpay.png" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hall.oss-cn-qingdao.aliyuncs.com/wechatpay.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://hall.oss-cn-qingdao.aliyuncs.com/alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hall.oss-cn-qingdao.aliyuncs.com/alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/10G-EPON/" style="font-size: 1.05rem;">10G EPON<sup>1</sup></a><a href="/tags/CentOS%E4%B8%8Bgo%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/" style="font-size: 1.05rem;">CentOS下go环境安装<sup>1</sup></a><a href="/tags/Linux/" style="font-size: 1.05rem;">Linux<sup>6</sup></a><a href="/tags/TEWA-1010E/" style="font-size: 1.05rem;">TEWA-1010E<sup>1</sup></a><a href="/tags/centos/" style="font-size: 1.05rem;">centos<sup>5</sup></a><a href="/tags/centos%E5%AE%89%E5%85%A8/" style="font-size: 1.05rem;">centos安全<sup>1</sup></a><a href="/tags/cpu/" style="font-size: 1.05rem;">cpu<sup>3</sup></a><a href="/tags/date/" style="font-size: 1.05rem;">date<sup>1</sup></a><a href="/tags/docker/" style="font-size: 1.05rem;">docker<sup>5</sup></a><a href="/tags/docker%E4%B8%8B%E9%95%9C%E5%83%8F%E6%97%B6%E9%97%B4/" style="font-size: 1.05rem;">docker下镜像时间<sup>1</sup></a><a href="/tags/docker%E5%AE%89%E8%A3%85gitlab/" style="font-size: 1.05rem;">docker安装gitlab<sup>1</sup></a><a href="/tags/docker%E9%95%9C%E5%83%8F%E4%BF%AE%E6%94%B9%E6%97%B6%E5%8C%BA/" style="font-size: 1.05rem;">docker镜像修改时区<sup>1</sup></a><a href="/tags/free/" style="font-size: 1.05rem;">free<sup>1</sup></a><a href="/tags/gitlab/" style="font-size: 1.05rem;">gitlab<sup>1</sup></a><a href="/tags/go%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/" style="font-size: 1.05rem;">go环境安装<sup>1</sup></a><a href="/tags/linux%E5%AE%89%E5%85%A8/" style="font-size: 1.05rem;">linux安全<sup>1</sup></a><a href="/tags/linux%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE/" style="font-size: 1.05rem;">linux安全配置<sup>1</sup></a><a href="/tags/lrzsz/" style="font-size: 1.05rem;">lrzsz<sup>1</sup></a><a href="/tags/memory/" style="font-size: 1.05rem;">memory<sup>1</sup></a><a href="/tags/mysql/" style="font-size: 1.05rem;">mysql<sup>1</sup></a><a href="/tags/mysql6-5/" style="font-size: 1.05rem;">mysql6.5<sup>1</sup></a><a href="/tags/mysql%E5%AE%89%E8%A3%85/" style="font-size: 1.05rem;">mysql安装<sup>1</sup></a><a href="/tags/mysql%E9%85%8D%E7%BD%AE/" style="font-size: 1.05rem;">mysql配置<sup>1</sup></a><a href="/tags/rz/" style="font-size: 1.05rem;">rz<sup>1</sup></a><a href="/tags/sz/" style="font-size: 1.05rem;">sz<sup>1</sup></a><a href="/tags/yum%E5%AE%89%E8%A3%85mysql/" style="font-size: 1.05rem;">yum安装mysql<sup>1</sup></a><a href="/tags/%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%88%E8%A7%84%E8%8C%83/" style="font-size: 1.05rem;">中文文案规范<sup>1</sup></a><a href="/tags/%E4%BB%A3%E6%9B%BFftp/" style="font-size: 1.05rem;">代替ftp<sup>1</sup></a><a href="/tags/%E4%BF%AE%E6%94%B9%E6%97%B6%E5%8C%BA/" style="font-size: 1.05rem;">修改时区<sup>1</sup></a><a href="/tags/%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4/" style="font-size: 1.05rem;">修改时间<sup>1</sup></a><a href="/tags/%E5%85%89%E7%8C%AB%E7%A0%B4%E8%A7%A3/" style="font-size: 1.05rem;">光猫破解<sup>1</sup></a><a href="/tags/%E5%86%99%E4%BD%9C%E8%A7%84%E8%8C%83/" style="font-size: 1.05rem;">写作规范<sup>1</sup></a><a href="/tags/%E5%B8%A6%E5%AE%BD/" style="font-size: 1.05rem;">带宽<sup>1</sup></a><a href="/tags/%E6%94%B9%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/" style="font-size: 1.05rem;">改桥接模式<sup>1</sup></a><a href="/tags/%E6%96%87%E6%A1%88%E8%A7%84%E8%8C%83/" style="font-size: 1.05rem;">文案规范<sup>1</sup></a><a href="/tags/%E6%97%B6%E5%8C%BA/" style="font-size: 1.05rem;">时区<sup>1</sup></a><a href="/tags/%E6%9F%A5%E7%9C%8B%E5%86%85%E5%AD%98/" style="font-size: 1.05rem;">查看内存<sup>1</sup></a><a href="/tags/%E7%A3%81%E7%9B%98%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B5/" style="font-size: 1.05rem;">磁盘使用情况<sup>1</sup></a><a href="/tags/%E7%BD%91%E9%80%9F/" style="font-size: 1.05rem;">网速<sup>1</sup></a><a href="/tags/%E8%81%94%E9%80%9A%E5%85%89%E7%8C%AB/" style="font-size: 1.05rem;">联通光猫<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/01/"><span class="card-archive-list-date">一月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">8</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/12/"><span class="card-archive-list-date">十二月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/04/"><span class="card-archive-list-date">四月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/03/"><span class="card-archive-list-date">三月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">4</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/02/"><span class="card-archive-list-date">二月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/12/"><span class="card-archive-list-date">十二月 2019</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2018/11/"><span class="card-archive-list-date">十一月 2018</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2018/09/"><span class="card-archive-list-date">九月 2018</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="anzhiyu.switchCommentBarrage()" title="热评开关"><a class="commentBarrage"><i class="anzhiyufont anzhiyu-icon-message"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/Python%E6%95%99%E7%A8%8B/" itemprop="url">Python教程</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>教程</span></a><a class="article-meta__tags" href="/tags/%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>编程入门</span></a><a class="article-meta__tags" href="/tags/Python/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Python</span></a></span></div></div><h1 class="post-title" itemprop="name headline">从零开始学Python（一）：Python简介与环境搭建</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2025-12-30T02:00:00.000Z" title="发表于 2025-12-30 10:00:00">2025-12-30</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2025-12-30T01:41:40.905Z" title="更新于 2025-12-30 09:41:40">2025-12-30</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为Beijing"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>Beijing</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src=""></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="http://cuizhenjie.github.io/2025/12/30/python-tutorial-01-intro/"><header><a class="post-meta-categories" href="/categories/Python%E6%95%99%E7%A8%8B/" itemprop="url">Python教程</a><a href="/tags/%E6%95%99%E7%A8%8B/" tabindex="-1" itemprop="url">教程</a><a href="/tags/%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/" tabindex="-1" itemprop="url">编程入门</a><a href="/tags/Python/" tabindex="-1" itemprop="url">Python</a><h1 id="CrawlerTitle" itemprop="name headline">从零开始学Python（一）：Python简介与环境搭建</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">cuizhenjie</span><time itemprop="dateCreated datePublished" datetime="2025-12-30T02:00:00.000Z" title="发表于 2025-12-30 10:00:00">2025-12-30</time><time itemprop="dateCreated datePublished" datetime="2025-12-30T01:41:40.905Z" title="更新于 2025-12-30 09:41:40">2025-12-30</time></header><h1 id="从零开始学Python（一）：Python简介与环境搭建"><a href="#从零开始学Python（一）：Python简介与环境搭建" class="headerlink" title="从零开始学Python（一）：Python简介与环境搭建"></a>从零开始学Python（一）：Python简介与环境搭建</h1><blockquote>
+<p>本系列教程将带你从零开始学习Python编程，无需任何编程基础。</p>
+</blockquote>
+<h2 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h2><p>完成本章后，你将学会：</p>
+<ul>
+<li>什么是Python以及为什么要学习它</li>
+<li>如何在你的电脑上安装Python</li>
+<li>如何运行Python代码（交互式模式和脚本模式）</li>
+<li>编写你的第一个Python程序</li>
+</ul>
+<h2 id="什么是Python？"><a href="#什么是Python？" class="headerlink" title="什么是Python？"></a>什么是Python？</h2><p>Python是一种<strong>高级编程语言</strong>，由荷兰程序员Guido van Rossum在1991年创建。它的名字来源于英国喜剧团体”Monty Python”（蒙提·派森），而不是蟒蛇。</p>
+<h3 id="为什么选择Python？"><a href="#为什么选择Python？" class="headerlink" title="为什么选择Python？"></a>为什么选择Python？</h3><p>想象一下，如果你要用一种语言和世界各地的朋友交流，你会选择哪种语言？你会选择一种语法简单、表达清晰、容易学习的语言，对吧？</p>
+<p>Python就是编程世界的这种语言：</p>
+<ul>
+<li><strong>简单易学</strong>：Python的语法接近英语，即使没有编程基础也能快速理解</li>
+<li><strong>功能强大</strong>：从网站开发到人工智能，从数据分析到自动化办公，Python无所不能</li>
+<li><strong>社区活跃</strong>：全球有数百万Python开发者，遇到问题很容易找到解决方案</li>
+<li><strong>跨平台</strong>：无论是Windows、Mac还是Linux，Python都能运行</li>
+</ul>
+<h3 id="Python的应用领域"><a href="#Python的应用领域" class="headerlink" title="Python的应用领域"></a>Python的应用领域</h3><table>
+<thead>
+<tr>
+<th>领域</th>
+<th>应用案例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>网站开发</td>
+<td>YouTube、Instagram、豆瓣都使用Python</td>
+</tr>
+<tr>
+<td>数据科学</td>
+<td>数据分析、机器学习、人工智能</td>
+</tr>
+<tr>
+<td>自动化</td>
+<td>自动化办公、爬虫、测试脚本</td>
+</tr>
+<tr>
+<td>游戏开发</td>
+<td>游戏逻辑、服务器端</td>
+</tr>
+</tbody></table>
+<h2 id="安装Python"><a href="#安装Python" class="headerlink" title="安装Python"></a>安装Python</h2><p>在开始编写Python代码之前，我们需要先在电脑上安装Python。</p>
+<h3 id="检查是否已安装Python"><a href="#检查是否已安装Python" class="headerlink" title="检查是否已安装Python"></a>检查是否已安装Python</h3><p>你的电脑可能已经安装了Python。让我们先检查一下：</p>
+<p><strong>Windows用户</strong>：</p>
+<ol>
+<li>按 <code>Win + R</code> 键，输入 <code>cmd</code>，按回车</li>
+<li>输入 <code>python --version</code> 或 <code>python3 --version</code></li>
+<li>如果看到版本号（如 Python 3.8.x），说明已安装</li>
+</ol>
+<p><strong>Mac用户</strong>：</p>
+<ol>
+<li>打开”终端”（在”应用程序” → “实用工具”中）</li>
+<li>输入 <code>python3 --version</code></li>
+<li>如果看到版本号，说明已安装</li>
+</ol>
+<p><strong>Linux用户</strong>：<br>大多数Linux系统默认已安装Python 3。在终端输入 <code>python3 --version</code> 检查。</p>
+<p>如果看到类似 <code>Python 3.8.2</code> 的版本号，恭喜你！你可以跳过安装步骤。</p>
+<h3 id="安装Python（如果需要）"><a href="#安装Python（如果需要）" class="headerlink" title="安装Python（如果需要）"></a>安装Python（如果需要）</h3><p><strong>Windows安装步骤</strong>：</p>
+<ol>
+<li>访问 <a href="https://www.python.org/downloads/">Python官网</a></li>
+<li>点击 “Download Python” 按钮（会自动检测你的系统）</li>
+<li><strong>重要</strong>：安装时勾选 “Add Python to PATH”</li>
+<li>点击 “Install Now”</li>
+</ol>
+<blockquote>
+<p><strong>警告</strong>：如果没有勾选 “Add Python to PATH”，后续需要手动配置环境变量，会比较麻烦。</p>
+</blockquote>
+<p><strong>Mac安装步骤</strong>：</p>
+<p>推荐使用Homebrew安装（如果已安装Homebrew）：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install python@3.8</span><br></pre></td></tr></tbody></table></figure>
+
+<p>或者从Python官网下载macOS安装包。</p>
+<p><strong>Linux安装步骤</strong>：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Ubuntu/Debian</span></span><br><span class="line"><span class="built_in">sudo</span> apt-get update</span><br><span class="line"><span class="built_in">sudo</span> apt-get install python3.8</span><br><span class="line"></span><br><span class="line"><span class="comment"># CentOS/RHEL</span></span><br><span class="line"><span class="built_in">sudo</span> yum install python38</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="验证安装"><a href="#验证安装" class="headerlink" title="验证安装"></a>验证安装</h3><p>安装完成后，打开终端（或命令提示符），输入：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 --version</span><br></pre></td></tr></tbody></table></figure>
+
+<p>应该看到类似 <code>Python 3.8.2</code> 的输出。</p>
+<h2 id="运行Python代码"><a href="#运行Python代码" class="headerlink" title="运行Python代码"></a>运行Python代码</h2><p>Python代码有两种运行方式：<strong>交互式模式</strong>和<strong>脚本模式</strong>。</p>
+<h3 id="交互式模式"><a href="#交互式模式" class="headerlink" title="交互式模式"></a>交互式模式</h3><p>交互式模式就像和Python对话一样：你输入一条命令，Python立即执行并显示结果。</p>
+<p><strong>启动交互式模式</strong>：</p>
+<p>在终端输入 <code>python3</code>，你会看到：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Python 3.8.2 (default, Dec 30 2025, 10:00:00)</span><br><span class="line">[GCC 4.2.1 Compatible Apple LLVM 12.0.0] on darwin</span><br><span class="line">Type "help", "copyright", "credits" or "license" for more information.</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>&gt;&gt;&gt;</code> 是Python的提示符，等待你输入命令。</p>
+<p><strong>试一试</strong>：</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(<span class="string">"Hello, World!"</span>)</span><br><span class="line">Hello, World!</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">1</span> + <span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">"Python"</span> * <span class="number">3</span></span><br><span class="line"><span class="string">'PythonPythonPython'</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>退出交互式模式</strong>：</p>
+<p>输入 <code>exit()</code> 或按 <code>Ctrl + D</code>（Mac/Linux）或 <code>Ctrl + Z</code>（Windows）。</p>
+<h3 id="脚本模式"><a href="#脚本模式" class="headerlink" title="脚本模式"></a>脚本模式</h3><p>脚本模式是将代码保存在文件中，然后一次性运行整个文件。这是编写实际程序的方式。</p>
+<p><strong>创建你的第一个Python脚本</strong>：</p>
+<ol>
+<li>打开文本编辑器（Notepad、VS Code、Sublime Text等）</li>
+<li>输入以下代码：</li>
+</ol>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 我的第一个Python程序</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">"Hello, World!"</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"欢迎来到Python的世界！"</span>)</span><br></pre></td></tr></tbody></table></figure>
+
+<ol start="3">
+<li>保存为 <code>hello.py</code>（注意：扩展名必须是 <code>.py</code>）</li>
+<li>在终端中，导航到保存文件的目录</li>
+<li>运行程序：</li>
+</ol>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 hello.py</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>输出</strong>：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hello, World!</span><br><span class="line">欢迎来到Python的世界！</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="实战示例：个人信息卡片"><a href="#实战示例：个人信息卡片" class="headerlink" title="实战示例：个人信息卡片"></a>实战示例：个人信息卡片</h2><p>让我们用一个实际的例子来练习刚学的知识。我们将创建一个简单的程序，显示你的个人信息卡片。</p>
+<h3 id="场景说明"><a href="#场景说明" class="headerlink" title="场景说明"></a>场景说明</h3><p>你需要在介绍自己的场合展示个人信息。我们可以用Python创建一个简单的”个人信息卡片”程序。</p>
+<h3 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h3><p>创建文件 <code>personal_card.py</code>：</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 个人信息卡片程序</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">"="</span> * <span class="number">30</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"      个人信息卡片"</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"="</span> * <span class="number">30</span>)</span><br><span class="line"><span class="built_in">print</span>()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"姓名：张三"</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"职业：Python学习者"</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"目标：掌握Python编程"</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"座右铭：学而时习之，不亦说乎"</span>)</span><br><span class="line"><span class="built_in">print</span>()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"="</span> * <span class="number">30</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"   感谢查看！"</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"="</span> * <span class="number">30</span>)</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 personal_card.py</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>输出</strong>：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">==============================</span><br><span class="line">      个人信息卡片</span><br><span class="line">==============================</span><br><span class="line"></span><br><span class="line">姓名：张三</span><br><span class="line">职业：Python学习者</span><br><span class="line">目标：掌握Python编程</span><br><span class="line">座右铭：学而时习之，不亦说乎</span><br><span class="line"></span><br><span class="line">==============================</span><br><span class="line">   感谢查看！</span><br><span class="line">==============================</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="代码解析"><a href="#代码解析" class="headerlink" title="代码解析"></a>代码解析</h3><p>让我们逐行解释这段代码：</p>
+<ul>
+<li><code>#</code> 开头的行是<strong>注释</strong>，Python不会执行它们。注释用于说明代码的作用。</li>
+<li><code>print()</code> 是一个<strong>函数</strong>，用于在屏幕上显示内容。</li>
+<li><code>"=" * 30</code> 表示将字符串 <code>"="</code> 重复30次，创建分隔线。</li>
+<li><code>print()</code> 不带参数时输出一个空行，用于增加可读性。</li>
+</ul>
+<h2 id="常见错误"><a href="#常见错误" class="headerlink" title="常见错误"></a>常见错误</h2><h3 id="错误1：忘记勾选-“Add-Python-to-PATH”"><a href="#错误1：忘记勾选-“Add-Python-to-PATH”" class="headerlink" title="错误1：忘记勾选 “Add Python to PATH”"></a>错误1：忘记勾选 “Add Python to PATH”</h3><p><strong>症状</strong>：在命令提示符输入 <code>python</code> 或 <code>python3</code> 时提示”不是内部或外部命令”。</p>
+<p><strong>解决方案</strong>：</p>
+<ol>
+<li>重新运行Python安装程序</li>
+<li>这次务必勾选 “Add Python to PATH”</li>
+<li>或手动将Python添加到系统PATH</li>
+</ol>
+<h3 id="错误2：使用-python-而不是-python3"><a href="#错误2：使用-python-而不是-python3" class="headerlink" title="错误2：使用 python 而不是 python3"></a>错误2：使用 <code>python</code> 而不是 <code>python3</code></h3><p><strong>症状</strong>：输入 <code>python</code> 时启动的是旧版本Python 2或命令不存在。</p>
+<p><strong>正确做法</strong>：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 推荐使用 python3</span></span><br><span class="line">python3 --version</span><br><span class="line">python3 hello.py</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="错误3：中文显示乱码"><a href="#错误3：中文显示乱码" class="headerlink" title="错误3：中文显示乱码"></a>错误3：中文显示乱码</h3><p><strong>症状</strong>：运行程序时中文显示为乱码。</p>
+<p><strong>解决方案</strong>：</p>
+<ol>
+<li>确保文件保存为 UTF-8 编码（大多数现代编辑器默认）</li>
+<li>在脚本开头添加：</li>
+</ol>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="错误4：缩进问题"><a href="#错误4：缩进问题" class="headerlink" title="错误4：缩进问题"></a>错误4：缩进问题</h3><p><strong>症状</strong>：程序报错 “IndentationError” 或 “unexpected indent”。</p>
+<p><strong>正确做法</strong>：</p>
+<ul>
+<li>Python使用缩进表示代码块（类似于段落）</li>
+<li>使用4个空格（推荐）或1个Tab键保持一致</li>
+<li>不要混用空格和Tab</li>
+</ul>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 正确的缩进</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">"Hello"</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"World"</span>)  <span class="comment"># 错误：不必要的缩进</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 正确的缩进（后续会学到）</span></span><br><span class="line"><span class="keyword">if</span> <span class="literal">True</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"这是正确的"</span>)</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="本章小结"><a href="#本章小结" class="headerlink" title="本章小结"></a>本章小结</h2><p>本章我们学习了：</p>
+<ol>
+<li><strong>Python是什么</strong>：一种简单易学、功能强大的编程语言</li>
+<li><strong>安装Python</strong>：在Windows/Mac/Linux上安装Python 3.8+</li>
+<li><strong>运行Python代码</strong>：交互式模式（逐条执行）和脚本模式（运行文件）</li>
+<li><strong>编写第一个程序</strong>：使用 <code>print()</code> 函数输出内容</li>
+</ol>
+<h2 id="下一章预告"><a href="#下一章预告" class="headerlink" title="下一章预告"></a>下一章预告</h2><p>在下一章中，我们将学习<strong>Python基础语法</strong>。这将帮助我们理解如何使用变量存储数据、如何给代码添加注释、以及如何从用户那里获取输入。</p>
+<p>准备好了吗？让我们继续Python之旅！</p>
+<hr>
+<p><strong>系列导航</strong>：</p>
+<ul>
+<li><a href="/categories/Python%E6%95%99%E7%A8%8B/">目录</a></li>
+<li><a href="/python-tutorial-02-basics/">下一章：Python基础语法</a></li>
+</ul>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hall.oss-cn-qingdao.aliyuncs.com/avatar.png" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hall.oss-cn-qingdao.aliyuncs.com/avatar.png" title="头像" alt="头像"></a><div class="post-copyright__author_name">cuizhenjie</div><div class="post-copyright__author_desc">学而不思则罔，思而不学则殆！</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="http://cuizhenjie.github.io/2025/12/30/python-tutorial-01-intro/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('http://cuizhenjie.github.io/2025/12/30/python-tutorial-01-intro/')">从零开始学Python（一）：Python简介与环境搭建</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://hall.oss-cn-qingdao.aliyuncs.com/wechatpay.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hall.oss-cn-qingdao.aliyuncs.com/wechatpay.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://hall.oss-cn-qingdao.aliyuncs.com/alipay.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hall.oss-cn-qingdao.aliyuncs.com/alipay.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://cuizhenjie.github.io/2025/12/30/python-tutorial-01-intro/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=从零开始学Python（一）：Python简介与环境搭建&amp;url=http://cuizhenjie.github.io/2025/12/30/python-tutorial-01-intro/&amp;pic=" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="undefined" target="_blank">MIT</a> 许可协议。转载请注明来自 <a href="http://cuizhenjie.github.io" target="_blank">cuizhenjie`blog</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/%E6%95%99%E7%A8%8B/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>教程<span class="tagsPageCount">11</span></a><a class="post-meta__box__tags" href="/tags/%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>编程入门<span class="tagsPageCount">11</span></a><a class="post-meta__box__tags" href="/tags/Python/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>Python<span class="tagsPageCount">10</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://hall.oss-cn-qingdao.aliyuncs.com/avatar.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/04/10/docker-redis/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">docker 下 redis 安装</div></div></a></div><div class="next-post pull-right"><a href="/2025/12/30/langchain-tutorial-01-intro/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">从零开始学LangChain（一）：LangChain简介与环境搭建</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/2025/12/31/python-tutorial-02-basics/" title="从零开始学Python（二）：Python基础语法"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-12-31</div><div class="title">从零开始学Python（二）：Python基础语法</div></div></a></div><div><a href="/2026/01/01/python-tutorial-03-data-types/" title="从零开始学Python（三）：数据类型与变量"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-01-01</div><div class="title">从零开始学Python（三）：数据类型与变量</div></div></a></div><div><a href="/2026/01/02/python-tutorial-04-control-flow/" title="从零开始学Python（四）：控制流程"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-01-02</div><div class="title">从零开始学Python（四）：控制流程</div></div></a></div><div><a href="/2026/01/05/python-tutorial-07-files/" title="从零开始学Python（七）：文件操作"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-01-05</div><div class="title">从零开始学Python（七）：文件操作</div></div></a></div><div><a href="/2026/01/04/python-tutorial-06-data-structures/" title="从零开始学Python（六）：数据结构"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-01-04</div><div class="title">从零开始学Python（六）：数据结构</div></div></a></div><div><a href="/2026/01/06/python-tutorial-08-exceptions/" title="从零开始学Python（八）：异常处理"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-01-06</div><div class="title">从零开始学Python（八）：异常处理</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hall.oss-cn-qingdao.aliyuncs.com/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/zc998800/cdn/face/gif/p045.gif" alt="status"/></div></div><div class="author-info__description">我不是知识的创造者，我只是知识搬运工</div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">cuizhenjie</h1><div class="author-info__desc">学而不思则罔，思而不学则殆！</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/cuizhenjie" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a></div></div></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bullhorn anzhiyu-shake"></i><span>公告</span></div><div class="announcement_content">🍧今天也是元气满满的一天呢~ 开心一点！🍧</div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://hall.oss-cn-qingdao.aliyuncs.com/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://hall.oss-cn-qingdao.aliyuncs.com/63c02edf44033.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6Python%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9APython%E7%AE%80%E4%BB%8B%E4%B8%8E%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-number">1.</span> <span class="toc-text">从零开始学Python（一）：Python简介与环境搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E7%9B%AE%E6%A0%87"><span class="toc-number">1.1.</span> <span class="toc-text">学习目标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFPython%EF%BC%9F"><span class="toc-number">1.2.</span> <span class="toc-text">什么是Python？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9Python%EF%BC%9F"><span class="toc-number">1.2.1.</span> <span class="toc-text">为什么选择Python？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python%E7%9A%84%E5%BA%94%E7%94%A8%E9%A2%86%E5%9F%9F"><span class="toc-number">1.2.2.</span> <span class="toc-text">Python的应用领域</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Python"><span class="toc-number">1.3.</span> <span class="toc-text">安装Python</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A3%80%E6%9F%A5%E6%98%AF%E5%90%A6%E5%B7%B2%E5%AE%89%E8%A3%85Python"><span class="toc-number">1.3.1.</span> <span class="toc-text">检查是否已安装Python</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Python%EF%BC%88%E5%A6%82%E6%9E%9C%E9%9C%80%E8%A6%81%EF%BC%89"><span class="toc-number">1.3.2.</span> <span class="toc-text">安装Python（如果需要）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AA%8C%E8%AF%81%E5%AE%89%E8%A3%85"><span class="toc-number">1.3.3.</span> <span class="toc-text">验证安装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E8%A1%8CPython%E4%BB%A3%E7%A0%81"><span class="toc-number">1.4.</span> <span class="toc-text">运行Python代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%A4%E4%BA%92%E5%BC%8F%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.4.1.</span> <span class="toc-text">交互式模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%84%9A%E6%9C%AC%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.4.2.</span> <span class="toc-text">脚本模式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E6%88%98%E7%A4%BA%E4%BE%8B%EF%BC%9A%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF%E5%8D%A1%E7%89%87"><span class="toc-number">1.5.</span> <span class="toc-text">实战示例：个人信息卡片</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%BA%E6%99%AF%E8%AF%B4%E6%98%8E"><span class="toc-number">1.5.1.</span> <span class="toc-text">场景说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81"><span class="toc-number">1.5.2.</span> <span class="toc-text">完整代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-number">1.5.3.</span> <span class="toc-text">运行结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90"><span class="toc-number">1.5.4.</span> <span class="toc-text">代码解析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF"><span class="toc-number">1.6.</span> <span class="toc-text">常见错误</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%94%99%E8%AF%AF1%EF%BC%9A%E5%BF%98%E8%AE%B0%E5%8B%BE%E9%80%89-%E2%80%9CAdd-Python-to-PATH%E2%80%9D"><span class="toc-number">1.6.1.</span> <span class="toc-text">错误1：忘记勾选 “Add Python to PATH”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%94%99%E8%AF%AF2%EF%BC%9A%E4%BD%BF%E7%94%A8-python-%E8%80%8C%E4%B8%8D%E6%98%AF-python3"><span class="toc-number">1.6.2.</span> <span class="toc-text">错误2：使用 python 而不是 python3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%94%99%E8%AF%AF3%EF%BC%9A%E4%B8%AD%E6%96%87%E6%98%BE%E7%A4%BA%E4%B9%B1%E7%A0%81"><span class="toc-number">1.6.3.</span> <span class="toc-text">错误3：中文显示乱码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%94%99%E8%AF%AF4%EF%BC%9A%E7%BC%A9%E8%BF%9B%E9%97%AE%E9%A2%98"><span class="toc-number">1.6.4.</span> <span class="toc-text">错误4：缩进问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E7%AB%A0%E5%B0%8F%E7%BB%93"><span class="toc-number">1.7.</span> <span class="toc-text">本章小结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E4%B8%80%E7%AB%A0%E9%A2%84%E5%91%8A"><span class="toc-number">1.8.</span> <span class="toc-text">下一章预告</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/01/08/python-tutorial-10-project/" title="从零开始学Python（十）：实战项目 - 个人记账本">从零开始学Python（十）：实战项目 - 个人记账本</a><time datetime="2026-01-08T02:00:00.000Z" title="发表于 2026-01-08 10:00:00">2026-01-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/01/07/python-tutorial-09-oop/" title="从零开始学Python（九）：面向对象编程">从零开始学Python（九）：面向对象编程</a><time datetime="2026-01-07T02:00:00.000Z" title="发表于 2026-01-07 10:00:00">2026-01-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/01/06/python-tutorial-08-exceptions/" title="从零开始学Python（八）：异常处理">从零开始学Python（八）：异常处理</a><time datetime="2026-01-06T02:00:00.000Z" title="发表于 2026-01-06 10:00:00">2026-01-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/01/05/python-tutorial-07-files/" title="从零开始学Python（七）：文件操作">从零开始学Python（七）：文件操作</a><time datetime="2026-01-05T02:00:00.000Z" title="发表于 2026-01-05 10:00:00">2026-01-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/01/04/python-tutorial-06-data-structures/" title="从零开始学Python（六）：数据结构">从零开始学Python（六）：数据结构</a><time datetime="2026-01-04T02:00:00.000Z" title="发表于 2026-01-04 10:00:00">2026-01-04</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="footer_deal"><a class="deal_link" href="mailto:cuizhenjie@gmail.com" title="email"><i class="anzhiyufont anzhiyu-icon-envelope"></i></a><a class="deal_link" href="https://weibo.com/u/7888758278" title="微博"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a><a class="deal_link" href="/atom.xml" title="RSS"><i class="anzhiyufont anzhiyu-icon-rss"></i></a><img class="footer_mini_logo" title="返回顶部" alt="返回顶部" onclick="anzhiyu.scrollToDest(0, 500)" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hall.oss-cn-qingdao.aliyuncs.com/avatar.png" size="50px"/><a class="deal_link" href="https://github.com/cuizhenjie" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="deal_link" href="https://www.youtube.com/@cuizhenjie" title="Youtube"><i class="anzhiyufont anzhiyu-icon-fire"></i></a><a class="deal_link" href="/copyright" title="CC"><i class="anzhiyufont anzhiyu-icon-copyright-line"></i></a></div><div id="workboard"><img class="workSituationImg boardsign" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.shields.io/badge/Czj-Working-yellow" alt="智者不入爱河，牛马不知死活~" title="智者不入爱河，牛马不知死活~"/><div id="runtimeTextTip"></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2025 By <a class="footer-bar-link" href="/" title="cuizhenjie" target="_blank">cuizhenjie</a></div></div><div id="footer-type-tips"></div><div class="js-pjax"><script>function subtitleType () {
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      if (true) {
+        const from = '出自 ' + data.from
+        const sub = ["生活明朗&#44; 万物可爱&#44; 人间值得&#44; 未来可期.","以欢喜心&#44; 慢度日常&#44; 四季清宁&#44; 万物可爱."]
+        sub.unshift(data.hitokoto, from)
+        window.typed = new Typed('#footer-type-tips', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('footer-type-tips').innerHTML = data.hitokoto
+      }
+    })
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.cbd.int/typed.js@2.1.0/dist/typed.umd.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}
+</script></div></div><div class="footer-bar-right"><a class="footer-bar-link" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="Theme">Theme</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">37</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">95</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">19</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://cuizhenjie.github.io/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" href="https://image.anheyu.com/" title="图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="图床"/><span class="back-menu-item-text">图床</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/10G-EPON/" style="font-size: 0.88rem;">10G EPON<sup>1</sup></a><a href="/tags/CentOS%E4%B8%8Bgo%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/" style="font-size: 0.88rem;">CentOS下go环境安装<sup>1</sup></a><a href="/tags/Linux/" style="font-size: 0.88rem;">Linux<sup>6</sup></a><a href="/tags/TEWA-1010E/" style="font-size: 0.88rem;">TEWA-1010E<sup>1</sup></a><a href="/tags/centos/" style="font-size: 0.88rem;">centos<sup>5</sup></a><a href="/tags/centos%E5%AE%89%E5%85%A8/" style="font-size: 0.88rem;">centos安全<sup>1</sup></a><a href="/tags/cpu/" style="font-size: 0.88rem;">cpu<sup>3</sup></a><a href="/tags/date/" style="font-size: 0.88rem;">date<sup>1</sup></a><a href="/tags/docker/" style="font-size: 0.88rem;">docker<sup>5</sup></a><a href="/tags/docker%E4%B8%8B%E9%95%9C%E5%83%8F%E6%97%B6%E9%97%B4/" style="font-size: 0.88rem;">docker下镜像时间<sup>1</sup></a><a href="/tags/docker%E5%AE%89%E8%A3%85gitlab/" style="font-size: 0.88rem;">docker安装gitlab<sup>1</sup></a><a href="/tags/docker%E9%95%9C%E5%83%8F%E4%BF%AE%E6%94%B9%E6%97%B6%E5%8C%BA/" style="font-size: 0.88rem;">docker镜像修改时区<sup>1</sup></a><a href="/tags/free/" style="font-size: 0.88rem;">free<sup>1</sup></a><a href="/tags/gitlab/" style="font-size: 0.88rem;">gitlab<sup>1</sup></a><a href="/tags/go%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/" style="font-size: 0.88rem;">go环境安装<sup>1</sup></a><a href="/tags/linux%E5%AE%89%E5%85%A8/" style="font-size: 0.88rem;">linux安全<sup>1</sup></a><a href="/tags/linux%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE/" style="font-size: 0.88rem;">linux安全配置<sup>1</sup></a><a href="/tags/lrzsz/" style="font-size: 0.88rem;">lrzsz<sup>1</sup></a><a href="/tags/memory/" style="font-size: 0.88rem;">memory<sup>1</sup></a><a href="/tags/mysql/" style="font-size: 0.88rem;">mysql<sup>1</sup></a><a href="/tags/mysql6-5/" style="font-size: 0.88rem;">mysql6.5<sup>1</sup></a><a href="/tags/mysql%E5%AE%89%E8%A3%85/" style="font-size: 0.88rem;">mysql安装<sup>1</sup></a><a href="/tags/mysql%E9%85%8D%E7%BD%AE/" style="font-size: 0.88rem;">mysql配置<sup>1</sup></a><a href="/tags/rz/" style="font-size: 0.88rem;">rz<sup>1</sup></a><a href="/tags/sz/" style="font-size: 0.88rem;">sz<sup>1</sup></a><a href="/tags/yum%E5%AE%89%E8%A3%85mysql/" style="font-size: 0.88rem;">yum安装mysql<sup>1</sup></a><a href="/tags/%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%88%E8%A7%84%E8%8C%83/" style="font-size: 0.88rem;">中文文案规范<sup>1</sup></a><a href="/tags/%E4%BB%A3%E6%9B%BFftp/" style="font-size: 0.88rem;">代替ftp<sup>1</sup></a><a href="/tags/%E4%BF%AE%E6%94%B9%E6%97%B6%E5%8C%BA/" style="font-size: 0.88rem;">修改时区<sup>1</sup></a><a href="/tags/%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4/" style="font-size: 0.88rem;">修改时间<sup>1</sup></a><a href="/tags/%E5%85%89%E7%8C%AB%E7%A0%B4%E8%A7%A3/" style="font-size: 0.88rem;">光猫破解<sup>1</sup></a><a href="/tags/%E5%86%99%E4%BD%9C%E8%A7%84%E8%8C%83/" style="font-size: 0.88rem;">写作规范<sup>1</sup></a><a href="/tags/%E5%B8%A6%E5%AE%BD/" style="font-size: 0.88rem;">带宽<sup>1</sup></a><a href="/tags/%E6%94%B9%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/" style="font-size: 0.88rem;">改桥接模式<sup>1</sup></a><a href="/tags/%E6%96%87%E6%A1%88%E8%A7%84%E8%8C%83/" style="font-size: 0.88rem;">文案规范<sup>1</sup></a><a href="/tags/%E6%97%B6%E5%8C%BA/" style="font-size: 0.88rem;">时区<sup>1</sup></a><a href="/tags/%E6%9F%A5%E7%9C%8B%E5%86%85%E5%AD%98/" style="font-size: 0.88rem;">查看内存<sup>1</sup></a><a href="/tags/%E7%A3%81%E7%9B%98%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B5/" style="font-size: 0.88rem;">磁盘使用情况<sup>1</sup></a><a href="/tags/%E7%BD%91%E9%80%9F/" style="font-size: 0.88rem;">网速<sup>1</sup></a><a href="/tags/%E8%81%94%E9%80%9A%E5%85%89%E7%8C%AB/" style="font-size: 0.88rem;">联通光猫<sup>1</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="switch-commentBarrage" href="javascript:anzhiyu.switchCommentBarrage();" title="开关弹幕"><i class="anzhiyufont anzhiyu-icon-danmu"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@6.1.6/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("03/01/2017 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2025 By 安知鱼 V1.7.0",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 cuizhenjie 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script async="async">(function () {
+  var grt = new Date("03/01/2017 00:00:00"); //设置网站上线时间
+  var now = new Date();
+  var dnum;
+  var hnum;
+  var mnum;
+  var snum;
+  var nowHour;
+
+  // 计算并更新天数、小时数、分钟数和秒数
+  function updateTime() {
+    now = new Date(); // 更新 now 的值
+    nowHour = now.getHours(); // 更新 nowHour 的值
+    var days = (now - grt) / 1000 / 60 / 60 / 24;
+    dnum = Math.floor(days);
+    var hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+    hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+      hnum = "0" + hnum;
+    }
+    var minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+      mnum = "0" + mnum;
+    }
+    var seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+    snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+      snum = "0" + snum;
+    }
+  }
+
+  // 更新网页中显示的网站运行时间
+  function updateHtml() {
+    const footer = document.getElementById("footer");
+    if (!footer) return
+    let currentTimeHtml = "";
+    if (nowHour < 18 && nowHour >= 9) {
+      // 如果是上班时间，默认就是"安知鱼-上班摸鱼中.svg"图片，不需要更改
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    } else {
+      // 如果是下班时间，插入"安知鱼-下班啦.svg"图片
+      let img = document.querySelector("#workboard .workSituationImg");
+      if (img != null) {
+        img.src = "https://img.shields.io/badge/Czj-Offduty-red";
+        img.title = "有惊无险，又到6点~";
+        img.alt = "有惊无险，又到6点~";
+      }
+
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    }
+
+    if (document.getElementById("runtimeTextTip")) {
+      document.getElementById("runtimeTextTip").innerHTML = currentTimeHtml;
+    }
+  }
+
+  setInterval(() => {
+    updateTime();
+    updateHtml();
+  }, 1000);
+})();</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.1/bubble/bubble.js"></script><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://cdn.cbd.int/qrcodejs@1.0.0/qrcode.min.js"></script><script src="/js/anzhiyu/right_click_menu.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><script defer="defer" id="ribbon" src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/canvas-fluttering-ribbon.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
