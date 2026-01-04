@@ -612,11 +612,11 @@
       
         <tags>
             
+            <tag> Linux </tag>
+            
             <tag> go环境安装 </tag>
             
             <tag> CentOS下go环境安装 </tag>
-            
-            <tag> Linux </tag>
             
         </tags>
       
@@ -714,41 +714,6 @@
     
     
     <entry>
-      <title>CentOS下使用lrzsz，代替ftp上传、下载</title>
-      <link href="/2018/03/26/centos-lrzsz/"/>
-      <url>/2018/03/26/centos-lrzsz/</url>
-      
-        <content type="html"><![CDATA[<p>CentOS下使用lrzsz，代替ftp实现rz、sz上传下载</p><span id="more"></span> <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="lrzsz安装"><a href="#lrzsz安装" class="headerlink" title="lrzsz安装"></a>lrzsz安装</h3><ul><li>lrzsz是一个unix通信套件提供的X，Y，和ZModem文件传输协议</li><li>文件传输可解脱对ftp工具的依赖，直接命令行窗口即可解决文件上传下载相关工作</li></ul><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">首先在centos下安装 lrzsz</span></span><br><span class="line">yum  -y install lrzsz </span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">上传文件命令，执行后在跳出文件选择窗口选择好文件，点击确认即可。</span></span><br><span class="line">rz</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">下载文件命令,执行后跳出文件选择窗口选择好要下载地址，点击确认即可</span></span><br><span class="line">sz 文件名</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure><hr><h3 id="修改时间"><a href="#修改时间" class="headerlink" title="修改时间"></a>修改时间</h3><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">MM:月份、DD：日、hh:24小时制、mm:分、YYYY:年份</span></span><br><span class="line">date MMDDhhmmYYYY</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">另外一种格式</span></span><br><span class="line">date -s "2018-03-26 10:30:00"</span><br></pre></td></tr></tbody></table></figure><hr><h3 id="网络时间同步"><a href="#网络时间同步" class="headerlink" title="网络时间同步"></a>网络时间同步</h3><ul><li>设置好时区后，使用ntp同步标准时间。</li><li></li></ul><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">安装ntp</span></span><br><span class="line">yum install ntp</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">同步时间命令</span></span><br><span class="line">ntpdate pool.ntp.org</span><br></pre></td></tr></tbody></table></figure><hr>]]></content>
-      
-      
-      <categories>
-          
-          <category> centos </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Linux </tag>
-            
-            <tag> centos </tag>
-            
-            <tag> lrzsz </tag>
-            
-            <tag> rz </tag>
-            
-            <tag> sz </tag>
-            
-            <tag> 代替ftp </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>CentOS下修改时间、时区</title>
       <link href="/2018/03/26/centos-date/"/>
       <url>/2018/03/26/centos-date/</url>
@@ -765,8 +730,6 @@
       
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> centos </tag>
             
             <tag> date </tag>
@@ -776,6 +739,43 @@
             <tag> 修改时间 </tag>
             
             <tag> 修改时区 </tag>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CentOS下使用lrzsz，代替ftp上传、下载</title>
+      <link href="/2018/03/26/centos-lrzsz/"/>
+      <url>/2018/03/26/centos-lrzsz/</url>
+      
+        <content type="html"><![CDATA[<p>CentOS下使用lrzsz，代替ftp实现rz、sz上传下载</p><span id="more"></span> <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="lrzsz安装"><a href="#lrzsz安装" class="headerlink" title="lrzsz安装"></a>lrzsz安装</h3><ul><li>lrzsz是一个unix通信套件提供的X，Y，和ZModem文件传输协议</li><li>文件传输可解脱对ftp工具的依赖，直接命令行窗口即可解决文件上传下载相关工作</li></ul><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">首先在centos下安装 lrzsz</span></span><br><span class="line">yum  -y install lrzsz </span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">上传文件命令，执行后在跳出文件选择窗口选择好文件，点击确认即可。</span></span><br><span class="line">rz</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">下载文件命令,执行后跳出文件选择窗口选择好要下载地址，点击确认即可</span></span><br><span class="line">sz 文件名</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure><hr><h3 id="修改时间"><a href="#修改时间" class="headerlink" title="修改时间"></a>修改时间</h3><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">MM:月份、DD：日、hh:24小时制、mm:分、YYYY:年份</span></span><br><span class="line">date MMDDhhmmYYYY</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">另外一种格式</span></span><br><span class="line">date -s "2018-03-26 10:30:00"</span><br></pre></td></tr></tbody></table></figure><hr><h3 id="网络时间同步"><a href="#网络时间同步" class="headerlink" title="网络时间同步"></a>网络时间同步</h3><ul><li>设置好时区后，使用ntp同步标准时间。</li><li></li></ul><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">安装ntp</span></span><br><span class="line">yum install ntp</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">同步时间命令</span></span><br><span class="line">ntpdate pool.ntp.org</span><br></pre></td></tr></tbody></table></figure><hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> centos </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> centos </tag>
+            
+            <tag> Linux </tag>
+            
+            <tag> lrzsz </tag>
+            
+            <tag> rz </tag>
+            
+            <tag> sz </tag>
+            
+            <tag> 代替ftp </tag>
             
         </tags>
       
@@ -800,9 +800,9 @@
       
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> centos </tag>
+            
+            <tag> Linux </tag>
             
             <tag> linux安全 </tag>
             
@@ -833,9 +833,9 @@
       
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> centos </tag>
+            
+            <tag> Linux </tag>
             
             <tag> mysql </tag>
             
@@ -870,9 +870,9 @@
       
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> centos </tag>
+            
+            <tag> Linux </tag>
             
             <tag> cpu </tag>
             
