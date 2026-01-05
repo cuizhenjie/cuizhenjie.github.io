@@ -6,7 +6,7 @@
   <link href="http://cuizhenjie.github.io/atom.xml" rel="self"/>
   
   <link href="http://cuizhenjie.github.io/"/>
-  <updated>2025-12-30T01:41:40.907Z</updated>
+  <updated>2026-01-05T07:47:43.816Z</updated>
   <id>http://cuizhenjie.github.io/</id>
   
   <author>
@@ -21,16 +21,10 @@
     <link href="http://cuizhenjie.github.io/2026/01/08/python-tutorial-10-project/"/>
     <id>http://cuizhenjie.github.io/2026/01/08/python-tutorial-10-project/</id>
     <published>2026-01-08T02:00:00.000Z</published>
-    <updated>2025-12-30T01:41:40.907Z</updated>
+    <updated>2026-01-05T07:47:43.816Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;从零开始学Python（十）：实战项目-个人记账本&quot;&gt;&lt;a href=&quot;#从零开始学Python（十）：实战项目-个人记账本&quot; class=&quot;headerlink&quot; title=&quot;从零开始学Python（十）：实战项目 -</summary>
-        
-      
+    <summary type="html">Python实战项目教程，从零开发一个个人记账本应用，综合运用前面学到的知识，包括函数、数据结构、文件操作、异常处理等，提升Python编程实战能力，完成从入门到实践的跨越。</summary>
     
     
     
@@ -50,16 +44,10 @@
     <link href="http://cuizhenjie.github.io/2026/01/07/python-tutorial-09-oop/"/>
     <id>http://cuizhenjie.github.io/2026/01/07/python-tutorial-09-oop/</id>
     <published>2026-01-07T02:00:00.000Z</published>
-    <updated>2025-12-30T01:41:40.906Z</updated>
+    <updated>2026-01-05T07:47:53.285Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;从零开始学Python（九）：面向对象编程&quot;&gt;&lt;a href=&quot;#从零开始学Python（九）：面向对象编程&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+    <summary type="html">全面介绍Python的面向对象编程特性，包括类和对象的概念、属性和方法、继承和多态、魔术方法等OOP核心概念，帮助理解面向对象的设计思想，编写更优雅的代码。</summary>
     
     
     
@@ -79,7 +67,7 @@
     <link href="http://cuizhenjie.github.io/2026/01/06/python-tutorial-08-exceptions/"/>
     <id>http://cuizhenjie.github.io/2026/01/06/python-tutorial-08-exceptions/</id>
     <published>2026-01-06T02:00:00.000Z</published>
-    <updated>2025-12-30T01:41:40.906Z</updated>
+    <updated>2026-01-05T07:48:04.995Z</updated>
     
     
       
@@ -104,11 +92,96 @@
   </entry>
   
   <entry>
+    <title>AI视频长视频制作与商业化完全指南</title>
+    <link href="http://cuizhenjie.github.io/2026/01/05/ai-video-long-form/"/>
+    <id>http://cuizhenjie.github.io/2026/01/05/ai-video-long-form/</id>
+    <published>2026-01-05T08:00:00.000Z</published>
+    <updated>2026-01-05T03:24:54.169Z</updated>
+    
+    
+    <summary type="html">深入讲解AI视频长视频制作与商业化完整指南，包括长视频制作挑战、多角色管理、对话生成、配音音效、专业工作流、商业化应用场景、项目实战、客户沟通、变现策略等核心内容，帮助你从技术创作者进阶为商业视频制作人。</summary>
+    
+    
+    
+    <category term="AIGC" scheme="http://cuizhenjie.github.io/categories/AIGC/"/>
+    
+    
+    <category term="AI视频" scheme="http://cuizhenjie.github.io/tags/AI%E8%A7%86%E9%A2%91/"/>
+    
+    <category term="AIGC" scheme="http://cuizhenjie.github.io/tags/AIGC/"/>
+    
+    <category term="可灵" scheme="http://cuizhenjie.github.io/tags/%E5%8F%AF%E7%81%B5/"/>
+    
+    <category term="视频商业化" scheme="http://cuizhenjie.github.io/tags/%E8%A7%86%E9%A2%91%E5%95%86%E4%B8%9A%E5%8C%96/"/>
+    
+    <category term="长视频制作" scheme="http://cuizhenjie.github.io/tags/%E9%95%BF%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C/"/>
+    
+    <category term="视频变现" scheme="http://cuizhenjie.github.io/tags/%E8%A7%86%E9%A2%91%E5%8F%98%E7%8E%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AI视频进阶技巧：从提示词工程到叙事创作</title>
+    <link href="http://cuizhenjie.github.io/2026/01/05/ai-video-advanced-tips/"/>
+    <id>http://cuizhenjie.github.io/2026/01/05/ai-video-advanced-tips/</id>
+    <published>2026-01-05T06:00:00.000Z</published>
+    <updated>2026-01-05T03:15:11.351Z</updated>
+    
+    
+    <summary type="html">深入讲解AI视频进阶技巧，包括高级提示词工程、多镜头组合叙事、视频连续性控制、复杂场景构建、角色一致性保持等核心技术，帮助你从单镜头视频升级到完整叙事短片创作。</summary>
+    
+    
+    
+    <category term="AIGC" scheme="http://cuizhenjie.github.io/categories/AIGC/"/>
+    
+    
+    <category term="AI视频" scheme="http://cuizhenjie.github.io/tags/AI%E8%A7%86%E9%A2%91/"/>
+    
+    <category term="AIGC" scheme="http://cuizhenjie.github.io/tags/AIGC/"/>
+    
+    <category term="可灵" scheme="http://cuizhenjie.github.io/tags/%E5%8F%AF%E7%81%B5/"/>
+    
+    <category term="视频生成" scheme="http://cuizhenjie.github.io/tags/%E8%A7%86%E9%A2%91%E7%94%9F%E6%88%90/"/>
+    
+    <category term="提示词工程" scheme="http://cuizhenjie.github.io/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B/"/>
+    
+    <category term="叙事技巧" scheme="http://cuizhenjie.github.io/tags/%E5%8F%99%E4%BA%8B%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一看就懂的22个AI视频镜头技巧</title>
+    <link href="http://cuizhenjie.github.io/2026/01/05/ai-video-camera-shots/"/>
+    <id>http://cuizhenjie.github.io/2026/01/05/ai-video-camera-shots/</id>
+    <published>2026-01-05T02:00:00.000Z</published>
+    <updated>2026-01-05T03:13:19.366Z</updated>
+    
+    
+    <summary type="html">详细解析22个AI视频镜头技巧，从浅焦镜头到微距镜头，包含具体的提示词示例和配图清单，教你如何结合具体画面编写关键词，掌握影视级运镜技巧，适用于可灵等AI视频生成工具。</summary>
+    
+    
+    
+    <category term="AIGC" scheme="http://cuizhenjie.github.io/categories/AIGC/"/>
+    
+    
+    <category term="AI视频" scheme="http://cuizhenjie.github.io/tags/AI%E8%A7%86%E9%A2%91/"/>
+    
+    <category term="AIGC" scheme="http://cuizhenjie.github.io/tags/AIGC/"/>
+    
+    <category term="可灵" scheme="http://cuizhenjie.github.io/tags/%E5%8F%AF%E7%81%B5/"/>
+    
+    <category term="视频生成" scheme="http://cuizhenjie.github.io/tags/%E8%A7%86%E9%A2%91%E7%94%9F%E6%88%90/"/>
+    
+    <category term="镜头技巧" scheme="http://cuizhenjie.github.io/tags/%E9%95%9C%E5%A4%B4%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
+  
+  <entry>
     <title>从零开始学Python（七）：文件操作</title>
     <link href="http://cuizhenjie.github.io/2026/01/05/python-tutorial-07-files/"/>
     <id>http://cuizhenjie.github.io/2026/01/05/python-tutorial-07-files/</id>
     <published>2026-01-05T02:00:00.000Z</published>
-    <updated>2025-12-30T01:41:40.906Z</updated>
+    <updated>2026-01-05T07:48:10.538Z</updated>
     
     
       
@@ -133,20 +206,91 @@
   </entry>
   
   <entry>
+    <title>Claude Code 使用指南</title>
+    <link href="http://cuizhenjie.github.io/2026/01/04/claude-code-operation/"/>
+    <id>http://cuizhenjie.github.io/2026/01/04/claude-code-operation/</id>
+    <published>2026-01-04T02:30:00.000Z</published>
+    <updated>2026-01-04T09:33:45.807Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Claude Code 使用指南&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="AIGC" scheme="http://cuizhenjie.github.io/categories/AIGC/"/>
+    
+    
+    <category term="Claude Code" scheme="http://cuizhenjie.github.io/tags/Claude-Code/"/>
+    
+    <category term="AI Coding" scheme="http://cuizhenjie.github.io/tags/AI-Coding/"/>
+    
+    <category term="Authropic" scheme="http://cuizhenjie.github.io/tags/Authropic/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Claude Code Skill 诊断Skill</title>
+    <link href="http://cuizhenjie.github.io/2026/01/04/claude-code-skill-check/"/>
+    <id>http://cuizhenjie.github.io/2026/01/04/claude-code-skill-check/</id>
+    <published>2026-01-04T02:00:00.000Z</published>
+    <updated>2026-01-04T09:07:36.151Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Claude-Code-Skill-诊断Skill&quot;&gt;&lt;a href=&quot;#Claude-Code-Skill-诊断Skill&quot; class=&quot;headerlink&quot; title=&quot;Claude Code Skill 诊断Skill&quot;&gt;&lt;/a&gt;Claude</summary>
+        
+      
+    
+    
+    
+    <category term="AIGC" scheme="http://cuizhenjie.github.io/categories/AIGC/"/>
+    
+    
+    <category term="Prompt" scheme="http://cuizhenjie.github.io/tags/Prompt/"/>
+    
+    <category term="claude code" scheme="http://cuizhenjie.github.io/tags/claude-code/"/>
+    
+    <category term="skill" scheme="http://cuizhenjie.github.io/tags/skill/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从零开始学LangChain（六）：实战项目 - 智能文档问答系统</title>
+    <link href="http://cuizhenjie.github.io/2026/01/04/langchain-tutorial-06-project/"/>
+    <id>http://cuizhenjie.github.io/2026/01/04/langchain-tutorial-06-project/</id>
+    <published>2026-01-04T02:00:00.000Z</published>
+    <updated>2026-01-05T02:04:11.009Z</updated>
+    
+    
+    <summary type="html">LangChain实战项目教程，从零开始构建一个智能文档问答系统（RAG），综合运用Models、Prompts、Chains、Memory等核心概念，实现文档加载、向量化存储、相似度检索、答案生成的完整流程。</summary>
+    
+    
+    
+    <category term="LangChain教程" scheme="http://cuizhenjie.github.io/categories/LangChain%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="AI" scheme="http://cuizhenjie.github.io/tags/AI/"/>
+    
+    <category term="LangChain" scheme="http://cuizhenjie.github.io/tags/LangChain/"/>
+    
+    <category term="教程" scheme="http://cuizhenjie.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="编程入门" scheme="http://cuizhenjie.github.io/tags/%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
     <title>从零开始学Python（六）：数据结构</title>
     <link href="http://cuizhenjie.github.io/2026/01/04/python-tutorial-06-data-structures/"/>
     <id>http://cuizhenjie.github.io/2026/01/04/python-tutorial-06-data-structures/</id>
     <published>2026-01-04T02:00:00.000Z</published>
-    <updated>2025-12-30T01:41:40.906Z</updated>
+    <updated>2026-01-05T07:48:17.071Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;从零开始学Python（六）：数据结构&quot;&gt;&lt;a href=&quot;#从零开始学Python（六）：数据结构&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+    <summary type="html">深入讲解Python的核心数据结构，包括列表、字典、元组、集合等容器类型，以及它们的常用操作方法和应用场景，帮助选择合适的数据结构解决实际问题。</summary>
     
     
     
@@ -166,16 +310,10 @@
     <link href="http://cuizhenjie.github.io/2026/01/03/python-tutorial-05-functions/"/>
     <id>http://cuizhenjie.github.io/2026/01/03/python-tutorial-05-functions/</id>
     <published>2026-01-03T02:00:00.000Z</published>
-    <updated>2025-12-30T01:41:40.906Z</updated>
+    <updated>2026-01-05T07:48:23.868Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;从零开始学Python（五）：函数&quot;&gt;&lt;a href=&quot;#从零开始学Python（五）：函数&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+    <summary type="html">全面讲解Python函数的定义和使用，包括函数参数、返回值、作用域、默认参数、关键字参数、lambda表达式等，帮助理解函数式编程的核心思想，编写可复用的代码模块。</summary>
     
     
     
@@ -187,6 +325,79 @@
     <category term="编程入门" scheme="http://cuizhenjie.github.io/tags/%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/"/>
     
     <category term="Python" scheme="http://cuizhenjie.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从零开始学LangChain（五）：Memory 记忆管理</title>
+    <link href="http://cuizhenjie.github.io/2026/01/03/langchain-tutorial-05-memory/"/>
+    <id>http://cuizhenjie.github.io/2026/01/03/langchain-tutorial-05-memory/</id>
+    <published>2026-01-03T02:00:00.000Z</published>
+    <updated>2026-01-05T02:02:41.447Z</updated>
+    
+    
+    <summary type="html">深入讲解LangChain的Memory模块，介绍对话记忆的重要性、不同类型的记忆组件、如何在链中使用记忆、构建有记忆的聊天机器人，帮助实现持续的多轮对话。</summary>
+    
+    
+    
+    <category term="LangChain教程" scheme="http://cuizhenjie.github.io/categories/LangChain%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="AI" scheme="http://cuizhenjie.github.io/tags/AI/"/>
+    
+    <category term="LangChain" scheme="http://cuizhenjie.github.io/tags/LangChain/"/>
+    
+    <category term="教程" scheme="http://cuizhenjie.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="编程入门" scheme="http://cuizhenjie.github.io/tags/%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>生成式引擎优化(GEO)</title>
+    <link href="http://cuizhenjie.github.io/2026/01/02/geo/"/>
+    <id>http://cuizhenjie.github.io/2026/01/02/geo/</id>
+    <published>2026-01-02T03:24:46.000Z</published>
+    <updated>2026-01-02T03:24:46.000Z</updated>
+    
+    
+    <summary type="html">生成引擎优化（Generative Engine Optimization，GEO)，就是如何让AI搜索曝光你的产品或者公司。</summary>
+    
+    
+    
+    <category term="AIGC" scheme="http://cuizhenjie.github.io/categories/AIGC/"/>
+    
+    
+    <category term="AIGC" scheme="http://cuizhenjie.github.io/tags/AIGC/"/>
+    
+    <category term="AI" scheme="http://cuizhenjie.github.io/tags/AI/"/>
+    
+    <category term="geo" scheme="http://cuizhenjie.github.io/tags/geo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从零开始学LangChain（四）：Chains 链式调用</title>
+    <link href="http://cuizhenjie.github.io/2026/01/02/langchain-tutorial-04-chains/"/>
+    <id>http://cuizhenjie.github.io/2026/01/02/langchain-tutorial-04-chains/</id>
+    <published>2026-01-02T02:00:00.000Z</published>
+    <updated>2026-01-05T02:00:24.402Z</updated>
+    
+    
+    <summary type="html">深入讲解LangChain的Chains模块，介绍LangChain表达式语言(LCEL)、如何创建和组合链、常见链类型、顺序链和并行链的实现，帮助构建复杂的AI应用工作流。</summary>
+    
+    
+    
+    <category term="LangChain教程" scheme="http://cuizhenjie.github.io/categories/LangChain%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="AI" scheme="http://cuizhenjie.github.io/tags/AI/"/>
+    
+    <category term="LangChain" scheme="http://cuizhenjie.github.io/tags/LangChain/"/>
+    
+    <category term="教程" scheme="http://cuizhenjie.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="编程入门" scheme="http://cuizhenjie.github.io/tags/%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/"/>
     
   </entry>
   
@@ -195,16 +406,10 @@
     <link href="http://cuizhenjie.github.io/2026/01/02/python-tutorial-04-control-flow/"/>
     <id>http://cuizhenjie.github.io/2026/01/02/python-tutorial-04-control-flow/</id>
     <published>2026-01-02T02:00:00.000Z</published>
-    <updated>2025-12-30T01:41:40.906Z</updated>
+    <updated>2026-01-05T07:48:30.675Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;从零开始学Python（四）：控制流程&quot;&gt;&lt;a href=&quot;#从零开始学Python（四）：控制流程&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+    <summary type="html">讲解Python的程序控制流程，包括if条件判断、for循环、while循环、break和continue语句等，通过实例演示如何控制程序的执行流程，实现复杂的逻辑判断和循环处理。</summary>
     
     
     
@@ -216,6 +421,56 @@
     <category term="编程入门" scheme="http://cuizhenjie.github.io/tags/%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/"/>
     
     <category term="Python" scheme="http://cuizhenjie.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OpenSpec Coding 从零上手使用</title>
+    <link href="http://cuizhenjie.github.io/2026/01/01/open-spec-coding/"/>
+    <id>http://cuizhenjie.github.io/2026/01/01/open-spec-coding/</id>
+    <published>2026-01-01T03:24:46.000Z</published>
+    <updated>2026-01-01T03:24:46.000Z</updated>
+    
+    
+    <summary type="html">OpenSpec 是一个为AI编码助手设计的规范驱动开发工具，它通过轻量级的工作流程，确保人类开发者和AI助手在编写任何代码之前就能对需求达成明确共识。</summary>
+    
+    
+    
+    <category term="AIGC" scheme="http://cuizhenjie.github.io/categories/AIGC/"/>
+    
+    
+    <category term="AIGC" scheme="http://cuizhenjie.github.io/tags/AIGC/"/>
+    
+    <category term="AI" scheme="http://cuizhenjie.github.io/tags/AI/"/>
+    
+    <category term="Spec Coding" scheme="http://cuizhenjie.github.io/tags/Spec-Coding/"/>
+    
+    <category term="OpenSpec" scheme="http://cuizhenjie.github.io/tags/OpenSpec/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从零开始学LangChain（三）：Prompts 提示词工程</title>
+    <link href="http://cuizhenjie.github.io/2026/01/01/langchain-tutorial-03-prompts/"/>
+    <id>http://cuizhenjie.github.io/2026/01/01/langchain-tutorial-03-prompts/</id>
+    <published>2026-01-01T02:00:00.000Z</published>
+    <updated>2026-01-05T01:58:35.247Z</updated>
+    
+    
+    <summary type="html">深入讲解LangChain的Prompts模块，介绍提示词工程最佳实践、如何创建和使用提示词模板、少样本提示技巧、提示词优化方法，帮助设计高质量的提示词提升AI应用效果。</summary>
+    
+    
+    
+    <category term="LangChain教程" scheme="http://cuizhenjie.github.io/categories/LangChain%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="AI" scheme="http://cuizhenjie.github.io/tags/AI/"/>
+    
+    <category term="LangChain" scheme="http://cuizhenjie.github.io/tags/LangChain/"/>
+    
+    <category term="教程" scheme="http://cuizhenjie.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="编程入门" scheme="http://cuizhenjie.github.io/tags/%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/"/>
     
   </entry>
   
@@ -224,16 +479,10 @@
     <link href="http://cuizhenjie.github.io/2026/01/01/python-tutorial-03-data-types/"/>
     <id>http://cuizhenjie.github.io/2026/01/01/python-tutorial-03-data-types/</id>
     <published>2026-01-01T02:00:00.000Z</published>
-    <updated>2025-12-30T01:41:40.906Z</updated>
+    <updated>2026-01-05T07:48:35.774Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;从零开始学Python（三）：数据类型与变量&quot;&gt;&lt;a href=&quot;#从零开始学Python（三）：数据类型与变量&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+    <summary type="html">深入讲解Python的数据类型系统，包括数字、字符串、布尔值等基本类型，以及类型转换、变量赋值、运算符等核心概念，通过实例演示各种数据类型的操作方法。</summary>
     
     
     
@@ -249,308 +498,27 @@
   </entry>
   
   <entry>
-    <title>从零开始学Python（二）：Python基础语法</title>
-    <link href="http://cuizhenjie.github.io/2025/12/31/python-tutorial-02-basics/"/>
-    <id>http://cuizhenjie.github.io/2025/12/31/python-tutorial-02-basics/</id>
+    <title>从零开始学LangChain（二）：Models 模型详解</title>
+    <link href="http://cuizhenjie.github.io/2025/12/31/langchain-tutorial-02-models/"/>
+    <id>http://cuizhenjie.github.io/2025/12/31/langchain-tutorial-02-models/</id>
     <published>2025-12-31T02:00:00.000Z</published>
-    <updated>2025-12-30T01:41:40.905Z</updated>
+    <updated>2026-01-05T01:56:23.564Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;从零开始学Python（二）：Python基础语法&quot;&gt;&lt;a href=&quot;#从零开始学Python（二）：Python基础语法&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Python教程" scheme="http://cuizhenjie.github.io/categories/Python%E6%95%99%E7%A8%8B/"/>
-    
-    
-    <category term="教程" scheme="http://cuizhenjie.github.io/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="编程入门" scheme="http://cuizhenjie.github.io/tags/%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/"/>
-    
-    <category term="Python" scheme="http://cuizhenjie.github.io/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>从零开始学LangChain（一）：LangChain简介与环境搭建</title>
-    <link href="http://cuizhenjie.github.io/2025/12/30/langchain-tutorial-01-intro/"/>
-    <id>http://cuizhenjie.github.io/2025/12/30/langchain-tutorial-01-intro/</id>
-    <published>2025-12-30T02:00:00.000Z</published>
-    <updated>2025-12-30T01:41:40.905Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;从零开始学LangChain（一）：LangChain简介与环境搭建&quot;&gt;&lt;a href=&quot;#从零开始学LangChain（一）：LangChain简介与环境搭建&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+    <summary type="html">深入讲解LangChain的Models模块，介绍LLM和Chat Model的区别、如何调用不同的大语言模型、控制模型参数、实现流式输出、处理结构化输出等核心概念，帮助掌握模型使用技巧。</summary>
     
     
     
     <category term="LangChain教程" scheme="http://cuizhenjie.github.io/categories/LangChain%E6%95%99%E7%A8%8B/"/>
     
     
+    <category term="AI" scheme="http://cuizhenjie.github.io/tags/AI/"/>
+    
     <category term="LangChain" scheme="http://cuizhenjie.github.io/tags/LangChain/"/>
     
     <category term="教程" scheme="http://cuizhenjie.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="AI" scheme="http://cuizhenjie.github.io/tags/AI/"/>
-    
     <category term="编程入门" scheme="http://cuizhenjie.github.io/tags/%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>从零开始学Python（一）：Python简介与环境搭建</title>
-    <link href="http://cuizhenjie.github.io/2025/12/30/python-tutorial-01-intro/"/>
-    <id>http://cuizhenjie.github.io/2025/12/30/python-tutorial-01-intro/</id>
-    <published>2025-12-30T02:00:00.000Z</published>
-    <updated>2025-12-30T01:41:40.905Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;从零开始学Python（一）：Python简介与环境搭建&quot;&gt;&lt;a href=&quot;#从零开始学Python（一）：Python简介与环境搭建&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Python教程" scheme="http://cuizhenjie.github.io/categories/Python%E6%95%99%E7%A8%8B/"/>
-    
-    
-    <category term="教程" scheme="http://cuizhenjie.github.io/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="编程入门" scheme="http://cuizhenjie.github.io/tags/%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/"/>
-    
-    <category term="Python" scheme="http://cuizhenjie.github.io/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>docker 下 redis 安装</title>
-    <link href="http://cuizhenjie.github.io/2020/04/10/docker-redis/"/>
-    <id>http://cuizhenjie.github.io/2020/04/10/docker-redis/</id>
-    <published>2020-04-10T08:00:00.000Z</published>
-    <updated>2025-12-30T01:41:40.904Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;docker 下 的单节点 redis 安装及配置远程连接。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="docker" scheme="http://cuizhenjie.github.io/categories/docker/"/>
-    
-    
-    <category term="docker" scheme="http://cuizhenjie.github.io/tags/docker/"/>
-    
-    <category term="docker下安装redis" scheme="http://cuizhenjie.github.io/tags/docker%E4%B8%8B%E5%AE%89%E8%A3%85redis/"/>
-    
-    <category term="redis" scheme="http://cuizhenjie.github.io/tags/redis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>联通 10G EPON 光猫破解，并改桥接模式</title>
-    <link href="http://cuizhenjie.github.io/2020/04/06/china-unicom-cat/"/>
-    <id>http://cuizhenjie.github.io/2020/04/06/china-unicom-cat/</id>
-    <published>2020-04-06T10:30:00.000Z</published>
-    <updated>2025-12-30T01:41:40.903Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;联通万兆光猫（型号：TEWA-1010E）破解高级权限，并修改桥接模式。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="家庭网络" scheme="http://cuizhenjie.github.io/categories/%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C/"/>
-    
-    
-    <category term="联通光猫" scheme="http://cuizhenjie.github.io/tags/%E8%81%94%E9%80%9A%E5%85%89%E7%8C%AB/"/>
-    
-    <category term="改桥接模式" scheme="http://cuizhenjie.github.io/tags/%E6%94%B9%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/"/>
-    
-    <category term="光猫破解" scheme="http://cuizhenjie.github.io/tags/%E5%85%89%E7%8C%AB%E7%A0%B4%E8%A7%A3/"/>
-    
-    <category term="10G EPON" scheme="http://cuizhenjie.github.io/tags/10G-EPON/"/>
-    
-    <category term="TEWA-1010E" scheme="http://cuizhenjie.github.io/tags/TEWA-1010E/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Markdown 技术文档规范</title>
-    <link href="http://cuizhenjie.github.io/2020/03/24/markdown-style-guide/"/>
-    <id>http://cuizhenjie.github.io/2020/03/24/markdown-style-guide/</id>
-    <published>2020-03-24T08:30:00.000Z</published>
-    <updated>2025-12-30T01:41:40.905Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;Markdown 格式的技术文档写作规范。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="规范" scheme="http://cuizhenjie.github.io/categories/%E8%A7%84%E8%8C%83/"/>
-    
-    
-    <category term="Markdown 技术文档规范" scheme="http://cuizhenjie.github.io/tags/Markdown-%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3%E8%A7%84%E8%8C%83/"/>
-    
-    <category term="技术文档规范" scheme="http://cuizhenjie.github.io/tags/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3%E8%A7%84%E8%8C%83/"/>
-    
-    <category term="文档规范" scheme="http://cuizhenjie.github.io/tags/%E6%96%87%E6%A1%A3%E8%A7%84%E8%8C%83/"/>
-    
-    <category term="Markdown" scheme="http://cuizhenjie.github.io/tags/Markdown/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>中文文案写作规范</title>
-    <link href="http://cuizhenjie.github.io/2020/03/24/chinese-writing-style-guide/"/>
-    <id>http://cuizhenjie.github.io/2020/03/24/chinese-writing-style-guide/</id>
-    <published>2020-03-24T06:30:00.000Z</published>
-    <updated>2025-12-30T01:41:40.904Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;中文文案写作、排版风格规范。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="规范" scheme="http://cuizhenjie.github.io/categories/%E8%A7%84%E8%8C%83/"/>
-    
-    
-    <category term="中文文案规范" scheme="http://cuizhenjie.github.io/tags/%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%88%E8%A7%84%E8%8C%83/"/>
-    
-    <category term="写作规范" scheme="http://cuizhenjie.github.io/tags/%E5%86%99%E4%BD%9C%E8%A7%84%E8%8C%83/"/>
-    
-    <category term="文案规范" scheme="http://cuizhenjie.github.io/tags/%E6%96%87%E6%A1%88%E8%A7%84%E8%8C%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java 程序 CPU 100% 排查</title>
-    <link href="http://cuizhenjie.github.io/2020/03/19/java-cpu-overflow/"/>
-    <id>http://cuizhenjie.github.io/2020/03/19/java-cpu-overflow/</id>
-    <published>2020-03-19T06:30:00.000Z</published>
-    <updated>2025-12-30T01:41:40.905Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;排查 Java 程序 CPU 100% 问题，三种方式：jvm工具、show-busy-java-threads脚本、Arthas&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="jvm" scheme="http://cuizhenjie.github.io/categories/jvm/"/>
-    
-    
-    <category term="cpu" scheme="http://cuizhenjie.github.io/tags/cpu/"/>
-    
-    <category term="java" scheme="http://cuizhenjie.github.io/tags/java/"/>
-    
-    <category term="100%" scheme="http://cuizhenjie.github.io/tags/100/"/>
-    
-    <category term="jvm优化" scheme="http://cuizhenjie.github.io/tags/jvm%E4%BC%98%E5%8C%96/"/>
-    
-    <category term="show-busy-java-threads" scheme="http://cuizhenjie.github.io/tags/show-busy-java-threads/"/>
-    
-    <category term="Arthas" scheme="http://cuizhenjie.github.io/tags/Arthas/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mac下安装Python3环境</title>
-    <link href="http://cuizhenjie.github.io/2020/03/17/python3-install/"/>
-    <id>http://cuizhenjie.github.io/2020/03/17/python3-install/</id>
-    <published>2020-03-17T02:30:00.000Z</published>
-    <updated>2025-12-30T01:41:40.907Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;Mac下安装Python3环境，并配置开发环境及如何卸载&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="python" scheme="http://cuizhenjie.github.io/categories/python/"/>
-    
-    
-    <category term="python环境安装" scheme="http://cuizhenjie.github.io/tags/python%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/"/>
-    
-    <category term="Mac下python3环境安装" scheme="http://cuizhenjie.github.io/tags/Mac%E4%B8%8Bpython3%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/"/>
-    
-    <category term="python环境卸载" scheme="http://cuizhenjie.github.io/tags/python%E7%8E%AF%E5%A2%83%E5%8D%B8%E8%BD%BD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mac 安装使用 Docker</title>
-    <link href="http://cuizhenjie.github.io/2020/02/27/docker-install-mac/"/>
-    <id>http://cuizhenjie.github.io/2020/02/27/docker-install-mac/</id>
-    <published>2020-02-27T08:00:00.000Z</published>
-    <updated>2025-12-30T01:41:40.904Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;Mac下 安装 Docker，以docker desktop方式安装为例&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Docker" scheme="http://cuizhenjie.github.io/categories/Docker/"/>
-    
-    
-    <category term="mac" scheme="http://cuizhenjie.github.io/tags/mac/"/>
-    
-    <category term="Docker" scheme="http://cuizhenjie.github.io/tags/Docker/"/>
-    
-    <category term="Docker安装" scheme="http://cuizhenjie.github.io/tags/Docker%E5%AE%89%E8%A3%85/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CentOS7 安装 FastDFS</title>
-    <link href="http://cuizhenjie.github.io/2019/12/05/fastdfs-install/"/>
-    <id>http://cuizhenjie.github.io/2019/12/05/fastdfs-install/</id>
-    <published>2019-12-05T08:00:00.000Z</published>
-    <updated>2025-12-30T01:41:40.904Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;基于CentOS7 安装 FastDFS&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="fastDFS" scheme="http://cuizhenjie.github.io/categories/fastDFS/"/>
-    
-    
-    <category term="centos7" scheme="http://cuizhenjie.github.io/tags/centos7/"/>
-    
-    <category term="fastdfs安装" scheme="http://cuizhenjie.github.io/tags/fastdfs%E5%AE%89%E8%A3%85/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>docker镜像下时间同步问题</title>
-    <link href="http://cuizhenjie.github.io/2018/11/01/docker-datetime/"/>
-    <id>http://cuizhenjie.github.io/2018/11/01/docker-datetime/</id>
-    <published>2018-11-01T02:00:00.000Z</published>
-    <updated>2025-12-30T01:41:40.904Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;docker镜像同步时间，修改时区问题&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="docker" scheme="http://cuizhenjie.github.io/categories/docker/"/>
-    
-    
-    <category term="docker" scheme="http://cuizhenjie.github.io/tags/docker/"/>
-    
-    <category term="docker下镜像时间" scheme="http://cuizhenjie.github.io/tags/docker%E4%B8%8B%E9%95%9C%E5%83%8F%E6%97%B6%E9%97%B4/"/>
-    
-    <category term="docker镜像修改时区" scheme="http://cuizhenjie.github.io/tags/docker%E9%95%9C%E5%83%8F%E4%BF%AE%E6%94%B9%E6%97%B6%E5%8C%BA/"/>
     
   </entry>
   

@@ -1,0 +1,645 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>生成式引擎优化(GEO) | cuizhenjie`blog</title><meta name="keywords" content="AIGC,AI,geo"><meta name="author" content="cuizhenjie"><meta name="copyright" content="cuizhenjie"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="生成式引擎优化(GEO)"><meta name="application-name" content="生成式引擎优化(GEO)"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="生成式引擎优化(GEO)"><meta property="og:url" content="http://cuizhenjie.github.io/2026/01/02/geo/index.html"><meta property="og:site_name" content="cuizhenjie`blog"><meta property="og:description" content="生成引擎优化（Generative Engine Optimization，GEO)，就是如何让AI搜索曝光你的产品或者公司。"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://hall.oss-cn-qingdao.aliyuncs.com/avatar.png"><meta property="article:author" content="cuizhenjie"><meta property="article:tag" content="技术博客,编程教程,Python,Docker,CentOS,Java,Linux,DevOps,AI,LangChain,运维开发,cuizhenjie,崔振杰"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://hall.oss-cn-qingdao.aliyuncs.com/avatar.png"><meta name="description" content="生成引擎优化（Generative Engine Optimization，GEO)，就是如何让AI搜索曝光你的产品或者公司。"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://cuizhenjie.github.io/2026/01/02/geo/"><link rel="preconnect" href="//cdn.cbd.int"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@6.1.6/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2024/07/27/125766904/ba62475f396df9de3316a08ed9e65d86_5680958632268053399..png"},
+  postHeadAiDescription: undefined,
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好鸭👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋, 宝贝","startTime":12,"endTime":14},{"greeting":"🌈充实的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19点喽, 奖励一顿丰盛的大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚上好👋, 在属于自己的时间好好放松😌~","startTime":20,"endTime":24}]},
+  twikooEnvId: '',
+  commentBarrageConfig:{"enable":true,"maxBarrage":1,"barrageTime":4000,"accessToken":"","mailMd5":""},
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: {"apiurl":"https://puquan.wudl.cn/"},
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: {"skills":["🤖️ 数码科技爱好者","🔍 分享与热心帮助","🏠 AiCoding小能手","🔨 产品研发一条龙","🏃 脚踏实地行动派","💢 壮汉人狠话不多"]},
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: cuizhenjie","link":"链接: ","source":"来源: cuizhenjie`blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.2.0/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.2.0/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'cuizhenjie`blog',
+  title: '生成式引擎优化(GEO)',
+  postAI: '',
+  pageFillDescription: 'GEO简介, GEO的关键组成部分： GEO = SEO + RAG, SEO应该为GEO的第一步, 1.搜索引擎如何工作, 2.SEO关键词, 3.站内SEO：优化你的内容, 4.站外SEO：建立网站权威性, 5. 技术SEO：幕后技术优化, 6. 用户体验（UX）：留住访客, 为什么Programmatic SEO自然搜索流量(SEO)如此重要？, 1. 可规模化：更高效地覆盖大量关键词, 从GEO（SEO + RAG）的视角看程序化SEO, 优化RAG是GEO的核心 (GEO= SEO + RAG）, 1. 强化检索（SEO的结合）, 2.为提取信息环节优化（RAG第二步）, 3.内容战略连接SEO与RAG, 4. Demo示例, 5.测试并不断优化, 程序化GEO是AI时代内容战略的未来, 程序化GEO具体怎么做？, 1. 规模化提升覆盖范围, 2.精准锁定长尾关键词, 3.自动化节省时间和成本, 4.规模满足用户意图, 5.在竞争激烈的市场中脱颖而出, 6.持续适应搜索算法变化, 7.程序化GEO的真实应用场景, 程序化GEO的收益简介在豆包这样搜索引擎上让产品被搜到或者曝光呢这涉及到生成引擎优化就是如何让搜索曝光你的产品或者公司生成式引擎优化英文指的是针对由人工智能驱动的搜索引擎如豆包以及谷歌摘要功能进行网站内容优化的一种策略目的是提升品牌在生成的搜索结果中的可见性具体来说通过优化企业的品牌信息可以更频繁地出现在用户利用工具搜索与其产品服务或专业领域相关的问题时生成的回答中最终的核心目标是提高网站在搜索中的曝光率精准引流用户并将网站访问者转化为忠诚的品牌粉丝让他们持续关注并反复回访的关键组成部分在搜索的时候有两步首先是进行搜索找到相关的内容因为网络搜索涉及极其大量的网页爬取和收录大多数搜索公司是继续调用的搜索功能从搜索结果中总结和寻找用户问题的答案所以进行优化也有两步首先是让搜索引擎可以搜到你从搜索结果中找到并推荐你的品牌信息所以优化通过整合与优化内容的方式包括技术提高关键词数量搜索排名和自然流量方法确保内容的准确性相关性和及时更新应该为的第一步如果网页不能被搜到也就无法引用你的内容搜索引擎如何工作搜索引擎通过以下三个步骤提供搜索结果抓取搜索引擎的机器人也称为蜘蛛在互联网上爬行通过跟踪链接发现新网页并索引索引搜索引擎将抓取到的内容存储并整理到庞大型数据库中分析文本图像以及网页结构排名当用户搜索时搜索引擎会根据特定算法如谷歌的挑选出最相关高质量的网页的目的就是让你的网页更容易被抓取索引并在搜索结果中排名靠前关键词关键词是用户在搜索引擎输入的词语或短语例如附近最好的披萨关键词研究使用谷歌关键词规划师等工具或趋势分析确定你的目标用户在搜索哪些关键词关键词布局自然地将关键词布置在标题段落标题和正文中但不要过度重复这称为关键词堆砌会被惩罚搜索意图匹配根据用户意图选择关键词例如信息类什么是导航类工具或交易类购买课程站内优化你的内容站内指的是调整你的网页元素目标让你的网页更易被搜索引擎和用户理解标题标签搜索结果中可点击的标题例如基础年指南长度保持在个字符以内元描述搜索结果中的网页简介个字符以内吸引点击如掌握基础知识提升网站表现标题使用等标签组织内容结构就像本文这样并合理加入关键词内容质量撰写清晰有价值且原创的内容篇幅较长的内容字以上通常排名更好图像优化为图像添加描述性的文本例如基础图解帮助搜索引擎理解并提高可访问性站外建立网站权威性站外是指网站外部的优化活动反向链接当权威的网站链接到你的网站这意味着你的内容被认可链接质量比数量更重要例如福布斯链接优于普通博客社交信号在推特等社交平台上的分享可以间接提升你的网站曝光度品牌口碑积极的品牌提及或评论有助于搜索引擎认可你的可信度技术幕后技术优化技术保证你的网站平稳运行目标去除搜索引擎抓取你网页的技术障碍网站速度网页加载速度越快排名越好可以用谷歌的工具检测速度移动端友好性大部分搜索在移动端进行你的网页必须自适应布局站点地图与帮助搜索引擎机器人发现和索引你的网页安全协议谷歌更倾向于安全的网站而非网站用户体验留住访客搜索引擎会追踪网站的互动情况跳出率用户快速离开网页对排名不利提供吸引用户的内容能降低跳出率停留时间用户停留在网页的时间越长越好因此要让你的网页内容真正有价值导航结构清晰的菜单和内部链接可以提高用户探索的意愿为什么自然搜索流量如此重要程序化通过大量创建网页覆盖长尾关键词来提高谷歌流量在服务客户时做的程序化与传统手动制作单个网页不同程序化能够生成成千甚至上万的网页特别是网站和落地页针对特定关键词用户搜索意图或细分市场进行优化这种模式正在彻底改变的游戏规则并与我们的生成式引擎优化密切相关关键词搜索量分布长尾关键词机会显著可规模化更高效地覆盖大量关键词传统通常只优化少数高价值网页但程序化让你可以大规模地瞄准长尾关键词例如房地产网站可能只手动优化纽约房屋但程序化方式可覆盖布鲁克林三居室住宅或中央公园附近的公寓效果更多的网页被索引更多的排名机会更多自然流量的结合在环境中这些网页成为检索的宝库为生成式引擎提供精准地点特定的答案从的视角看程序化效果谷歌奖励相关性和精确性推动网页在数千个细分搜索中排名靠前的结合系统如需要详细且明确的内容程序化网页为检索增强生成提供更多内容来源提升回答质量手动为每个关键词变体优化网页费时费力程序化实现自动化模板数据例如产品城市名称批量创建网页如电商网站可以生成每个组合的在城市购买产品效果节省资源同时批量创造大量针对优化的网页的结合在战略中大批产内容意味着更多数据供检索与整合增强你的品牌在生成结果中的存在感搜索引擎优先考虑用户意图信息型导航型交易型程序化可以精准匹配用户的意图每个决策阶段网页如是什么如何购买的评价如旅游网站可生成每个热门地的在城市可做的事情效果匹配用户意图能提高点击率和用户停留时间这些都是重要的排名因素的结合针对用户意图的网页在检索特别有价值确保提取到直接回应用户问题的内容在竞争激烈的市场中要在宽泛关键词上排名困难重重程序化帮助你占据长尾关键词健身网站可以生成针对每个地区和年龄组的适合年龄段在地点的健身计划竞争对手可能忽视这些关键词而你则能稳稳排名占据细分市场效果在竞争不充分的领域建立自己的阵地逐步提升流量的结合这些细分领域的网页成为权威信息来源增加你被引用的可能性谷歌的算法不断进化如和更偏爱以用户全面导向的内容程序化通过以下方式快速适应快速更新网页模板以符合新最佳实践如添加结构化数据通过自动化数据更新保持内容新鲜效果让你始终站在算法变化前列维持排名稳定性的结合新鲜且结构化的内容满足对最新可检索数据的要求截至年月日如果我们把看成是与的结合程序化能够同时加强这两个方面方面构建庞大且优化良好的内容库确保传统搜索的曝光率从而成为发现内容的前提方面检索环节成千上万具体且精准的网页提高检索到你内容的概率例如用户搜索在地点最好的产品服务生成环节结构化富含数据的网页例如价格地点评价为生成提供详实的信息以生成答案示例场景程序化生成的网页如年奥斯汀最佳咖啡馆能在传统中获得排名效果系统在回答奥斯汀有哪些咖啡馆值得去时可轻松检索到此网页检索阶段并利用网页的具体内容生成详细回答生成阶段优化是的核心就是让从众多搜索结果中挑选你的内容向用户提供答案这意味着摒弃时代关键词堆砌的做法尤其要避免堆砌不明觉厉的词汇而应采用清晰详尽的自然语言来描述产品要素这对于确保内容被有效识别和采纳至关重要强化检索的结合中检索阶段是指根据用户问题从大量的搜索结果中找出最相关的内容要优化这个过程你需要语义相关性内容要高度契合用户的搜索意图用户搜索如何优化搜索你的内容应精准且深入地回答这个问题上下文密度在内容中加入关联概念如附近可以同时提到大语言模型自然语言处理让将你的内容视作权威的知识资源独特标识独特短语或原创术语例如让你的内容在检索时脱颖而出不被泛泛的竞争内容淹没结构化数据使用结构化标记如模式明确告诉你的内容用途与结构帮助更好地识别和抓取你的内容检索目标确保你的内容是检索特定问题时找到的最相关的内容为提取信息环节优化第二步一旦内容被检索到的生成阶段就开始了会在这里整合并生成答案此阶段你要优化如何理解并呈现你的内容明确回答问题的区别就是要用自然语言清晰详细的写出产品的主要功能不要堆砌关键词在开头就直接回答用户可能提出的问题如果用户搜索如何做优化则开头就说实现优化方法是优化检索和内容生成两个环节清晰与简洁使用易于提炼的语言短句比复杂的长段落更有效例如结合的曝光度与的精准性权威语气使用自信专业的语言并辅以数据或实例偏好权威的内容例如研究表明的答案来自排名前的网页如需要真实数据我可帮你查找避免模糊表述表达要具体明确不要说这样很有用而要说能让内容在驱动的搜索中提升的曝光率举例性数据若需要我可核实生成目标让你的内容成为生成答案时首选的引用来源内容战略连接与长尾关键词优化长尾关键词如如何为生成式搜索引擎优化内容而这些恰好也是在对话式检索时经常触发的查询主题权威性围绕创建内容集群例如什么是工具与的区别既能提升排名也增加检索你内容的机会内容新鲜度定期更新内容偏爱新鲜内容也更偏爱当前信息参与度信号在社交平台如推广你的内容高参与度点赞分享能向和同时释放内容相关性信号示例假设你要优化一篇博客文章优化标题年如何做与完美结合元描述学习如何通过与技巧为生成式搜索优化内容关键词优化搜索优化检索优化文章中专设段落结合技术确保内容在语义检索中更容易被找到详细具体的指南优于泛泛而谈的概述生成优化添加清晰的结论想做好就应像这样撰写权威有结构的答案的曝光力的相关性社交平台推广在推特上发布如何做到点击了解链接测试并不断优化效果检查使用工具跟踪内容的排名表现效果检查询问我或其他类似如何为生成式引擎优化内容这样的问题看看你的内容是否被引用到持续迭代优化如果内容未被引用调整内容的清晰度权威性或者进一步强化检索信号不断提升效果程序化是时代内容战略的未来什么是程序化程序化指的是自动化批量生成大量针对搜索进行优化的网页以提高在搜索结果中的曝光率因为生成的网页多就可以对应到更多的搜索问题程序化是为了覆盖海量搜索关键词程序化就是批量覆盖海量的搜索问题因为用户在工具搜索的时候搜索问题远远多于关键词搜索对搜索内容的要求更为具体搜索变得具体和长尾化对长尾关键词和问题的覆盖变得尤为有种在程序化基础上进一步融合了与检索增强生成让程序化生成的网页既满足传统搜索引擎排名需求又能够为的两阶段处理检索与生成提供大量优质内容这些网页既能在搜索中排名靠前又能被系统检索引用并呈现给用户举个例子一个咖啡馆网站可以自动化批量生成年城市最好的咖啡馆网页覆盖全美每个城市这些网页能针对长尾关键词排名也能被在回答用户城市哪里可以喝咖啡时检索到步骤并为生成答案提供详细信息如店名营业时间步骤程序化具体怎么做规模化提升覆盖范围重要性传统只能优化少数网页程序化却能快速生成数千甚至数百万个特定网页实施方法识别数据来源如产品数据库城市名称或用户生成内容如房地产咖啡馆名录创建内容模板设计带有可替换变量的模板如在城市购买产品例旅游网站可以生成全球各城市的城市必玩旅游活动例如年东京必玩旅游活动落地页示例优化的大规模落地页覆盖海量搜索问题效果网页多索引多流量自然提升优势为提供丰富素材精准回答用户地理位置相关问题精准锁定长尾关键词重要性长尾关键词竞争少转化效果更佳适合程序化实施方法关键词挖掘利用关键词规划工具或爬取等平台数据挖掘用户搜索长尾关键词批量创建网页用关键词相关数据填充模板如商店名称位置价格例健身网站批量生成迈阿密青少年健身计划效果精准内容获得谷歌排名奖励优势为提供检索时精准且细节充分的网页提升被引用机会自动化节省时间和成本重要性手动优化成千上万网页几乎不可能自动化能极大节省资源实施方法集合数据然后用多步如进行批量网页生成效果规模提升成本和时间下降优势快速生成内容满足检索需求增加引用率规模满足用户意图重要性搜索引擎与偏爱精准匹配用户意图信息型导航型交易型实施方法根据用户意图设计模板如什么是在哪购买评价变量网页内容根据用户具体需求生成例房产网站批量生成每个区域的城市购房指南社区生活指南效果精准匹配意图提升点击率和停留时间优势高度匹配意图的网页极易被检索并引用直接回应用户问题在竞争激烈的市场中脱颖而出重要性在饱和领域通用关键词竞争激烈而程序化可占据长尾关键词市场实施方法寻找竞争不充分的细分领域关键词如青少年瑜伽疗养地生成竞争对手忽略的内容例健身网站生成丹佛女性专属健身计划效果占领竞争薄弱领域稳定获得流量优势细分领域的网页成为权威引用源持续适应搜索算法变化重要性算法如和持续更新程序化可快速适应算法变化实施方法结构化数据添加产品本地商家等结构化标记让搜索引擎和明确理解网页内容自动化内容更新设置脚本定期更新内容如年份价格例将年奥斯汀最佳咖啡馆自动更新为年适应搜索趋势效果始终紧跟算法变化保持网页排名优势提供最新鲜的数据满足检索需要程序化的真实应用场景例如一家售卖跑鞋的电商网站端生成在芝加哥购买跑鞋网页捕捉长尾关键词排名端检索搜索芝加哥哪里买跑鞋时检索到该网页生成直接引用价格和商店信息生成答案最终效果网站在传统搜索与回答中占据优势提升流量和销量程序化的收益收益规模精准高效匹配用户意图稳居排名前列收益语义精确结构清晰内容易被引用程序化综合效果构建一个在传统搜索和生成答案中都有强势表现的内容帝国覆盖海量搜索问题赢得未来搜索市场主导权',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-01-02 11:24:46',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="cuizhenjie`blog" type="application/atom+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://avatars.githubusercontent.com/u/2757261?v=4&amp;size=128"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">cuizhenjie`blog</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"/><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 教程</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/categories/Python%E6%95%99%E7%A8%8B/"><i class="anzhiyufont anzhiyu-icon-book faa-tada" style="font-size: 0.9em;"></i><span> Python入门</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/LangChain%E6%95%99%E7%A8%8B/"><i class="anzhiyufont anzhiyu-icon-robot faa-tada" style="font-size: 0.9em;"></i><span> LangChain</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://hall.oss-cn-qingdao.aliyuncs.com/wechatpay.png" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hall.oss-cn-qingdao.aliyuncs.com/wechatpay.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://hall.oss-cn-qingdao.aliyuncs.com/alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hall.oss-cn-qingdao.aliyuncs.com/alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/3d/" style="font-size: 1.05rem;">3d<sup>1</sup></a><a href="/tags/AIGC/" style="font-size: 1.05rem;">AIGC<sup>10</sup></a><a href="/tags/AI%E8%A7%86%E9%A2%91/" style="font-size: 1.05rem;">AI视频<sup>3</sup></a><a href="/tags/CentOS%E4%B8%8Bgo%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/" style="font-size: 1.05rem;">CentOS下go环境安装<sup>1</sup></a><a href="/tags/Linux/" style="font-size: 1.05rem;">Linux<sup>6</sup></a><a href="/tags/centos/" style="font-size: 1.05rem;">centos<sup>5</sup></a><a href="/tags/cpu/" style="font-size: 1.05rem;">cpu<sup>3</sup></a><a href="/tags/date/" style="font-size: 1.05rem;">date<sup>1</sup></a><a href="/tags/free/" style="font-size: 1.05rem;">free<sup>1</sup></a><a href="/tags/go%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/" style="font-size: 1.05rem;">go环境安装<sup>1</sup></a><a href="/tags/lrzsz/" style="font-size: 1.05rem;">lrzsz<sup>1</sup></a><a href="/tags/memory/" style="font-size: 1.05rem;">memory<sup>1</sup></a><a href="/tags/mysql/" style="font-size: 1.05rem;">mysql<sup>1</sup></a><a href="/tags/mysql6-5/" style="font-size: 1.05rem;">mysql6.5<sup>1</sup></a><a href="/tags/mysql%E5%AE%89%E8%A3%85/" style="font-size: 1.05rem;">mysql安装<sup>1</sup></a><a href="/tags/mysql%E9%85%8D%E7%BD%AE/" style="font-size: 1.05rem;">mysql配置<sup>1</sup></a><a href="/tags/prompt/" style="font-size: 1.05rem;">prompt<sup>1</sup></a><a href="/tags/rz/" style="font-size: 1.05rem;">rz<sup>1</sup></a><a href="/tags/sz/" style="font-size: 1.05rem;">sz<sup>1</sup></a><a href="/tags/threejs/" style="font-size: 1.05rem;">threejs<sup>1</sup></a><a href="/tags/webgl/" style="font-size: 1.05rem;">webgl<sup>1</sup></a><a href="/tags/yum%E5%AE%89%E8%A3%85mysql/" style="font-size: 1.05rem;">yum安装mysql<sup>1</sup></a><a href="/tags/%E4%BB%A3%E6%9B%BFftp/" style="font-size: 1.05rem;">代替ftp<sup>1</sup></a><a href="/tags/%E4%BF%AE%E6%94%B9%E6%97%B6%E5%8C%BA/" style="font-size: 1.05rem;">修改时区<sup>1</sup></a><a href="/tags/%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4/" style="font-size: 1.05rem;">修改时间<sup>1</sup></a><a href="/tags/%E5%8F%99%E4%BA%8B%E6%8A%80%E5%B7%A7/" style="font-size: 1.05rem;">叙事技巧<sup>1</sup></a><a href="/tags/%E5%8F%AF%E7%81%B5/" style="font-size: 1.05rem;">可灵<sup>3</sup></a><a href="/tags/%E5%9C%A3%E8%AF%9E%E6%A0%91/" style="font-size: 1.05rem;">圣诞树<sup>1</sup></a><a href="/tags/%E5%B8%A6%E5%AE%BD/" style="font-size: 1.05rem;">带宽<sup>1</sup></a><a href="/tags/%E6%89%8B%E5%8A%BF/" style="font-size: 1.05rem;">手势<sup>1</sup></a><a href="/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B/" style="font-size: 1.05rem;">提示词工程<sup>1</sup></a><a href="/tags/%E6%97%B6%E5%8C%BA/" style="font-size: 1.05rem;">时区<sup>1</sup></a><a href="/tags/%E6%9F%A5%E7%9C%8B%E5%86%85%E5%AD%98/" style="font-size: 1.05rem;">查看内存<sup>1</sup></a><a href="/tags/%E7%A3%81%E7%9B%98%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B5/" style="font-size: 1.05rem;">磁盘使用情况<sup>1</sup></a><a href="/tags/%E7%BD%91%E9%80%9F/" style="font-size: 1.05rem;">网速<sup>1</sup></a><a href="/tags/%E8%A7%86%E9%A2%91%E5%8F%98%E7%8E%B0/" style="font-size: 1.05rem;">视频变现<sup>1</sup></a><a href="/tags/%E8%A7%86%E9%A2%91%E5%95%86%E4%B8%9A%E5%8C%96/" style="font-size: 1.05rem;">视频商业化<sup>1</sup></a><a href="/tags/%E8%A7%86%E9%A2%91%E7%94%9F%E6%88%90/" style="font-size: 1.05rem;">视频生成<sup>2</sup></a><a href="/tags/%E9%95%9C%E5%A4%B4%E6%8A%80%E5%B7%A7/" style="font-size: 1.05rem;">镜头技巧<sup>1</sup></a><a href="/tags/%E9%95%BF%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C/" style="font-size: 1.05rem;">长视频制作<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/01/"><span class="card-archive-list-date">一月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">19</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/12/"><span class="card-archive-list-date">十二月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">10</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/11/"><span class="card-archive-list-date">十一月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/04/"><span class="card-archive-list-date">四月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/03/"><span class="card-archive-list-date">三月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">4</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/02/"><span class="card-archive-list-date">二月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/12/"><span class="card-archive-list-date">十二月 2019</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2018/11/"><span class="card-archive-list-date">十一月 2018</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="anzhiyu.switchCommentBarrage()" title="热评开关"><a class="commentBarrage"><i class="anzhiyufont anzhiyu-icon-message"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/AIGC/" itemprop="url">AIGC</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/AIGC/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>AIGC</span></a><a class="article-meta__tags" href="/tags/AI/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>AI</span></a><a class="article-meta__tags" href="/tags/geo/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>geo</span></a></span></div></div><h1 class="post-title" itemprop="name headline">生成式引擎优化(GEO)</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2026-01-02T03:24:46.000Z" title="发表于 2026-01-02 11:24:46">2026-01-02</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2026-01-02T03:24:46.000Z" title="更新于 2026-01-02 11:24:46">2026-01-02</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-pv-cv" id="" data-flag-title="生成式引擎优化(GEO)"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">阅读量:</span><span id="busuanzi_value_page_pv"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为Beijing"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>Beijing</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src=""></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="http://cuizhenjie.github.io/2026/01/02/geo/"><header><a class="post-meta-categories" href="/categories/AIGC/" itemprop="url">AIGC</a><a href="/tags/AIGC/" tabindex="-1" itemprop="url">AIGC</a><a href="/tags/AI/" tabindex="-1" itemprop="url">AI</a><a href="/tags/geo/" tabindex="-1" itemprop="url">geo</a><h1 id="CrawlerTitle" itemprop="name headline">生成式引擎优化(GEO)</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">cuizhenjie</span><time itemprop="dateCreated datePublished" datetime="2026-01-02T03:24:46.000Z" title="发表于 2026-01-02 11:24:46">2026-01-02</time><time itemprop="dateCreated datePublished" datetime="2026-01-02T03:24:46.000Z" title="更新于 2026-01-02 11:24:46">2026-01-02</time></header><h2 id="GEO简介"><a href="#GEO简介" class="headerlink" title="GEO简介"></a>GEO简介</h2><p>在DeepSeek、豆包、Qwen、Gemini这样AI搜索引擎上，让产品被搜到或者曝光呢？这涉及到生成引擎优化（Generative Engine Optimization，GEO)，就是如何让AI搜索曝光你的产品或者公司。</p>
+<p>GEO（生成式引擎优化，英文Generative Engine Optimization）指的是针对由人工智能驱动的搜索引擎（如DeepSeek、豆包、Qwen、Gemini以及谷歌AI摘要功能）进行网站内容优化的一种策略，目的是提升品牌在AI生成的搜索结果中的可见性。具体来说，通过GEO优化，企业的品牌信息可以更频繁地出现在用户利用AI工具搜索与其产品、服务或专业领域相关的问题时生成的回答中。最终，GEO的核心目标是提高网站在AI搜索中的曝光率，精准引流用户，并将网站访问者转化为忠诚的品牌粉丝，让他们持续关注并反复回访。</p>
+<h2 id="GEO的关键组成部分：-GEO-SEO-RAG"><a href="#GEO的关键组成部分：-GEO-SEO-RAG" class="headerlink" title="GEO的关键组成部分： GEO = SEO + RAG"></a>GEO的关键组成部分： GEO = SEO + RAG</h2><p>AI在搜索的时候有两步：</p>
+<ul>
+<li>首先是进行搜索找到相关的内容<br>因为网络搜索涉及极其大量的网页爬取和收录，大多数AI搜索公司是继续调用Google、Bing的搜索功能</li>
+<li>AI从搜索结果中，总结和寻找用户问题的答案。</li>
+</ul>
+<p>所以进行GEO优化也有两步:</p>
+<ul>
+<li>首先是让搜索引擎可以搜到你 — SEO</li>
+<li>AI从搜索结果中找到并推荐你的品牌信息 — RAG</li>
+</ul>
+<p>所以GEO = SEO + RAG优化。</p>
+<p>通过整合SEO与RAG，GEO优化AI内容的方式包括：</p>
+<ul>
+<li>SEO技术：提高关键词数量，搜索排名和自然流量。</li>
+<li>RAG方法：确保内容的准确性、相关性和及时更新。</li>
+</ul>
+<h2 id="SEO应该为GEO的第一步"><a href="#SEO应该为GEO的第一步" class="headerlink" title="SEO应该为GEO的第一步"></a>SEO应该为GEO的第一步</h2><p>如果网页不能被AI搜到，AI也就无法引用你的内容。</p>
+<h3 id="1-搜索引擎如何工作"><a href="#1-搜索引擎如何工作" class="headerlink" title="1.搜索引擎如何工作"></a>1.搜索引擎如何工作</h3><p>搜索引擎通过以下三个步骤提供搜索结果：</p>
+<ul>
+<li>抓取（Crawling）：搜索引擎的机器人（也称为”蜘蛛”）在互联网上爬行，通过跟踪链接发现新网页并索引</li>
+<li>索引（Indexing）：搜索引擎将抓取到的内容存储并整理到庞大型数据库中，分析文本、图像以及网页结构。</li>
+<li>排名（Ranking）：当用户搜索时，搜索引擎会根据特定算法（如谷歌的PageRank）挑选出最相关、高质量的网页</li>
+</ul>
+<p>SEO的目的就是让你的网页更容易被抓取、索引并在搜索结果中排名靠前。</p>
+<h3 id="2-SEO关键词"><a href="#2-SEO关键词" class="headerlink" title="2.SEO关键词"></a>2.SEO关键词</h3><p>关键词是用户在搜索引擎输入的词语或短语（例如：”附近最好的披萨”）。</p>
+<ul>
+<li>关键词研究：使用谷歌关键词规划师等工具或趋势分析，确定你的目标用户在搜索哪些关键词。</li>
+<li>关键词布局：自然地将关键词布置在标题、段落标题和正文中。但不要过度重复（这称为”关键词堆砌”，会被惩罚）。</li>
+<li>搜索意图匹配：根据用户意图选择关键词，例如信息类（”什么是SEO”）、导航类（”SEO工具”）或交易类（”购买SEO课程”）。</li>
+</ul>
+<h3 id="3-站内SEO：优化你的内容"><a href="#3-站内SEO：优化你的内容" class="headerlink" title="3.站内SEO：优化你的内容"></a>3.站内SEO：优化你的内容</h3><p>站内SEO指的是调整你的网页元素，目标：让你的网页更易被搜索引擎和用户理解：</p>
+<ul>
+<li>标题标签（Title Tag）：搜索结果中可点击的标题（例如：”SEO基础：2025年指南”），长度保持在60个字符以内。</li>
+<li>元描述（Meta Description）：搜索结果中的网页简介（160个字符以内），吸引点击（如：”掌握SEO基础知识，提升2025网站表现！”）。</li>
+<li>标题（Headings）：使用H1、H2等标签组织内容结构（就像本文这样），并合理加入关键词。</li>
+<li>内容质量（Content Quality）：撰写清晰、有价值且原创的内容，篇幅较长的内容（1000字以上）通常排名更好。</li>
+<li>图像优化（Images）：为图像添加描述性的Alt文本（例如：”SEO基础图解”），帮助搜索引擎理解并提高可访问性。</li>
+</ul>
+<h3 id="4-站外SEO：建立网站权威性"><a href="#4-站外SEO：建立网站权威性" class="headerlink" title="4.站外SEO：建立网站权威性"></a>4.站外SEO：建立网站权威性</h3><p>站外SEO是指网站外部的优化活动：</p>
+<ul>
+<li>反向链接（Backlinks）：当权威的网站链接到你的网站，这意味着你的内容被认可。链接质量比数量更重要（例如，《福布斯》链接优于普通博客）。</li>
+<li>社交信号（Social Signals）：在X（推特）等社交平台上的分享，可以间接提升你的网站曝光度。</li>
+<li>品牌口碑（Brand Reputation）：积极的品牌提及或评论有助于搜索引擎认可你的可信度。</li>
+</ul>
+<h3 id="5-技术SEO：幕后技术优化"><a href="#5-技术SEO：幕后技术优化" class="headerlink" title="5. 技术SEO：幕后技术优化"></a>5. 技术SEO：幕后技术优化</h3><p>技术SEO保证你的网站平稳运行，目标：去除搜索引擎抓取你网页的技术障碍：</p>
+<ul>
+<li>网站速度（Site Speed）：网页加载速度越快排名越好，可以用谷歌的PageSpeed Insights工具检测速度。</li>
+<li>移动端友好性（Mobile-Friendliness）：大部分搜索在移动端进行，你的网页必须自适应布局。</li>
+<li>站点地图与Robots.txt（Sitemap &amp; Robots.txt）：帮助搜索引擎机器人发现和索引你的网页</li>
+<li>安全协议HTTPS：谷歌更倾向于安全的HTTPS网站，而非HTTP网站</li>
+</ul>
+<h3 id="6-用户体验（UX）：留住访客"><a href="#6-用户体验（UX）：留住访客" class="headerlink" title="6. 用户体验（UX）：留住访客"></a>6. 用户体验（UX）：留住访客</h3><p>搜索引擎会追踪网站的互动情况：</p>
+<ul>
+<li>跳出率（Bounce Rate）：用户快速离开网页对排名不利。提供吸引用户的内容能降低跳出率。</li>
+<li>停留时间（Dwell Time）：用户停留在网页的时间越长越好，因此要让你的网页内容真正有价值。</li>
+<li>导航结构（Navigation）：清晰的菜单和内部链接可以提高用户探索的意愿。</li>
+</ul>
+<h2 id="为什么Programmatic-SEO自然搜索流量-SEO-如此重要？"><a href="#为什么Programmatic-SEO自然搜索流量-SEO-如此重要？" class="headerlink" title="为什么Programmatic SEO自然搜索流量(SEO)如此重要？"></a>为什么Programmatic SEO自然搜索流量(SEO)如此重要？</h2><p>Programmatic SEO（程序化SEO）通过大量创建网页，覆盖长尾关键词，来提高谷歌流量。CapGo AI在服务客户时做的程序化SEO与传统SEO手动制作单个网页不同，程序化SEO能够生成成千（甚至上万）的网页，特别是网站和落地页，针对特定关键词、用户搜索意图或细分市场进行优化。这种模式正在彻底改变SEO的游戏规则，并与我们的GEO（生成式引擎优化）密切相关。</p>
+<p>关键词搜索量分布：长尾关键词机会显著</p>
+<h3 id="1-可规模化：更高效地覆盖大量关键词"><a href="#1-可规模化：更高效地覆盖大量关键词" class="headerlink" title="1. 可规模化：更高效地覆盖大量关键词"></a>1. 可规模化：更高效地覆盖大量关键词</h3><p>传统SEO通常只优化少数高价值网页，但程序化SEO让你可以大规模地瞄准长尾关键词，例如：<br>  房地产网站可能只手动优化”纽约房屋”，但程序化方式可覆盖”布鲁克林三居室住宅”或”中央公园附近的公寓”</p>
+<ul>
+<li><p>SEO效果：更多的网页被索引 = 更多的排名机会 = 更多自然流量</p>
+</li>
+<li><p>GEO的结合：在GEO（SEO+RAG）环境中，这些网页成为AI检索的宝库，为生成式引擎提供精准、地点特定的答案。</p>
+</li>
+</ul>
+<h2 id="从GEO（SEO-RAG）的视角看程序化SEO"><a href="#从GEO（SEO-RAG）的视角看程序化SEO" class="headerlink" title="从GEO（SEO + RAG）的视角看程序化SEO"></a>从GEO（SEO + RAG）的视角看程序化SEO</h2><ul>
+<li><strong>SEO效果</strong>：谷歌奖励相关性和精确性，推动网页在数千个细分搜索中排名靠前。</li>
+<li><strong>GEO的结合</strong>：AI系统（如ChatGPT）需要详细且明确的内容。程序化网页为RAG（检索增强生成）提供更多内容来源，提升回答质量。</li>
+<li>手动为每个关键词变体优化网页费时费力。程序化SEO实现自动化：<br>  AI + 模板 + 数据（例如产品SKU、城市名称）批量创建网页<br>  如电商网站可以生成每个组合的”在[城市]购买[产品]”</li>
+<li><strong>SEO效果</strong>：节省资源，同时批量创造大量针对SEO优化的网页</li>
+<li><strong>GEO的结合</strong>：在GEO战略中，大批产内容意味着更多数据供AI检索与整合，增强你的品牌在AI生成结果中的存在感。</li>
+<li>搜索引擎优先考虑用户意图（信息型、导航型、交易型）。程序化SEO可以精准匹配用户的意图：<br>  每个决策阶段网页（如”X是什么”、”如何购买X”、”X的评价”）。<br>  如旅游网站可生成每个热门地的”在[城市]可做的事情”</li>
+<li><strong>SEO效果</strong>：匹配用户意图能提高点击率和用户停留时间——这些都是重要的排名因素。</li>
+<li><strong>GEO的结合</strong>：针对用户意图的网页在RAG检索特别有价值，确保AI提取到直接回应用户问题的内容。</li>
+<li>在竞争激烈的市场中，要在宽泛关键词上排名困难重重。程序化SEO帮助你占据”长尾关键词”：<br>  健身网站可以生成针对每个地区和年龄组的”适合[年龄段]在[地点]的健身计划”</li>
+<li>竞争对手可能忽视这些关键词，而你则能稳稳排名，占据细分市场。</li>
+<li><strong>SEO效果</strong>：在竞争不充分的领域建立自己的阵地，逐步提升流量。</li>
+<li><strong>GEO的结合</strong>：这些细分领域的网页成为AI权威信息来源，增加你被AI引用的可能性。</li>
+<li>谷歌的算法不断进化（如BERT和MUM），更偏爱以用户全面导向的内容。程序化SEO通过以下方式快速适应：<br>  快速更新网页模板以符合新最佳实践（如添加结构化数据）。<br>  通过自动化数据更新保持内容新鲜。</li>
+<li><strong>SEO效果</strong>：让你始终站在算法变化前列，维持排名稳定性。</li>
+<li><strong>GEO的结合</strong>：新鲜且结构化的内容满足GEO对最新、可检索数据的要求（截至2025年3月13日）。</li>
+<li>如果我们把GEO看成是SEO与RAG的结合，程序化SEO能够同时加强这两个方面：<ul>
+<li><strong>SEO方面</strong>：构建庞大且优化良好的内容库，确保传统搜索的曝光率，从而成为AI发现内容的前提。</li>
+<li><strong>RAG方面</strong>：<br>  检索环节：成千上万具体且精准的网页，提高AI检索到你内容的概率，例如用户搜索”在[Y地点]最好的[X产品/服务]”<br>  生成环节：结构化、富含数据的网页（例如价格、地点、评价），为AI生成提供详实的信息以生成答案。</li>
+</ul>
+</li>
+<li>示例场景：程序化生成的网页，如”2025年奥斯汀最佳咖啡馆”，能在传统SEO中获得排名（SEO效果），AI系统在回答”奥斯汀有哪些咖啡馆值得去”时可轻松检索到此网页（RAG检索阶段），并利用网页的具体内容生成详细回答（RAG生成阶段）。</li>
+</ul>
+<h2 id="优化RAG是GEO的核心-GEO-SEO-RAG）"><a href="#优化RAG是GEO的核心-GEO-SEO-RAG）" class="headerlink" title="优化RAG是GEO的核心 (GEO= SEO + RAG）"></a>优化RAG是GEO的核心 (GEO= SEO + RAG）</h2><p>RAG就是让AI从众多搜索结果中挑选你的内容，向用户提供答案。这意味着，摒弃SEO时代关键词堆砌的做法（尤其要避免堆砌不明觉厉的词汇），而应采用清晰、详尽的自然语言来描述产品要素，这对于确保内容被AI有效识别和采纳至关重要。</p>
+<h3 id="1-强化检索（SEO的结合）"><a href="#1-强化检索（SEO的结合）" class="headerlink" title="1. 强化检索（SEO的结合）"></a>1. 强化检索（SEO的结合）</h3><p>RAG中，”检索”阶段是指AI根据用户问题，从大量的搜索结果中找出最相关的内容。要优化这个过程，你需要：</p>
+<ul>
+<li>语义相关性（Semantic Relevance）：内容要高度契合用户的搜索意图。用户搜索：”如何优化AI搜索？”你的内容应精准且深入地回答这个问题。</li>
+<li>上下文密度（Contextual Density）：在内容中加入关联概念，如”GEO”附近可以同时提到”大语言模型（LLM）”、”自然语言处理（NLP）”、”xAI”，让AI将你的内容视作权威的知识资源。</li>
+<li>独特标识（Unique Identifiers）：独特短语或原创术语（例如：”GEO = SEO + RAG”），让你的内容在AI检索时脱颖而出，不被泛泛的竞争内容淹没。</li>
+<li>结构化数据（Structured Data）：使用结构化标记（如FAQ、How-To模式）明确告诉AI你的内容用途与结构，帮助AI更好地识别和抓取你的内容。</li>
+</ul>
+<p><strong>RAG检索目标</strong>：确保你的内容是AI检索特定问题时找到的最相关的内容。</p>
+<h3 id="2-为提取信息环节优化（RAG第二步）"><a href="#2-为提取信息环节优化（RAG第二步）" class="headerlink" title="2.为提取信息环节优化（RAG第二步）"></a>2.为提取信息环节优化（RAG第二步）</h3><p>一旦内容被检索到，RAG的”生成”阶段就开始了。AI会在这里整合并生成答案。此阶段你要优化AI如何理解并呈现你的内容：</p>
+<ul>
+<li>明确回答问题（Answer-Oriented）：SEO的区别，就是要用自然语言清晰详细的写出产品的主要功能，不要堆砌关键词。在开头就直接回答用户可能提出的问题。如果用户搜索：”如何做GEO优化？”则开头就说：”实现GEO优化方法是：优化检索和内容生成两个环节。”</li>
+<li>清晰与简洁（Clarity and Conciseness）：使用易于AI提炼的语言，短句比复杂的长段落更有效。例如：”GEO结合SEO的曝光度与RAG的精准性。”</li>
+<li>权威语气（Authoritative Tone）：使用自信、专业的语言，并辅以数据或实例。AI偏好权威的内容（例如：”研究表明，60%的AI答案来自排名前5的网页”——如需要真实数据，我可帮你查找）。</li>
+<li>避免模糊表述（Avoid Ambiguity）：表达要具体明确，不要说”这样很有用”而要说”GEO能让内容在AI驱动的搜索中提升30%的曝光率（举例性数据，若需要我可核实）。</li>
+</ul>
+<p><strong>RAG生成目标</strong>：让你的内容成为AI生成答案时首选的引用来源。</p>
+<h3 id="3-内容战略连接SEO与RAG"><a href="#3-内容战略连接SEO与RAG" class="headerlink" title="3.内容战略连接SEO与RAG"></a>3.内容战略连接SEO与RAG</h3><ul>
+<li>长尾关键词（Long-Tail Queries）：SEO优化长尾关键词（如”如何为生成式AI搜索引擎优化内容”），而这些恰好也是RAG在对话式检索时经常触发的查询。</li>
+<li>主题权威性（Topical Authority）：围绕GEO创建内容集群（例如：”什么是GEO？”、”GEO工具”、”GEO与SEO的区别”），既能提升SEO排名，也增加RAG检索你内容的机会。</li>
+<li>内容新鲜度（Freshness）：定期更新内容（SEO偏爱新鲜内容，RAG也更偏爱当前信息）。</li>
+<li>参与度信号（Engagement Signals）：在社交平台（如X）推广你的内容，高参与度（点赞、分享）能向SEO和RAG同时释放内容相关性信号。</li>
+</ul>
+<h3 id="4-Demo示例"><a href="#4-Demo示例" class="headerlink" title="4. Demo示例"></a>4. Demo示例</h3><p>假设你要优化一篇博客文章：</p>
+<ul>
+<li>SEO优化：标题：”2025年如何做GEO：SEO与RAG完美结合”；元描述：”学习如何通过SEO与RAG技巧为生成式AI搜索优化内容。”；关键词：”GEO优化”、”AI搜索优化”</li>
+<li>RAG检索优化：文章中专设段落：”GEO结合RAG技术，确保内容在语义检索中更容易被找到——详细具体的指南优于泛泛而谈的概述。”</li>
+<li>RAG生成优化：添加清晰的结论：”想做好GEO，就应像这样撰写权威、有结构的答案：GEO = SEO的曝光力 + RAG的相关性。”</li>
+<li>社交平台推广：在X（推特）上发布：”GEO = SEO + RAG，如何做到？点击了解：[链接]”</li>
+</ul>
+<h3 id="5-测试并不断优化"><a href="#5-测试并不断优化" class="headerlink" title="5.测试并不断优化"></a>5.测试并不断优化</h3><ul>
+<li>SEO效果检查：使用Ahrefs、Google Search Console工具，跟踪内容的排名表现。</li>
+<li>RAG效果检查：询问我（或其他AI）类似”如何为生成式AI引擎优化内容？”这样的问题，看看你的内容是否被引用到。</li>
+<li>持续迭代优化：如果内容未被AI引用，调整内容的清晰度、权威性，或者进一步强化检索信号，不断提升效果。</li>
+</ul>
+<h2 id="程序化GEO是AI时代内容战略的未来"><a href="#程序化GEO是AI时代内容战略的未来" class="headerlink" title="程序化GEO是AI时代内容战略的未来"></a>程序化GEO是AI时代内容战略的未来</h2><p>什么是程序化GEO（Programmatic GEO）？</p>
+<p>程序化GEO指的是自动化批量生成大量针对AI搜索进行优化的网页，以提高在AI搜索结果中的曝光率。因为生成的网页多，就可以对应到更多的AI搜索问题。<br>程序化SEO是为了覆盖海量搜索关键词 (Search keywords)，程序化GEO就是批量覆盖海量的搜索问题 (Search Queries)。<br>因为用户在AI工具搜索的时候，搜索问题远远多于关键词搜索，对搜索内容的要求更为具体，搜索变得具体和长尾化，对长尾关键词和问题的覆盖变得尤为有种。</p>
+<p>GEO在程序化SEO基础上进一步融合了SEO与RAG（检索增强生成），让程序化生成的网页既满足传统搜索引擎排名需求，又能够为AI的两阶段处理（检索与生成）提供大量优质内容。这些网页既能在Google搜索中排名靠前，又能被AI系统检索、引用并呈现给用户。</p>
+<p>举个例子：一个咖啡馆网站可以自动化批量生成”2025年[城市]最好的咖啡馆”网页，覆盖全美每个城市。这些网页能针对长尾关键词排名（SEO），也能被AI在回答用户”[城市]哪里可以喝咖啡”时检索到（RAG步骤1），并为AI生成答案提供详细信息（如店名、营业时间）（RAG步骤2）。</p>
+<h3 id="程序化GEO具体怎么做？"><a href="#程序化GEO具体怎么做？" class="headerlink" title="程序化GEO具体怎么做？"></a>程序化GEO具体怎么做？</h3><h4 id="1-规模化提升覆盖范围"><a href="#1-规模化提升覆盖范围" class="headerlink" title="1. 规模化提升覆盖范围"></a>1. 规模化提升覆盖范围</h4><ul>
+<li>重要性：传统SEO只能优化少数网页，程序化GEO却能快速生成数千甚至数百万个特定网页。</li>
+<li>实施方法：<br>识别数据来源：如产品数据库、城市名称或用户生成内容（如房地产、咖啡馆名录）。<br>创建内容模板：设计带有可替换变量的模板（如”在[城市]购买[产品]”）。<br>例：旅游网站可以生成全球各城市的”[城市]必玩旅游活动”，例如”2025年东京必玩旅游活动”</li>
+</ul>
+<p>落地页示例：GEO优化的大规模落地页，覆盖海量AI搜索问题</p>
+<p>** SEO效果** ：网页多、索引多，流量自然提升。<br>** GEO优势** ：为AI提供丰富素材，精准回答用户地理位置相关问题。</p>
+<h3 id="2-精准锁定长尾关键词"><a href="#2-精准锁定长尾关键词" class="headerlink" title="2.精准锁定长尾关键词"></a>2.精准锁定长尾关键词</h3><ul>
+<li>重要性：长尾关键词竞争少，转化效果更佳，适合程序化GEO。</li>
+<li>实施方法：<br>  关键词挖掘：利用Google关键词规划工具或爬取X等平台数据，挖掘用户搜索长尾关键词。<br>  批量创建网页：用关键词相关数据填充模板（如商店名称、位置、价格）。<br>  例：健身网站批量生成”迈阿密青少年健身计划”。</li>
+<li>SEO效果：精准内容获得谷歌排名奖励。</li>
+<li>GEO优势：为AI提供检索时精准且细节充分的网页，提升被引用机会。</li>
+</ul>
+<h3 id="3-自动化节省时间和成本"><a href="#3-自动化节省时间和成本" class="headerlink" title="3.自动化节省时间和成本"></a>3.自动化节省时间和成本</h3><ul>
+<li>重要性：手动优化成千上万网页几乎不可能，自动化能极大节省资源。</li>
+<li>实施方法：<br>  集合数据，然后用多步AI Agent（如CapGo AI）进行批量网页生成。</li>
+<li>SEO效果：规模提升，成本和时间下降。</li>
+<li>GEO优势：快速生成内容满足AI检索需求，增加AI引用率。</li>
+</ul>
+<h3 id="4-规模满足用户意图"><a href="#4-规模满足用户意图" class="headerlink" title="4.规模满足用户意图"></a>4.规模满足用户意图</h3><ul>
+<li>重要性：搜索引擎与AI偏爱精准匹配用户意图（信息型、导航型、交易型）。<br>-实施方法：<br>  根据用户意图设计模板（如：”什么是[X]”、”在哪购买[X]”、”[X]评价”）。<br>  变量网页：内容根据用户具体需求生成。<br>  例：房产网站批量生成每个区域的”[城市]购房指南”、”[社区]生活指南”</li>
+<li>SEO效果：精准匹配意图提升点击率和停留时间。</li>
+<li>GEO优势：高度匹配意图的网页极易被AI检索并引用，直接回应用户问题。</li>
+</ul>
+<h3 id="5-在竞争激烈的市场中脱颖而出"><a href="#5-在竞争激烈的市场中脱颖而出" class="headerlink" title="5.在竞争激烈的市场中脱颖而出"></a>5.在竞争激烈的市场中脱颖而出</h3><ul>
+<li>重要性：在饱和领域，通用关键词竞争激烈，而程序化GEO可占据长尾关键词市场。<br>-实施方法：<br>  寻找竞争不充分的细分领域关键词（如：”青少年瑜伽疗养地”）。<br>  生成竞争对手忽略的内容<br>  例：健身网站生成”丹佛女性专属健身计划”</li>
+<li>SEO效果：占领竞争薄弱领域，稳定获得流量。</li>
+<li>GEO优势：细分领域的网页成为AI权威引用源。</li>
+</ul>
+<h3 id="6-持续适应搜索算法变化"><a href="#6-持续适应搜索算法变化" class="headerlink" title="6.持续适应搜索算法变化"></a>6.持续适应搜索算法变化</h3><ul>
+<li>重要性：Google算法（如BERT和MUM）持续更新，程序化GEO可快速适应算法变化。</li>
+<li>实施方法：<br>  结构化数据：添加FAQ、产品、本地商家等结构化标记，让搜索引擎和AI明确理解网页内容。<br>  自动化内容更新：设置脚本定期更新内容（如年份、价格）。<br>  例：将”2025年奥斯汀最佳咖啡馆”自动更新为”2026年…”，适应搜索趋势。</li>
+<li>SEO效果：始终紧跟算法变化，保持网页排名。</li>
+<li>GEO优势：提供最新鲜的数据，满足AI检索需要。</li>
+</ul>
+<h3 id="7-程序化GEO的真实应用场景"><a href="#7-程序化GEO的真实应用场景" class="headerlink" title="7.程序化GEO的真实应用场景"></a>7.程序化GEO的真实应用场景</h3><p>例如一家售卖跑鞋的电商网站：</p>
+<ul>
+<li>SEO端：生成”在芝加哥购买Nike Pegasus跑鞋”网页，捕捉长尾关键词排名。</li>
+<li>RAG端：<br>  检索：AI搜索”芝加哥哪里买跑鞋”时，检索到该网页<br>  生成：AI直接引用价格和商店信息生成答案。</li>
+<li>最终效果：网站在传统搜索与AI回答中占据优势，提升流量和销量。</li>
+</ul>
+<h2 id="程序化GEO的收益"><a href="#程序化GEO的收益" class="headerlink" title="程序化GEO的收益"></a>程序化GEO的收益</h2><ul>
+<li>SEO收益：规模、精准、高效、匹配用户意图，稳居排名前列。</li>
+<li>RAG收益：语义精确、结构清晰，内容易被AI引用</li>
+<li>程序化GEO综合效果：构建一个在传统搜索和AI生成答案中都有强势表现的内容帝国，覆盖海量搜索问题，赢得未来搜索市场主导权。</li>
+</ul>
+<hr>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hall.oss-cn-qingdao.aliyuncs.com/avatar.png" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hall.oss-cn-qingdao.aliyuncs.com/avatar.png" title="头像" alt="头像"></a><div class="post-copyright__author_name">cuizhenjie</div><div class="post-copyright__author_desc">学而不思则罔，思而不学则殆！</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="http://cuizhenjie.github.io/2026/01/02/geo/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('http://cuizhenjie.github.io/2026/01/02/geo/')">生成式引擎优化(GEO)</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://hall.oss-cn-qingdao.aliyuncs.com/wechatpay.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hall.oss-cn-qingdao.aliyuncs.com/wechatpay.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://hall.oss-cn-qingdao.aliyuncs.com/alipay.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hall.oss-cn-qingdao.aliyuncs.com/alipay.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://cuizhenjie.github.io/2026/01/02/geo/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=生成式引擎优化(GEO)&amp;url=http://cuizhenjie.github.io/2026/01/02/geo/&amp;pic=" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="undefined" target="_blank">MIT</a> 许可协议。转载请注明来自 <a href="http://cuizhenjie.github.io" target="_blank">cuizhenjie`blog</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/AIGC/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>AIGC<span class="tagsPageCount">10</span></a><a class="post-meta__box__tags" href="/tags/AI/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>AI<span class="tagsPageCount">13</span></a><a class="post-meta__box__tags" href="/tags/geo/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>geo<span class="tagsPageCount">1</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://hall.oss-cn-qingdao.aliyuncs.com/avatar.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2026/01/02/langchain-tutorial-04-chains/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">从零开始学LangChain（四）：Chains 链式调用</div></div></a></div><div class="next-post pull-right"><a href="/2026/01/03/langchain-tutorial-05-memory/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">从零开始学LangChain（五）：Memory 记忆管理</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/2025/12/30/fastapi-project-prompt/" title="FastAPI项目模板Prompt"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-12-30</div><div class="title">FastAPI项目模板Prompt</div></div></a></div><div><a href="/2025/12/30/ai-nianzhongzongjie-prompt/" title="AI年终总结Prompt"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-12-30</div><div class="title">AI年终总结Prompt</div></div></a></div><div><a href="/2026/01/01/open-spec-coding/" title="OpenSpec Coding 从零上手使用"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-01-01</div><div class="title">OpenSpec Coding 从零上手使用</div></div></a></div><div><a href="/2025/12/30/prompt-create-fastapi-template/" title="FastAPI项目模板Prompt"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-12-30</div><div class="title">FastAPI项目模板Prompt</div></div></a></div><div><a href="/2025/12/30/prompt-ai-nian-zhong-zong-jie/" title="AI年终总结Prompt"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-12-30</div><div class="title">AI年终总结Prompt</div></div></a></div><div><a href="/2025/12/29/speckit-coding/" title="Spec Coding 规范式编程"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-12-29</div><div class="title">Spec Coding 规范式编程</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hall.oss-cn-qingdao.aliyuncs.com/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/zc998800/cdn/face/gif/p045.gif" alt="status"/></div></div><div class="author-info__description">我不是知识的创造者，我只是知识搬运工</div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">cuizhenjie</h1><div class="author-info__desc">学而不思则罔，思而不学则殆！</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/cuizhenjie" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a></div></div></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bullhorn anzhiyu-shake"></i><span>公告</span></div><div class="announcement_content">🍧今天也是元气满满的一天呢~ 开心一点！🍧</div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://hall.oss-cn-qingdao.aliyuncs.com/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://hall.oss-cn-qingdao.aliyuncs.com/63c02edf44033.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#GEO%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">GEO简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GEO%E7%9A%84%E5%85%B3%E9%94%AE%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86%EF%BC%9A-GEO-SEO-RAG"><span class="toc-number">2.</span> <span class="toc-text">GEO的关键组成部分： GEO &#x3D; SEO + RAG</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SEO%E5%BA%94%E8%AF%A5%E4%B8%BAGEO%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5"><span class="toc-number">3.</span> <span class="toc-text">SEO应该为GEO的第一步</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C"><span class="toc-number">3.1.</span> <span class="toc-text">1.搜索引擎如何工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-SEO%E5%85%B3%E9%94%AE%E8%AF%8D"><span class="toc-number">3.2.</span> <span class="toc-text">2.SEO关键词</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E7%AB%99%E5%86%85SEO%EF%BC%9A%E4%BC%98%E5%8C%96%E4%BD%A0%E7%9A%84%E5%86%85%E5%AE%B9"><span class="toc-number">3.3.</span> <span class="toc-text">3.站内SEO：优化你的内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E7%AB%99%E5%A4%96SEO%EF%BC%9A%E5%BB%BA%E7%AB%8B%E7%BD%91%E7%AB%99%E6%9D%83%E5%A8%81%E6%80%A7"><span class="toc-number">3.4.</span> <span class="toc-text">4.站外SEO：建立网站权威性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E6%8A%80%E6%9C%AFSEO%EF%BC%9A%E5%B9%95%E5%90%8E%E6%8A%80%E6%9C%AF%E4%BC%98%E5%8C%96"><span class="toc-number">3.5.</span> <span class="toc-text">5. 技术SEO：幕后技术优化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%EF%BC%88UX%EF%BC%89%EF%BC%9A%E7%95%99%E4%BD%8F%E8%AE%BF%E5%AE%A2"><span class="toc-number">3.6.</span> <span class="toc-text">6. 用户体验（UX）：留住访客</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88Programmatic-SEO%E8%87%AA%E7%84%B6%E6%90%9C%E7%B4%A2%E6%B5%81%E9%87%8F-SEO-%E5%A6%82%E6%AD%A4%E9%87%8D%E8%A6%81%EF%BC%9F"><span class="toc-number">4.</span> <span class="toc-text">为什么Programmatic SEO自然搜索流量(SEO)如此重要？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%8F%AF%E8%A7%84%E6%A8%A1%E5%8C%96%EF%BC%9A%E6%9B%B4%E9%AB%98%E6%95%88%E5%9C%B0%E8%A6%86%E7%9B%96%E5%A4%A7%E9%87%8F%E5%85%B3%E9%94%AE%E8%AF%8D"><span class="toc-number">4.1.</span> <span class="toc-text">1. 可规模化：更高效地覆盖大量关键词</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8EGEO%EF%BC%88SEO-RAG%EF%BC%89%E7%9A%84%E8%A7%86%E8%A7%92%E7%9C%8B%E7%A8%8B%E5%BA%8F%E5%8C%96SEO"><span class="toc-number">5.</span> <span class="toc-text">从GEO（SEO + RAG）的视角看程序化SEO</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%98%E5%8C%96RAG%E6%98%AFGEO%E7%9A%84%E6%A0%B8%E5%BF%83-GEO-SEO-RAG%EF%BC%89"><span class="toc-number">6.</span> <span class="toc-text">优化RAG是GEO的核心 (GEO&#x3D; SEO + RAG）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%BC%BA%E5%8C%96%E6%A3%80%E7%B4%A2%EF%BC%88SEO%E7%9A%84%E7%BB%93%E5%90%88%EF%BC%89"><span class="toc-number">6.1.</span> <span class="toc-text">1. 强化检索（SEO的结合）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%B8%BA%E6%8F%90%E5%8F%96%E4%BF%A1%E6%81%AF%E7%8E%AF%E8%8A%82%E4%BC%98%E5%8C%96%EF%BC%88RAG%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%89"><span class="toc-number">6.2.</span> <span class="toc-text">2.为提取信息环节优化（RAG第二步）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%86%85%E5%AE%B9%E6%88%98%E7%95%A5%E8%BF%9E%E6%8E%A5SEO%E4%B8%8ERAG"><span class="toc-number">6.3.</span> <span class="toc-text">3.内容战略连接SEO与RAG</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Demo%E7%A4%BA%E4%BE%8B"><span class="toc-number">6.4.</span> <span class="toc-text">4. Demo示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E6%B5%8B%E8%AF%95%E5%B9%B6%E4%B8%8D%E6%96%AD%E4%BC%98%E5%8C%96"><span class="toc-number">6.5.</span> <span class="toc-text">5.测试并不断优化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E5%8C%96GEO%E6%98%AFAI%E6%97%B6%E4%BB%A3%E5%86%85%E5%AE%B9%E6%88%98%E7%95%A5%E7%9A%84%E6%9C%AA%E6%9D%A5"><span class="toc-number">7.</span> <span class="toc-text">程序化GEO是AI时代内容战略的未来</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E5%8C%96GEO%E5%85%B7%E4%BD%93%E6%80%8E%E4%B9%88%E5%81%9A%EF%BC%9F"><span class="toc-number">7.1.</span> <span class="toc-text">程序化GEO具体怎么做？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E8%A7%84%E6%A8%A1%E5%8C%96%E6%8F%90%E5%8D%87%E8%A6%86%E7%9B%96%E8%8C%83%E5%9B%B4"><span class="toc-number">7.1.1.</span> <span class="toc-text">1. 规模化提升覆盖范围</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%B2%BE%E5%87%86%E9%94%81%E5%AE%9A%E9%95%BF%E5%B0%BE%E5%85%B3%E9%94%AE%E8%AF%8D"><span class="toc-number">7.2.</span> <span class="toc-text">2.精准锁定长尾关键词</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%87%AA%E5%8A%A8%E5%8C%96%E8%8A%82%E7%9C%81%E6%97%B6%E9%97%B4%E5%92%8C%E6%88%90%E6%9C%AC"><span class="toc-number">7.3.</span> <span class="toc-text">3.自动化节省时间和成本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E8%A7%84%E6%A8%A1%E6%BB%A1%E8%B6%B3%E7%94%A8%E6%88%B7%E6%84%8F%E5%9B%BE"><span class="toc-number">7.4.</span> <span class="toc-text">4.规模满足用户意图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%9C%A8%E7%AB%9E%E4%BA%89%E6%BF%80%E7%83%88%E7%9A%84%E5%B8%82%E5%9C%BA%E4%B8%AD%E8%84%B1%E9%A2%96%E8%80%8C%E5%87%BA"><span class="toc-number">7.5.</span> <span class="toc-text">5.在竞争激烈的市场中脱颖而出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E6%8C%81%E7%BB%AD%E9%80%82%E5%BA%94%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95%E5%8F%98%E5%8C%96"><span class="toc-number">7.6.</span> <span class="toc-text">6.持续适应搜索算法变化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E7%A8%8B%E5%BA%8F%E5%8C%96GEO%E7%9A%84%E7%9C%9F%E5%AE%9E%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">7.7.</span> <span class="toc-text">7.程序化GEO的真实应用场景</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E5%8C%96GEO%E7%9A%84%E6%94%B6%E7%9B%8A"><span class="toc-number">8.</span> <span class="toc-text">程序化GEO的收益</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/01/08/python-tutorial-10-project/" title="从零开始学Python（十）：实战项目 - 个人记账本">从零开始学Python（十）：实战项目 - 个人记账本</a><time datetime="2026-01-08T02:00:00.000Z" title="发表于 2026-01-08 10:00:00">2026-01-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/01/07/python-tutorial-09-oop/" title="从零开始学Python（九）：面向对象编程">从零开始学Python（九）：面向对象编程</a><time datetime="2026-01-07T02:00:00.000Z" title="发表于 2026-01-07 10:00:00">2026-01-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/01/06/python-tutorial-08-exceptions/" title="从零开始学Python（八）：异常处理">从零开始学Python（八）：异常处理</a><time datetime="2026-01-06T02:00:00.000Z" title="发表于 2026-01-06 10:00:00">2026-01-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/01/05/ai-video-long-form/" title="AI视频长视频制作与商业化完全指南">AI视频长视频制作与商业化完全指南</a><time datetime="2026-01-05T08:00:00.000Z" title="发表于 2026-01-05 16:00:00">2026-01-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/01/05/ai-video-advanced-tips/" title="AI视频进阶技巧：从提示词工程到叙事创作">AI视频进阶技巧：从提示词工程到叙事创作</a><time datetime="2026-01-05T06:00:00.000Z" title="发表于 2026-01-05 14:00:00">2026-01-05</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="footer_deal"><a class="deal_link" href="mailto:cuizhenjie@gmail.com" title="email"><i class="anzhiyufont anzhiyu-icon-envelope"></i></a><a class="deal_link" href="https://weibo.com/u/7888758278" title="微博"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a><a class="deal_link" href="/atom.xml" title="RSS"><i class="anzhiyufont anzhiyu-icon-rss"></i></a><img class="footer_mini_logo" title="返回顶部" alt="返回顶部" onclick="anzhiyu.scrollToDest(0, 500)" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hall.oss-cn-qingdao.aliyuncs.com/avatar.png" size="50px"/><a class="deal_link" href="https://github.com/cuizhenjie" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="deal_link" href="https://www.youtube.com/@cuizhenjie" title="Youtube"><i class="anzhiyufont anzhiyu-icon-fire"></i></a><a class="deal_link" href="/copyright" title="CC"><i class="anzhiyufont anzhiyu-icon-copyright-line"></i></a></div><div id="workboard"><img class="workSituationImg boardsign" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.shields.io/badge/Czj-Working-yellow" alt="智者不入爱河，牛马不知死活~" title="智者不入爱河，牛马不知死活~"/><div id="runtimeTextTip"></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2025 - 2026 By <a class="footer-bar-link" href="/" title="cuizhenjie" target="_blank">cuizhenjie</a></div></div><div id="footer-type-tips"></div><div class="js-pjax"><script>function subtitleType () {
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      if (true) {
+        const from = '出自 ' + data.from
+        const sub = ["生活明朗&#44; 万物可爱&#44; 人间值得&#44; 未来可期.","以欢喜心&#44; 慢度日常&#44; 四季清宁&#44; 万物可爱."]
+        sub.unshift(data.hitokoto, from)
+        window.typed = new Typed('#footer-type-tips', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('footer-type-tips').innerHTML = data.hitokoto
+      }
+    })
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.cbd.int/typed.js@2.1.0/dist/typed.umd.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}
+</script></div></div><div class="footer-bar-right"><a class="footer-bar-link" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="Theme">Theme</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">56</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">124</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">20</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://cuizhenjie.github.io/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 教程</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/categories/Python%E6%95%99%E7%A8%8B/"><i class="anzhiyufont anzhiyu-icon-book faa-tada" style="font-size: 0.9em;"></i><span> Python入门</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/LangChain%E6%95%99%E7%A8%8B/"><i class="anzhiyufont anzhiyu-icon-robot faa-tada" style="font-size: 0.9em;"></i><span> LangChain</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/3d/" style="font-size: 0.88rem;">3d<sup>1</sup></a><a href="/tags/AIGC/" style="font-size: 0.88rem;">AIGC<sup>10</sup></a><a href="/tags/AI%E8%A7%86%E9%A2%91/" style="font-size: 0.88rem;">AI视频<sup>3</sup></a><a href="/tags/CentOS%E4%B8%8Bgo%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/" style="font-size: 0.88rem;">CentOS下go环境安装<sup>1</sup></a><a href="/tags/Linux/" style="font-size: 0.88rem;">Linux<sup>6</sup></a><a href="/tags/centos/" style="font-size: 0.88rem;">centos<sup>5</sup></a><a href="/tags/cpu/" style="font-size: 0.88rem;">cpu<sup>3</sup></a><a href="/tags/date/" style="font-size: 0.88rem;">date<sup>1</sup></a><a href="/tags/free/" style="font-size: 0.88rem;">free<sup>1</sup></a><a href="/tags/go%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/" style="font-size: 0.88rem;">go环境安装<sup>1</sup></a><a href="/tags/lrzsz/" style="font-size: 0.88rem;">lrzsz<sup>1</sup></a><a href="/tags/memory/" style="font-size: 0.88rem;">memory<sup>1</sup></a><a href="/tags/mysql/" style="font-size: 0.88rem;">mysql<sup>1</sup></a><a href="/tags/mysql6-5/" style="font-size: 0.88rem;">mysql6.5<sup>1</sup></a><a href="/tags/mysql%E5%AE%89%E8%A3%85/" style="font-size: 0.88rem;">mysql安装<sup>1</sup></a><a href="/tags/mysql%E9%85%8D%E7%BD%AE/" style="font-size: 0.88rem;">mysql配置<sup>1</sup></a><a href="/tags/prompt/" style="font-size: 0.88rem;">prompt<sup>1</sup></a><a href="/tags/rz/" style="font-size: 0.88rem;">rz<sup>1</sup></a><a href="/tags/sz/" style="font-size: 0.88rem;">sz<sup>1</sup></a><a href="/tags/threejs/" style="font-size: 0.88rem;">threejs<sup>1</sup></a><a href="/tags/webgl/" style="font-size: 0.88rem;">webgl<sup>1</sup></a><a href="/tags/yum%E5%AE%89%E8%A3%85mysql/" style="font-size: 0.88rem;">yum安装mysql<sup>1</sup></a><a href="/tags/%E4%BB%A3%E6%9B%BFftp/" style="font-size: 0.88rem;">代替ftp<sup>1</sup></a><a href="/tags/%E4%BF%AE%E6%94%B9%E6%97%B6%E5%8C%BA/" style="font-size: 0.88rem;">修改时区<sup>1</sup></a><a href="/tags/%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4/" style="font-size: 0.88rem;">修改时间<sup>1</sup></a><a href="/tags/%E5%8F%99%E4%BA%8B%E6%8A%80%E5%B7%A7/" style="font-size: 0.88rem;">叙事技巧<sup>1</sup></a><a href="/tags/%E5%8F%AF%E7%81%B5/" style="font-size: 0.88rem;">可灵<sup>3</sup></a><a href="/tags/%E5%9C%A3%E8%AF%9E%E6%A0%91/" style="font-size: 0.88rem;">圣诞树<sup>1</sup></a><a href="/tags/%E5%B8%A6%E5%AE%BD/" style="font-size: 0.88rem;">带宽<sup>1</sup></a><a href="/tags/%E6%89%8B%E5%8A%BF/" style="font-size: 0.88rem;">手势<sup>1</sup></a><a href="/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B/" style="font-size: 0.88rem;">提示词工程<sup>1</sup></a><a href="/tags/%E6%97%B6%E5%8C%BA/" style="font-size: 0.88rem;">时区<sup>1</sup></a><a href="/tags/%E6%9F%A5%E7%9C%8B%E5%86%85%E5%AD%98/" style="font-size: 0.88rem;">查看内存<sup>1</sup></a><a href="/tags/%E7%A3%81%E7%9B%98%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B5/" style="font-size: 0.88rem;">磁盘使用情况<sup>1</sup></a><a href="/tags/%E7%BD%91%E9%80%9F/" style="font-size: 0.88rem;">网速<sup>1</sup></a><a href="/tags/%E8%A7%86%E9%A2%91%E5%8F%98%E7%8E%B0/" style="font-size: 0.88rem;">视频变现<sup>1</sup></a><a href="/tags/%E8%A7%86%E9%A2%91%E5%95%86%E4%B8%9A%E5%8C%96/" style="font-size: 0.88rem;">视频商业化<sup>1</sup></a><a href="/tags/%E8%A7%86%E9%A2%91%E7%94%9F%E6%88%90/" style="font-size: 0.88rem;">视频生成<sup>2</sup></a><a href="/tags/%E9%95%9C%E5%A4%B4%E6%8A%80%E5%B7%A7/" style="font-size: 0.88rem;">镜头技巧<sup>1</sup></a><a href="/tags/%E9%95%BF%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C/" style="font-size: 0.88rem;">长视频制作<sup>1</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="switch-commentBarrage" href="javascript:anzhiyu.switchCommentBarrage();" title="开关弹幕"><i class="anzhiyufont anzhiyu-icon-danmu"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@6.1.6/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("03/01/2017 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2025 By 安知鱼 V1.7.0",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 cuizhenjie 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script async="async">(function () {
+  var grt = new Date("03/01/2017 00:00:00"); //设置网站上线时间
+  var now = new Date();
+  var dnum;
+  var hnum;
+  var mnum;
+  var snum;
+  var nowHour;
+
+  // 计算并更新天数、小时数、分钟数和秒数
+  function updateTime() {
+    now = new Date(); // 更新 now 的值
+    nowHour = now.getHours(); // 更新 nowHour 的值
+    var days = (now - grt) / 1000 / 60 / 60 / 24;
+    dnum = Math.floor(days);
+    var hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+    hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+      hnum = "0" + hnum;
+    }
+    var minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+      mnum = "0" + mnum;
+    }
+    var seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+    snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+      snum = "0" + snum;
+    }
+  }
+
+  // 更新网页中显示的网站运行时间
+  function updateHtml() {
+    const footer = document.getElementById("footer");
+    if (!footer) return
+    let currentTimeHtml = "";
+    if (nowHour < 18 && nowHour >= 9) {
+      // 如果是上班时间，默认就是"安知鱼-上班摸鱼中.svg"图片，不需要更改
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    } else {
+      // 如果是下班时间，插入"安知鱼-下班啦.svg"图片
+      let img = document.querySelector("#workboard .workSituationImg");
+      if (img != null) {
+        img.src = "https://img.shields.io/badge/Czj-Offduty-red";
+        img.title = "有惊无险，又到6点~";
+        img.alt = "有惊无险，又到6点~";
+      }
+
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    }
+
+    if (document.getElementById("runtimeTextTip")) {
+      document.getElementById("runtimeTextTip").innerHTML = currentTimeHtml;
+    }
+  }
+
+  setInterval(() => {
+    updateTime();
+    updateHtml();
+  }, 1000);
+})();</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.1/bubble/bubble.js"></script><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://cdn.cbd.int/qrcodejs@1.0.0/qrcode.min.js"></script><script src="/js/anzhiyu/right_click_menu.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><script defer="defer" id="ribbon" src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/canvas-fluttering-ribbon.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
