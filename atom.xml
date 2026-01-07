@@ -502,14 +502,14 @@
   </entry>
   
   <entry>
-    <title>02 安装与配置</title>
-    <link href="https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/02-installation-and-setup/"/>
-    <id>https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/02-installation-and-setup/</id>
+    <title>03 基础使用</title>
+    <link href="https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/03-basic-usage/"/>
+    <id>https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/03-basic-usage/</id>
     <published>2026-01-04T16:00:00.000Z</published>
     <updated>2026-01-04T16:00:00.000Z</updated>
     
     
-    <summary type="html">详细介绍如何在 macOS、Linux 和 Windows 上安装 Claude Code，包括环境配置、API 密钥设置和常见问题排查。</summary>
+    <summary type="html">学习 Claude Code 的基础使用方法，包括第一个命令、基本交互模式、提示词编写技巧和常用命令。</summary>
     
     
     
@@ -522,9 +522,9 @@
     
     <category term="开发工具" scheme="https://cuizhenjie.github.io/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
     
-    <category term="安装教程" scheme="https://cuizhenjie.github.io/tags/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
+    <category term="基础教程" scheme="https://cuizhenjie.github.io/tags/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
     
-    <category term="环境配置" scheme="https://cuizhenjie.github.io/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    <category term="提示词" scheme="https://cuizhenjie.github.io/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D/"/>
     
   </entry>
   

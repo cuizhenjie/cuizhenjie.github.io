@@ -65,7 +65,7 @@
   </url>
   
   <url>
-    <loc>https://cuizhenjie.github.io/air-conditioner/index.html</loc>
+    <loc>https://cuizhenjie.github.io/album/index.html</loc>
     
     <lastmod>2026-01-06</lastmod>
     
@@ -74,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://cuizhenjie.github.io/album/index.html</loc>
+    <loc>https://cuizhenjie.github.io/air-conditioner/index.html</loc>
     
     <lastmod>2026-01-06</lastmod>
     
@@ -101,6 +101,24 @@
   </url>
   
   <url>
+    <loc>https://cuizhenjie.github.io/2026/01/05/python-tutorial-07-files/</loc>
+    
+    <lastmod>2026-01-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://cuizhenjie.github.io/2026/01/07/python-tutorial-09-oop/</loc>
+    
+    <lastmod>2026-01-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://cuizhenjie.github.io/2026/01/06/python-tutorial-08-exceptions/</loc>
     
     <lastmod>2026-01-06</lastmod>
@@ -119,24 +137,6 @@
   </url>
   
   <url>
-    <loc>https://cuizhenjie.github.io/2026/01/07/python-tutorial-09-oop/</loc>
-    
-    <lastmod>2026-01-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://cuizhenjie.github.io/2026/01/05/python-tutorial-07-files/</loc>
-    
-    <lastmod>2026-01-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://cuizhenjie.github.io/2026/01/01/python-tutorial-03-data-types/</loc>
     
     <lastmod>2026-01-06</lastmod>
@@ -146,7 +146,7 @@
   </url>
   
   <url>
-    <loc>https://cuizhenjie.github.io/2026/01/03/python-tutorial-05-functions/</loc>
+    <loc>https://cuizhenjie.github.io/2026/01/02/python-tutorial-04-control-flow/</loc>
     
     <lastmod>2026-01-06</lastmod>
     
@@ -155,7 +155,7 @@
   </url>
   
   <url>
-    <loc>https://cuizhenjie.github.io/2026/01/02/python-tutorial-04-control-flow/</loc>
+    <loc>https://cuizhenjie.github.io/2026/01/03/python-tutorial-05-functions/</loc>
     
     <lastmod>2026-01-06</lastmod>
     
@@ -182,7 +182,7 @@
   </url>
   
   <url>
-    <loc>https://cuizhenjie.github.io/2026/01/04/langchain-tutorial-06-project/</loc>
+    <loc>https://cuizhenjie.github.io/2026/01/03/langchain-tutorial-05-memory/</loc>
     
     <lastmod>2026-01-06</lastmod>
     
@@ -191,7 +191,7 @@
   </url>
   
   <url>
-    <loc>https://cuizhenjie.github.io/2026/01/03/langchain-tutorial-05-memory/</loc>
+    <loc>https://cuizhenjie.github.io/2026/01/04/langchain-tutorial-06-project/</loc>
     
     <lastmod>2026-01-06</lastmod>
     
@@ -497,7 +497,7 @@
   </url>
   
   <url>
-    <loc>https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/02-installation-and-setup/</loc>
+    <loc>https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/03-basic-usage/</loc>
     
     <lastmod>2026-01-04</lastmod>
     
@@ -506,7 +506,7 @@
   </url>
   
   <url>
-    <loc>https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/03-basic-usage/</loc>
+    <loc>https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/02-installation-and-setup/</loc>
     
     <lastmod>2026-01-04</lastmod>
     
@@ -578,15 +578,6 @@
   </url>
   
   <url>
-    <loc>https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/11-troubleshooting/</loc>
-    
-    <lastmod>2026-01-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/12-next-steps/</loc>
     
     <lastmod>2026-01-04</lastmod>
@@ -615,6 +606,15 @@
   
   <url>
     <loc>https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/15-multi-language/</loc>
+    
+    <lastmod>2026-01-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/11-troubleshooting/</loc>
     
     <lastmod>2026-01-04</lastmod>
     
@@ -839,15 +839,6 @@
   </url>
   
   <url>
-    <loc>https://cuizhenjie.github.io/categories/develop/index.html</loc>
-    
-    <lastmod>2025-12-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://cuizhenjie.github.io/categories/aigc/index.html</loc>
     
     <lastmod>2025-12-28</lastmod>
@@ -857,7 +848,7 @@
   </url>
   
   <url>
-    <loc>https://cuizhenjie.github.io/categories/prompt/index.html</loc>
+    <loc>https://cuizhenjie.github.io/categories/develop/index.html</loc>
     
     <lastmod>2025-12-28</lastmod>
     
@@ -867,6 +858,15 @@
   
   <url>
     <loc>https://cuizhenjie.github.io/categories/operation/index.html</loc>
+    
+    <lastmod>2025-12-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://cuizhenjie.github.io/categories/prompt/index.html</loc>
     
     <lastmod>2025-12-28</lastmod>
     
@@ -1045,20 +1045,6 @@
   </url>
   
   <url>
-    <loc>https://cuizhenjie.github.io/tags/Prompt/</loc>
-    <lastmod>2026-01-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cuizhenjie.github.io/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</loc>
-    <lastmod>2026-01-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://cuizhenjie.github.io/tags/%E4%B9%A6%E7%B1%8D/</loc>
     <lastmod>2026-01-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -1067,6 +1053,20 @@
   
   <url>
     <loc>https://cuizhenjie.github.io/tags/%E6%B5%B7%E6%8A%A5/</loc>
+    <lastmod>2026-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cuizhenjie.github.io/tags/Prompt/</loc>
+    <lastmod>2026-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cuizhenjie.github.io/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2026-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1192,55 +1192,6 @@
   </url>
   
   <url>
-    <loc>https://cuizhenjie.github.io/tags/cpu/</loc>
-    <lastmod>2026-01-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cuizhenjie.github.io/tags/memory/</loc>
-    <lastmod>2026-01-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cuizhenjie.github.io/tags/%E6%9F%A5%E7%9C%8B%E5%86%85%E5%AD%98/</loc>
-    <lastmod>2026-01-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cuizhenjie.github.io/tags/free/</loc>
-    <lastmod>2026-01-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cuizhenjie.github.io/tags/%E7%BD%91%E9%80%9F/</loc>
-    <lastmod>2026-01-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cuizhenjie.github.io/tags/%E5%B8%A6%E5%AE%BD/</loc>
-    <lastmod>2026-01-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cuizhenjie.github.io/tags/%E7%A3%81%E7%9B%98%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B5/</loc>
-    <lastmod>2026-01-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://cuizhenjie.github.io/tags/linux%E5%AE%89%E5%85%A8/</loc>
     <lastmod>2026-01-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -1297,27 +1248,6 @@
   </url>
   
   <url>
-    <loc>https://cuizhenjie.github.io/tags/Claude-Code/</loc>
-    <lastmod>2026-01-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cuizhenjie.github.io/tags/AI-Coding/</loc>
-    <lastmod>2026-01-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cuizhenjie.github.io/tags/Authropic/</loc>
-    <lastmod>2026-01-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://cuizhenjie.github.io/tags/%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%88%E8%A7%84%E8%8C%83/</loc>
     <lastmod>2026-01-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -1339,14 +1269,49 @@
   </url>
   
   <url>
-    <loc>https://cuizhenjie.github.io/tags/%E6%96%87%E6%A1%88/</loc>
+    <loc>https://cuizhenjie.github.io/tags/cpu/</loc>
     <lastmod>2026-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://cuizhenjie.github.io/tags/%E5%8E%BB%E9%99%A4AI%E5%91%B3/</loc>
+    <loc>https://cuizhenjie.github.io/tags/memory/</loc>
+    <lastmod>2026-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cuizhenjie.github.io/tags/%E6%9F%A5%E7%9C%8B%E5%86%85%E5%AD%98/</loc>
+    <lastmod>2026-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cuizhenjie.github.io/tags/free/</loc>
+    <lastmod>2026-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cuizhenjie.github.io/tags/%E7%BD%91%E9%80%9F/</loc>
+    <lastmod>2026-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cuizhenjie.github.io/tags/%E5%B8%A6%E5%AE%BD/</loc>
+    <lastmod>2026-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cuizhenjie.github.io/tags/%E7%A3%81%E7%9B%98%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B5/</loc>
     <lastmod>2026-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1361,6 +1326,27 @@
   
   <url>
     <loc>https://cuizhenjie.github.io/tags/skill/</loc>
+    <lastmod>2026-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cuizhenjie.github.io/tags/Claude-Code/</loc>
+    <lastmod>2026-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cuizhenjie.github.io/tags/AI-Coding/</loc>
+    <lastmod>2026-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cuizhenjie.github.io/tags/Authropic/</loc>
     <lastmod>2026-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1388,14 +1374,21 @@
   </url>
   
   <url>
-    <loc>https://cuizhenjie.github.io/tags/gitlab/</loc>
+    <loc>https://cuizhenjie.github.io/tags/mac/</loc>
     <lastmod>2026-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://cuizhenjie.github.io/tags/docker%E5%AE%89%E8%A3%85gitlab/</loc>
+    <loc>https://cuizhenjie.github.io/tags/Docker/</loc>
+    <lastmod>2026-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cuizhenjie.github.io/tags/Docker%E5%AE%89%E8%A3%85/</loc>
     <lastmod>2026-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1416,21 +1409,28 @@
   </url>
   
   <url>
-    <loc>https://cuizhenjie.github.io/tags/mac/</loc>
+    <loc>https://cuizhenjie.github.io/tags/%E6%96%87%E6%A1%88/</loc>
     <lastmod>2026-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://cuizhenjie.github.io/tags/Docker/</loc>
+    <loc>https://cuizhenjie.github.io/tags/%E5%8E%BB%E9%99%A4AI%E5%91%B3/</loc>
     <lastmod>2026-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://cuizhenjie.github.io/tags/Docker%E5%AE%89%E8%A3%85/</loc>
+    <loc>https://cuizhenjie.github.io/tags/gitlab/</loc>
+    <lastmod>2026-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cuizhenjie.github.io/tags/docker%E5%AE%89%E8%A3%85gitlab/</loc>
     <lastmod>2026-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1486,6 +1486,13 @@
   </url>
   
   <url>
+    <loc>https://cuizhenjie.github.io/tags/fastdfs%E5%AE%89%E8%A3%85/</loc>
+    <lastmod>2026-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://cuizhenjie.github.io/tags/%E6%96%87%E6%A1%A3/</loc>
     <lastmod>2026-01-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -1494,13 +1501,6 @@
   
   <url>
     <loc>https://cuizhenjie.github.io/tags/%E7%94%9F%E6%88%90%E7%BD%91%E9%A1%B5/</loc>
-    <lastmod>2026-01-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cuizhenjie.github.io/tags/fastdfs%E5%AE%89%E8%A3%85/</loc>
     <lastmod>2026-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1787,13 +1787,6 @@
   </url>
   
   <url>
-    <loc>https://cuizhenjie.github.io/tags/Spec-Kit/</loc>
-    <lastmod>2026-01-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://cuizhenjie.github.io/tags/tomcat/</loc>
     <lastmod>2026-01-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -1823,6 +1816,13 @@
   
   <url>
     <loc>https://cuizhenjie.github.io/tags/utf-8/</loc>
+    <lastmod>2026-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cuizhenjie.github.io/tags/Spec-Kit/</loc>
     <lastmod>2026-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1878,20 +1878,6 @@
   </url>
   
   <url>
-    <loc>https://cuizhenjie.github.io/tags/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2026-01-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cuizhenjie.github.io/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
-    <lastmod>2026-01-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://cuizhenjie.github.io/tags/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2026-01-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -1900,6 +1886,20 @@
   
   <url>
     <loc>https://cuizhenjie.github.io/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D/</loc>
+    <lastmod>2026-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cuizhenjie.github.io/tags/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2026-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cuizhenjie.github.io/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2026-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2004,20 +2004,6 @@
   </url>
   
   <url>
-    <loc>https://cuizhenjie.github.io/tags/%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5/</loc>
-    <lastmod>2026-01-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cuizhenjie.github.io/tags/%E8%B0%83%E8%AF%95/</loc>
-    <lastmod>2026-01-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://cuizhenjie.github.io/tags/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E5%BE%84/</loc>
     <lastmod>2026-01-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -2068,6 +2054,20 @@
   
   <url>
     <loc>https://cuizhenjie.github.io/tags/Rust/</loc>
+    <lastmod>2026-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cuizhenjie.github.io/tags/%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5/</loc>
+    <lastmod>2026-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cuizhenjie.github.io/tags/%E8%B0%83%E8%AF%95/</loc>
     <lastmod>2026-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
