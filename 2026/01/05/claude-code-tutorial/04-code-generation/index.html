@@ -1,0 +1,579 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>04 代码生成 | cuizhenjie`blog</title><meta name="keywords" content="AI,Claude Code,开发工具,代码生成,编程"><meta name="author" content="cuizhenjie"><meta name="copyright" content="cuizhenjie"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="04 代码生成"><meta name="application-name" content="04 代码生成"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="04 代码生成"><meta property="og:url" content="https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/04-code-generation/index.html"><meta property="og:site_name" content="cuizhenjie`blog"><meta property="og:description" content="深入学习如何使用 Claude Code 生成高质量代码，包括函数、类、模块和完整应用，以及代码生成的最佳实践。"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://images.unsplash.com/photo-1574607408385-dc664a9c5272?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb&amp;w=4800&amp;_r_=3a406ee0-d503-4f1b-e1c0-d8c5157aca99"><meta property="article:author" content="cuizhenjie"><meta property="article:tag" content="技术博客,编程教程,Python,Docker,CentOS,Java,Linux,DevOps,AI,LangChain,运维开发,cuizhenjie,崔振杰"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://images.unsplash.com/photo-1574607408385-dc664a9c5272?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb&amp;w=4800&amp;_r_=3a406ee0-d503-4f1b-e1c0-d8c5157aca99"><meta name="description" content="深入学习如何使用 Claude Code 生成高质量代码，包括函数、类、模块和完整应用，以及代码生成的最佳实践。"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/04-code-generation/"><link rel="preconnect" href="//cdn.cbd.int"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@6.1.6/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2024/07/27/125766904/ba62475f396df9de3316a08ed9e65d86_5680958632268053399..png"},
+  postHeadAiDescription: undefined,
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好鸭👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋, 宝贝","startTime":12,"endTime":14},{"greeting":"🌈充实的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19点喽, 奖励一顿丰盛的大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚上好👋, 在属于自己的时间好好放松😌~","startTime":20,"endTime":24}]},
+  twikooEnvId: '',
+  commentBarrageConfig:{"enable":true,"maxBarrage":1,"barrageTime":4000,"accessToken":"","mailMd5":""},
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: {"apiurl":"https://puquan.wudl.cn/"},
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: {"skills":["🤖️ 数码科技爱好者","🔍 分享与热心帮助","🏠 AiCoding小能手","🔨 产品研发一条龙","🏃 脚踏实地行动派","💢 壮汉人狠话不多"]},
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: cuizhenjie","link":"链接: ","source":"来源: cuizhenjie`blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.2.0/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.2.0/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'cuizhenjie`blog',
+  title: '04 代码生成',
+  postAI: '',
+  pageFillDescription: '代码生成才是重头戏, 从函数开始, 类也不在话下, 模块级别的代码, 整个项目都能生成, 代码风格这事儿, 几个小技巧, 实际场景举例, 几个建议, 几个常见问题, 总结一下, 下一步代码生成才是重头戏说实话我第一次用生成代码的时候真的被惊艳到了那会儿我需要写一个数据处理脚本按照传统方式得花个把小时结果跟说清楚需求它几秒钟就给我生成了完整的代码而且质量还挺不错从那之后我就成了代码生成的忠实用户无论你需要一个简单的工具函数还是整个项目的架构它都能帮你搞定关键是你得知道怎么跟它沟通从函数开始最简单的就是一个函数用写一个函数计算两个数字的平均值它会给你类似这样的代码计算两个数字的平均值挺简单的吧但实际开发中你需要的不止是这些你可能需要参数验证错误处理类型提示那就把要求说清楚用写一个函数计算列表的平均值需要处理空列表情况验证输入是数字类型包含文档字符串添加类型提示这次它会给你更完善的代码包含类型检查完整的文档我一般都会要求它加上这些因为生产环境的代码不能太随意有时候你需要实现特定算法比如二分查找那就说清楚算法名称是否需要自定义比较函数怎么处理边界情况它通常能给出不错的实现还会加上注释和使用示例类也不在话下生成类也挺常见的比如你需要一个银行账户类用创建一个类包含存款取款余额不足时抛出异常查询余额方法还要有交易历史记录它会给你一个完整的类实现包含构造函数各个方法异常处理交易记录我试过几次质量都挺不错的它甚至会考虑到一些你自己可能没注意到的细节比如交易时间戳余额验证等等如果你需要面向对象的特性比如继承和多态直接说就行用创建一个基类和子类实现计算面积和周长的方法模块级别的代码有时候你需要生成整个模块而不仅仅是一个函数或类比如一个日期工具模块创建一个模块包含计算工作日数量判断是否为工作日获取下个工作日等函数添加类型提示和文档字符串或者一个客户端创建一个模块用于调用包含认证处理仓库列表获取问题创建错误处理使用这种时候它会把相关的功能组织在一起给你一个完整可用的模块文件整个项目都能生成这个我真心觉得厉害你甚至可以让它帮你生成整个项目结构比如一个的项目为一个创建项目结构包含用户认证数据模型中间件路由环境配置说明它会给你一个完整的目录树告诉你每个文件应该放什么内容虽然不是真的把文件创建好这点它做不到但它给出的结构图足够你照着实现了对于多文件项目我建议分步来先让它给你搭好骨架然后再逐个文件实现这样比一次性生成所有内容要好因为你可以每一步都验证一下发现问题及时调整代码风格这事儿如果你有特定的编码规范直接告诉它比如你团队用的是风格指南用写一个组件遵循风格指南使用函数组件和或者你需要用特定的测试框架为这个函数编写单元测试使用包含正常情况和边界情况文档格式也能指定用格式为这个函数添加文档注释我一般都会提一下代码规范因为它生成的代码默认风格可能跟你们团队的不一样与其让它生成完了你再改不如一开始就说清楚几个小技巧用了这么久我积累了一些经验别指望一次就得到完美结果我一般会先生个基础版本然后再逐步添加功能比如先创建一个简单的服务器然后再加请求日志最后再加错误处理这样每一步都能验证出了问题也好定位生成代码之后立即让它自己审查一遍这个技巧特别有用创建一个函数验证邮箱格式然后审查生成的代码指出潜在的安全问题它能发现很多你自己可能忽略的问题尤其是安全方面的有时候你想看看不同的实现方式那就直接问提供三种不同的方式来实现单例模式并解释每种方式的优缺点它通常能给你几个不同的思路你可以根据具体场景选择最合适的性能优化也挺重要的生成完代码之后可以让它帮忙优化创建一个函数检查列表是否包含重复项然后优化它的性能实际场景举例说几个我常用的场景吧数据处理脚本这个真的太常用了创建一个脚本读取文件过滤出特定条件的数据计算统计信息导出到新的文件以前这种脚本我得写半天现在几分钟就搞定了自动化任务也特别方便写一个脚本自动备份数据库到包括错误处理日志记录通知功能测试代码生成也省了不少时间为这个端点编写集成测试使用和还有配置文件每次写我都得查半天文档现在直接问它就行创建一个包含数据库缓存应用网络配置几个建议明确需求最重要语言功能输入输出特殊要求这些都得说清楚你越具体它给的答案就越接近你想要的质量标准也得提我一般会要求它包含错误处理类型提示文档字符串使用示例还有遵循什么编码规范这样生成的代码才能直接用最好让它顺便把测试也写了创建一个函数并编写相应的单元测试这样你不仅有实现代码还有测试用例一举两得生成完代码之后别忘了让它审查一下然后根据建议改进这个步骤我从来不会省因为它的建议确实有价值几个常见问题有人问生成的代码有错误怎么办这种情况我遇到过别慌直接把错误信息反馈给它这段代码有错误错误信息请帮我修复并解释原因它一般能快速定位问题还会告诉你为什么会错怎么改以后怎么避免还有人问怎么让它生成符合团队规范的代码简单直接把你们的编码规范文档贴给它使用以下规范生成代码粘贴团队的编码规范文档它就会按照你们的规范来生成代码不过这个可能需要多试几次有时候它理解得不太准确框架支持方面它基本都能搞你只要说清楚用什么框架哪个版本就行使用和创建使用和创建总结一下代码生成是最实用的功能之一从简单的函数到完整的项目架构它都能帮你搞定但关键是你要会提问说得越清楚它生成的就越接近你想要的别指望一次就完美慢慢迭代逐步优化这样效果最好还有个重要原则永远不要直接用它的代码至少要通读一遍理解它做了什么然后测试一下它是助手不是替代品下一步代码生成只是功能的一部分接下来我们聊聊怎么让它帮你理解代码这个功能也特别实用第五章代码理解咱们继续',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-01-05 00:00:00',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="cuizhenjie`blog" type="application/atom+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://avatars.githubusercontent.com/u/2757261?v=4&amp;size=128"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">cuizhenjie`blog</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"/><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 教程</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/categories/claude-code/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> Claude Code</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/Python%E6%95%99%E7%A8%8B/"><i class="anzhiyufont anzhiyu-icon-book faa-tada" style="font-size: 0.9em;"></i><span> Python入门</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/LangChain%E6%95%99%E7%A8%8B/"><i class="anzhiyufont anzhiyu-icon-robot faa-tada" style="font-size: 0.9em;"></i><span> LangChain</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://hall.oss-cn-qingdao.aliyuncs.com/wechatpay.png" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hall.oss-cn-qingdao.aliyuncs.com/wechatpay.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://hall.oss-cn-qingdao.aliyuncs.com/alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hall.oss-cn-qingdao.aliyuncs.com/alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/3d/" style="font-size: 1.05rem;">3d<sup>1</sup></a><a href="/tags/AI/" style="font-size: 1.05rem;">AI<sup>37</sup></a><a href="/tags/AIGC/" style="font-size: 1.05rem;">AIGC<sup>11</sup></a><a href="/tags/AI%E8%A7%86%E9%A2%91/" style="font-size: 1.05rem;">AI视频<sup>4</sup></a><a href="/tags/CentOS%E4%B8%8Bgo%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/" style="font-size: 1.05rem;">CentOS下go环境安装<sup>1</sup></a><a href="/tags/HR/" style="font-size: 1.05rem;">HR<sup>1</sup></a><a href="/tags/Linux/" style="font-size: 1.05rem;">Linux<sup>6</sup></a><a href="/tags/PPT/" style="font-size: 1.05rem;">PPT<sup>1</sup></a><a href="/tags/Prompt/" style="font-size: 1.05rem;">Prompt<sup>5</sup></a><a href="/tags/centos/" style="font-size: 1.05rem;">centos<sup>5</sup></a><a href="/tags/date/" style="font-size: 1.05rem;">date<sup>1</sup></a><a href="/tags/go%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/" style="font-size: 1.05rem;">go环境安装<sup>1</sup></a><a href="/tags/lrzsz/" style="font-size: 1.05rem;">lrzsz<sup>1</sup></a><a href="/tags/mysql/" style="font-size: 1.05rem;">mysql<sup>1</sup></a><a href="/tags/prompt/" style="font-size: 1.05rem;">prompt<sup>11</sup></a><a href="/tags/rz/" style="font-size: 1.05rem;">rz<sup>1</sup></a><a href="/tags/sz/" style="font-size: 1.05rem;">sz<sup>1</sup></a><a href="/tags/threejs/" style="font-size: 1.05rem;">threejs<sup>1</sup></a><a href="/tags/webgl/" style="font-size: 1.05rem;">webgl<sup>1</sup></a><a href="/tags/%E4%B9%A6%E7%B1%8D/" style="font-size: 1.05rem;">书籍<sup>1</sup></a><a href="/tags/%E4%BB%A3%E6%9B%BFftp/" style="font-size: 1.05rem;">代替ftp<sup>1</sup></a><a href="/tags/%E4%BF%AE%E6%94%B9%E6%97%B6%E5%8C%BA/" style="font-size: 1.05rem;">修改时区<sup>1</sup></a><a href="/tags/%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4/" style="font-size: 1.05rem;">修改时间<sup>1</sup></a><a href="/tags/%E5%8F%99%E4%BA%8B%E6%8A%80%E5%B7%A7/" style="font-size: 1.05rem;">叙事技巧<sup>1</sup></a><a href="/tags/%E5%8F%AF%E7%81%B5/" style="font-size: 1.05rem;">可灵<sup>4</sup></a><a href="/tags/%E5%9C%A3%E8%AF%9E%E6%A0%91/" style="font-size: 1.05rem;">圣诞树<sup>1</sup></a><a href="/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" style="font-size: 1.05rem;">年终总结<sup>1</sup></a><a href="/tags/%E6%89%8B%E5%8A%BF/" style="font-size: 1.05rem;">手势<sup>1</sup></a><a href="/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B/" style="font-size: 1.05rem;">提示词工程<sup>2</sup></a><a href="/tags/%E6%96%B0%E9%97%BB%E4%BD%9C%E8%80%85/" style="font-size: 1.05rem;">新闻作者<sup>1</sup></a><a href="/tags/%E6%97%B6%E5%8C%BA/" style="font-size: 1.05rem;">时区<sup>1</sup></a><a href="/tags/%E6%B5%B7%E6%8A%A5/" style="font-size: 1.05rem;">海报<sup>1</sup></a><a href="/tags/%E6%BC%94%E7%A4%BA%E6%96%87%E7%A8%BF/" style="font-size: 1.05rem;">演示文稿<sup>1</sup></a><a href="/tags/%E8%A7%86%E9%A2%91%E5%89%A7%E6%9C%AC/" style="font-size: 1.05rem;">视频剧本<sup>2</sup></a><a href="/tags/%E8%A7%86%E9%A2%91%E5%8F%98%E7%8E%B0/" style="font-size: 1.05rem;">视频变现<sup>1</sup></a><a href="/tags/%E8%A7%86%E9%A2%91%E5%95%86%E4%B8%9A%E5%8C%96/" style="font-size: 1.05rem;">视频商业化<sup>2</sup></a><a href="/tags/%E8%A7%86%E9%A2%91%E7%94%9F%E6%88%90/" style="font-size: 1.05rem;">视频生成<sup>2</sup></a><a href="/tags/%E9%95%9C%E5%A4%B4%E6%8A%80%E5%B7%A7/" style="font-size: 1.05rem;">镜头技巧<sup>1</sup></a><a href="/tags/%E9%95%BF%E8%A7%86%E9%A2%91/" style="font-size: 1.05rem;">长视频<sup>1</sup></a><a href="/tags/%E9%95%BF%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C/" style="font-size: 1.05rem;">长视频制作<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/01/"><span class="card-archive-list-date">一月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">45</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/12/"><span class="card-archive-list-date">十二月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">9</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/11/"><span class="card-archive-list-date">十一月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/04/"><span class="card-archive-list-date">四月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/03/"><span class="card-archive-list-date">三月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">4</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/02/"><span class="card-archive-list-date">二月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/12/"><span class="card-archive-list-date">十二月 2019</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2018/11/"><span class="card-archive-list-date">十一月 2018</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="anzhiyu.switchCommentBarrage()" title="热评开关"><a class="commentBarrage"><i class="anzhiyufont anzhiyu-icon-message"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/claude-code/" itemprop="url">claude-code</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/AI/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>AI</span></a><a class="article-meta__tags" href="/tags/Claude-Code/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Claude Code</span></a><a class="article-meta__tags" href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>开发工具</span></a><a class="article-meta__tags" href="/tags/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>代码生成</span></a><a class="article-meta__tags" href="/tags/%E7%BC%96%E7%A8%8B/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>编程</span></a></span></div></div><h1 class="post-title" itemprop="name headline">04 代码生成</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2026-01-04T16:00:00.000Z" title="发表于 2026-01-05 00:00:00">2026-01-05</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2026-01-04T16:00:00.000Z" title="更新于 2026-01-05 00:00:00">2026-01-05</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-pv-cv" id="" data-flag-title="04 代码生成"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">阅读量:</span><span id="busuanzi_value_page_pv"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为Beijing"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>Beijing</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://images.unsplash.com/photo-1574607408385-dc664a9c5272?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb&amp;w=4800&amp;_r_=3a406ee0-d503-4f1b-e1c0-d8c5157aca99"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/04-code-generation/"><header><a class="post-meta-categories" href="/categories/claude-code/" itemprop="url">claude-code</a><a href="/tags/AI/" tabindex="-1" itemprop="url">AI</a><a href="/tags/Claude-Code/" tabindex="-1" itemprop="url">Claude Code</a><a href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" tabindex="-1" itemprop="url">开发工具</a><a href="/tags/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/" tabindex="-1" itemprop="url">代码生成</a><a href="/tags/%E7%BC%96%E7%A8%8B/" tabindex="-1" itemprop="url">编程</a><h1 id="CrawlerTitle" itemprop="name headline">04 代码生成</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">cuizhenjie</span><time itemprop="dateCreated datePublished" datetime="2026-01-04T16:00:00.000Z" title="发表于 2026-01-05 00:00:00">2026-01-05</time><time itemprop="dateCreated datePublished" datetime="2026-01-04T16:00:00.000Z" title="更新于 2026-01-05 00:00:00">2026-01-05</time></header><h2 id="代码生成才是重头戏"><a href="#代码生成才是重头戏" class="headerlink" title="代码生成才是重头戏"></a>代码生成才是重头戏</h2><p>说实话，我第一次用 Claude Code 生成代码的时候，真的被惊艳到了。</p>
+<p>那会儿我需要写一个数据处理脚本，按照传统方式得花个把小时。结果跟 Claude Code 说清楚需求，它几秒钟就给我生成了完整的代码，而且质量还挺不错。从那之后，我就成了代码生成的忠实用户。</p>
+<p>无论你需要一个简单的工具函数，还是整个项目的架构，它都能帮你搞定。关键是你得知道怎么跟它沟通。</p>
+<hr>
+<h2 id="从函数开始"><a href="#从函数开始" class="headerlink" title="从函数开始"></a>从函数开始</h2><p>最简单的就是一个函数：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">claude <span class="string">"用 Python 写一个函数，计算两个数字的平均值"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>它会给你类似这样的代码：</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">average</span>(<span class="params">a, b</span>):</span><br><span class="line">    <span class="string">"""计算两个数字的平均值"""</span></span><br><span class="line">    <span class="keyword">return</span> (a + b) / <span class="number">2</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>挺简单的吧？但实际开发中，你需要的不止是这些。你可能需要参数验证、错误处理、类型提示。那就把要求说清楚：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">claude <span class="string">"用 Python 写一个函数，计算列表的平均值。</span></span><br><span class="line"><span class="string">需要处理空列表情况，验证输入是数字类型，包含文档字符串，添加类型提示"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>这次它会给你更完善的代码，包含 <code>try-except</code>、类型检查、完整的文档。我一般都会要求它加上这些，因为生产环境的代码不能太随意。</p>
+<p>有时候你需要实现特定算法，比如二分查找。那就说清楚算法名称、是否需要自定义比较函数、怎么处理边界情况。它通常能给出不错的实现，还会加上注释和使用示例。</p>
+<hr>
+<h2 id="类也不在话下"><a href="#类也不在话下" class="headerlink" title="类也不在话下"></a>类也不在话下</h2><p>生成类也挺常见的。比如你需要一个银行账户类：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">claude <span class="string">"用 Python 创建一个 BankAccount 类，包含存款、取款（余额不足时抛出异常）、查询余额方法，还要有交易历史记录"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>它会给你一个完整的类实现，包含构造函数、各个方法、异常处理、交易记录。我试过几次，质量都挺不错的。它甚至会考虑到一些你自己可能没注意到的细节，比如交易时间戳、余额验证等等。</p>
+<p>如果你需要面向对象的特性，比如继承和多态，直接说就行：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">claude <span class="string">"用 JavaScript 创建一个 Shape 基类，和 Circle、Rectangle 子类，实现计算面积和周长的方法"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<hr>
+<h2 id="模块级别的代码"><a href="#模块级别的代码" class="headerlink" title="模块级别的代码"></a>模块级别的代码</h2><p>有时候你需要生成整个模块，而不仅仅是一个函数或类。</p>
+<p>比如一个日期工具模块：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">claude <span class="string">"创建一个 Python 模块 date_utils.py，包含计算工作日数量、判断是否为工作日、获取下个工作日等函数，添加类型提示和文档字符串"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>或者一个 API 客户端：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">claude <span class="string">"创建一个 Node.js 模块用于调用 GitHub API，包含认证处理、仓库列表获取、问题创建、错误处理，使用 axios"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>这种时候它会把相关的功能组织在一起，给你一个完整可用的模块文件。</p>
+<hr>
+<h2 id="整个项目都能生成"><a href="#整个项目都能生成" class="headerlink" title="整个项目都能生成"></a>整个项目都能生成</h2><p>这个我真心觉得厉害。你甚至可以让它帮你生成整个项目结构。</p>
+<p>比如一个 Express.js 的 REST API 项目：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">claude <span class="string">"为一个 Express.js REST API 创建项目结构，包含用户认证（JWT）、MongoDB 数据模型、中间件、路由、环境配置、README 说明"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>它会给你一个完整的目录树，告诉你每个文件应该放什么内容。虽然不是真的把文件创建好（这点它做不到），但它给出的结构图足够你照着实现了。</p>
+<p>对于多文件项目，我建议分步来。先让它给你搭好骨架，然后再逐个文件实现。这样比一次性生成所有内容要好，因为你可以每一步都验证一下，发现问题及时调整。</p>
+<hr>
+<h2 id="代码风格这事儿"><a href="#代码风格这事儿" class="headerlink" title="代码风格这事儿"></a>代码风格这事儿</h2><p>如果你有特定的编码规范，直接告诉它。</p>
+<p>比如你团队用的是 Airbnb JavaScript 风格指南：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">claude <span class="string">"用 JavaScript 写一个 React 组件，遵循 Airbnb JavaScript 风格指南，使用函数组件和 Hooks"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>或者你需要用特定的测试框架：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">claude <span class="string">"为这个函数编写单元测试，使用 pytest，包含正常情况和边界情况"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>文档格式也能指定：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">claude <span class="string">"用 JSDoc 格式为这个函数添加文档注释"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>我一般都会提一下代码规范，因为它生成的代码默认风格可能跟你们团队的不一样。与其让它生成完了你再改，不如一开始就说清楚。</p>
+<hr>
+<h2 id="几个小技巧"><a href="#几个小技巧" class="headerlink" title="几个小技巧"></a>几个小技巧</h2><p>用了这么久，我积累了一些经验。</p>
+<p>别指望一次就得到完美结果。我一般会先生个基础版本，然后再逐步添加功能。比如先创建一个简单的 HTTP 服务器，然后再加请求日志，最后再加错误处理。这样每一步都能验证，出了问题也好定位。</p>
+<p>生成代码之后，立即让它自己审查一遍。这个技巧特别有用：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">claude <span class="string">"创建一个函数验证邮箱格式，然后审查生成的代码，指出潜在的安全问题"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>它能发现很多你自己可能忽略的问题，尤其是安全方面的。</p>
+<p>有时候你想看看不同的实现方式，那就直接问：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">claude <span class="string">"提供三种不同的方式来实现单例模式，并解释每种方式的优缺点"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>它通常能给你几个不同的思路，你可以根据具体场景选择最合适的。</p>
+<p>性能优化也挺重要的。生成完代码之后，可以让它帮忙优化：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">claude <span class="string">"创建一个函数检查列表是否包含重复项，然后优化它的性能"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<hr>
+<h2 id="实际场景举例"><a href="#实际场景举例" class="headerlink" title="实际场景举例"></a>实际场景举例</h2><p>说几个我常用的场景吧。</p>
+<p>数据处理脚本。这个真的太常用了：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">claude <span class="string">"创建一个 Python 脚本，读取 CSV 文件，过滤出特定条件的数据，计算统计信息，导出到新的 CSV 文件"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>以前这种脚本我得写半天，现在几分钟就搞定了。</p>
+<p>自动化任务也特别方便：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">claude <span class="string">"写一个 Bash 脚本，自动备份 PostgreSQL 数据库到 S3，包括错误处理、日志记录、通知功能"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>测试代码生成也省了不少时间：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">claude <span class="string">"为这个 API 端点编写集成测试，使用 Jest 和 Supertest"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>还有配置文件。每次写 docker-compose.yml 我都得查半天文档，现在直接问它就行：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">claude <span class="string">"创建一个 docker-compose.yml，包含 PostgreSQL 数据库、Redis 缓存、Node.js 应用、网络配置"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<hr>
+<h2 id="几个建议"><a href="#几个建议" class="headerlink" title="几个建议"></a>几个建议</h2><p>明确需求最重要。语言、功能、输入输出、特殊要求，这些都得说清楚。你越具体，它给的答案就越接近你想要的。</p>
+<p>质量标准也得提。我一般会要求它包含错误处理、类型提示、文档字符串、使用示例，还有遵循什么编码规范。这样生成的代码才能直接用。</p>
+<p>最好让它顺便把测试也写了：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">claude <span class="string">"创建一个函数并编写相应的单元测试"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>这样你不仅有实现代码，还有测试用例，一举两得。</p>
+<p>生成完代码之后，别忘了让它审查一下，然后根据建议改进。这个步骤我从来不会省，因为它的建议确实有价值。</p>
+<hr>
+<h2 id="几个常见问题"><a href="#几个常见问题" class="headerlink" title="几个常见问题"></a>几个常见问题</h2><p>有人问，生成的代码有错误怎么办？</p>
+<p>这种情况我遇到过。别慌，直接把错误信息反馈给它：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">claude <span class="string">"这段代码有错误：[错误信息]，请帮我修复并解释原因"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>它一般能快速定位问题，还会告诉你为什么会错、怎么改、以后怎么避免。</p>
+<p>还有人问，怎么让它生成符合团队规范的代码？</p>
+<p>简单，直接把你们的编码规范文档贴给它：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">claude <span class="string">"使用以下规范生成代码：[粘贴团队的编码规范文档]"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>它就会按照你们的规范来生成代码。不过这个可能需要多试几次，有时候它理解得不太准确。</p>
+<p>框架支持方面，它基本都能搞。你只要说清楚用什么框架、哪个版本就行：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">claude <span class="string">"使用 React 18 和 TypeScript 创建..."</span></span><br><span class="line">claude <span class="string">"使用 Django 5 和 Django REST Framework 创建..."</span></span><br></pre></td></tr></tbody></table></figure>
+
+<hr>
+<h2 id="总结一下"><a href="#总结一下" class="headerlink" title="总结一下"></a>总结一下</h2><p>代码生成是 Claude Code 最实用的功能之一。从简单的函数到完整的项目架构，它都能帮你搞定。</p>
+<p>但关键是你要会提问。说得越清楚，它生成的就越接近你想要的。别指望一次就完美，慢慢迭代，逐步优化，这样效果最好。</p>
+<p>还有个重要原则：永远不要直接用它的代码。至少要通读一遍，理解它做了什么，然后测试一下。它是助手，不是替代品。</p>
+<hr>
+<h2 id="下一步"><a href="#下一步" class="headerlink" title="下一步"></a>下一步</h2><p>代码生成只是 Claude Code 功能的一部分。接下来我们聊聊怎么让它帮你理解代码，这个功能也特别实用。</p>
+<p><strong><a href="/2026/01/05/05-code-understanding/">第五章：代码理解</a></strong></p>
+<p>咱们继续！</p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hall.oss-cn-qingdao.aliyuncs.com/avatar.png" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hall.oss-cn-qingdao.aliyuncs.com/avatar.png" title="头像" alt="头像"></a><div class="post-copyright__author_name">cuizhenjie</div><div class="post-copyright__author_desc">学而不思则罔，思而不学则殆！</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/04-code-generation/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/04-code-generation/')">04 代码生成</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://hall.oss-cn-qingdao.aliyuncs.com/wechatpay.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hall.oss-cn-qingdao.aliyuncs.com/wechatpay.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://hall.oss-cn-qingdao.aliyuncs.com/alipay.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hall.oss-cn-qingdao.aliyuncs.com/alipay.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/04-code-generation/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=04 代码生成&amp;url=https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/04-code-generation/&amp;pic=https://images.unsplash.com/photo-1574607408385-dc664a9c5272?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb&amp;w=4800&amp;_r_=3a406ee0-d503-4f1b-e1c0-d8c5157aca99" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="undefined" target="_blank">MIT</a> 许可协议。转载请注明来自 <a href="https://cuizhenjie.github.io" target="_blank">cuizhenjie`blog</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/AI/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>AI<span class="tagsPageCount">37</span></a><a class="post-meta__box__tags" href="/tags/Claude-Code/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>Claude Code<span class="tagsPageCount">16</span></a><a class="post-meta__box__tags" href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>开发工具<span class="tagsPageCount">15</span></a><a class="post-meta__box__tags" href="/tags/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>代码生成<span class="tagsPageCount">1</span></a><a class="post-meta__box__tags" href="/tags/%E7%BC%96%E7%A8%8B/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>编程<span class="tagsPageCount">1</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F11ea7b9d-9d9c-4e36-a69c-08d10e0be5ee%2Ftim-wildsmith-n5cWlpH3iGo-unsplash.jpg?table=block&amp;id=2045b442-1b56-4594-b385-6cd52d8f3714&amp;spaceId=16408c86-aaac-4840-9fb1-d640bfa5b77c&amp;width=2000&amp;userId=d5481426-cbd2-4592-8737-6587afcc13eb&amp;cache=v2&amp;_r_=8fc7ab6e-2c01-b0ed-db86-c3f61b535221" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2026/01/05/claude-code-tutorial/05-code-understanding/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.notionusercontent.com/s3/prod-files-secure%2F16408c86-aaac-4840-9fb1-d640bfa5b77c%2Fbcbf8864-5efa-4a18-bfb2-bb19f7417684%2Fnasa_space_shuttle_challenger.jpg/size/w=2000?exp=1767632290&amp;sig=GAG9OSiF192Y6yOSWNz8EbC1to2hKVqvIuNd_4j7ufs&amp;id=184d57da-e3da-80d1-9167-c51bbf53bc2f&amp;table=block&amp;userId=d5481426-cbd2-4592-8737-6587afcc13eb&amp;_r_=ef505013-f3d8-26da-f778-b26f57cb3764" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">05 代码理解</div></div></a></div><div class="next-post pull-right"><a href="/2026/01/05/claude-code-tutorial/03-basic-usage/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://images.unsplash.com/photo-1574607408385-dc664a9c5272?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb&amp;w=4800&amp;_r_=fbe47751-25cc-dd70-3367-de1890563da0" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">03 基础使用</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/2026/01/05/claude-code-tutorial/01-what-is-claude-code/" title="01 Claude Code 是什么"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16408c86-aaac-4840-9fb1-d640bfa5b77c%2F5d526cb2-b2aa-45b3-9c74-5ee4a8c10544%2FStudioGhibli_NotionCovers-6.jpg?table=block&id=184d57da-e3da-81b9-a1b1-d3fd07cd85fc&spaceId=16408c86-aaac-4840-9fb1-d640bfa5b77c&width=2000&userId=d5481426-cbd2-4592-8737-6587afcc13eb&cache=v2&_r_=db8dece6-4d79-033f-0723-5073504cc6c5" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-01-05</div><div class="title">01 Claude Code 是什么</div></div></a></div><div><a href="/2026/01/05/claude-code-tutorial/02-installation-and-setup/" title="02 安装与配置"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/05/13/645fa3cf90d70.webp?_r_=6f69ca28-492e-0763-b9a6-1ab4d9d3bbd5" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-01-05</div><div class="title">02 安装与配置</div></div></a></div><div><a href="/2026/01/05/claude-code-tutorial/03-basic-usage/" title="03 基础使用"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://images.unsplash.com/photo-1574607408385-dc664a9c5272?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=4800&_r_=fbe47751-25cc-dd70-3367-de1890563da0" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-01-05</div><div class="title">03 基础使用</div></div></a></div><div><a href="/2026/01/05/claude-code-tutorial/05-code-understanding/" title="05 代码理解"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.notionusercontent.com/s3/prod-files-secure%2F16408c86-aaac-4840-9fb1-d640bfa5b77c%2Fbcbf8864-5efa-4a18-bfb2-bb19f7417684%2Fnasa_space_shuttle_challenger.jpg/size/w=2000?exp=1767632290&sig=GAG9OSiF192Y6yOSWNz8EbC1to2hKVqvIuNd_4j7ufs&id=184d57da-e3da-80d1-9167-c51bbf53bc2f&table=block&userId=d5481426-cbd2-4592-8737-6587afcc13eb&_r_=ef505013-f3d8-26da-f778-b26f57cb3764" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-01-05</div><div class="title">05 代码理解</div></div></a></div><div><a href="/2026/01/05/claude-code-tutorial/06-code-refactoring/" title="06 代码重构"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ff24ebdc6-a65d-455e-a781-c0811113870d%2Fhenry-mcintosh-HYxR4XN8ZFE-unsplash.jpg?table=block&id=3a74a8b9-e058-4fed-b3ac-b241e12cb26a&spaceId=16408c86-aaac-4840-9fb1-d640bfa5b77c&width=2000&userId=d5481426-cbd2-4592-8737-6587afcc13eb&cache=v2&_r_=cd3f13d7-3395-d8bf-75b6-da09cc1ac854" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-01-05</div><div class="title">06 代码重构</div></div></a></div><div><a href="/2026/01/05/claude-code-tutorial/07-working-with-files/" title="07 文件操作"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.notionusercontent.com/s3/prod-files-secure%2F16408c86-aaac-4840-9fb1-d640bfa5b77c%2Fbcbf8864-5efa-4a18-bfb2-bb19f7417684%2Fnasa_space_shuttle_challenger.jpg/size/w=2000?exp=1767632290&sig=GAG9OSiF192Y6yOSWNz8EbC1to2hKVqvIuNd_4j7ufs&id=184d57da-e3da-80d1-9167-c51bbf53bc2f&table=block&userId=d5481426-cbd2-4592-8737-6587afcc13eb&_r_=64cc76fb-9f7b-def3-4a51-118afd1d3574" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-01-05</div><div class="title">07 文件操作</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hall.oss-cn-qingdao.aliyuncs.com/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/zc998800/cdn/face/gif/p045.gif" alt="status"/></div></div><div class="author-info__description">我不是知识的创造者，我只是知识搬运工</div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">cuizhenjie</h1><div class="author-info__desc">学而不思则罔，思而不学则殆！</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/cuizhenjie" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a></div></div></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bullhorn anzhiyu-shake"></i><span>公告</span></div><div class="announcement_content">🍧今天也是元气满满的一天呢~ 开心一点！🍧</div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://hall.oss-cn-qingdao.aliyuncs.com/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://hall.oss-cn-qingdao.aliyuncs.com/63c02edf44033.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E6%89%8D%E6%98%AF%E9%87%8D%E5%A4%B4%E6%88%8F"><span class="toc-number">1.</span> <span class="toc-text">代码生成才是重头戏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8E%E5%87%BD%E6%95%B0%E5%BC%80%E5%A7%8B"><span class="toc-number">2.</span> <span class="toc-text">从函数开始</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E4%B9%9F%E4%B8%8D%E5%9C%A8%E8%AF%9D%E4%B8%8B"><span class="toc-number">3.</span> <span class="toc-text">类也不在话下</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E5%9D%97%E7%BA%A7%E5%88%AB%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="toc-number">4.</span> <span class="toc-text">模块级别的代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B4%E4%B8%AA%E9%A1%B9%E7%9B%AE%E9%83%BD%E8%83%BD%E7%94%9F%E6%88%90"><span class="toc-number">5.</span> <span class="toc-text">整个项目都能生成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC%E8%BF%99%E4%BA%8B%E5%84%BF"><span class="toc-number">6.</span> <span class="toc-text">代码风格这事儿</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%A0%E4%B8%AA%E5%B0%8F%E6%8A%80%E5%B7%A7"><span class="toc-number">7.</span> <span class="toc-text">几个小技巧</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%99%85%E5%9C%BA%E6%99%AF%E4%B8%BE%E4%BE%8B"><span class="toc-number">8.</span> <span class="toc-text">实际场景举例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%A0%E4%B8%AA%E5%BB%BA%E8%AE%AE"><span class="toc-number">9.</span> <span class="toc-text">几个建议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%A0%E4%B8%AA%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-number">10.</span> <span class="toc-text">几个常见问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93%E4%B8%80%E4%B8%8B"><span class="toc-number">11.</span> <span class="toc-text">总结一下</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E4%B8%80%E6%AD%A5"><span class="toc-number">12.</span> <span class="toc-text">下一步</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/01/26/ai-create-video-prompt/" title="创作病毒性传播的视频剧本的Prompt"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F11ea7b9d-9d9c-4e36-a69c-08d10e0be5ee%2Ftim-wildsmith-n5cWlpH3iGo-unsplash.jpg?table=block&amp;id=2045b442-1b56-4594-b385-6cd52d8f3714&amp;spaceId=16408c86-aaac-4840-9fb1-d640bfa5b77c&amp;width=2000&amp;userId=d5481426-cbd2-4592-8737-6587afcc13eb&amp;cache=v2&amp;_r_=8fc7ab6e-2c01-b0ed-db86-c3f61b535221" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="创作病毒性传播的视频剧本的Prompt"/></a><div class="content"><a class="title" href="/2026/01/26/ai-create-video-prompt/" title="创作病毒性传播的视频剧本的Prompt">创作病毒性传播的视频剧本的Prompt</a><time datetime="2026-01-25T16:00:00.000Z" title="发表于 2026-01-26 00:00:00">2026-01-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/01/26/ai-news-prompt/" title="科技类新闻作者的Prompt"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16408c86-aaac-4840-9fb1-d640bfa5b77c%2Fff36204d-38f2-4300-97b9-e56e59d1ee5a%2FStudioGhibli_NotionCovers-11.jpg?table=block&amp;id=184d57da-e3da-8015-9c77-dfde8713e330&amp;spaceId=16408c86-aaac-4840-9fb1-d640bfa5b77c&amp;width=2000&amp;userId=d5481426-cbd2-4592-8737-6587afcc13eb&amp;cache=v2&amp;_r_=8809a5c1-7bff-b395-0c08-ba9fc43c7799" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="科技类新闻作者的Prompt"/></a><div class="content"><a class="title" href="/2026/01/26/ai-news-prompt/" title="科技类新闻作者的Prompt">科技类新闻作者的Prompt</a><time datetime="2026-01-25T16:00:00.000Z" title="发表于 2026-01-26 00:00:00">2026-01-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/01/26/ai-hr-prompt/" title="企业HR助手相关的的Prompt"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.notion.so/images/page-cover/nasa_the_blue_marble.jpg?_r_=89394fe0-efa1-3a6b-8869-4a1d657e5609" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="企业HR助手相关的的Prompt"/></a><div class="content"><a class="title" href="/2026/01/26/ai-hr-prompt/" title="企业HR助手相关的的Prompt">企业HR助手相关的的Prompt</a><time datetime="2026-01-25T16:00:00.000Z" title="发表于 2026-01-26 00:00:00">2026-01-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/01/26/ai-pbl-prompt/" title="PBL项目创意的Prompt"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.notion.so/images/page-cover/met_henri_rousseau_1907.jpg?_r_=d438524e-f082-6ce0-50b0-e5115befe27d" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="PBL项目创意的Prompt"/></a><div class="content"><a class="title" href="/2026/01/26/ai-pbl-prompt/" title="PBL项目创意的Prompt">PBL项目创意的Prompt</a><time datetime="2026-01-25T16:00:00.000Z" title="发表于 2026-01-26 00:00:00">2026-01-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/01/26/ai-ppt-prompt/" title="生成专业演示文稿的Prompt"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ff24ebdc6-a65d-455e-a781-c0811113870d%2Fhenry-mcintosh-HYxR4XN8ZFE-unsplash.jpg?table=block&amp;id=3a74a8b9-e058-4fed-b3ac-b241e12cb26a&amp;spaceId=16408c86-aaac-4840-9fb1-d640bfa5b77c&amp;width=2000&amp;userId=d5481426-cbd2-4592-8737-6587afcc13eb&amp;cache=v2&amp;_r_=2262ccbb-41ce-fd85-87b0-219b45cceeec" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="生成专业演示文稿的Prompt"/></a><div class="content"><a class="title" href="/2026/01/26/ai-ppt-prompt/" title="生成专业演示文稿的Prompt">生成专业演示文稿的Prompt</a><time datetime="2026-01-25T16:00:00.000Z" title="发表于 2026-01-26 00:00:00">2026-01-26</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="footer_deal"><a class="deal_link" href="mailto:cuizhenjie@gmail.com" title="email"><i class="anzhiyufont anzhiyu-icon-envelope"></i></a><a class="deal_link" href="https://weibo.com/u/7888758278" title="微博"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a><a class="deal_link" href="/atom.xml" title="RSS"><i class="anzhiyufont anzhiyu-icon-rss"></i></a><img class="footer_mini_logo" title="返回顶部" alt="返回顶部" onclick="anzhiyu.scrollToDest(0, 500)" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hall.oss-cn-qingdao.aliyuncs.com/avatar.png" size="50px"/><a class="deal_link" href="https://github.com/cuizhenjie" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="deal_link" href="https://www.youtube.com/@cuizhenjie" title="Youtube"><i class="anzhiyufont anzhiyu-icon-fire"></i></a><a class="deal_link" href="/copyright" title="CC"><i class="anzhiyufont anzhiyu-icon-copyright-line"></i></a></div><div id="workboard"><img class="workSituationImg boardsign" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.shields.io/badge/Czj-Working-yellow" alt="智者不入爱河，牛马不知死活~" title="智者不入爱河，牛马不知死活~"/><div id="runtimeTextTip"></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2025 - 2026 By <a class="footer-bar-link" href="/" title="cuizhenjie" target="_blank">cuizhenjie</a></div></div><div id="footer-type-tips"></div><div class="js-pjax"><script>function subtitleType () {
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      if (true) {
+        const from = '出自 ' + data.from
+        const sub = ["生活明朗&#44; 万物可爱&#44; 人间值得&#44; 未来可期.","以欢喜心&#44; 慢度日常&#44; 四季清宁&#44; 万物可爱."]
+        sub.unshift(data.hitokoto, from)
+        window.typed = new Typed('#footer-type-tips', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('footer-type-tips').innerHTML = data.hitokoto
+      }
+    })
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.cbd.int/typed.js@2.1.0/dist/typed.umd.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}
+</script></div></div><div class="footer-bar-right"><a class="footer-bar-link" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="Theme">Theme</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">81</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">170</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">21</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://cuizhenjie.github.io/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 教程</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/categories/claude-code/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> Claude Code</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/Python%E6%95%99%E7%A8%8B/"><i class="anzhiyufont anzhiyu-icon-book faa-tada" style="font-size: 0.9em;"></i><span> Python入门</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/LangChain%E6%95%99%E7%A8%8B/"><i class="anzhiyufont anzhiyu-icon-robot faa-tada" style="font-size: 0.9em;"></i><span> LangChain</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/3d/" style="font-size: 0.88rem;">3d<sup>1</sup></a><a href="/tags/AI/" style="font-size: 0.88rem;">AI<sup>37</sup></a><a href="/tags/AIGC/" style="font-size: 0.88rem;">AIGC<sup>11</sup></a><a href="/tags/AI%E8%A7%86%E9%A2%91/" style="font-size: 0.88rem;">AI视频<sup>4</sup></a><a href="/tags/CentOS%E4%B8%8Bgo%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/" style="font-size: 0.88rem;">CentOS下go环境安装<sup>1</sup></a><a href="/tags/HR/" style="font-size: 0.88rem;">HR<sup>1</sup></a><a href="/tags/Linux/" style="font-size: 0.88rem;">Linux<sup>6</sup></a><a href="/tags/PPT/" style="font-size: 0.88rem;">PPT<sup>1</sup></a><a href="/tags/Prompt/" style="font-size: 0.88rem;">Prompt<sup>5</sup></a><a href="/tags/centos/" style="font-size: 0.88rem;">centos<sup>5</sup></a><a href="/tags/date/" style="font-size: 0.88rem;">date<sup>1</sup></a><a href="/tags/go%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/" style="font-size: 0.88rem;">go环境安装<sup>1</sup></a><a href="/tags/lrzsz/" style="font-size: 0.88rem;">lrzsz<sup>1</sup></a><a href="/tags/mysql/" style="font-size: 0.88rem;">mysql<sup>1</sup></a><a href="/tags/prompt/" style="font-size: 0.88rem;">prompt<sup>11</sup></a><a href="/tags/rz/" style="font-size: 0.88rem;">rz<sup>1</sup></a><a href="/tags/sz/" style="font-size: 0.88rem;">sz<sup>1</sup></a><a href="/tags/threejs/" style="font-size: 0.88rem;">threejs<sup>1</sup></a><a href="/tags/webgl/" style="font-size: 0.88rem;">webgl<sup>1</sup></a><a href="/tags/%E4%B9%A6%E7%B1%8D/" style="font-size: 0.88rem;">书籍<sup>1</sup></a><a href="/tags/%E4%BB%A3%E6%9B%BFftp/" style="font-size: 0.88rem;">代替ftp<sup>1</sup></a><a href="/tags/%E4%BF%AE%E6%94%B9%E6%97%B6%E5%8C%BA/" style="font-size: 0.88rem;">修改时区<sup>1</sup></a><a href="/tags/%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4/" style="font-size: 0.88rem;">修改时间<sup>1</sup></a><a href="/tags/%E5%8F%99%E4%BA%8B%E6%8A%80%E5%B7%A7/" style="font-size: 0.88rem;">叙事技巧<sup>1</sup></a><a href="/tags/%E5%8F%AF%E7%81%B5/" style="font-size: 0.88rem;">可灵<sup>4</sup></a><a href="/tags/%E5%9C%A3%E8%AF%9E%E6%A0%91/" style="font-size: 0.88rem;">圣诞树<sup>1</sup></a><a href="/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" style="font-size: 0.88rem;">年终总结<sup>1</sup></a><a href="/tags/%E6%89%8B%E5%8A%BF/" style="font-size: 0.88rem;">手势<sup>1</sup></a><a href="/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B/" style="font-size: 0.88rem;">提示词工程<sup>2</sup></a><a href="/tags/%E6%96%B0%E9%97%BB%E4%BD%9C%E8%80%85/" style="font-size: 0.88rem;">新闻作者<sup>1</sup></a><a href="/tags/%E6%97%B6%E5%8C%BA/" style="font-size: 0.88rem;">时区<sup>1</sup></a><a href="/tags/%E6%B5%B7%E6%8A%A5/" style="font-size: 0.88rem;">海报<sup>1</sup></a><a href="/tags/%E6%BC%94%E7%A4%BA%E6%96%87%E7%A8%BF/" style="font-size: 0.88rem;">演示文稿<sup>1</sup></a><a href="/tags/%E8%A7%86%E9%A2%91%E5%89%A7%E6%9C%AC/" style="font-size: 0.88rem;">视频剧本<sup>2</sup></a><a href="/tags/%E8%A7%86%E9%A2%91%E5%8F%98%E7%8E%B0/" style="font-size: 0.88rem;">视频变现<sup>1</sup></a><a href="/tags/%E8%A7%86%E9%A2%91%E5%95%86%E4%B8%9A%E5%8C%96/" style="font-size: 0.88rem;">视频商业化<sup>2</sup></a><a href="/tags/%E8%A7%86%E9%A2%91%E7%94%9F%E6%88%90/" style="font-size: 0.88rem;">视频生成<sup>2</sup></a><a href="/tags/%E9%95%9C%E5%A4%B4%E6%8A%80%E5%B7%A7/" style="font-size: 0.88rem;">镜头技巧<sup>1</sup></a><a href="/tags/%E9%95%BF%E8%A7%86%E9%A2%91/" style="font-size: 0.88rem;">长视频<sup>1</sup></a><a href="/tags/%E9%95%BF%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C/" style="font-size: 0.88rem;">长视频制作<sup>1</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="switch-commentBarrage" href="javascript:anzhiyu.switchCommentBarrage();" title="开关弹幕"><i class="anzhiyufont anzhiyu-icon-danmu"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@6.1.6/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("03/01/2017 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2025 By 安知鱼 V1.7.0",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 cuizhenjie 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script async="async">(function () {
+  var grt = new Date("03/01/2017 00:00:00"); //设置网站上线时间
+  var now = new Date();
+  var dnum;
+  var hnum;
+  var mnum;
+  var snum;
+  var nowHour;
+
+  // 计算并更新天数、小时数、分钟数和秒数
+  function updateTime() {
+    now = new Date(); // 更新 now 的值
+    nowHour = now.getHours(); // 更新 nowHour 的值
+    var days = (now - grt) / 1000 / 60 / 60 / 24;
+    dnum = Math.floor(days);
+    var hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+    hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+      hnum = "0" + hnum;
+    }
+    var minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+      mnum = "0" + mnum;
+    }
+    var seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+    snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+      snum = "0" + snum;
+    }
+  }
+
+  // 更新网页中显示的网站运行时间
+  function updateHtml() {
+    const footer = document.getElementById("footer");
+    if (!footer) return
+    let currentTimeHtml = "";
+    if (nowHour < 18 && nowHour >= 9) {
+      // 如果是上班时间，默认就是"安知鱼-上班摸鱼中.svg"图片，不需要更改
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    } else {
+      // 如果是下班时间，插入"安知鱼-下班啦.svg"图片
+      let img = document.querySelector("#workboard .workSituationImg");
+      if (img != null) {
+        img.src = "https://img.shields.io/badge/Czj-Offduty-red";
+        img.title = "有惊无险，又到6点~";
+        img.alt = "有惊无险，又到6点~";
+      }
+
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    }
+
+    if (document.getElementById("runtimeTextTip")) {
+      document.getElementById("runtimeTextTip").innerHTML = currentTimeHtml;
+    }
+  }
+
+  setInterval(() => {
+    updateTime();
+    updateHtml();
+  }, 1000);
+})();</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.1/bubble/bubble.js"></script><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://cdn.cbd.int/qrcodejs@1.0.0/qrcode.min.js"></script><script src="/js/anzhiyu/right_click_menu.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><script defer="defer" id="ribbon" src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/canvas-fluttering-ribbon.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
