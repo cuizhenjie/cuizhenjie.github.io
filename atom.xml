@@ -123,29 +123,6 @@
   </entry>
   
   <entry>
-    <title>科技类新闻作者的Prompt</title>
-    <link href="https://cuizhenjie.github.io/2026/01/26/ai-news-prompt/"/>
-    <id>https://cuizhenjie.github.io/2026/01/26/ai-news-prompt/</id>
-    <published>2026-01-25T16:00:00.000Z</published>
-    <updated>2026-04-19T13:50:52.697Z</updated>
-    
-    
-    <summary type="html">创作专业新闻文章的Prompt。</summary>
-    
-    
-    
-    <category term="AIGC" scheme="https://cuizhenjie.github.io/categories/AIGC/"/>
-    
-    
-    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
-    
-    <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
-    
-    <category term="新闻作者" scheme="https://cuizhenjie.github.io/tags/%E6%96%B0%E9%97%BB%E4%BD%9C%E8%80%85/"/>
-    
-  </entry>
-  
-  <entry>
     <title>企业HR助手相关的的Prompt</title>
     <link href="https://cuizhenjie.github.io/2026/01/26/ai-hr-prompt/"/>
     <id>https://cuizhenjie.github.io/2026/01/26/ai-hr-prompt/</id>
@@ -165,6 +142,29 @@
     <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
     
     <category term="HR" scheme="https://cuizhenjie.github.io/tags/HR/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>科技类新闻作者的Prompt</title>
+    <link href="https://cuizhenjie.github.io/2026/01/26/ai-news-prompt/"/>
+    <id>https://cuizhenjie.github.io/2026/01/26/ai-news-prompt/</id>
+    <published>2026-01-25T16:00:00.000Z</published>
+    <updated>2026-04-19T13:50:52.697Z</updated>
+    
+    
+    <summary type="html">创作专业新闻文章的Prompt。</summary>
+    
+    
+    
+    <category term="AIGC" scheme="https://cuizhenjie.github.io/categories/AIGC/"/>
+    
+    
+    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
+    
+    <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
+    
+    <category term="新闻作者" scheme="https://cuizhenjie.github.io/tags/%E6%96%B0%E9%97%BB%E4%BD%9C%E8%80%85/"/>
     
   </entry>
   
