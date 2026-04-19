@@ -6,7 +6,7 @@
   <link href="https://cuizhenjie.github.io/atom.xml" rel="self"/>
   
   <link href="https://cuizhenjie.github.io/"/>
-  <updated>2026-04-19T18:18:40.312Z</updated>
+  <updated>2026-04-19T18:27:34.703Z</updated>
   <id>https://cuizhenjie.github.io/</id>
   
   <author>
@@ -17,33 +17,66 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>AI视频镜头语言提示词大全之运镜篇：3大类17种技巧+通用模板</title>
+    <link href="https://cuizhenjie.github.io/2026/04/20/ai-video-camera-shots/"/>
+    <id>https://cuizhenjie.github.io/2026/04/20/ai-video-camera-shots/</id>
+    <published>2026-04-19T21:00:00.000Z</published>
+    <updated>2026-04-19T18:27:34.703Z</updated>
+    
+    
+    <summary type="html">AI视频运镜完整指南：3大类17种运镜技巧（基础/进阶/大师级），每种含通用提示词模板和套用示例，附导演签名式镜头合集。</summary>
+    
+    
+    
+    <category term="AI视频" scheme="https://cuizhenjie.github.io/categories/AI%E8%A7%86%E9%A2%91/"/>
+    
+    
+    <category term="AI视频" scheme="https://cuizhenjie.github.io/tags/AI%E8%A7%86%E9%A2%91/"/>
+    
+    <category term="AIGC" scheme="https://cuizhenjie.github.io/tags/AIGC/"/>
+    
+    <category term="可灵" scheme="https://cuizhenjie.github.io/tags/%E5%8F%AF%E7%81%B5/"/>
+    
+    <category term="运镜" scheme="https://cuizhenjie.github.io/tags/%E8%BF%90%E9%95%9C/"/>
+    
+    <category term="镜头语言" scheme="https://cuizhenjie.github.io/tags/%E9%95%9C%E5%A4%B4%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="提示词" scheme="https://cuizhenjie.github.io/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D/"/>
+    
+    <category term="Runway" scheme="https://cuizhenjie.github.io/tags/Runway/"/>
+    
+    <category term="Sora" scheme="https://cuizhenjie.github.io/tags/Sora/"/>
+    
+  </entry>
+  
+  <entry>
     <title>AI视频转场提示词大全：6大类19种技巧，从&quot;硬切&quot;到&quot;大片感&quot;</title>
     <link href="https://cuizhenjie.github.io/2026/04/20/ai-video-transition-prompts-guide/"/>
     <id>https://cuizhenjie.github.io/2026/04/20/ai-video-transition-prompts-guide/</id>
     <published>2026-04-19T20:00:00.000Z</published>
-    <updated>2026-04-19T18:18:40.312Z</updated>
+    <updated>2026-04-19T18:27:34.704Z</updated>
     
     
     <summary type="html">6大类19种AI视频转场技巧完全指南：相似性转场、反差型、遮挡类、视线引导、特效型、叙事型，每种附完整提示词模板和套用示例。</summary>
     
     
     
-    <category term="AI工具" scheme="https://cuizhenjie.github.io/categories/AI%E5%B7%A5%E5%85%B7/"/>
+    <category term="AI视频" scheme="https://cuizhenjie.github.io/categories/AI%E8%A7%86%E9%A2%91/"/>
     
     
     <category term="AI视频" scheme="https://cuizhenjie.github.io/tags/AI%E8%A7%86%E9%A2%91/"/>
     
-    <category term="提示词" scheme="https://cuizhenjie.github.io/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D/"/>
-    
-    <category term="视频制作" scheme="https://cuizhenjie.github.io/tags/%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C/"/>
-    
-    <category term="转场" scheme="https://cuizhenjie.github.io/tags/%E8%BD%AC%E5%9C%BA/"/>
-    
     <category term="运镜" scheme="https://cuizhenjie.github.io/tags/%E8%BF%90%E9%95%9C/"/>
+    
+    <category term="提示词" scheme="https://cuizhenjie.github.io/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D/"/>
     
     <category term="Runway" scheme="https://cuizhenjie.github.io/tags/Runway/"/>
     
     <category term="Sora" scheme="https://cuizhenjie.github.io/tags/Sora/"/>
+    
+    <category term="视频制作" scheme="https://cuizhenjie.github.io/tags/%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C/"/>
+    
+    <category term="转场" scheme="https://cuizhenjie.github.io/tags/%E8%BD%AC%E5%9C%BA/"/>
     
   </entry>
   
@@ -158,29 +191,6 @@
   </entry>
   
   <entry>
-    <title>创作病毒性传播的视频剧本的Prompt</title>
-    <link href="https://cuizhenjie.github.io/2026/01/26/ai-create-video-prompt/"/>
-    <id>https://cuizhenjie.github.io/2026/01/26/ai-create-video-prompt/</id>
-    <published>2026-01-25T16:00:00.000Z</published>
-    <updated>2026-04-19T13:50:52.737Z</updated>
-    
-    
-    <summary type="html">创作专业视频剧本的Prompt。</summary>
-    
-    
-    
-    <category term="AIGC" scheme="https://cuizhenjie.github.io/categories/AIGC/"/>
-    
-    
-    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
-    
-    <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
-    
-    <category term="视频剧本" scheme="https://cuizhenjie.github.io/tags/%E8%A7%86%E9%A2%91%E5%89%A7%E6%9C%AC/"/>
-    
-  </entry>
-  
-  <entry>
     <title>科技类新闻作者的Prompt</title>
     <link href="https://cuizhenjie.github.io/2026/01/26/ai-news-prompt/"/>
     <id>https://cuizhenjie.github.io/2026/01/26/ai-news-prompt/</id>
@@ -200,29 +210,6 @@
     <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
     
     <category term="新闻作者" scheme="https://cuizhenjie.github.io/tags/%E6%96%B0%E9%97%BB%E4%BD%9C%E8%80%85/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>企业HR助手相关的的Prompt</title>
-    <link href="https://cuizhenjie.github.io/2026/01/26/ai-hr-prompt/"/>
-    <id>https://cuizhenjie.github.io/2026/01/26/ai-hr-prompt/</id>
-    <published>2026-01-25T16:00:00.000Z</published>
-    <updated>2026-04-19T13:50:52.693Z</updated>
-    
-    
-    <summary type="html">企业HR助手相关的Prompt。</summary>
-    
-    
-    
-    <category term="AIGC" scheme="https://cuizhenjie.github.io/categories/AIGC/"/>
-    
-    
-    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
-    
-    <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
-    
-    <category term="HR" scheme="https://cuizhenjie.github.io/tags/HR/"/>
     
   </entry>
   
@@ -271,6 +258,52 @@
     <category term="PPT" scheme="https://cuizhenjie.github.io/tags/PPT/"/>
     
     <category term="演示文稿" scheme="https://cuizhenjie.github.io/tags/%E6%BC%94%E7%A4%BA%E6%96%87%E7%A8%BF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>创作病毒性传播的视频剧本的Prompt</title>
+    <link href="https://cuizhenjie.github.io/2026/01/26/ai-create-video-prompt/"/>
+    <id>https://cuizhenjie.github.io/2026/01/26/ai-create-video-prompt/</id>
+    <published>2026-01-25T16:00:00.000Z</published>
+    <updated>2026-04-19T18:27:34.707Z</updated>
+    
+    
+    <summary type="html">创作专业视频剧本的Prompt。</summary>
+    
+    
+    
+    <category term="AI视频" scheme="https://cuizhenjie.github.io/categories/AI%E8%A7%86%E9%A2%91/"/>
+    
+    
+    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
+    
+    <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
+    
+    <category term="视频剧本" scheme="https://cuizhenjie.github.io/tags/%E8%A7%86%E9%A2%91%E5%89%A7%E6%9C%AC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>企业HR助手相关的的Prompt</title>
+    <link href="https://cuizhenjie.github.io/2026/01/26/ai-hr-prompt/"/>
+    <id>https://cuizhenjie.github.io/2026/01/26/ai-hr-prompt/</id>
+    <published>2026-01-25T16:00:00.000Z</published>
+    <updated>2026-04-19T13:50:52.693Z</updated>
+    
+    
+    <summary type="html">企业HR助手相关的Prompt。</summary>
+    
+    
+    
+    <category term="AIGC" scheme="https://cuizhenjie.github.io/categories/AIGC/"/>
+    
+    
+    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
+    
+    <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
+    
+    <category term="HR" scheme="https://cuizhenjie.github.io/tags/HR/"/>
     
   </entry>
   
@@ -492,29 +525,6 @@
     <category term="Prompt" scheme="https://cuizhenjie.github.io/tags/Prompt/"/>
     
     <category term="音乐" scheme="https://cuizhenjie.github.io/tags/%E9%9F%B3%E4%B9%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>从零开始学Python（十）：实战项目 - 个人记账本</title>
-    <link href="https://cuizhenjie.github.io/2026/01/08/python-tutorial-10-project/"/>
-    <id>https://cuizhenjie.github.io/2026/01/08/python-tutorial-10-project/</id>
-    <published>2026-01-08T02:00:00.000Z</published>
-    <updated>2026-04-19T13:50:52.701Z</updated>
-    
-    
-    <summary type="html">Python实战项目教程，从零开发一个个人记账本应用，综合运用前面学到的知识，包括函数、数据结构、文件操作、异常处理等，提升Python编程实战能力，完成从入门到实践的跨越。</summary>
-    
-    
-    
-    <category term="Python教程" scheme="https://cuizhenjie.github.io/categories/Python%E6%95%99%E7%A8%8B/"/>
-    
-    
-    <category term="教程" scheme="https://cuizhenjie.github.io/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="编程入门" scheme="https://cuizhenjie.github.io/tags/%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/"/>
-    
-    <category term="Python" scheme="https://cuizhenjie.github.io/tags/Python/"/>
     
   </entry>
   

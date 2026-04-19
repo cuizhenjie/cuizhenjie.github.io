@@ -1,6 +1,6 @@
 ﻿# llms.txt — cuizhenjie blog
 
-> Generated: 2026-04-19T18:18:51.184Z | Posts: 92 | Pages: 17
+> Generated: 2026-04-19T18:27:46.775Z | Posts: 92 | Pages: 18
 
 ---
 
@@ -25,16 +25,25 @@
 
 ## Blog Posts (92 total)
 
-### 1. AI视频转场提示词大全：6大类19种技巧，从"硬切"到"大片感"
+### 1. AI视频镜头语言提示词大全之运镜篇：3大类17种技巧+通用模板
+
+- URL: https://cuizhenjie.github.io/2026/04/20/ai-video-camera-shots/
+- Date: 2026-04-20
+- Tags: AI视频, AIGC, 可灵, 运镜, 镜头语言, 提示词, Runway, Sora
+- Categories: AI视频
+- Description: AI视频运镜完整指南：3大类17种运镜技巧（基础/进阶/大师级），每种含通用提示词模板和套用示例，附导演签名式镜头合集。
+- Excerpt: 你有没有这种感觉：用AI生成的视频，画质明明很好，人物也很精致，但总觉得少了点什么。 看起来更像一张”动起来的海报”，而不是一段真正的影像。 差的那个东西，叫运镜。 运镜就是画面怎么”动”——是静止不动，还是慢慢推上去，还是绕着人转一圈，还是从天上俯冲到地面。同一场景，换一种运镜方式，出来的视频感觉完全不一样。 大多数人在写AI视频提示词的时候，压根不知道运镜该怎么写。所以我把AI视频生成中所有主流运镜技巧做了一次系统梳理。每种运镜给了 通用模板 和 套用示例 ，模板里【】的部分替换成你自己的内容就行。 这是「AI视频镜头语言提示词大全」系列的第一篇：运镜篇。
+
+### 2. AI视频转场提示词大全：6大类19种技巧，从"硬切"到"大片感"
 
 - URL: https://cuizhenjie.github.io/2026/04/20/ai-video-transition-prompts-guide/
 - Date: 2026-04-20
-- Tags: AI视频, 提示词, 视频制作, 转场, 运镜, Runway, Sora
-- Categories: AI工具
+- Tags: AI视频, 运镜, 提示词, Runway, Sora, 视频制作, 转场
+- Categories: AI视频
 - Description: 6大类19种AI视频转场技巧完全指南：相似性转场、反差型、遮挡类、视线引导、特效型、叙事型，每种附完整提示词模板和套用示例。
 - Excerpt: 做AI视频的人很多，但认真想过”这条视频和下一条怎么接”的人很少。 我之前也是这样。 生成完才发现上一条是城市航拍，下一条是海边日落，中间怎么接？硬切。观众看着一跳一跳的，但又说不上来哪里不对。 其实转场这事，想不想得起来，体现的是对视频语言的理不理解。 最近看到一篇整理得很完整的AI视频转场指南，作者是 WaytoAGI 视频板块的尹小歪，把能用提示词实现的转场类型系统梳理了一遍。我结合自己的理解，重新整理成本文。 不废话，直接进正题。
 
-### 2. AI 生图风格速查表：我见过最实用的 Stable Diffusion 提示词词典
+### 3. AI 生图风格速查表：我见过最实用的 Stable Diffusion 提示词词典
 
 - URL: https://cuizhenjie.github.io/2026/04/20/stable-diffusion-style-cheatsheet-guide/
 - Date: 2026-04-20
@@ -43,7 +52,7 @@
 - Description: 介绍 stable-diffusion-style-cheatsheet 开源工具——一张在本地运行的速查表，同时对比 SDXL 和 FLUX 两大模型在同一风格上的效果，即用即查。
 - Excerpt: 你用 Stable Diffusion 生图的时候，有没有过这种感觉—— 脑子里知道想要什么画面，但就是不知道该往提示词里塞什么英文词。 “我要一个赛博朋克风格的城市夜景。” 然后你写 cyberpunk city night ，出来的东西总觉得差点意思。不是那个味儿。 但别人写的提示词里多了个 neon-soaked 、 trending on artstation 、 cinematic lighting ，效果就完全不一样了。 这种东西，Google 不到。只能靠试。 最近我找到一个开源项目，解决了这个问题。
 
-### 3. 博物馆图鉴式信息图生成指南：AI绘图提示词的完整设计手册
+### 4. 博物馆图鉴式信息图生成指南：AI绘图提示词的完整设计手册
 
 - URL: https://cuizhenjie.github.io/2026/04/20/museum-infographic-prompt-guide/
 - Date: 2026-04-20
@@ -52,7 +61,7 @@
 - Description: 完整解析「博物馆图鉴式中文拆解信息图」的AI绘图提示词设计方法，涵盖主体判断、版式结构、文字规范、材质工艺说明与文化寓意解析。
 - Excerpt: 这是一套可复用的 AI 图像生成提示词系统，专门用于制作「博物馆图鉴式中文拆解信息图」。无需任何额外素材输入，只需提供主题，即可自动生成兼具真实感与文化深度的文博级信息图。
 
-### 4. GPT-Image-2 提示词库大全：50+实战案例分类整理
+### 5. GPT-Image-2 提示词库大全：50+实战案例分类整理
 
 - URL: https://cuizhenjie.github.io/2026/04/19/gpt-image-2-prompts-library/
 - Date: 2026-04-19
@@ -60,21 +69,13 @@
 - Categories: AI绘图
 - Excerpt: 来源： awesome-gpt-image-2-prompts · CC BY 4.0 本库收录 GPT-Image-2 在人像、海报、角色设计、UI原型及社区实验等场景下的高质量提示词与图像案例，共 50+ 实战案例。
 
-### 5. 用GPT-Image-2秒变插画师：17种风格一库搞定
+### 6. 用GPT-Image-2秒变插画师：17种风格一库搞定
 
 - URL: https://cuizhenjie.github.io/2026/04/18/gpt-image-2-illustration-style-library/
 - Date: 2026-04-18
 - Tags: 提示词, AI图像, GPT-Image-2, 插画风格, AI生图
 - Categories: AI工具
 - Description: GPT-Image-2重磅发布，文字渲染终于解决中文乱码问题。本文深度解读preangelleo/illustration-style-samples开源项目，17种插画风格横向测评，手把手教你构建个人专属风格库。
-
-### 6. 创作病毒性传播的视频剧本的Prompt
-
-- URL: https://cuizhenjie.github.io/2026/01/26/ai-create-video-prompt/
-- Date: 2026-01-26
-- Tags: prompt, AI, 视频剧本
-- Categories: AIGC
-- Description: 创作专业视频剧本的Prompt。
 
 ### 7. 科技类新闻作者的Prompt
 
@@ -84,15 +85,7 @@
 - Categories: AIGC
 - Description: 创作专业新闻文章的Prompt。
 
-### 8. 企业HR助手相关的的Prompt
-
-- URL: https://cuizhenjie.github.io/2026/01/26/ai-hr-prompt/
-- Date: 2026-01-26
-- Tags: prompt, AI, HR
-- Categories: AIGC
-- Description: 企业HR助手相关的Prompt。
-
-### 9. PBL项目创意的Prompt
+### 8. PBL项目创意的Prompt
 
 - URL: https://cuizhenjie.github.io/2026/01/26/ai-pbl-prompt/
 - Date: 2026-01-26
@@ -100,7 +93,7 @@
 - Categories: AIGC
 - Description: PBL项目创意的Prompt。
 
-### 10. 生成专业演示文稿的Prompt
+### 9. 生成专业演示文稿的Prompt
 
 - URL: https://cuizhenjie.github.io/2026/01/26/ai-ppt-prompt/
 - Date: 2026-01-26
@@ -108,7 +101,23 @@
 - Categories: AIGC
 - Description: 生成专业演示文稿的Prompt。
 
-### 11. 生成书籍精华海报的Prompt
+### 10. 创作病毒性传播的视频剧本的Prompt
+
+- URL: https://cuizhenjie.github.io/2026/01/26/ai-create-video-prompt/
+- Date: 2026-01-26
+- Tags: prompt, AI, 视频剧本
+- Categories: AI视频
+- Description: 创作专业视频剧本的Prompt。
+
+### 11. 企业HR助手相关的的Prompt
+
+- URL: https://cuizhenjie.github.io/2026/01/26/ai-hr-prompt/
+- Date: 2026-01-26
+- Tags: prompt, AI, HR
+- Categories: AIGC
+- Description: 企业HR助手相关的Prompt。
+
+### 12. 生成书籍精华海报的Prompt
 
 - URL: https://cuizhenjie.github.io/2026/01/26/book-cover-prompt/
 - Date: 2026-01-26
@@ -116,7 +125,7 @@
 - Categories: AIGC
 - Description: 生成书籍精华海报的Prompt。
 
-### 12. 去除AI味的Prompt
+### 13. 去除AI味的Prompt
 
 - URL: https://cuizhenjie.github.io/2026/01/26/clean-ai/
 - Date: 2026-01-26
@@ -124,7 +133,7 @@
 - Categories: AIGC
 - Description: 去除AI味的Prompt。
 
-### 13. 通过文档生成网页的Prompt
+### 14. 通过文档生成网页的Prompt
 
 - URL: https://cuizhenjie.github.io/2026/01/26/document-to-website/
 - Date: 2026-01-26
@@ -132,7 +141,7 @@
 - Categories: AIGC
 - Description: 通过文档生成美观漂亮的中文可视化网页的Prompt。
 
-### 14. 生成专业知识卡片的Prompt
+### 15. 生成专业知识卡片的Prompt
 
 - URL: https://cuizhenjie.github.io/2026/01/26/gen-card-prompt/
 - Date: 2026-01-26
@@ -140,7 +149,7 @@
 - Categories: AIGC
 - Description: 生成专业知识卡片的Prompt。
 
-### 15. 生成旅游攻略地图的Prompt
+### 16. 生成旅游攻略地图的Prompt
 
 - URL: https://cuizhenjie.github.io/2026/01/26/trip-cover-prompt/
 - Date: 2026-01-26
@@ -148,7 +157,7 @@
 - Categories: AIGC
 - Description: 生成旅游攻略地图的Prompt。
 
-### 16. Spec-Driven Devement
+### 17. Spec-Driven Devement
 
 - URL: https://cuizhenjie.github.io/2026/01/21/sdd-aicoding/
 - Date: 2026-01-21
@@ -156,7 +165,7 @@
 - Categories: AIGC
 - Excerpt: 从依赖感觉的 Vibe Coding 过渡到一个强调规范、可复现、可靠交付的新阶段，SDD（Specification-Driven Development 规范驱动开发）多AI协同。
 
-### 17. HTML卡片PRD生成的prompt
+### 18. HTML卡片PRD生成的prompt
 
 - URL: https://cuizhenjie.github.io/2026/01/18/ai-card-prd-prompt/
 - Date: 2026-01-18
@@ -164,7 +173,7 @@
 - Categories: AIGC
 - Description: AI卡片PRD的prompt
 
-### 18. Superpowers 零基础应用指南：让 Vibe Coding 拥有系统化软件开发能力
+### 19. Superpowers 零基础应用指南：让 Vibe Coding 拥有系统化软件开发能力
 
 - URL: https://cuizhenjie.github.io/2026/01/15/superpowers-tutorial/
 - Date: 2026-01-15
@@ -172,7 +181,7 @@
 - Categories: AIGC
 - Excerpt: Claude code的最热Skill：Superpowers 系统化使用
 
-### 19. AI音乐通用Prompt
+### 20. AI音乐通用Prompt
 
 - URL: https://cuizhenjie.github.io/2026/01/14/ai-music-prompt/
 - Date: 2026-01-14
@@ -181,7 +190,7 @@
 - Description: Prompt提示词，AI音乐通用Prompt。
 - Excerpt: 零基础做AI音乐，通用Prompt知识。
 
-### 20. 从零开始学Python（十）：实战项目 - 个人记账本
+### 21. 从零开始学Python（十）：实战项目 - 个人记账本
 
 - URL: https://cuizhenjie.github.io/2026/01/08/python-tutorial-10-project/
 - Date: 2026-01-08
@@ -189,7 +198,7 @@
 - Categories: Python教程
 - Description: Python实战项目教程，从零开发一个个人记账本应用，综合运用前面学到的知识，包括函数、数据结构、文件操作、异常处理等，提升Python编程实战能力，完成从入门到实践的跨越。
 
-### 21. 从零开始学Python（九）：面向对象编程
+### 22. 从零开始学Python（九）：面向对象编程
 
 - URL: https://cuizhenjie.github.io/2026/01/07/python-tutorial-09-oop/
 - Date: 2026-01-07
@@ -197,28 +206,20 @@
 - Categories: Python教程
 - Description: 全面介绍Python的面向对象编程特性，包括类和对象的概念、属性和方法、继承和多态、魔术方法等OOP核心概念，帮助理解面向对象的设计思想，编写更优雅的代码。
 
-### 22. 从零开始学Python（八）：异常处理
+### 23. 从零开始学Python（八）：异常处理
 
 - URL: https://cuizhenjie.github.io/2026/01/06/python-tutorial-08-exceptions/
 - Date: 2026-01-06
 - Tags: 教程, 编程入门, Python
 - Categories: Python教程
 
-### 23. AI视频进阶技巧：从提示词工程到叙事创作
+### 24. AI视频进阶技巧：从提示词工程到叙事创作
 
 - URL: https://cuizhenjie.github.io/2026/01/05/ai-video-advanced-tips/
 - Date: 2026-01-05
 - Tags: AI视频, AIGC, 可灵, 视频生成, 提示词工程, 叙事技巧
-- Categories: AIGC
+- Categories: AI视频
 - Description: 深入讲解AI视频进阶技巧，包括高级提示词工程、多镜头组合叙事、视频连续性控制、复杂场景构建、角色一致性保持等核心技术，帮助你从单镜头视频升级到完整叙事短片创作。
-
-### 24. 一看就懂的22个AI视频镜头技巧
-
-- URL: https://cuizhenjie.github.io/2026/01/05/ai-video-camera-shots/
-- Date: 2026-01-05
-- Tags: AI视频, AIGC, 可灵, 视频生成, 镜头技巧
-- Categories: AIGC
-- Description: 详细解析22个AI视频镜头技巧，从浅焦镜头到微距镜头，包含具体的提示词示例和配图清单，教你如何结合具体画面编写关键词，掌握影视级运镜技巧，适用于可灵等AI视频生成工具。
 
 ### 25. 从零开始学Python（七）：文件操作
 
@@ -227,37 +228,37 @@
 - Tags: 教程, 编程入门, Python
 - Categories: Python教程
 
-### 26. AI视频长视频制作与商业化完全指南
-
-- URL: https://cuizhenjie.github.io/2026/01/05/ai-video-long-form/
-- Date: 2026-01-05
-- Tags: AI视频, AIGC, 可灵, 视频商业化, 长视频制作, 视频变现
-- Categories: AIGC
-- Description: 深入讲解AI视频长视频制作与商业化完整指南，包括长视频制作挑战、多角色管理、对话生成、配音音效、专业工作流、商业化应用场景、项目实战、客户沟通、变现策略等核心内容，帮助你从技术创作者进阶为商业视频制作人。
-
-### 27. AI视频编剧Prompt
+### 26. AI视频编剧Prompt
 
 - URL: https://cuizhenjie.github.io/2026/01/05/ai-video-script/
 - Date: 2026-01-05
 - Tags: AI视频, AIGC, 可灵, 视频商业化, 长视频
-- Categories: AIGC
+- Categories: AI视频
 - Description: 深入讲解AI视频长视频制作与商业化完整指南，包括长视频制作挑战、多角色管理、对话生成、配音音效、专业工作流、商业化应用场景、项目实战、客户沟通、变现策略等核心内容，帮助你从技术创作者进阶为商业视频制作人。
 
-### 28. 02 安装与配置
+### 27. AI视频长视频制作与商业化完全指南
 
-- URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/02-installation-and-setup/
+- URL: https://cuizhenjie.github.io/2026/01/05/ai-video-long-form/
 - Date: 2026-01-05
-- Tags: AI, Claude Code, 开发工具, 安装教程, 环境配置
-- Categories: claude-code
-- Description: 详细介绍如何在 macOS、Linux 和 Windows 上安装 Claude Code，包括环境配置、API 密钥设置和常见问题排查。
+- Tags: AI视频, AIGC, 可灵, 视频商业化, 长视频制作, 视频变现
+- Categories: AI视频
+- Description: 深入讲解AI视频长视频制作与商业化完整指南，包括长视频制作挑战、多角色管理、对话生成、配音音效、专业工作流、商业化应用场景、项目实战、客户沟通、变现策略等核心内容，帮助你从技术创作者进阶为商业视频制作人。
 
-### 29. 01 Claude Code 是什么
+### 28. 01 Claude Code 是什么
 
 - URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/01-what-is-claude-code/
 - Date: 2026-01-05
 - Tags: AI, AIGC, Claude Code, 开发工具, 编程助手
 - Categories: claude-code
 - Description: Claude Code 是 Anthropic 推出的 AI 编程助手，能够在终端中与开发者自然对话，帮助编写、理解和优化代码。本文介绍 Claude Code 的核心概念、特点和适用场景。
+
+### 29. 02 安装与配置
+
+- URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/02-installation-and-setup/
+- Date: 2026-01-05
+- Tags: AI, Claude Code, 开发工具, 安装教程, 环境配置
+- Categories: claude-code
+- Description: 详细介绍如何在 macOS、Linux 和 Windows 上安装 Claude Code，包括环境配置、API 密钥设置和常见问题排查。
 
 ### 30. 04 代码生成
 
@@ -267,15 +268,7 @@
 - Categories: claude-code
 - Description: 深入学习如何使用 Claude Code 生成高质量代码，包括函数、类、模块和完整应用，以及代码生成的最佳实践。
 
-### 31. 05 代码理解
-
-- URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/05-code-understanding/
-- Date: 2026-01-05
-- Tags: AI, Claude Code, 开发工具, 代码阅读, 代码分析
-- Categories: claude-code
-- Description: 学习如何使用 Claude Code 快速理解和分析代码，包括代码解释、架构分析、复杂逻辑理解和第三方库探索。
-
-### 32. 03 基础使用
+### 31. 03 基础使用
 
 - URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/03-basic-usage/
 - Date: 2026-01-05
@@ -283,13 +276,21 @@
 - Categories: claude-code
 - Description: 学习 Claude Code 的基础使用方法，包括第一个命令、基本交互模式、提示词编写技巧和常用命令。
 
-### 33. 08 命令行集成
+### 32. 05 代码理解
 
-- URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/08-command-line-basics/
+- URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/05-code-understanding/
 - Date: 2026-01-05
-- Tags: AI, Claude Code, Docker, 开发工具, 命令行, Git
+- Tags: AI, Claude Code, 开发工具, 代码阅读, 代码分析
 - Categories: claude-code
-- Description: 学习如何将 Claude Code 与 Git、Docker 等命令行工具深度集成,构建高效的开发工作流。
+- Description: 学习如何使用 Claude Code 快速理解和分析代码，包括代码解释、架构分析、复杂逻辑理解和第三方库探索。
+
+### 33. 09 AI Agent 基础
+
+- URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/09-ai-agent-basics/
+- Date: 2026-01-05
+- Tags: AI, Claude Code, 自动化, 开发工具, AI Agents
+- Categories: claude-code
+- Description: 了解 Claude Code 的 AI Agent 系统,学习如何使用和配置 Agents 来自动化复杂的多步骤开发任务。
 
 ### 34. 06 代码重构
 
@@ -307,15 +308,7 @@
 - Categories: claude-code
 - Description: 学习如何使用 Claude Code 高效处理项目文件，包括文件读取、修改、创建以及上下文管理和 .claudeignore 配置。
 
-### 36. 09 AI Agent 基础
-
-- URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/09-ai-agent-basics/
-- Date: 2026-01-05
-- Tags: AI, Claude Code, 自动化, 开发工具, AI Agents
-- Categories: claude-code
-- Description: 了解 Claude Code 的 AI Agent 系统,学习如何使用和配置 Agents 来自动化复杂的多步骤开发任务。
-
-### 37. 11 故障排查
+### 36. 11 故障排查
 
 - URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/11-troubleshooting/
 - Date: 2026-01-05
@@ -323,7 +316,23 @@
 - Categories: claude-code
 - Description: 学习如何诊断和解决使用 Claude Code 时遇到的常见问题,包括安装错误、API 问题、性能瓶颈和调试技巧。
 
-### 38. 10 最佳实践
+### 37. 13 上下文管理的进阶实践
+
+- URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/13-context-management/
+- Date: 2026-01-05
+- Tags: AI, Claude Code, 开发工具, 上下文管理, 进阶教程
+- Categories: claude-code
+- Description: 深入理解Claude Code的上下文管理机制，掌握项目上下文自动加载、.claudeignore高级配置、Token优化策略，提升大型项目的AI辅助开发效率。
+
+### 38. 08 命令行集成
+
+- URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/08-command-line-basics/
+- Date: 2026-01-05
+- Tags: AI, Claude Code, Docker, 开发工具, 命令行, Git
+- Categories: claude-code
+- Description: 学习如何将 Claude Code 与 Git、Docker 等命令行工具深度集成,构建高效的开发工作流。
+
+### 39. 10 最佳实践
 
 - URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/10-best-practices/
 - Date: 2026-01-05
@@ -331,29 +340,21 @@
 - Categories: claude-code
 - Description: 总结使用 Claude Code 的最佳实践,包括高效技巧、常见陷阱、工作流优化和安全注意事项。
 
-### 39. 12 下一步：我的进阶学习之路
+### 40. 12 下一步：我的进阶学习之路
 
 - URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/12-next-steps/
 - Date: 2026-01-05
-- Tags: AI, Claude Code, 开发工具, 学习路径, 进阶教程
+- Tags: AI, Claude Code, 开发工具, 进阶教程, 学习路径
 - Categories: claude-code
 - Description: 回顾Claude Code基础教程的学习成果，规划进阶学习路径，探索实战项目和高级特性，开启AI辅助编程的进阶之旅。
 
-### 40. 14 提示词工程的实战心得
+### 41. 14 提示词工程的实战心得
 
 - URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/14-prompt-engineering/
 - Date: 2026-01-05
 - Tags: AI, 提示词工程, Claude Code, 开发工具, Prompt Engineering
 - Categories: claude-code
 - Description: 掌握Claude Code提示词工程的核心技巧，学习Few-shot Learning、Chain-of-Thought、角色扮演等高级方法，构建高效的提示词模板库，提升AI辅助编程效果。
-
-### 41. 13 上下文管理的进阶实践
-
-- URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/13-context-management/
-- Date: 2026-01-05
-- Tags: AI, Claude Code, 开发工具, 进阶教程, 上下文管理
-- Categories: claude-code
-- Description: 深入理解Claude Code的上下文管理机制，掌握项目上下文自动加载、.claudeignore高级配置、Token优化策略，提升大型项目的AI辅助开发效率。
 
 ### 42. 15 多语言编程的实战对比
 
@@ -666,7 +667,7 @@
 
 - URL: https://cuizhenjie.github.io/2018/07/10/gradle/
 - Date: 2018-07-10
-- Tags: java, gradle, gradle安装, gradle配置
+- Tags: gradle, gradle安装, gradle配置, java
 - Categories: gradle
 - Excerpt: Mac下使用gradle安装及常规配置
 
@@ -737,7 +738,7 @@
 
 - URL: https://cuizhenjie.github.io/2017/08/04/idea-maven-project/
 - Date: 2017-08-04
-- Tags: idea, maven, maven项目搭建, java
+- Tags: java, idea, maven, maven项目搭建
 - Categories: maven
 - Description: 详细介绍在IntelliJ IDEA中创建和配置Maven项目的完整步骤，包括Maven环境配置、项目创建、依赖管理、常用配置等，帮助Java开发者快速搭建规范的Maven项目结构。
 - Excerpt: 基于idea编辑器下创建maven项目的基本步骤及java项目常规配置
@@ -746,7 +747,7 @@
 
 - URL: https://cuizhenjie.github.io/2017/08/04/maven-settings/
 - Date: 2017-08-04
-- Tags: maven, java, 项目搭建
+- Tags: java, maven, 项目搭建
 - Categories: maven
 - Description: 详细介绍Maven的下载、安装和环境变量配置，包括settings.xml配置文件详解、本地仓库设置、镜像源配置等，帮助Java开发者快速搭建Maven构建环境。
 - Excerpt: maven的下载、安装、及开发环境配置
@@ -791,16 +792,17 @@
 - 关于: https://cuizhenjie.github.io/about/
 - 追番页: https://cuizhenjie.github.io/bangumi/
 - Prompt常用提示词: https://cuizhenjie.github.io/categories/
-- 相册集: https://cuizhenjie.github.io/album/
 - contact: https://cuizhenjie.github.io/contact/
+- 相册集: https://cuizhenjie.github.io/album/
+- 友链: https://cuizhenjie.github.io/friends/
 - 我的音乐馆: https://cuizhenjie.github.io/music/
+- AI视频: https://cuizhenjie.github.io/categories/AI视频/
+- Claude Code 教程: https://cuizhenjie.github.io/categories/claude-code/
+- AIGC 相关: https://cuizhenjie.github.io/categories/aigc/
 - 开发 相关: https://cuizhenjie.github.io/categories/prompt/
 - 营销运营相关: https://cuizhenjie.github.io/categories/operation/
 - 标签: https://cuizhenjie.github.io/tags/
-- 友链: https://cuizhenjie.github.io/friends/
 - 开发 相关: https://cuizhenjie.github.io/categories/develop/
-- Claude Code 教程: https://cuizhenjie.github.io/categories/claude-code/
-- AIGC 相关: https://cuizhenjie.github.io/categories/aigc/
 
 ---
 
