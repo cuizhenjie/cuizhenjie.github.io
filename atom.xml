@@ -6,7 +6,7 @@
   <link href="https://cuizhenjie.github.io/atom.xml" rel="self"/>
   
   <link href="https://cuizhenjie.github.io/"/>
-  <updated>2026-04-19T14:58:57.466Z</updated>
+  <updated>2026-04-19T18:11:35.178Z</updated>
   <id>https://cuizhenjie.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AI 生图风格速查表：我见过最实用的 Stable Diffusion 提示词词典</title>
+    <link href="https://cuizhenjie.github.io/2026/04/20/stable-diffusion-style-cheatsheet-guide/"/>
+    <id>https://cuizhenjie.github.io/2026/04/20/stable-diffusion-style-cheatsheet-guide/</id>
+    <published>2026-04-19T19:10:00.000Z</published>
+    <updated>2026-04-19T18:11:35.178Z</updated>
+    
+    
+    <summary type="html">介绍 stable-diffusion-style-cheatsheet 开源工具——一张在本地运行的速查表，同时对比 SDXL 和 FLUX 两大模型在同一风格上的效果，即用即查。</summary>
+    
+    
+    
+    <category term="AI工具" scheme="https://cuizhenjie.github.io/categories/AI%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="提示词" scheme="https://cuizhenjie.github.io/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D/"/>
+    
+    <category term="AI生图" scheme="https://cuizhenjie.github.io/tags/AI%E7%94%9F%E5%9B%BE/"/>
+    
+    <category term="Stable Diffusion" scheme="https://cuizhenjie.github.io/tags/Stable-Diffusion/"/>
+    
+    <category term="FLUX" scheme="https://cuizhenjie.github.io/tags/FLUX/"/>
+    
+    <category term="AI工具" scheme="https://cuizhenjie.github.io/tags/AI%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>博物馆图鉴式信息图生成指南：AI绘图提示词的完整设计手册</title>
@@ -62,11 +89,11 @@
     
     <category term="AIGC" scheme="https://cuizhenjie.github.io/tags/AIGC/"/>
     
+    <category term="AI绘图" scheme="https://cuizhenjie.github.io/tags/AI%E7%BB%98%E5%9B%BE/"/>
+    
     <category term="GPT-Image-2" scheme="https://cuizhenjie.github.io/tags/GPT-Image-2/"/>
     
     <category term="提示词" scheme="https://cuizhenjie.github.io/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D/"/>
-    
-    <category term="AI绘图" scheme="https://cuizhenjie.github.io/tags/AI%E7%BB%98%E5%9B%BE/"/>
     
     <category term="Midjourney替代" scheme="https://cuizhenjie.github.io/tags/Midjourney%E6%9B%BF%E4%BB%A3/"/>
     
@@ -87,15 +114,15 @@
     <category term="AI工具" scheme="https://cuizhenjie.github.io/categories/AI%E5%B7%A5%E5%85%B7/"/>
     
     
-    <category term="AI图像" scheme="https://cuizhenjie.github.io/tags/AI%E5%9B%BE%E5%83%8F/"/>
-    
     <category term="GPT-Image-2" scheme="https://cuizhenjie.github.io/tags/GPT-Image-2/"/>
+    
+    <category term="提示词" scheme="https://cuizhenjie.github.io/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D/"/>
+    
+    <category term="AI图像" scheme="https://cuizhenjie.github.io/tags/AI%E5%9B%BE%E5%83%8F/"/>
     
     <category term="插画风格" scheme="https://cuizhenjie.github.io/tags/%E6%8F%92%E7%94%BB%E9%A3%8E%E6%A0%BC/"/>
     
     <category term="AI生图" scheme="https://cuizhenjie.github.io/tags/AI%E7%94%9F%E5%9B%BE/"/>
-    
-    <category term="提示词" scheme="https://cuizhenjie.github.io/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D/"/>
     
   </entry>
   
@@ -114,9 +141,9 @@
     <category term="AIGC" scheme="https://cuizhenjie.github.io/categories/AIGC/"/>
     
     
-    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
-    
     <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
+    
+    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
     
     <category term="视频剧本" scheme="https://cuizhenjie.github.io/tags/%E8%A7%86%E9%A2%91%E5%89%A7%E6%9C%AC/"/>
     
@@ -137,9 +164,9 @@
     <category term="AIGC" scheme="https://cuizhenjie.github.io/categories/AIGC/"/>
     
     
-    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
-    
     <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
+    
+    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
     
     <category term="HR" scheme="https://cuizhenjie.github.io/tags/HR/"/>
     
@@ -160,9 +187,9 @@
     <category term="AIGC" scheme="https://cuizhenjie.github.io/categories/AIGC/"/>
     
     
-    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
-    
     <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
+    
+    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
     
     <category term="新闻作者" scheme="https://cuizhenjie.github.io/tags/%E6%96%B0%E9%97%BB%E4%BD%9C%E8%80%85/"/>
     
@@ -183,9 +210,9 @@
     <category term="AIGC" scheme="https://cuizhenjie.github.io/categories/AIGC/"/>
     
     
-    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
-    
     <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
+    
+    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
     
     <category term="视频剧本" scheme="https://cuizhenjie.github.io/tags/%E8%A7%86%E9%A2%91%E5%89%A7%E6%9C%AC/"/>
     
@@ -206,9 +233,9 @@
     <category term="AIGC" scheme="https://cuizhenjie.github.io/categories/AIGC/"/>
     
     
-    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
-    
     <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
+    
+    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
     
     <category term="PPT" scheme="https://cuizhenjie.github.io/tags/PPT/"/>
     
@@ -231,9 +258,9 @@
     <category term="AIGC" scheme="https://cuizhenjie.github.io/categories/AIGC/"/>
     
     
-    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
-    
     <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
+    
+    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
     
     <category term="书籍" scheme="https://cuizhenjie.github.io/tags/%E4%B9%A6%E7%B1%8D/"/>
     
@@ -256,9 +283,9 @@
     <category term="AIGC" scheme="https://cuizhenjie.github.io/categories/AIGC/"/>
     
     
-    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
-    
     <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
+    
+    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
     
     <category term="文案" scheme="https://cuizhenjie.github.io/tags/%E6%96%87%E6%A1%88/"/>
     
@@ -281,9 +308,9 @@
     <category term="AIGC" scheme="https://cuizhenjie.github.io/categories/AIGC/"/>
     
     
-    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
-    
     <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
+    
+    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
     
     <category term="文档" scheme="https://cuizhenjie.github.io/tags/%E6%96%87%E6%A1%A3/"/>
     
@@ -306,9 +333,9 @@
     <category term="AIGC" scheme="https://cuizhenjie.github.io/categories/AIGC/"/>
     
     
-    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
-    
     <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
+    
+    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
     
     <category term="知识卡片" scheme="https://cuizhenjie.github.io/tags/%E7%9F%A5%E8%AF%86%E5%8D%A1%E7%89%87/"/>
     
@@ -331,9 +358,9 @@
     <category term="AIGC" scheme="https://cuizhenjie.github.io/categories/AIGC/"/>
     
     
-    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
-    
     <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
+    
+    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
     
     <category term="旅游" scheme="https://cuizhenjie.github.io/tags/%E6%97%85%E6%B8%B8/"/>
     
@@ -469,35 +496,6 @@
     
     
     <summary type="html">全面介绍Python的面向对象编程特性，包括类和对象的概念、属性和方法、继承和多态、魔术方法等OOP核心概念，帮助理解面向对象的设计思想，编写更优雅的代码。</summary>
-    
-    
-    
-    <category term="Python教程" scheme="https://cuizhenjie.github.io/categories/Python%E6%95%99%E7%A8%8B/"/>
-    
-    
-    <category term="教程" scheme="https://cuizhenjie.github.io/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="编程入门" scheme="https://cuizhenjie.github.io/tags/%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/"/>
-    
-    <category term="Python" scheme="https://cuizhenjie.github.io/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>从零开始学Python（八）：异常处理</title>
-    <link href="https://cuizhenjie.github.io/2026/01/06/python-tutorial-08-exceptions/"/>
-    <id>https://cuizhenjie.github.io/2026/01/06/python-tutorial-08-exceptions/</id>
-    <published>2026-01-06T02:00:00.000Z</published>
-    <updated>2026-04-19T13:50:52.722Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;从零开始学Python（八）：异常处理&quot;&gt;&lt;a href=&quot;#从零开始学Python（八）：异常处理&quot; class=&quot;headerlink&quot;</summary>
-        
-      
     
     
     

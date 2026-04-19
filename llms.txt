@@ -1,6 +1,6 @@
 ﻿# llms.txt — cuizhenjie blog
 
-> Generated: 2026-04-19T17:53:39.159Z | Posts: 90 | Pages: 17
+> Generated: 2026-04-19T18:11:45.706Z | Posts: 91 | Pages: 17
 
 ---
 
@@ -23,9 +23,18 @@
 - Album: https://cuizhenjie.github.io/album/
 - Bangumi: https://cuizhenjie.github.io/bangumi/
 
-## Blog Posts (90 total)
+## Blog Posts (91 total)
 
-### 1. 博物馆图鉴式信息图生成指南：AI绘图提示词的完整设计手册
+### 1. AI 生图风格速查表：我见过最实用的 Stable Diffusion 提示词词典
+
+- URL: https://cuizhenjie.github.io/2026/04/20/stable-diffusion-style-cheatsheet-guide/
+- Date: 2026-04-20
+- Tags: 提示词, AI生图, Stable Diffusion, FLUX, AI工具
+- Categories: AI工具
+- Description: 介绍 stable-diffusion-style-cheatsheet 开源工具——一张在本地运行的速查表，同时对比 SDXL 和 FLUX 两大模型在同一风格上的效果，即用即查。
+- Excerpt: 你用 Stable Diffusion 生图的时候，有没有过这种感觉—— 脑子里知道想要什么画面，但就是不知道该往提示词里塞什么英文词。 “我要一个赛博朋克风格的城市夜景。” 然后你写 cyberpunk city night ，出来的东西总觉得差点意思。不是那个味儿。 但别人写的提示词里多了个 neon-soaked 、 trending on artstation 、 cinematic lighting ，效果就完全不一样了。 这种东西，Google 不到。只能靠试。 最近我找到一个开源项目，解决了这个问题。
+
+### 2. 博物馆图鉴式信息图生成指南：AI绘图提示词的完整设计手册
 
 - URL: https://cuizhenjie.github.io/2026/04/20/museum-infographic-prompt-guide/
 - Date: 2026-04-20
@@ -34,103 +43,103 @@
 - Description: 完整解析「博物馆图鉴式中文拆解信息图」的AI绘图提示词设计方法，涵盖主体判断、版式结构、文字规范、材质工艺说明与文化寓意解析。
 - Excerpt: 这是一套可复用的 AI 图像生成提示词系统，专门用于制作「博物馆图鉴式中文拆解信息图」。无需任何额外素材输入，只需提供主题，即可自动生成兼具真实感与文化深度的文博级信息图。
 
-### 2. GPT-Image-2 提示词库大全：50+实战案例分类整理
+### 3. GPT-Image-2 提示词库大全：50+实战案例分类整理
 
 - URL: https://cuizhenjie.github.io/2026/04/19/gpt-image-2-prompts-library/
 - Date: 2026-04-19
-- Tags: AIGC, GPT-Image-2, 提示词, AI绘图, Midjourney替代
+- Tags: AIGC, AI绘图, GPT-Image-2, 提示词, Midjourney替代
 - Categories: AI绘图
 - Excerpt: 来源： awesome-gpt-image-2-prompts · CC BY 4.0 本库收录 GPT-Image-2 在人像、海报、角色设计、UI原型及社区实验等场景下的高质量提示词与图像案例，共 50+ 实战案例。
 
-### 3. 用GPT-Image-2秒变插画师：17种风格一库搞定
+### 4. 用GPT-Image-2秒变插画师：17种风格一库搞定
 
 - URL: https://cuizhenjie.github.io/2026/04/18/gpt-image-2-illustration-style-library/
 - Date: 2026-04-18
-- Tags: AI图像, GPT-Image-2, 插画风格, AI生图, 提示词
+- Tags: GPT-Image-2, 提示词, AI图像, 插画风格, AI生图
 - Categories: AI工具
 - Description: GPT-Image-2重磅发布，文字渲染终于解决中文乱码问题。本文深度解读preangelleo/illustration-style-samples开源项目，17种插画风格横向测评，手把手教你构建个人专属风格库。
 
-### 4. 创作病毒性传播的视频剧本的Prompt
+### 5. 创作病毒性传播的视频剧本的Prompt
 
 - URL: https://cuizhenjie.github.io/2026/01/26/ai-create-video-prompt/
 - Date: 2026-01-26
-- Tags: prompt, AI, 视频剧本
+- Tags: AI, prompt, 视频剧本
 - Categories: AIGC
 - Description: 创作专业视频剧本的Prompt。
 
-### 5. 企业HR助手相关的的Prompt
+### 6. 企业HR助手相关的的Prompt
 
 - URL: https://cuizhenjie.github.io/2026/01/26/ai-hr-prompt/
 - Date: 2026-01-26
-- Tags: prompt, AI, HR
+- Tags: AI, prompt, HR
 - Categories: AIGC
 - Description: 企业HR助手相关的Prompt。
 
-### 6. 科技类新闻作者的Prompt
+### 7. 科技类新闻作者的Prompt
 
 - URL: https://cuizhenjie.github.io/2026/01/26/ai-news-prompt/
 - Date: 2026-01-26
-- Tags: prompt, AI, 新闻作者
+- Tags: AI, prompt, 新闻作者
 - Categories: AIGC
 - Description: 创作专业新闻文章的Prompt。
 
-### 7. PBL项目创意的Prompt
+### 8. PBL项目创意的Prompt
 
 - URL: https://cuizhenjie.github.io/2026/01/26/ai-pbl-prompt/
 - Date: 2026-01-26
-- Tags: prompt, AI, 视频剧本
+- Tags: AI, prompt, 视频剧本
 - Categories: AIGC
 - Description: PBL项目创意的Prompt。
 
-### 8. 生成专业演示文稿的Prompt
+### 9. 生成专业演示文稿的Prompt
 
 - URL: https://cuizhenjie.github.io/2026/01/26/ai-ppt-prompt/
 - Date: 2026-01-26
-- Tags: prompt, AI, PPT, 演示文稿
+- Tags: AI, prompt, PPT, 演示文稿
 - Categories: AIGC
 - Description: 生成专业演示文稿的Prompt。
 
-### 9. 生成书籍精华海报的Prompt
+### 10. 生成书籍精华海报的Prompt
 
 - URL: https://cuizhenjie.github.io/2026/01/26/book-cover-prompt/
 - Date: 2026-01-26
-- Tags: prompt, AI, 书籍, 海报
+- Tags: AI, prompt, 书籍, 海报
 - Categories: AIGC
 - Description: 生成书籍精华海报的Prompt。
 
-### 10. 去除AI味的Prompt
+### 11. 去除AI味的Prompt
 
 - URL: https://cuizhenjie.github.io/2026/01/26/clean-ai/
 - Date: 2026-01-26
-- Tags: prompt, AI, 文案, 去除AI味
+- Tags: AI, prompt, 文案, 去除AI味
 - Categories: AIGC
 - Description: 去除AI味的Prompt。
 
-### 11. 通过文档生成网页的Prompt
+### 12. 通过文档生成网页的Prompt
 
 - URL: https://cuizhenjie.github.io/2026/01/26/document-to-website/
 - Date: 2026-01-26
-- Tags: prompt, AI, 文档, 生成网页
+- Tags: AI, prompt, 文档, 生成网页
 - Categories: AIGC
 - Description: 通过文档生成美观漂亮的中文可视化网页的Prompt。
 
-### 12. 生成专业知识卡片的Prompt
+### 13. 生成专业知识卡片的Prompt
 
 - URL: https://cuizhenjie.github.io/2026/01/26/gen-card-prompt/
 - Date: 2026-01-26
-- Tags: prompt, AI, 知识卡片, 设计风格
+- Tags: AI, prompt, 知识卡片, 设计风格
 - Categories: AIGC
 - Description: 生成专业知识卡片的Prompt。
 
-### 13. 生成旅游攻略地图的Prompt
+### 14. 生成旅游攻略地图的Prompt
 
 - URL: https://cuizhenjie.github.io/2026/01/26/trip-cover-prompt/
 - Date: 2026-01-26
-- Tags: prompt, AI, 旅游, 地图
+- Tags: AI, prompt, 旅游, 地图
 - Categories: AIGC
 - Description: 生成旅游攻略地图的Prompt。
 
-### 14. Spec-Driven Devement
+### 15. Spec-Driven Devement
 
 - URL: https://cuizhenjie.github.io/2026/01/21/sdd-aicoding/
 - Date: 2026-01-21
@@ -138,7 +147,7 @@
 - Categories: AIGC
 - Excerpt: 从依赖感觉的 Vibe Coding 过渡到一个强调规范、可复现、可靠交付的新阶段，SDD（Specification-Driven Development 规范驱动开发）多AI协同。
 
-### 15. HTML卡片PRD生成的prompt
+### 16. HTML卡片PRD生成的prompt
 
 - URL: https://cuizhenjie.github.io/2026/01/18/ai-card-prd-prompt/
 - Date: 2026-01-18
@@ -146,7 +155,7 @@
 - Categories: AIGC
 - Description: AI卡片PRD的prompt
 
-### 16. Superpowers 零基础应用指南：让 Vibe Coding 拥有系统化软件开发能力
+### 17. Superpowers 零基础应用指南：让 Vibe Coding 拥有系统化软件开发能力
 
 - URL: https://cuizhenjie.github.io/2026/01/15/superpowers-tutorial/
 - Date: 2026-01-15
@@ -154,7 +163,7 @@
 - Categories: AIGC
 - Excerpt: Claude code的最热Skill：Superpowers 系统化使用
 
-### 17. AI音乐通用Prompt
+### 18. AI音乐通用Prompt
 
 - URL: https://cuizhenjie.github.io/2026/01/14/ai-music-prompt/
 - Date: 2026-01-14
@@ -163,7 +172,7 @@
 - Description: Prompt提示词，AI音乐通用Prompt。
 - Excerpt: 零基础做AI音乐，通用Prompt知识。
 
-### 18. 从零开始学Python（十）：实战项目 - 个人记账本
+### 19. 从零开始学Python（十）：实战项目 - 个人记账本
 
 - URL: https://cuizhenjie.github.io/2026/01/08/python-tutorial-10-project/
 - Date: 2026-01-08
@@ -171,7 +180,7 @@
 - Categories: Python教程
 - Description: Python实战项目教程，从零开发一个个人记账本应用，综合运用前面学到的知识，包括函数、数据结构、文件操作、异常处理等，提升Python编程实战能力，完成从入门到实践的跨越。
 
-### 19. 从零开始学Python（九）：面向对象编程
+### 20. 从零开始学Python（九）：面向对象编程
 
 - URL: https://cuizhenjie.github.io/2026/01/07/python-tutorial-09-oop/
 - Date: 2026-01-07
@@ -179,14 +188,14 @@
 - Categories: Python教程
 - Description: 全面介绍Python的面向对象编程特性，包括类和对象的概念、属性和方法、继承和多态、魔术方法等OOP核心概念，帮助理解面向对象的设计思想，编写更优雅的代码。
 
-### 20. 从零开始学Python（八）：异常处理
+### 21. 从零开始学Python（八）：异常处理
 
 - URL: https://cuizhenjie.github.io/2026/01/06/python-tutorial-08-exceptions/
 - Date: 2026-01-06
 - Tags: 教程, 编程入门, Python
 - Categories: Python教程
 
-### 21. AI视频进阶技巧：从提示词工程到叙事创作
+### 22. AI视频进阶技巧：从提示词工程到叙事创作
 
 - URL: https://cuizhenjie.github.io/2026/01/05/ai-video-advanced-tips/
 - Date: 2026-01-05
@@ -194,7 +203,7 @@
 - Categories: AIGC
 - Description: 深入讲解AI视频进阶技巧，包括高级提示词工程、多镜头组合叙事、视频连续性控制、复杂场景构建、角色一致性保持等核心技术，帮助你从单镜头视频升级到完整叙事短片创作。
 
-### 22. 一看就懂的22个AI视频镜头技巧
+### 23. 一看就懂的22个AI视频镜头技巧
 
 - URL: https://cuizhenjie.github.io/2026/01/05/ai-video-camera-shots/
 - Date: 2026-01-05
@@ -202,14 +211,14 @@
 - Categories: AIGC
 - Description: 详细解析22个AI视频镜头技巧，从浅焦镜头到微距镜头，包含具体的提示词示例和配图清单，教你如何结合具体画面编写关键词，掌握影视级运镜技巧，适用于可灵等AI视频生成工具。
 
-### 23. 从零开始学Python（七）：文件操作
+### 24. 从零开始学Python（七）：文件操作
 
 - URL: https://cuizhenjie.github.io/2026/01/05/python-tutorial-07-files/
 - Date: 2026-01-05
 - Tags: 教程, 编程入门, Python
 - Categories: Python教程
 
-### 24. AI视频长视频制作与商业化完全指南
+### 25. AI视频长视频制作与商业化完全指南
 
 - URL: https://cuizhenjie.github.io/2026/01/05/ai-video-long-form/
 - Date: 2026-01-05
@@ -217,7 +226,7 @@
 - Categories: AIGC
 - Description: 深入讲解AI视频长视频制作与商业化完整指南，包括长视频制作挑战、多角色管理、对话生成、配音音效、专业工作流、商业化应用场景、项目实战、客户沟通、变现策略等核心内容，帮助你从技术创作者进阶为商业视频制作人。
 
-### 25. AI视频编剧Prompt
+### 26. AI视频编剧Prompt
 
 - URL: https://cuizhenjie.github.io/2026/01/05/ai-video-script/
 - Date: 2026-01-05
@@ -225,7 +234,7 @@
 - Categories: AIGC
 - Description: 深入讲解AI视频长视频制作与商业化完整指南，包括长视频制作挑战、多角色管理、对话生成、配音音效、专业工作流、商业化应用场景、项目实战、客户沟通、变现策略等核心内容，帮助你从技术创作者进阶为商业视频制作人。
 
-### 26. 01 Claude Code 是什么
+### 27. 01 Claude Code 是什么
 
 - URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/01-what-is-claude-code/
 - Date: 2026-01-05
@@ -233,21 +242,13 @@
 - Categories: claude-code
 - Description: Claude Code 是 Anthropic 推出的 AI 编程助手，能够在终端中与开发者自然对话，帮助编写、理解和优化代码。本文介绍 Claude Code 的核心概念、特点和适用场景。
 
-### 27. 04 代码生成
+### 28. 04 代码生成
 
 - URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/04-code-generation/
 - Date: 2026-01-05
 - Tags: AI, Claude Code, 开发工具, 代码生成, 编程
 - Categories: claude-code
 - Description: 深入学习如何使用 Claude Code 生成高质量代码，包括函数、类、模块和完整应用，以及代码生成的最佳实践。
-
-### 28. 03 基础使用
-
-- URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/03-basic-usage/
-- Date: 2026-01-05
-- Tags: AI, Claude Code, 提示词, 开发工具, 基础教程
-- Categories: claude-code
-- Description: 学习 Claude Code 的基础使用方法，包括第一个命令、基本交互模式、提示词编写技巧和常用命令。
 
 ### 29. 02 安装与配置
 
@@ -257,15 +258,7 @@
 - Categories: claude-code
 - Description: 详细介绍如何在 macOS、Linux 和 Windows 上安装 Claude Code，包括环境配置、API 密钥设置和常见问题排查。
 
-### 30. 05 代码理解
-
-- URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/05-code-understanding/
-- Date: 2026-01-05
-- Tags: AI, Claude Code, 开发工具, 代码阅读, 代码分析
-- Categories: claude-code
-- Description: 学习如何使用 Claude Code 快速理解和分析代码，包括代码解释、架构分析、复杂逻辑理解和第三方库探索。
-
-### 31. 06 代码重构
+### 30. 06 代码重构
 
 - URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/06-code-refactoring/
 - Date: 2026-01-05
@@ -273,13 +266,21 @@
 - Categories: claude-code
 - Description: 学习如何使用 Claude Code 安全地重构代码，改善代码质量、可读性和可维护性，同时确保功能不变。
 
-### 32. 08 命令行集成
+### 31. 05 代码理解
 
-- URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/08-command-line-basics/
+- URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/05-code-understanding/
 - Date: 2026-01-05
-- Tags: AI, Claude Code, Docker, 开发工具, 命令行, Git
+- Tags: AI, Claude Code, 开发工具, 代码阅读, 代码分析
 - Categories: claude-code
-- Description: 学习如何将 Claude Code 与 Git、Docker 等命令行工具深度集成,构建高效的开发工作流。
+- Description: 学习如何使用 Claude Code 快速理解和分析代码，包括代码解释、架构分析、复杂逻辑理解和第三方库探索。
+
+### 32. 03 基础使用
+
+- URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/03-basic-usage/
+- Date: 2026-01-05
+- Tags: AI, Claude Code, 提示词, 开发工具, 基础教程
+- Categories: claude-code
+- Description: 学习 Claude Code 的基础使用方法，包括第一个命令、基本交互模式、提示词编写技巧和常用命令。
 
 ### 33. 07 文件操作
 
@@ -289,13 +290,13 @@
 - Categories: claude-code
 - Description: 学习如何使用 Claude Code 高效处理项目文件，包括文件读取、修改、创建以及上下文管理和 .claudeignore 配置。
 
-### 34. 09 AI Agent 基础
+### 34. 08 命令行集成
 
-- URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/09-ai-agent-basics/
+- URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/08-command-line-basics/
 - Date: 2026-01-05
-- Tags: AI, Claude Code, 自动化, 开发工具, AI Agents
+- Tags: AI, Claude Code, Docker, 开发工具, 命令行, Git
 - Categories: claude-code
-- Description: 了解 Claude Code 的 AI Agent 系统,学习如何使用和配置 Agents 来自动化复杂的多步骤开发任务。
+- Description: 学习如何将 Claude Code 与 Git、Docker 等命令行工具深度集成,构建高效的开发工作流。
 
 ### 35. 10 最佳实践
 
@@ -305,15 +306,7 @@
 - Categories: claude-code
 - Description: 总结使用 Claude Code 的最佳实践,包括高效技巧、常见陷阱、工作流优化和安全注意事项。
 
-### 36. 12 下一步：我的进阶学习之路
-
-- URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/12-next-steps/
-- Date: 2026-01-05
-- Tags: AI, Claude Code, 开发工具, 学习路径, 进阶教程
-- Categories: claude-code
-- Description: 回顾Claude Code基础教程的学习成果，规划进阶学习路径，探索实战项目和高级特性，开启AI辅助编程的进阶之旅。
-
-### 37. 11 故障排查
+### 36. 11 故障排查
 
 - URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/11-troubleshooting/
 - Date: 2026-01-05
@@ -321,13 +314,21 @@
 - Categories: claude-code
 - Description: 学习如何诊断和解决使用 Claude Code 时遇到的常见问题,包括安装错误、API 问题、性能瓶颈和调试技巧。
 
-### 38. 15 多语言编程的实战对比
+### 37. 12 下一步：我的进阶学习之路
 
-- URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/15-multi-language/
+- URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/12-next-steps/
 - Date: 2026-01-05
-- Tags: AI, Claude Code, Python, 开发工具, 多语言, JavaScript, Go, Rust
+- Tags: AI, Claude Code, 开发工具, 学习路径, 进阶教程
 - Categories: claude-code
-- Description: 深入对比Python、JavaScript、Go、Rust等主流编程语言在Claude Code中的使用特点，通过实战案例展示各语言的优势，掌握跨语言开发的最佳实践。
+- Description: 回顾Claude Code基础教程的学习成果，规划进阶学习路径，探索实战项目和高级特性，开启AI辅助编程的进阶之旅。
+
+### 38. 09 AI Agent 基础
+
+- URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/09-ai-agent-basics/
+- Date: 2026-01-05
+- Tags: AI, Claude Code, 自动化, 开发工具, AI Agents
+- Categories: claude-code
+- Description: 了解 Claude Code 的 AI Agent 系统,学习如何使用和配置 Agents 来自动化复杂的多步骤开发任务。
 
 ### 39. 13 上下文管理的进阶实践
 
@@ -345,7 +346,15 @@
 - Categories: claude-code
 - Description: 掌握Claude Code提示词工程的核心技巧，学习Few-shot Learning、Chain-of-Thought、角色扮演等高级方法，构建高效的提示词模板库，提升AI辅助编程效果。
 
-### 41. Claude Code 使用指南
+### 41. 15 多语言编程的实战对比
+
+- URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/15-multi-language/
+- Date: 2026-01-05
+- Tags: AI, Claude Code, Python, 开发工具, 多语言, JavaScript, Go, Rust
+- Categories: claude-code
+- Description: 深入对比Python、JavaScript、Go、Rust等主流编程语言在Claude Code中的使用特点，通过实战案例展示各语言的优势，掌握跨语言开发的最佳实践。
+
+### 42. Claude Code 使用指南
 
 - URL: https://cuizhenjie.github.io/2026/01/04/claude-code-operation/
 - Date: 2026-01-04
@@ -353,14 +362,14 @@
 - Categories: AIGC
 - Excerpt: Claude Code 使用指南
 
-### 42. Claude Code Skill 诊断Skill
+### 43. Claude Code Skill 诊断Skill
 
 - URL: https://cuizhenjie.github.io/2026/01/04/claude-code-skill-check/
 - Date: 2026-01-04
 - Tags: Prompt, claude code, skill
 - Categories: AIGC
 
-### 43. 从零开始学LangChain（六）：实战项目 - 智能文档问答系统
+### 44. 从零开始学LangChain（六）：实战项目 - 智能文档问答系统
 
 - URL: https://cuizhenjie.github.io/2026/01/04/langchain-tutorial-06-project/
 - Date: 2026-01-04
@@ -368,7 +377,7 @@
 - Categories: LangChain教程
 - Description: LangChain实战项目教程，从零开始构建一个智能文档问答系统（RAG），综合运用Models、Prompts、Chains、Memory等核心概念，实现文档加载、向量化存储、相似度检索、答案生成的完整流程。
 
-### 44. 从零开始学Python（六）：数据结构
+### 45. 从零开始学Python（六）：数据结构
 
 - URL: https://cuizhenjie.github.io/2026/01/04/python-tutorial-06-data-structures/
 - Date: 2026-01-04
@@ -376,7 +385,7 @@
 - Categories: Python教程
 - Description: 深入讲解Python的核心数据结构，包括列表、字典、元组、集合等容器类型，以及它们的常用操作方法和应用场景，帮助选择合适的数据结构解决实际问题。
 
-### 45. 从零开始学LangChain（五）：Memory 记忆管理
+### 46. 从零开始学LangChain（五）：Memory 记忆管理
 
 - URL: https://cuizhenjie.github.io/2026/01/03/langchain-tutorial-05-memory/
 - Date: 2026-01-03
@@ -384,7 +393,7 @@
 - Categories: LangChain教程
 - Description: 深入讲解LangChain的Memory模块，介绍对话记忆的重要性、不同类型的记忆组件、如何在链中使用记忆、构建有记忆的聊天机器人，帮助实现持续的多轮对话。
 
-### 46. 从零开始学Python（五）：函数
+### 47. 从零开始学Python（五）：函数
 
 - URL: https://cuizhenjie.github.io/2026/01/03/python-tutorial-05-functions/
 - Date: 2026-01-03
@@ -392,7 +401,7 @@
 - Categories: Python教程
 - Description: 全面讲解Python函数的定义和使用，包括函数参数、返回值、作用域、默认参数、关键字参数、lambda表达式等，帮助理解函数式编程的核心思想，编写可复用的代码模块。
 
-### 47. 生成式引擎优化(GEO)
+### 48. 生成式引擎优化(GEO)
 
 - URL: https://cuizhenjie.github.io/2026/01/02/geo/
 - Date: 2026-01-02
@@ -400,7 +409,7 @@
 - Categories: AIGC
 - Description: 生成引擎优化（Generative Engine Optimization，GEO)，就是如何让AI搜索曝光你的产品或者公司。
 
-### 48. 从零开始学LangChain（四）：Chains 链式调用
+### 49. 从零开始学LangChain（四）：Chains 链式调用
 
 - URL: https://cuizhenjie.github.io/2026/01/02/langchain-tutorial-04-chains/
 - Date: 2026-01-02
@@ -408,7 +417,7 @@
 - Categories: LangChain教程
 - Description: 深入讲解LangChain的Chains模块，介绍LangChain表达式语言(LCEL)、如何创建和组合链、常见链类型、顺序链和并行链的实现，帮助构建复杂的AI应用工作流。
 
-### 49. 从零开始学Python（四）：控制流程
+### 50. 从零开始学Python（四）：控制流程
 
 - URL: https://cuizhenjie.github.io/2026/01/02/python-tutorial-04-control-flow/
 - Date: 2026-01-02
@@ -416,7 +425,7 @@
 - Categories: Python教程
 - Description: 讲解Python的程序控制流程，包括if条件判断、for循环、while循环、break和continue语句等，通过实例演示如何控制程序的执行流程，实现复杂的逻辑判断和循环处理。
 
-### 50. 从零开始学LangChain（三）：Prompts 提示词工程
+### 51. 从零开始学LangChain（三）：Prompts 提示词工程
 
 - URL: https://cuizhenjie.github.io/2026/01/01/langchain-tutorial-03-prompts/
 - Date: 2026-01-01
@@ -424,7 +433,7 @@
 - Categories: LangChain教程
 - Description: 深入讲解LangChain的Prompts模块，介绍提示词工程最佳实践、如何创建和使用提示词模板、少样本提示技巧、提示词优化方法，帮助设计高质量的提示词提升AI应用效果。
 
-### 51. 从零开始学Python（三）：数据类型与变量
+### 52. 从零开始学Python（三）：数据类型与变量
 
 - URL: https://cuizhenjie.github.io/2026/01/01/python-tutorial-03-data-types/
 - Date: 2026-01-01
@@ -432,7 +441,7 @@
 - Categories: Python教程
 - Description: 深入讲解Python的数据类型系统，包括数字、字符串、布尔值等基本类型，以及类型转换、变量赋值、运算符等核心概念，通过实例演示各种数据类型的操作方法。
 
-### 52. OpenSpec Coding 从零上手使用
+### 53. OpenSpec Coding 从零上手使用
 
 - URL: https://cuizhenjie.github.io/2026/01/01/open-spec-coding/
 - Date: 2026-01-01
@@ -440,7 +449,7 @@
 - Categories: AIGC
 - Description: OpenSpec 是一个为AI编码助手设计的规范驱动开发工具，它通过轻量级的工作流程，确保人类开发者和AI助手在编写任何代码之前就能对需求达成明确共识。
 
-### 53. 从零开始学LangChain（二）：Models 模型详解
+### 54. 从零开始学LangChain（二）：Models 模型详解
 
 - URL: https://cuizhenjie.github.io/2025/12/31/langchain-tutorial-02-models/
 - Date: 2025-12-31
@@ -448,7 +457,7 @@
 - Categories: LangChain教程
 - Description: 深入讲解LangChain的Models模块，介绍LLM和Chat Model的区别、如何调用不同的大语言模型、控制模型参数、实现流式输出、处理结构化输出等核心概念，帮助掌握模型使用技巧。
 
-### 54. 从零开始学Python（二）：Python基础语法
+### 55. 从零开始学Python（二）：Python基础语法
 
 - URL: https://cuizhenjie.github.io/2025/12/31/python-tutorial-02-basics/
 - Date: 2025-12-31
@@ -456,7 +465,7 @@
 - Categories: Python教程
 - Description: Python基础语法详解，介绍变量的使用和命名规则、注释的添加方法、代码缩进规范等Python编程的基础知识，帮助初学者掌握Python代码的基本书写规范。
 
-### 55. 从零开始学LangChain（一）：LangChain简介与环境搭建
+### 56. 从零开始学LangChain（一）：LangChain简介与环境搭建
 
 - URL: https://cuizhenjie.github.io/2025/12/30/langchain-tutorial-01-intro/
 - Date: 2025-12-30
@@ -464,7 +473,7 @@
 - Categories: LangChain教程
 - Description: LangChain入门第一课：详细介绍LangChain框架的核心价值和组件，手把手教你搭建开发环境，配置OpenAI API，编写你的第一个LangChain程序，学习提示词模板和链式调用，适合AI应用开发初学者。
 
-### 56. 从零开始学Python（一）：Python简介与环境搭建
+### 57. 从零开始学Python（一）：Python简介与环境搭建
 
 - URL: https://cuizhenjie.github.io/2025/12/30/python-tutorial-01-intro/
 - Date: 2025-12-30
@@ -472,7 +481,7 @@
 - Categories: Python教程
 - Description: Python入门第一课：详细介绍Python的特点和应用领域，手把手教你在Windows/Mac/Linux系统上安装Python环境，学习交互式和脚本两种运行模式，编写你的第一个Python程序，适合零基础编程初学者。
 
-### 57. AI年终总结Prompt
+### 58. AI年终总结Prompt
 
 - URL: https://cuizhenjie.github.io/2025/12/30/ai-nianzhongzongjie-prompt/
 - Date: 2025-12-30
@@ -481,7 +490,7 @@
 - Description: Prompt提示词，年终总结。
 - Excerpt: 年终总结格式大概长这样： 开头，写几句“这一年我在和公司一起奋斗”之类的话。 中间，把12个月的月报汇总一下。 结尾，写成长和不足，以及对未来的展望。
 
-### 58. FastAPI项目模板Prompt
+### 59. FastAPI项目模板Prompt
 
 - URL: https://cuizhenjie.github.io/2025/12/30/fastapi-project-prompt/
 - Date: 2025-12-30
@@ -489,7 +498,7 @@
 - Categories: AIGC
 - Description: Prompt提示词，用于创建FastAPI项目模板。
 
-### 59. FastAPI项目模板Prompt
+### 60. FastAPI项目模板Prompt
 
 - URL: https://cuizhenjie.github.io/2025/12/30/prompt-create-fastapi-template/
 - Date: 2025-12-30
@@ -497,14 +506,14 @@
 - Categories: AIGC
 - Description: Prompt提示词，用于创建FastAPI项目模板。
 
-### 60. Claude 常用 Skills
+### 61. Claude 常用 Skills
 
 - URL: https://cuizhenjie.github.io/2025/12/29/claude-skill/
 - Date: 2025-12-29
 - Categories: AIGC
 - Description: Claude 常用 Skills，开发类、营销类、日常办公类等
 
-### 61. Spec Coding 规范式编程
+### 62. Spec Coding 规范式编程
 
 - URL: https://cuizhenjie.github.io/2025/12/29/speckit-coding/
 - Date: 2025-12-29
@@ -512,15 +521,15 @@
 - Categories: AIGC
 - Description: Spec Coding 规范式编程，巧用 Spec-Kit，把AI训练成可控的开发工程师！
 
-### 62. 3D手势跟随圣诞树Prompt
+### 63. 3D手势跟随圣诞树Prompt
 
 - URL: https://cuizhenjie.github.io/2025/11/26/3d-coding-prompt/
 - Date: 2025-11-26
-- Tags: 3d, 手势, 圣诞树, prompt, webgl, threejs
+- Tags: prompt, 3d, 手势, 圣诞树, webgl, threejs
 - Categories: AIGC
 - Description: 详细介绍3D手势跟随圣诞树Prompt，包括角色设定、任务目标、核心技术栈约束等。
 
-### 63. 使用AI来构建个人专业系统14个原则
+### 64. 使用AI来构建个人专业系统14个原则
 
 - URL: https://cuizhenjie.github.io/2025/11/26/ai-rule-personal/
 - Date: 2025-11-26
@@ -528,7 +537,7 @@
 - Categories: AIGC
 - Description: AI构建个人专业系统使用的14个原则
 
-### 64. Mac搭建OpenClaw+飞书/QQ自媒体自动化工作流
+### 65. Mac搭建OpenClaw+飞书/QQ自媒体自动化工作流
 
 - URL: https://cuizhenjie.github.io/2025/03/08/mac-openclaw-media-automation/
 - Date: 2025-03-08
@@ -536,7 +545,7 @@
 - Categories: 技术教程
 - Description: 从热点采集到自动发布，用OpenClaw+飞书+QQ搭建完整的自媒体生产系统，效率提升500%
 
-### 65. docker 下 redis 安装
+### 66. docker 下 redis 安装
 
 - URL: https://cuizhenjie.github.io/2020/04/10/docker-redis/
 - Date: 2020-04-10
@@ -545,7 +554,7 @@
 - Description: 介绍如何使用Docker快速部署Redis单节点服务，包括拉取Redis镜像、创建和启动容器、配置数据持久化、设置远程连接等完整步骤，附带详细的命令示例和配置说明。
 - Excerpt: docker 下 的单节点 redis 安装及配置远程连接。
 
-### 66. 联通 10G EPON 光猫破解，并改桥接模式
+### 67. 联通 10G EPON 光猫破解，并改桥接模式
 
 - URL: https://cuizhenjie.github.io/2020/04/06/china-unicom-cat/
 - Date: 2020-04-06
@@ -554,7 +563,7 @@
 - Description: 详细介绍联通TEWA-1010E万兆光猫的超级管理员密码获取方法，以及如何将光猫从路由模式改为桥接模式，配合自己的路由器使用，提升网络性能和稳定性。
 - Excerpt: 联通万兆光猫（型号：TEWA-1010E）破解高级权限，并修改桥接模式。
 
-### 67. Markdown 技术文档规范
+### 68. Markdown 技术文档规范
 
 - URL: https://cuizhenjie.github.io/2020/03/24/markdown-style-guide/
 - Date: 2020-03-24
@@ -563,7 +572,7 @@
 - Description: 详细的技术文档Markdown写作规范，包括标题层级、文本格式、代码块、表格、图片、链接等语法规范，以及文档组织和命名约定，帮助团队建立统一的技术文档标准。
 - Excerpt: Markdown 格式的技术文档写作规范。
 
-### 68. 中文文案写作规范
+### 69. 中文文案写作规范
 
 - URL: https://cuizhenjie.github.io/2020/03/24/chinese-writing-style-guide/
 - Date: 2020-03-24
@@ -572,7 +581,7 @@
 - Description: 中文文案排版和写作风格规范，包括中英文混排空格规则、标点符号使用、数字日期格式、段落组织等，帮助提升文档的专业性和可读性。
 - Excerpt: 中文文案写作、排版风格规范。
 
-### 69. Java 程序 CPU 100% 排查
+### 70. Java 程序 CPU 100% 排查
 
 - URL: https://cuizhenjie.github.io/2020/03/19/java-cpu-overflow/
 - Date: 2020-03-19
@@ -581,7 +590,7 @@
 - Description: 详细介绍Java程序CPU占用100%问题的三种排查方法：使用JVM原生工具jstack定位问题线程、使用阿里开源的Arthas诊断工具、使用show-busy-java-threads脚本快速定位，包含完整的操作步骤和实战示例。
 - Excerpt: 排查 Java 程序 CPU 100% 问题，三种方式：jvm工具、show-busy-java-threads脚本、Arthas
 
-### 70. Mac下安装Python3环境
+### 71. Mac下安装Python3环境
 
 - URL: https://cuizhenjie.github.io/2020/03/17/python3-install/
 - Date: 2020-03-17
@@ -590,7 +599,7 @@
 - Description: 详细介绍在Mac系统上安装Python3环境的完整流程，包括官方安装包和Homebrew两种安装方式、环境变量配置、pip配置、以及Python的完全卸载方法，帮助Mac用户快速搭建Python开发环境。
 - Excerpt: Mac下安装Python3环境，并配置开发环境及如何卸载
 
-### 71. Mac 安装使用 Docker
+### 72. Mac 安装使用 Docker
 
 - URL: https://cuizhenjie.github.io/2020/02/27/docker-install-mac/
 - Date: 2020-02-27
@@ -599,7 +608,7 @@
 - Description: 详细介绍在Mac系统上安装Docker Desktop的完整步骤，包括下载安装、配置优化、镜像加速设置、Kubernetes启用等，帮助Mac开发者快速搭建Docker开发环境。
 - Excerpt: Mac下 安装 Docker，以docker desktop方式安装为例
 
-### 72. CentOS7 安装 FastDFS
+### 73. CentOS7 安装 FastDFS
 
 - URL: https://cuizhenjie.github.io/2019/12/05/fastdfs-install/
 - Date: 2019-12-05
@@ -608,7 +617,7 @@
 - Description: 详细介绍在CentOS7上安装和配置FastDFS分布式文件系统的完整流程，包括安装libfastcommon、配置tracker和storage节点、安装nginx模块、测试文件上传下载等，帮助搭建高可用的文件存储服务。
 - Excerpt: 基于CentOS7 安装 FastDFS
 
-### 73. docker镜像下时间同步问题
+### 74. docker镜像下时间同步问题
 
 - URL: https://cuizhenjie.github.io/2018/11/01/docker-datetime/
 - Date: 2018-11-01
@@ -617,7 +626,7 @@
 - Description: 解决Docker容器时间不同步问题，详细介绍Alpine、CentOS等不同基础镜像的时区修改方法，包括环境变量设置、时区文件挂载、Dockerfile配置等多种解决方案。
 - Excerpt: docker镜像同步时间，修改时区问题
 
-### 74. CentOS下安装go环境
+### 75. CentOS下安装go环境
 
 - URL: https://cuizhenjie.github.io/2018/09/26/centos-go/
 - Date: 2018-09-26
@@ -626,7 +635,7 @@
 - Description: 详细介绍在CentOS系统上安装Go语言开发环境的完整步骤，包括下载二进制安装包、配置环境变量GOPATH和GOROOT、验证安装等，帮助开发者快速搭建Go开发环境。
 - Excerpt: centos7下安装go环境，并配置环境变量。
 
-### 75. docker方式安装gitlab
+### 76. docker方式安装gitlab
 
 - URL: https://cuizhenjie.github.io/2018/09/18/docker-gitlab/
 - Date: 2018-09-18
@@ -635,7 +644,7 @@
 - Description: 详细介绍使用Docker安装和配置GitLab的完整流程，包括镜像拉取、容器启动、数据持久化配置、邮件设置、HTTPS配置等，帮助团队快速搭建私有的Git代码托管平台和CI/CD系统。
 - Excerpt: docker方式安装gitlab
 
-### 76. CentOS7 安装 Docker
+### 77. CentOS7 安装 Docker
 
 - URL: https://cuizhenjie.github.io/2018/09/17/docker-install-centos7/
 - Date: 2018-09-17
@@ -644,7 +653,7 @@
 - Description: 详细介绍如何在CentOS7系统上安装Docker CE社区版，包括前置条件检查、安装步骤、配置优化、用户权限设置、镜像加速配置等完整流程，附带详细命令示例和docker-compose安装教程。
 - Excerpt: 基于CentOS7 安装 docker，安装CE社区版本
 
-### 77. gradle安装及常规配置
+### 78. gradle安装及常规配置
 
 - URL: https://cuizhenjie.github.io/2018/07/10/gradle/
 - Date: 2018-07-10
@@ -652,7 +661,7 @@
 - Categories: gradle
 - Excerpt: Mac下使用gradle安装及常规配置
 
-### 78. CentOS下修改时间、时区
+### 79. CentOS下修改时间、时区
 
 - URL: https://cuizhenjie.github.io/2018/03/26/centos-date/
 - Date: 2018-03-26
@@ -661,7 +670,7 @@
 - Description: 详细介绍CentOS系统时间和时区的修改方法，包括使用timedatectl和date命令修改时间、配置时区、设置NTP时间同步等，解决服务器时间不准确问题。
 - Excerpt: CentOS修改时间、时区及同步互联网时间等操作
 
-### 79. CentOS下使用lrzsz，代替ftp上传、下载
+### 80. CentOS下使用lrzsz，代替ftp上传、下载
 
 - URL: https://cuizhenjie.github.io/2018/03/26/centos-lrzsz/
 - Date: 2018-03-26
@@ -670,7 +679,7 @@
 - Description: 介绍在CentOS系统上安装和使用lrzsz工具，通过rz和sz命令在SSH终端直接上传下载文件，无需FTP工具，大幅提升运维效率，包含详细的安装和使用步骤。
 - Excerpt: CentOS下使用lrzsz，代替ftp实现rz、sz上传下载
 
-### 80. CentOS系统常规安全配置
+### 81. CentOS系统常规安全配置
 
 - URL: https://cuizhenjie.github.io/2017/11/13/centos-secuity/
 - Date: 2017-11-13
@@ -679,7 +688,7 @@
 - Description: 服务器安全加固指南，详细介绍CentOS系统的安全配置策略，包括修改SSH默认端口、配置防火墙规则、禁用root远程登录、设置密码策略、配置fail2ban防暴力破解等实用安全措施。
 - Excerpt: 近期服务器频繁有被暴力破解，大致分析了一下入侵行为，整理了常用的安全策略：最小的权限+最少的服务=最大的安全
 
-### 81. CentOS6.5安装mysql及常规配置
+### 82. CentOS6.5安装mysql及常规配置
 
 - URL: https://cuizhenjie.github.io/2017/10/16/centos-mysql/
 - Date: 2017-10-16
@@ -688,7 +697,7 @@
 - Description: 详细介绍在CentOS6.5系统上使用yum源安装MySQL 5.6的完整流程，包括添加MySQL yum源、安装MySQL服务、初始安全配置、字符集设置、开机自启动配置等，帮助快速搭建MySQL数据库环境。
 - Excerpt: CentOS6.5系统下使用yum安装mysql5.6
 
-### 82. CentOS下查看cpu、磁盘、内存使用情况以及如何清理内存
+### 83. CentOS下查看cpu、磁盘、内存使用情况以及如何清理内存
 
 - URL: https://cuizhenjie.github.io/2017/10/10/centos-memory/
 - Date: 2017-10-10
@@ -697,7 +706,7 @@
 - Description: 详细介绍CentOS/Linux系统资源监控命令，包括使用free查看内存、top查看CPU、df查看磁盘、iftop查看带宽等，以及内存清理的正确方法，帮助运维人员快速掌握服务器状态监控技能。
 - Excerpt: CentOS系统运行状态管理，查看内存、cpu，磁盘、网速及带宽等情况
 
-### 83. tomcat开发相关配置
+### 84. tomcat开发相关配置
 
 - URL: https://cuizhenjie.github.io/2017/09/21/tomcat-conf/
 - Date: 2017-09-21
@@ -706,7 +715,7 @@
 - Description: 详细介绍Tomcat开发环境的必要配置，包括UTF-8编码设置、server.xml和tomcat-users.xml配置、Manager管理用户配置、项目目录部署等常见配置项，帮助Java开发者快速配置Tomcat服务器。
 - Excerpt: tomcat开发配置，utf-8编码设置，tomcatmanager，设置项目目录等
 
-### 84. docker镜像下安装vim
+### 85. docker镜像下安装vim
 
 - URL: https://cuizhenjie.github.io/2017/09/21/docker-vim/
 - Date: 2017-09-21
@@ -715,7 +724,7 @@
 - Description: 解决Docker容器中没有vim编辑器的问题，介绍如何在Debian/Ubuntu和Alpine等不同基础镜像中快速安装vim，包括使用国内镜像源加速安装的实用技巧。
 - Excerpt: 在docker镜像下安装vim，通过apt-get方式同时使用国内镜像安装
 
-### 85. 基于idea下搭建maven项目
+### 86. 基于idea下搭建maven项目
 
 - URL: https://cuizhenjie.github.io/2017/08/04/idea-maven-project/
 - Date: 2017-08-04
@@ -724,7 +733,7 @@
 - Description: 详细介绍在IntelliJ IDEA中创建和配置Maven项目的完整步骤，包括Maven环境配置、项目创建、依赖管理、常用配置等，帮助Java开发者快速搭建规范的Maven项目结构。
 - Excerpt: 基于idea编辑器下创建maven项目的基本步骤及java项目常规配置
 
-### 86. maven的下载安装及基本配置
+### 87. maven的下载安装及基本配置
 
 - URL: https://cuizhenjie.github.io/2017/08/04/maven-settings/
 - Date: 2017-08-04
@@ -733,7 +742,7 @@
 - Description: 详细介绍Maven的下载、安装和环境变量配置，包括settings.xml配置文件详解、本地仓库设置、镜像源配置等，帮助Java开发者快速搭建Maven构建环境。
 - Excerpt: maven的下载、安装、及开发环境配置
 
-### 87. vim入门教程
+### 88. vim入门教程
 
 - URL: https://cuizhenjie.github.io/2017/07/28/vim-learn/
 - Date: 2017-07-28
@@ -742,7 +751,7 @@
 - Description: Vim入门完全教程，介绍Vim的安装配置、基本模式切换、常用快捷键、高级编辑技巧等，帮助Linux开发者快速掌握Vim编辑器的使用方法，提升开发效率。
 - Excerpt: vim的安装配置及常用快捷键用法。
 
-### 88. nodejs环境配置及yarn包管理工具安装配置
+### 89. nodejs环境配置及yarn包管理工具安装配置
 
 - URL: https://cuizhenjie.github.io/2017/07/25/nodejs-settings/
 - Date: 2017-07-25
@@ -751,7 +760,7 @@
 - Description: 详细介绍Node.js环境的安装配置，以及Yarn包管理工具的安装和使用，包括环境变量配置、镜像源设置等，帮助前端开发者快速搭建Node.js开发环境。
 - Excerpt: mac系统下的nodejs安装配置，以及优化版的npm包管理工具yarn安装配置。
 
-### 89. git安装、ssh秘钥生成及github配置
+### 90. git安装、ssh秘钥生成及github配置
 
 - URL: https://cuizhenjie.github.io/2017/07/25/git-settings/
 - Date: 2017-07-25
@@ -760,7 +769,7 @@
 - Description: 从零开始配置Git开发环境，包括Git客户端安装、SSH密钥生成、GitHub/GitLab配置等完整步骤，适合Git初学者的快速上手教程。
 - Excerpt: 从零开始安装配置git环境，以及生成git的ssh秘钥，最后配置到gitlab等git代码托管平台上。
 
-### 90. 基于Hexo+oschina的pages服务搭建个人博客
+### 91. 基于Hexo+oschina的pages服务搭建个人博客
 
 - URL: https://cuizhenjie.github.io/2017/07/25/hello-world/
 - Date: 2017-07-25
@@ -770,19 +779,19 @@
 
 ## Site Pages
 
-- 追番页: https://cuizhenjie.github.io/bangumi/
-- Prompt常用提示词: https://cuizhenjie.github.io/categories/
 - 关于: https://cuizhenjie.github.io/about/
-- 友链: https://cuizhenjie.github.io/friends/
-- 我的音乐馆: https://cuizhenjie.github.io/music/
-- contact: https://cuizhenjie.github.io/contact/
-- 标签: https://cuizhenjie.github.io/tags/
 - 相册集: https://cuizhenjie.github.io/album/
+- 追番页: https://cuizhenjie.github.io/bangumi/
+- contact: https://cuizhenjie.github.io/contact/
+- 友链: https://cuizhenjie.github.io/friends/
+- Prompt常用提示词: https://cuizhenjie.github.io/categories/
+- 我的音乐馆: https://cuizhenjie.github.io/music/
+- 标签: https://cuizhenjie.github.io/tags/
 - Claude Code 教程: https://cuizhenjie.github.io/categories/claude-code/
-- 开发 相关: https://cuizhenjie.github.io/categories/prompt/
 - AIGC 相关: https://cuizhenjie.github.io/categories/aigc/
-- 营销运营相关: https://cuizhenjie.github.io/categories/operation/
 - 开发 相关: https://cuizhenjie.github.io/categories/develop/
+- 营销运营相关: https://cuizhenjie.github.io/categories/operation/
+- 开发 相关: https://cuizhenjie.github.io/categories/prompt/
 
 ---
 
