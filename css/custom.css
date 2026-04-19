@@ -1,196 +1,263 @@
 /* ================================================
-   🌐 赛博朋克 + 科技风 自定义样式
-   注入到 anzhiyu 主题
+   🌐 Hexo Anzhiyu 赛博朋克主题 — 双模式升级版
+   深色：深空黑 + 赛博绿/蓝/紫霓虹
+   浅色：暖纸白 + 暗金/翡翠/靛青（高可读性）
    ================================================ */
 
-/* === 全局 :root 赛博变量覆盖 === */
+/* === 全局赛博 CSS 变量（双模式） === */
 :root {
-  /* 赛博主色系 */
-  --cyber-green: #00ff9f;
-  --cyber-blue: #00d4ff;
-  --cyber-pink: #ff2d78;
-  --cyber-purple: #b14eff;
+  /* ── 赛博调色板 ── */
+  --cyber-green:   #00ff9f;
+  --cyber-blue:   #00d4ff;
+  --cyber-pink:   #ff2d78;
+  --cyber-purple:  #b14eff;
   --cyber-yellow: #f0ff00;
-  
-  /* 深空背景 */
-  --cyber-bg-deep: #0a0a0f;
+  --cyber-orange: #ff9500;
+
+  /* ── 深色模式（默认，继承已有） ── */
+  --cyber-bg-deep:    #0a0a0f;
   --cyber-bg-surface: #12121a;
-  --cyber-border: rgba(0, 255, 159, 0.15);
-  --cyber-border-bright: rgba(0, 255, 159, 0.4);
-  
-  /* 文字 */
-  --cyber-text: #e0e0e8;
-  --cyber-text-muted: #7a7a8c;
-  
-  /* 文字渐变 */
-  --cyber-gradient-text: linear-gradient(90deg, #00ff9f, #00d4ff);
+  --cyber-bg-card:    #16161f;
+  --cyber-border:     rgba(0, 255, 159, 0.12);
+  --cyber-border-med: rgba(0, 255, 159, 0.3);
+  --cyber-border-hi:  rgba(0, 255, 159, 0.55);
+  --cyber-text:       #dcdce8;
+  --cyber-text-muted: #6a6a7a;
+  --cyber-text-sub:   #9898a8;
+  --cyber-heading:    #f0f0f8;
+  --cyber-shadow:     rgba(0, 0, 0, 0.45);
+  --cyber-glow-green: rgba(0, 255, 159, 0.25);
+  --cyber-glow-blue:  rgba(0, 212, 255, 0.2);
+
+  /* ── 渐变 ── */
+  --cyber-grad-text: linear-gradient(90deg, #00ff9f, #00d4ff);
+  --cyber-grad-bar:  linear-gradient(90deg, #00ff9f, #00d4ff, #b14eff);
+  --cyber-grad-card: linear-gradient(135deg, rgba(0,255,159,0.06), rgba(0,212,255,0.04));
+  --cyber-grad-nav:  linear-gradient(90deg, rgba(10,10,15,0.92), rgba(18,18,26,0.88));
+
+  /* ── 字体 ── */
+  --cyber-font-mono: 'Fira Code', 'SFMono-Regular', 'Cascadia Code', monospace;
 }
 
-/* === 页面背景 === */
+/* ── 浅色模式赛博变量（高可读性） ── */
+[data-theme="light"] {
+  --cyber-bg-deep:    #f8f6f1;
+  --cyber-bg-surface: #ffffff;
+  --cyber-bg-card:    #fdfcfa;
+  --cyber-border:     rgba(0, 180, 100, 0.15);
+  --cyber-border-med: rgba(0, 180, 100, 0.35);
+  --cyber-border-hi:  rgba(0, 180, 100, 0.6);
+  --cyber-text:       #2a2a35;
+  --cyber-text-muted: #7a7a8a;
+  --cyber-text-sub:   #5a5a6a;
+  --cyber-heading:    #1a1a25;
+  --cyber-shadow:     rgba(0, 0, 0, 0.08);
+  --cyber-glow-green: rgba(0, 200, 120, 0.15);
+  --cyber-glow-blue:  rgba(0, 160, 220, 0.12);
+
+  /* 浅色模式渐变（更柔和） */
+  --cyber-grad-text: linear-gradient(90deg, #00875a, #00a8cc);
+  --cyber-grad-bar:  linear-gradient(90deg, #00875a, #00a8cc, #7c3aed);
+  --cyber-grad-card: linear-gradient(135deg, rgba(0,135,90,0.05), rgba(0,168,204,0.03));
+  --cyber-grad-nav:  linear-gradient(90deg, rgba(248,246,241,0.96), rgba(255,255,255,0.92));
+
+  /* 赛博绿在浅色下用翡翠色，更稳重 */
+  --cyber-green:   #00875a;
+  --cyber-blue:    #00a8cc;
+  --cyber-purple:  #7c3aed;
+}
+
+/* ── 旧版 darkmode.styl 的 [data-theme='dark'] 也映射到赛博 ── */
+[data-theme="dark"] {
+  --cyber-bg-deep:    #0a0a0f;
+  --cyber-bg-surface: #12121a;
+  --cyber-bg-card:    #16161f;
+  --cyber-border:     rgba(0, 255, 159, 0.12);
+  --cyber-border-med: rgba(0, 255, 159, 0.3);
+  --cyber-border-hi:  rgba(0, 255, 159, 0.55);
+  --cyber-text:       #dcdce8;
+  --cyber-text-muted: #6a6a7a;
+  --cyber-text-sub:   #9898a8;
+  --cyber-heading:    #f0f0f8;
+  --cyber-shadow:     rgba(0, 0, 0, 0.45);
+  --cyber-glow-green: rgba(0, 255, 159, 0.25);
+  --cyber-glow-blue:  rgba(0, 212, 255, 0.2);
+  --cyber-grad-text: linear-gradient(90deg, #00ff9f, #00d4ff);
+  --cyber-grad-bar:  linear-gradient(90deg, #00ff9f, #00d4ff, #b14eff);
+  --cyber-grad-card: linear-gradient(135deg, rgba(0,255,159,0.06), rgba(0,212,255,0.04));
+  --cyber-grad-nav:  linear-gradient(90deg, rgba(10,10,15,0.92), rgba(18,18,26,0.88));
+}
+
+/* ================================================
+   全局元素
+   ================================================ */
+
 body {
   background-color: var(--cyber-bg-deep) !important;
   color: var(--cyber-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* === 顶栏赛博效果 === */
+/* ── 导航栏 ── */
 #nav {
-  background: rgba(10, 10, 15, 0.85) !important;
-  backdrop-filter: blur(12px);
+  background: var(--cyber-grad-nav) !important;
+  backdrop-filter: blur(16px) saturate(1.4);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
   border-bottom: 1px solid var(--cyber-border) !important;
-  box-shadow: 0 0 20px rgba(0, 255, 159, 0.05) !important;
+  box-shadow: 0 2px 20px rgba(0, 255, 159, 0.04) !important;
 }
 
-/* === 导航链接 === */
 #nav .nav-item a,
 #nav .menus_items .menu-item a {
-  color: var(--cyber-text) !important;
-  transition: color 0.3s ease, text-shadow 0.3s ease !important;
+  color: var(--cyber-text-sub) !important;
+  transition: color 0.25s ease, text-shadow 0.25s ease !important;
 }
 
 #nav .nav-item a:hover,
 #nav .menus_items .menu-item a:hover {
   color: var(--cyber-green) !important;
-  text-shadow: 0 0 8px var(--cyber-green) !important;
+  text-shadow: 0 0 10px var(--cyber-glow-green) !important;
 }
 
-/* === 首页主视觉区 === */
+/* ── 首页 Banner ── */
 #page-header {
   background: var(--cyber-bg-deep) !important;
   border-bottom: 1px solid var(--cyber-border) !important;
 }
 
-/* === 首页 banner 标题 === */
+#page-header::before {
+  display: none !important;
+}
+
 #page-header .page-title {
-  background: var(--cyber-gradient-text) !important;
+  background: var(--cyber-grad-text) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
-  font-weight: 700 !important;
+  font-weight: 800 !important;
   letter-spacing: -0.5px !important;
 }
 
-/* === 首页副标题 === */
 #page-header .page-description {
   color: var(--cyber-text-muted) !important;
 }
 
-/* === 文章卡片 === */
+/* ── 首页站点描述打字机 ── */
+.hope-ui-text b,
+#page-header .typed-text {
+  background: var(--cyber-grad-text) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* ── 文章卡片 ── */
 #article-container .post-card,
 .hope-container .post-card,
-.article-container .post {
-  background: var(--cyber-bg-surface) !important;
+.article-container .post,
+.recent-posts .post-card,
+.post-card {
+  background: var(--cyber-bg-card) !important;
   border: 1px solid var(--cyber-border) !important;
-  border-radius: 8px !important;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease !important;
+  border-radius: 10px !important;
+  box-shadow: 0 2px 12px var(--cyber-shadow) !important;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease,
+    background 0.3s ease !important;
 }
 
 #article-container .post-card:hover,
 .hope-container .post-card:hover,
-.article-container .post:hover {
-  border-color: var(--cyber-border-bright) !important;
-  box-shadow: 0 0 20px rgba(0, 255, 159, 0.1), 0 4px 16px rgba(0, 0, 0, 0.4) !important;
-  transform: translateY(-2px) !important;
+.article-container .post:hover,
+.recent-posts .post-card:hover,
+.post-card:hover {
+  border-color: var(--cyber-border-med) !important;
+  box-shadow: 0 4px 24px rgba(0, 255, 159, 0.08), 0 2px 12px var(--cyber-shadow) !important;
+  transform: translateY(-3px) !important;
 }
 
-/* === 文章标题 === */
 #article-container .post-card .post-title,
-.article-container .post .post-title {
-  color: var(--cyber-text) !important;
-  transition: color 0.3s ease !important;
+.article-container .post .post-title,
+.post-card .post-title {
+  color: var(--cyber-heading) !important;
+  transition: color 0.25s ease !important;
 }
 
 #article-container .post-card:hover .post-title,
-.article-container .post:hover .post-title {
+.article-container .post:hover .post-title,
+.post-card:hover .post-title {
   color: var(--cyber-green) !important;
 }
 
-/* === 文章封面图 === */
+/* 封面图 */
 #article-container .post-card .post-cover img,
-.article-container .post .post-cover img {
-  border-radius: 8px 8px 0 0 !important;
+.article-container .post .post-cover img,
+.post-card .post-cover img {
+  border-radius: 10px 10px 0 0 !important;
+  transition: filter 0.3s ease !important;
 }
 
-/* === 分类/标签胶囊 === */
+#article-container .post-card:hover .post-cover img {
+  filter: brightness(1.05) saturate(1.1) !important;
+}
+
+/* ── 标签胶囊 ── */
 .tag:not(.tags .tag):not(.hoping-tag),
 .tags .tag,
 .article-container .tag,
 .tag-cloud__title,
-.tag-list .tag {
+.tag-list .tag,
+.hope-ui-tag,
+.p-tag {
   background: rgba(0, 255, 159, 0.08) !important;
-  border: 1px solid rgba(0, 255, 159, 0.25) !important;
+  border: 1px solid rgba(0, 255, 159, 0.2) !important;
   color: var(--cyber-green) !important;
-  border-radius: 4px !important;
-  transition: all 0.3s ease !important;
+  border-radius: 5px !important;
+  font-size: 0.75em !important;
+  transition: all 0.25s ease !important;
 }
 
 .tag:hover,
 .tags .tag:hover,
-.article-container .tag:hover {
-  background: rgba(0, 255, 159, 0.18) !important;
-  border-color: var(--cyber-green) !important;
-  box-shadow: 0 0 8px rgba(0, 255, 159, 0.3) !important;
-  color: #fff !important;
+.article-container .tag:hover,
+.p-tag:hover {
+  background: rgba(0, 255, 159, 0.16) !important;
+  border-color: var(--cyber-border-med) !important;
+  box-shadow: 0 0 10px var(--cyber-glow-green) !important;
+  color: var(--cyber-green) !important;
   transform: translateY(-1px) !important;
 }
 
-/* === 侧边栏 === */
+/* ── 侧边栏 ── */
 #aside-content {
   background: var(--cyber-bg-surface) !important;
   border: 1px solid var(--cyber-border) !important;
-  border-radius: 8px !important;
+  border-radius: 10px !important;
 }
 
 .aside-list .aside-list-item {
-  border-bottom: 1px solid rgba(255,255,255,0.04) !important;
+  border-bottom: 1px solid var(--cyber-border) !important;
+  transition: background 0.2s ease !important;
 }
 
 .aside-list .aside-list-item:hover {
   background: rgba(0, 255, 159, 0.03) !important;
 }
 
-/* === 引用快/Note标签 === */
-blockquote {
-  border-left: 3px solid var(--cyber-green) !important;
-  background: rgba(0, 255, 159, 0.04) !important;
-  border-radius: 0 6px 6px 0 !important;
-  color: var(--cyber-text) !important;
-  margin: 1.2em 0 !important;
-  padding: 0.8em 1.2em !important;
-}
-
-/* === 代码块 === */
-pre,
-.code-block {
-  background: var(--cyber-bg-surface) !important;
-  border: 1px solid var(--cyber-border) !important;
-  border-radius: 8px !important;
-  box-shadow: 0 0 12px rgba(0, 255, 159, 0.05) !important;
-}
-
-pre .highlight {
-  background: var(--cyber-bg-surface) !important;
-}
-
-pre code {
+/* ── 文章内容区 ── */
+#article-container {
   color: var(--cyber-text) !important;
 }
 
-/* 行内代码 */
-code {
-  background: rgba(0, 255, 159, 0.08) !important;
-  border: 1px solid rgba(0, 255, 159, 0.15) !important;
-  color: var(--cyber-green) !important;
-  border-radius: 4px !important;
-  padding: 0.1em 0.4em !important;
-  font-family: 'SFMono-Regular', 'Fira Code', monospace !important;
-}
-
-/* === 文章页标题 === */
 #article-container h1,
 #article-container h2,
 #article-container h3,
-#article-container h4 {
-  color: var(--cyber-text) !important;
+#article-container h4,
+#article-container h5,
+#article-container h6 {
+  color: var(--cyber-heading) !important;
 }
 
 #article-container h1 {
@@ -200,117 +267,303 @@ code {
 
 #article-container h2 {
   border-left: 3px solid var(--cyber-green) !important;
-  padding-left: 0.6em !important;
+  padding-left: 0.7em !important;
+  color: var(--cyber-heading) !important;
 }
 
-/* === 链接 === */
-a {
+#article-container h3 {
+  color: var(--cyber-text) !important;
+}
+
+/* 链接 */
+#article-container a,
+.article-container a {
   color: var(--cyber-green) !important;
   transition: color 0.2s ease, text-shadow 0.2s ease !important;
 }
 
-a:hover {
+#article-container a:hover,
+.article-container a:hover {
   color: var(--cyber-blue) !important;
-  text-shadow: 0 0 6px var(--cyber-blue) !important;
+  text-shadow: 0 0 8px var(--cyber-glow-blue) !important;
 }
 
-/* === 滚动条 === */
-::-webkit-scrollbar {
-  width: 6px !important;
-  height: 6px !important;
+/* 引用块 */
+#article-container blockquote,
+.article-container blockquote {
+  border-left: 3px solid var(--cyber-green) !important;
+  background: rgba(0, 255, 159, 0.04) !important;
+  border-radius: 0 6px 6px 0 !important;
+  color: var(--cyber-text-sub) !important;
+  margin: 1.2em 0 !important;
+  padding: 0.8em 1.2em !important;
+  transition: background 0.3s ease, border-color 0.3s ease !important;
 }
 
-::-webkit-scrollbar-track {
-  background: var(--cyber-bg-deep) !important;
+/* 水平线 */
+#article-container hr {
+  border-color: var(--cyber-border) !important;
 }
 
-::-webkit-scrollbar-thumb {
-  background: rgba(0, 255, 159, 0.2) !important;
-  border-radius: 3px !important;
+/* 表格 */
+#article-container table {
+  border-collapse: collapse !important;
+  border: 1px solid var(--cyber-border) !important;
+  border-radius: 6px !important;
+  overflow: hidden;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 255, 159, 0.4) !important;
+#article-container table th {
+  background: rgba(0, 255, 159, 0.06) !important;
+  color: var(--cyber-green) !important;
+  border: 1px solid var(--cyber-border) !important;
 }
 
-/* === 友链卡片 === */
-.flink-list-card {
+#article-container table td {
+  border: 1px solid var(--cyber-border) !important;
+  color: var(--cyber-text) !important;
+}
+
+#article-container table tr:nth-child(even) {
+  background: rgba(0, 255, 159, 0.02) !important;
+}
+
+#article-container table tr:hover {
+  background: rgba(0, 255, 159, 0.04) !important;
+}
+
+/* ── 代码块 ── */
+pre,
+.code-block,
+.article-container pre,
+#article-container pre {
   background: var(--cyber-bg-surface) !important;
   border: 1px solid var(--cyber-border) !important;
   border-radius: 8px !important;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease !important;
+  box-shadow: 0 2px 12px var(--cyber-shadow), 0 0 0 1px var(--cyber-border) !important;
+  transition: background 0.3s ease, border-color 0.3s ease !important;
+}
+
+pre .highlight,
+pre code {
+  background: transparent !important;
+  color: var(--cyber-text) !important;
+}
+
+/* 行内代码 */
+#article-container code:not(pre code),
+.article-container code:not(pre code),
+code {
+  background: rgba(0, 255, 159, 0.09) !important;
+  border: 1px solid rgba(0, 255, 159, 0.18) !important;
+  color: var(--cyber-green) !important;
+  border-radius: 4px !important;
+  padding: 0.15em 0.45em !important;
+  font-family: var(--cyber-font-mono) !important;
+  font-size: 0.88em !important;
+  transition: all 0.2s ease !important;
+}
+
+#article-container code:hover,
+code:hover {
+  background: rgba(0, 255, 159, 0.15) !important;
+  border-color: var(--cyber-border-med) !important;
+}
+
+/* ── Note/标签块（hexo内置note） ── */
+.note {
+  border-radius: 8px !important;
+  border: none !important;
+}
+
+.note.note-info    { border-left: 4px solid #00d4ff !important; background: rgba(0,212,255,0.06) !important; }
+.note.note-warning { border-left: 4px solid #ff9500 !important; background: rgba(255,149,0,0.06) !important; }
+.note.note-danger  { border-left: 4px solid #ff2d78 !important; background: rgba(255,45,120,0.06) !important; }
+.note.note-success { border-left: 4px solid var(--cyber-green) !important; background: rgba(0,255,159,0.06) !important; }
+.note.note-primary { border-left: 4px solid var(--cyber-purple) !important; background: rgba(177,78,255,0.06) !important; }
+.note.default      { border-left: 4px solid var(--cyber-text-muted) !important; background: var(--cyber-bg-card) !important; }
+
+/* ── 友链卡片 ── */
+.flink-list-card,
+.flink-list-card:hover {
+  background: var(--cyber-bg-card) !important;
+  border: 1px solid var(--cyber-border) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 2px 12px var(--cyber-shadow) !important;
+  transition: all 0.3s ease !important;
 }
 
 .flink-list-card:hover {
-  border-color: var(--cyber-border-bright) !important;
-  box-shadow: 0 0 16px rgba(0, 255, 159, 0.12) !important;
+  border-color: var(--cyber-border-med) !important;
+  box-shadow: 0 4px 20px rgba(0, 255, 159, 0.1), 0 2px 12px var(--cyber-shadow) !important;
 }
 
-/* === 按钮 === */
-.btn {
+/* ── 按钮 ── */
+.btn,
+.hope-ui-button,
+.anzhiyu-btn {
   background: transparent !important;
-  border: 1px solid var(--cyber-border-bright) !important;
+  border: 1px solid var(--cyber-border-med) !important;
   color: var(--cyber-green) !important;
   border-radius: 6px !important;
   transition: all 0.3s ease !important;
 }
 
-.btn:hover {
+.btn:hover,
+.hope-ui-button:hover,
+.anzhiyu-btn:hover {
   background: rgba(0, 255, 159, 0.1) !important;
   border-color: var(--cyber-green) !important;
-  box-shadow: 0 0 12px rgba(0, 255, 159, 0.2) !important;
-  color: #fff !important;
+  box-shadow: 0 0 16px var(--cyber-glow-green) !important;
+  color: var(--cyber-green) !important;
 }
 
-/* === Footer === */
+/* ── 滚动条 ── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: var(--cyber-bg-deep) !important; }
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 159, 0.2) !important;
+  border-radius: 4px !important;
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(0, 255, 159, 0.4) !important; }
+
+/* ── Footer ── */
 #footer {
   background: var(--cyber-bg-surface) !important;
   border-top: 1px solid var(--cyber-border) !important;
   color: var(--cyber-text-muted) !important;
+  transition: background 0.3s ease, border-color 0.3s ease !important;
 }
 
-#footer a {
-  color: var(--cyber-text-muted) !important;
-}
+#footer a { color: var(--cyber-text-muted) !important; transition: color 0.2s ease !important; }
+#footer a:hover { color: var(--cyber-green) !important; }
 
-#footer a:hover {
-  color: var(--cyber-green) !important;
-}
-
-/* === 打字机效果 / 动效 === */
-@keyframes cyber-pulse {
-  0%, 100% { text-shadow: 0 0 4px var(--cyber-green); }
-  50% { text-shadow: 0 0 12px var(--cyber-green), 0 0 20px rgba(0, 255, 159, 0.3); }
-}
-
-.hope-ui-text b,
-.page-title,
-#page-header .page-title {
-  animation: cyber-pulse 3s ease-in-out infinite !important;
-}
-
-/* === 搜索框 === */
-#search .search-wrap {
+/* ── 搜索框 ── */
+#search .search-wrap,
+.local-search-box input {
   background: var(--cyber-bg-surface) !important;
   border: 1px solid var(--cyber-border) !important;
   border-radius: 8px !important;
+  color: var(--cyber-text) !important;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease !important;
 }
 
-/* === 404页面 === */
-.error404 {
+#search .search-wrap:focus-within,
+.local-search-box input:focus {
+  border-color: var(--cyber-border-med) !important;
+  box-shadow: 0 0 12px var(--cyber-glow-green) !important;
+}
+
+/* ── 404 页面 ── */
+.error404 { background: var(--cyber-bg-deep) !important; }
+
+/* ── 页面切换动画 ── */
+#content-inner {
+  animation: fadeIn 0.35s ease-out !important;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── 打字机光标 ── */
+.typed-cursor {
+  color: var(--cyber-green) !important;
+  opacity: 1 !important;
+}
+
+/* ── 滚动进度条 ── */
+#navtop .navbg,
+.scroll-progress-bar {
+  background: var(--cyber-grad-bar) !important;
+}
+
+/* ── 回到顶部 ── */
+#rightside #go-up {
+  background: var(--cyber-bg-surface) !important;
+  border: 1px solid var(--cyber-border) !important;
+  color: var(--cyber-green) !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+}
+
+#rightside #go-up:hover {
+  background: rgba(0, 255, 159, 0.1) !important;
+  border-color: var(--cyber-green) !important;
+  box-shadow: 0 0 14px var(--cyber-glow-green) !important;
+}
+
+/* ── 阅读模式/纯净阅读 ── */
+.read-mode #article-container {
   background: var(--cyber-bg-deep) !important;
 }
 
-/* === 进度条 / 滚动条顶部 === */
-#navtop .navbg {
-  background: linear-gradient(90deg, var(--cyber-green), var(--cyber-blue)) !important;
+/* ── 折叠标签（hide标签） ── */
+.hide-button,
+.hl-label,
+.expand {
+  background: rgba(0, 255, 159, 0.08) !important;
+  border: 1px solid var(--cyber-border) !important;
+  color: var(--cyber-green) !important;
+  border-radius: 5px !important;
+  transition: all 0.25s ease !important;
 }
 
-/* === 封面主色调跟随 === */
-#page-header::before {
-  background: linear-gradient(
-    to bottom,
-    rgba(10, 10, 15, 0.3) 0%,
-    rgba(10, 10, 15, 0.7) 100%
-  ) !important;
+.hide-button:hover,
+.expand:hover {
+  background: rgba(0, 255, 159, 0.15) !important;
+  border-color: var(--cyber-border-med) !important;
+}
+
+/* ── 文章元信息（日期/分类/阅读量） ── */
+.article-meta__date a,
+.article-meta__categories a,
+.article-meta__tags a,
+.post-meta__date,
+.post-meta__categories,
+.post-meta__tags {
+  color: var(--cyber-text-muted) !important;
+  transition: color 0.2s ease !important;
+}
+
+.article-meta__date a:hover,
+.post-meta__date a:hover {
+  color: var(--cyber-green) !important;
+}
+
+/* ── 分页 ── */
+.pagination .page-number {
+  background: var(--cyber-bg-card) !important;
+  border: 1px solid var(--cyber-border) !important;
+  color: var(--cyber-text-sub) !important;
+  border-radius: 6px !important;
+  transition: all 0.25s ease !important;
+}
+
+.pagination .page-number:hover,
+.pagination .current {
+  background: rgba(0, 255, 159, 0.1) !important;
+  border-color: var(--cyber-green) !important;
+  color: var(--cyber-green) !important;
+  box-shadow: 0 0 10px var(--cyber-glow-green) !important;
+}
+
+/* ── 公告/消息条 ── */
+.anzhiyu-card-list .card-class-list,
+.anzhiyu-notice {
+  background: var(--cyber-bg-card) !important;
+  border: 1px solid var(--cyber-border) !important;
+}
+
+/* ── 移动端适配 ── */
+@media (max-width: 768px) {
+  #nav {
+    background: var(--cyber-bg-deep) !important;
+    backdrop-filter: blur(12px) !important;
+  }
+
+  .post-card {
+    border-radius: 8px !important;
+  }
 }
