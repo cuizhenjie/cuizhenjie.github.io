@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>cuizhenjie`blog</title>
+  <title>cuizhenjie blog</title>
   
   <subtitle>学而不思则罔，思而不学则殆！</subtitle>
   <link href="https://cuizhenjie.github.io/atom.xml" rel="self"/>
   
   <link href="https://cuizhenjie.github.io/"/>
-  <updated>2026-04-19T13:30:28.852Z</updated>
+  <updated>2026-04-19T13:50:52.734Z</updated>
   <id>https://cuizhenjie.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://cuizhenjie.github.io/2026/04/19/gpt-image-2-prompts-library/"/>
     <id>https://cuizhenjie.github.io/2026/04/19/gpt-image-2-prompts-library/</id>
     <published>2026-04-19T14:00:00.000Z</published>
-    <updated>2026-04-19T13:30:28.852Z</updated>
+    <updated>2026-04-19T13:50:52.734Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -77,7 +77,7 @@
     <link href="https://cuizhenjie.github.io/2026/01/26/ai-create-video-prompt/"/>
     <id>https://cuizhenjie.github.io/2026/01/26/ai-create-video-prompt/</id>
     <published>2026-01-25T16:00:00.000Z</published>
-    <updated>2026-01-07T09:39:38.548Z</updated>
+    <updated>2026-04-19T13:50:52.737Z</updated>
     
     
     <summary type="html">创作专业视频剧本的Prompt。</summary>
@@ -100,7 +100,7 @@
     <link href="https://cuizhenjie.github.io/2026/01/26/ai-hr-prompt/"/>
     <id>https://cuizhenjie.github.io/2026/01/26/ai-hr-prompt/</id>
     <published>2026-01-25T16:00:00.000Z</published>
-    <updated>2026-01-07T09:42:15.595Z</updated>
+    <updated>2026-04-19T13:50:52.693Z</updated>
     
     
     <summary type="html">企业HR助手相关的Prompt。</summary>
@@ -119,34 +119,11 @@
   </entry>
   
   <entry>
-    <title>科技类新闻作者的Prompt</title>
-    <link href="https://cuizhenjie.github.io/2026/01/26/ai-news-prompt/"/>
-    <id>https://cuizhenjie.github.io/2026/01/26/ai-news-prompt/</id>
-    <published>2026-01-25T16:00:00.000Z</published>
-    <updated>2026-01-07T09:55:37.668Z</updated>
-    
-    
-    <summary type="html">创作专业新闻文章的Prompt。</summary>
-    
-    
-    
-    <category term="AIGC" scheme="https://cuizhenjie.github.io/categories/AIGC/"/>
-    
-    
-    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
-    
-    <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
-    
-    <category term="新闻作者" scheme="https://cuizhenjie.github.io/tags/%E6%96%B0%E9%97%BB%E4%BD%9C%E8%80%85/"/>
-    
-  </entry>
-  
-  <entry>
     <title>PBL项目创意的Prompt</title>
     <link href="https://cuizhenjie.github.io/2026/01/26/ai-pbl-prompt/"/>
     <id>https://cuizhenjie.github.io/2026/01/26/ai-pbl-prompt/</id>
     <published>2026-01-25T16:00:00.000Z</published>
-    <updated>2026-01-07T09:38:25.413Z</updated>
+    <updated>2026-04-19T13:50:52.718Z</updated>
     
     
     <summary type="html">PBL项目创意的Prompt。</summary>
@@ -165,11 +142,34 @@
   </entry>
   
   <entry>
+    <title>科技类新闻作者的Prompt</title>
+    <link href="https://cuizhenjie.github.io/2026/01/26/ai-news-prompt/"/>
+    <id>https://cuizhenjie.github.io/2026/01/26/ai-news-prompt/</id>
+    <published>2026-01-25T16:00:00.000Z</published>
+    <updated>2026-04-19T13:50:52.697Z</updated>
+    
+    
+    <summary type="html">创作专业新闻文章的Prompt。</summary>
+    
+    
+    
+    <category term="AIGC" scheme="https://cuizhenjie.github.io/categories/AIGC/"/>
+    
+    
+    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
+    
+    <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
+    
+    <category term="新闻作者" scheme="https://cuizhenjie.github.io/tags/%E6%96%B0%E9%97%BB%E4%BD%9C%E8%80%85/"/>
+    
+  </entry>
+  
+  <entry>
     <title>生成专业演示文稿的Prompt</title>
     <link href="https://cuizhenjie.github.io/2026/01/26/ai-ppt-prompt/"/>
     <id>https://cuizhenjie.github.io/2026/01/26/ai-ppt-prompt/</id>
     <published>2026-01-25T16:00:00.000Z</published>
-    <updated>2026-01-06T02:11:12.099Z</updated>
+    <updated>2026-04-19T13:50:52.698Z</updated>
     
     
     <summary type="html">生成专业演示文稿的Prompt。</summary>
@@ -194,7 +194,7 @@
     <link href="https://cuizhenjie.github.io/2026/01/26/book-cover-prompt/"/>
     <id>https://cuizhenjie.github.io/2026/01/26/book-cover-prompt/</id>
     <published>2026-01-25T16:00:00.000Z</published>
-    <updated>2026-01-06T02:11:12.102Z</updated>
+    <updated>2026-04-19T13:50:52.718Z</updated>
     
     
     <summary type="html">生成书籍精华海报的Prompt。</summary>
@@ -219,7 +219,7 @@
     <link href="https://cuizhenjie.github.io/2026/01/26/clean-ai/"/>
     <id>https://cuizhenjie.github.io/2026/01/26/clean-ai/</id>
     <published>2026-01-25T16:00:00.000Z</published>
-    <updated>2026-01-06T02:11:12.105Z</updated>
+    <updated>2026-04-19T13:50:52.721Z</updated>
     
     
     <summary type="html">去除AI味的Prompt。</summary>
@@ -244,7 +244,7 @@
     <link href="https://cuizhenjie.github.io/2026/01/26/document-to-website/"/>
     <id>https://cuizhenjie.github.io/2026/01/26/document-to-website/</id>
     <published>2026-01-25T16:00:00.000Z</published>
-    <updated>2026-01-06T02:11:12.105Z</updated>
+    <updated>2026-04-19T13:50:52.704Z</updated>
     
     
     <summary type="html">通过文档生成美观漂亮的中文可视化网页的Prompt。</summary>
@@ -269,7 +269,7 @@
     <link href="https://cuizhenjie.github.io/2026/01/26/gen-card-prompt/"/>
     <id>https://cuizhenjie.github.io/2026/01/26/gen-card-prompt/</id>
     <published>2026-01-25T16:00:00.000Z</published>
-    <updated>2026-01-06T02:11:12.105Z</updated>
+    <updated>2026-04-19T13:50:52.731Z</updated>
     
     
     <summary type="html">生成专业知识卡片的Prompt。</summary>
@@ -294,7 +294,7 @@
     <link href="https://cuizhenjie.github.io/2026/01/26/trip-cover-prompt/"/>
     <id>https://cuizhenjie.github.io/2026/01/26/trip-cover-prompt/</id>
     <published>2026-01-25T16:00:00.000Z</published>
-    <updated>2026-01-06T02:11:12.112Z</updated>
+    <updated>2026-04-19T13:50:52.729Z</updated>
     
     
     <summary type="html">生成旅游攻略地图的Prompt。</summary>
@@ -319,7 +319,7 @@
     <link href="https://cuizhenjie.github.io/2026/01/21/sdd-aicoding/"/>
     <id>https://cuizhenjie.github.io/2026/01/21/sdd-aicoding/</id>
     <published>2026-01-21T02:30:00.000Z</published>
-    <updated>2026-01-21T02:29:00.324Z</updated>
+    <updated>2026-04-19T13:50:52.708Z</updated>
     
     
     <summary type="html">&lt;p&gt;从依赖感觉的 Vibe Coding 过渡到一个强调规范、可复现、可靠交付的新阶段，SDD（Specification-Driven Development 规范驱动开发）多AI协同。 &lt;/p&gt;</summary>
@@ -342,7 +342,7 @@
     <link href="https://cuizhenjie.github.io/2026/01/18/ai-card-prd-prompt/"/>
     <id>https://cuizhenjie.github.io/2026/01/18/ai-card-prd-prompt/</id>
     <published>2026-01-17T16:00:00.000Z</published>
-    <updated>2026-01-19T01:58:04.378Z</updated>
+    <updated>2026-04-19T13:50:52.728Z</updated>
     
     
     <summary type="html">AI卡片PRD的prompt</summary>
@@ -365,7 +365,7 @@
     <link href="https://cuizhenjie.github.io/2026/01/15/superpowers-tutorial/"/>
     <id>https://cuizhenjie.github.io/2026/01/15/superpowers-tutorial/</id>
     <published>2026-01-15T15:38:00.000Z</published>
-    <updated>2026-01-28T09:22:41.281Z</updated>
+    <updated>2026-04-19T13:50:52.714Z</updated>
     
     
     <summary type="html">&lt;p&gt;Claude code的最热Skill：Superpowers 系统化使用&lt;/p&gt;</summary>
@@ -415,7 +415,7 @@
     <link href="https://cuizhenjie.github.io/2026/01/08/python-tutorial-10-project/"/>
     <id>https://cuizhenjie.github.io/2026/01/08/python-tutorial-10-project/</id>
     <published>2026-01-08T02:00:00.000Z</published>
-    <updated>2026-01-06T02:11:12.111Z</updated>
+    <updated>2026-04-19T13:50:52.701Z</updated>
     
     
     <summary type="html">Python实战项目教程，从零开发一个个人记账本应用，综合运用前面学到的知识，包括函数、数据结构、文件操作、异常处理等，提升Python编程实战能力，完成从入门到实践的跨越。</summary>
@@ -438,7 +438,7 @@
     <link href="https://cuizhenjie.github.io/2026/01/07/python-tutorial-09-oop/"/>
     <id>https://cuizhenjie.github.io/2026/01/07/python-tutorial-09-oop/</id>
     <published>2026-01-07T02:00:00.000Z</published>
-    <updated>2026-01-06T02:11:12.111Z</updated>
+    <updated>2026-04-19T13:50:52.707Z</updated>
     
     
     <summary type="html">全面介绍Python的面向对象编程特性，包括类和对象的概念、属性和方法、继承和多态、魔术方法等OOP核心概念，帮助理解面向对象的设计思想，编写更优雅的代码。</summary>
@@ -461,7 +461,7 @@
     <link href="https://cuizhenjie.github.io/2026/01/06/python-tutorial-08-exceptions/"/>
     <id>https://cuizhenjie.github.io/2026/01/06/python-tutorial-08-exceptions/</id>
     <published>2026-01-06T02:00:00.000Z</published>
-    <updated>2026-01-06T02:11:12.111Z</updated>
+    <updated>2026-04-19T13:50:52.722Z</updated>
     
     
       
@@ -490,7 +490,7 @@
     <link href="https://cuizhenjie.github.io/2026/01/05/ai-video-advanced-tips/"/>
     <id>https://cuizhenjie.github.io/2026/01/05/ai-video-advanced-tips/</id>
     <published>2026-01-05T06:00:00.000Z</published>
-    <updated>2026-01-06T02:11:12.100Z</updated>
+    <updated>2026-04-19T13:50:52.726Z</updated>
     
     
     <summary type="html">深入讲解AI视频进阶技巧，包括高级提示词工程、多镜头组合叙事、视频连续性控制、复杂场景构建、角色一致性保持等核心技术，帮助你从单镜头视频升级到完整叙事短片创作。</summary>
