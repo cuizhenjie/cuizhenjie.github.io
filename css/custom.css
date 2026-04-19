@@ -49,7 +49,7 @@
   --cyber-border-hi:  rgba(0, 180, 100, 0.6);
   --cyber-text:       #2a2a35;
   --cyber-text-muted: #7a7a8a;
-  --cyber-text-sub:   #5a5a6a;
+  --cyber-text-sub:   #4a4a5a;
   --cyber-heading:    #1a1a25;
   --cyber-shadow:     rgba(0, 0, 0, 0.08);
   --cyber-glow-green: rgba(0, 200, 120, 0.15);
@@ -565,5 +565,85 @@ code:hover {
 
   .post-card {
     border-radius: 8px !important;
+  }
+}
+
+/* ================================================
+   浅色模式 — 关键阅读元素强制对比度修复
+   ================================================ */
+[data-theme="light"] {
+  /* 导航菜单文字 — 白底深色导航，确保可见 */
+  #nav .nav-item a,
+  #nav .menus_items .menu-item a,
+  #nav .site-page {
+    color: #2a2a35 !important;
+  }
+
+  #nav .nav-item a:hover,
+  #nav .menus_items .menu-item a:hover,
+  #nav .site-page:hover {
+    color: #00875a !important;
+    text-shadow: none !important;
+  }
+
+  /* 二级页面（文章页/归档页/分类页）顶部标题 */
+  #page-header .page-title,
+  .page #page-header .page-title,
+  .post .page-title,
+  .page-header .page-title {
+    color: #1a1a25 !important;
+    -webkit-text-fill-color: #1a1a25 !important;
+    background: none !important;
+  }
+
+  /* 二级页面描述文字 */
+  #page-header .page-description,
+  .page #page-header .page-description {
+    color: #5a5a6a !important;
+  }
+
+  /* 文章页导航栏（fixed顶栏） */
+  .post #nav,
+  .page #nav,
+  #page-header.nav-fixed #nav {
+    background: #f8f6f1 !important;
+  }
+
+  /* 文章页侧边栏标题 */
+  #aside-content .card-archive .card-archive-title,
+  #aside-content .card-categories .card-categories-title {
+    color: #2a2a35 !important;
+  }
+
+  /* 分类/标签列表页的页面标题 */
+  .categoryzie-page #page-header .page-title,
+  .tags-page #page-header .page-title,
+  .archive-page #page-header .page-title {
+    color: #1a1a25 !important;
+    -webkit-text-fill-color: #1a1a25 !important;
+    background: none !important;
+  }
+
+  /* 搜索框内文字 */
+  #search .search-wrap input,
+  .local-search-box input {
+    color: #2a2a35 !important;
+  }
+
+  /* 分页文字 */
+  .pagination .page-number {
+    color: #3a3a4a !important;
+  }
+
+  /* 友链页标题 */
+  .flink-page-title,
+  .flink-list-card .flink-item-name {
+    color: #2a2a35 !important;
+  }
+
+  /* 音乐馆页 */
+  #music-page .aplayer .aplayer-info .aplayer-music .aplayer-title,
+  #music-page .aplayer .aplayer-info .aplayer-music .aplayer-author {
+    color: #2a2a35 !important;
   }
 }
