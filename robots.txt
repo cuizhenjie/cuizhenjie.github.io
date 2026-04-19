@@ -1,7 +1,6 @@
 User-agent: *
 Allow: /
-Disallow: /categories/
-Disallow: /tags/
+# Allow /categories/ and /tags/ for SEO — important content aggregation pages
 Disallow: /api/
 Disallow: /admin/
 
