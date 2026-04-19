@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://cuizhenjie.github.io/2026/04/20/museum-infographic-prompt-guide/</loc>
+    
+    <lastmod>2026-04-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://cuizhenjie.github.io/2026/01/26/ai-create-video-prompt/</loc>
     
     <lastmod>2026-04-19</lastmod>
@@ -2259,6 +2268,20 @@
   
   <url>
     <loc>https://cuizhenjie.github.io/tags/%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86/</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cuizhenjie.github.io/tags/%E4%BF%A1%E6%81%AF%E5%9B%BE%E8%AE%BE%E8%AE%A1/</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cuizhenjie.github.io/tags/%E6%96%87%E5%8D%9A/</loc>
     <lastmod>2026-04-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

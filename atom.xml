@@ -6,7 +6,7 @@
   <link href="https://cuizhenjie.github.io/atom.xml" rel="self"/>
   
   <link href="https://cuizhenjie.github.io/"/>
-  <updated>2026-04-19T13:50:52.734Z</updated>
+  <updated>2026-04-19T14:58:57.466Z</updated>
   <id>https://cuizhenjie.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>博物馆图鉴式信息图生成指南：AI绘图提示词的完整设计手册</title>
+    <link href="https://cuizhenjie.github.io/2026/04/20/museum-infographic-prompt-guide/"/>
+    <id>https://cuizhenjie.github.io/2026/04/20/museum-infographic-prompt-guide/</id>
+    <published>2026-04-19T16:00:00.000Z</published>
+    <updated>2026-04-19T14:58:57.466Z</updated>
+    
+    
+    <summary type="html">完整解析「博物馆图鉴式中文拆解信息图」的AI绘图提示词设计方法，涵盖主体判断、版式结构、文字规范、材质工艺说明与文化寓意解析。</summary>
+    
+    
+    
+    <category term="AI绘图" scheme="https://cuizhenjie.github.io/categories/AI%E7%BB%98%E5%9B%BE/"/>
+    
+    
+    <category term="AIGC" scheme="https://cuizhenjie.github.io/tags/AIGC/"/>
+    
+    <category term="提示词工程" scheme="https://cuizhenjie.github.io/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B/"/>
+    
+    <category term="AI绘图" scheme="https://cuizhenjie.github.io/tags/AI%E7%BB%98%E5%9B%BE/"/>
+    
+    <category term="信息图设计" scheme="https://cuizhenjie.github.io/tags/%E4%BF%A1%E6%81%AF%E5%9B%BE%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="文博" scheme="https://cuizhenjie.github.io/tags/%E6%96%87%E5%8D%9A/"/>
+    
+  </entry>
   
   <entry>
     <title>GPT-Image-2 提示词库大全：50+实战案例分类整理</title>
@@ -482,35 +509,6 @@
     <category term="编程入门" scheme="https://cuizhenjie.github.io/tags/%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/"/>
     
     <category term="Python" scheme="https://cuizhenjie.github.io/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AI视频进阶技巧：从提示词工程到叙事创作</title>
-    <link href="https://cuizhenjie.github.io/2026/01/05/ai-video-advanced-tips/"/>
-    <id>https://cuizhenjie.github.io/2026/01/05/ai-video-advanced-tips/</id>
-    <published>2026-01-05T06:00:00.000Z</published>
-    <updated>2026-04-19T13:50:52.726Z</updated>
-    
-    
-    <summary type="html">深入讲解AI视频进阶技巧，包括高级提示词工程、多镜头组合叙事、视频连续性控制、复杂场景构建、角色一致性保持等核心技术，帮助你从单镜头视频升级到完整叙事短片创作。</summary>
-    
-    
-    
-    <category term="AIGC" scheme="https://cuizhenjie.github.io/categories/AIGC/"/>
-    
-    
-    <category term="AI视频" scheme="https://cuizhenjie.github.io/tags/AI%E8%A7%86%E9%A2%91/"/>
-    
-    <category term="AIGC" scheme="https://cuizhenjie.github.io/tags/AIGC/"/>
-    
-    <category term="可灵" scheme="https://cuizhenjie.github.io/tags/%E5%8F%AF%E7%81%B5/"/>
-    
-    <category term="视频生成" scheme="https://cuizhenjie.github.io/tags/%E8%A7%86%E9%A2%91%E7%94%9F%E6%88%90/"/>
-    
-    <category term="提示词工程" scheme="https://cuizhenjie.github.io/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B/"/>
-    
-    <category term="叙事技巧" scheme="https://cuizhenjie.github.io/tags/%E5%8F%99%E4%BA%8B%E6%8A%80%E5%B7%A7/"/>
     
   </entry>
   
