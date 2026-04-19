@@ -5,4 +5,4 @@ Disallow: /tags/
 Disallow: /api/
 Disallow: /admin/
 
-Sitemap: http://cuizhenjie.github.io/sitemap.xml
+Sitemap: https://cuizhenjie.github.io/sitemap.xml
