@@ -1,12 +1,12 @@
-﻿# llms.txt — cuizhenjie`blog
+﻿# llms.txt — cuizhenjie blog
 
-> Generated: 2026-04-20T09:57:43.113Z | Posts: 121 | Pages: 18
+> Generated: 2026-04-20T10:01:41.602Z | Posts: 121 | Pages: 18
 
 ---
 
 ## Site Information
 
-- **Site**: cuizhenjie`blog
+- **Site**: cuizhenjie blog
 - **URL**: https://cuizhenjie.github.io
 - **Description**: 我不是知识的创造者，我只是知识搬运工
 - **Author**: 振长策
@@ -112,7 +112,7 @@
 
 - URL: https://cuizhenjie.github.io/2026/04/19/gpt-image-2-prompts-library/
 - Date: 2026-04-19
-- Tags: AIGC, 提示词, GPT-Image-2, AI绘图, Midjourney替代
+- Tags: AIGC, 提示词, AI绘图, GPT-Image-2, Midjourney替代
 - Categories: AI绘图
 - Excerpt: 来源： awesome-gpt-image-2-prompts · CC BY 4.0 本库收录 GPT-Image-2 在人像、海报、角色设计、UI原型及社区实验等场景下的高质量提示词与图像案例，共 50+ 实战案例。
 
@@ -120,47 +120,47 @@
 
 - URL: https://cuizhenjie.github.io/2026/04/18/gpt-image-2-illustration-style-library/
 - Date: 2026-04-18
-- Tags: 提示词, AI图像, GPT-Image-2, 插画风格, AI生图
+- Tags: 提示词, GPT-Image-2, AI图像, 插画风格, AI生图
 - Categories: AI工具
 - Description: GPT-Image-2重磅发布，文字渲染终于解决中文乱码问题。本文深度解读preangelleo/illustration-style-samples开源项目，17种插画风格横向测评，手把手教你构建个人专属风格库。
 
-### 13. 企业HR助手相关的的Prompt
-
-- URL: https://cuizhenjie.github.io/2026/01/26/ai-hr-prompt/
-- Date: 2026-01-26
-- Tags: AI, prompt, HR
-- Categories: AIGC
-- Description: 企业HR助手相关的Prompt。
-
-### 14. 创作病毒性传播的视频剧本的Prompt
-
-- URL: https://cuizhenjie.github.io/2026/01/26/ai-create-video-prompt/
-- Date: 2026-01-26
-- Tags: AI, prompt, 视频剧本
-- Categories: AIGC
-- Description: 创作专业视频剧本的Prompt。
-
-### 15. 科技类新闻作者的Prompt
+### 13. 科技类新闻作者的Prompt
 
 - URL: https://cuizhenjie.github.io/2026/01/26/ai-news-prompt/
 - Date: 2026-01-26
-- Tags: AI, prompt, 新闻作者
+- Tags: prompt, AI, 新闻作者
 - Categories: AIGC
 - Description: 创作专业新闻文章的Prompt。
 
-### 16. PBL项目创意的Prompt
+### 14. PBL项目创意的Prompt
 
 - URL: https://cuizhenjie.github.io/2026/01/26/ai-pbl-prompt/
 - Date: 2026-01-26
-- Tags: AI, prompt, 视频剧本
+- Tags: prompt, AI, 视频剧本
 - Categories: AIGC
 - Description: PBL项目创意的Prompt。
+
+### 15. 创作病毒性传播的视频剧本的Prompt
+
+- URL: https://cuizhenjie.github.io/2026/01/26/ai-create-video-prompt/
+- Date: 2026-01-26
+- Tags: prompt, AI, 视频剧本
+- Categories: AIGC
+- Description: 创作专业视频剧本的Prompt。
+
+### 16. 企业HR助手相关的的Prompt
+
+- URL: https://cuizhenjie.github.io/2026/01/26/ai-hr-prompt/
+- Date: 2026-01-26
+- Tags: prompt, AI, HR
+- Categories: AIGC
+- Description: 企业HR助手相关的Prompt。
 
 ### 17. 生成专业演示文稿的Prompt
 
 - URL: https://cuizhenjie.github.io/2026/01/26/ai-ppt-prompt/
 - Date: 2026-01-26
-- Tags: AI, prompt, PPT, 演示文稿
+- Tags: prompt, AI, PPT, 演示文稿
 - Categories: AIGC
 - Description: 生成专业演示文稿的Prompt。
 
@@ -168,7 +168,7 @@
 
 - URL: https://cuizhenjie.github.io/2026/01/26/book-cover-prompt/
 - Date: 2026-01-26
-- Tags: AI, prompt, 书籍, 海报
+- Tags: prompt, AI, 书籍, 海报
 - Categories: AIGC
 - Description: 生成书籍精华海报的Prompt。
 
@@ -176,7 +176,7 @@
 
 - URL: https://cuizhenjie.github.io/2026/01/26/clean-ai/
 - Date: 2026-01-26
-- Tags: AI, prompt, 文案, 去除AI味
+- Tags: prompt, AI, 文案, 去除AI味
 - Categories: AIGC
 - Description: 去除AI味的Prompt。
 
@@ -184,7 +184,7 @@
 
 - URL: https://cuizhenjie.github.io/2026/01/26/document-to-website/
 - Date: 2026-01-26
-- Tags: AI, prompt, 文档, 生成网页
+- Tags: prompt, AI, 文档, 生成网页
 - Categories: AIGC
 - Description: 通过文档生成美观漂亮的中文可视化网页的Prompt。
 
@@ -192,7 +192,7 @@
 
 - URL: https://cuizhenjie.github.io/2026/01/26/gen-card-prompt/
 - Date: 2026-01-26
-- Tags: AI, prompt, 知识卡片, 设计风格
+- Tags: prompt, AI, 知识卡片, 设计风格
 - Categories: AIGC
 - Description: 生成专业知识卡片的Prompt。
 
@@ -200,7 +200,7 @@
 
 - URL: https://cuizhenjie.github.io/2026/01/26/trip-cover-prompt/
 - Date: 2026-01-26
-- Tags: AI, prompt, 旅游, 地图
+- Tags: prompt, AI, 旅游, 地图
 - Categories: AIGC
 - Description: 生成旅游攻略地图的Prompt。
 
@@ -299,15 +299,7 @@
 - Categories: AIGC
 - Description: 深入讲解AI视频长视频制作与商业化完整指南，包括长视频制作挑战、多角色管理、对话生成、配音音效、专业工作流、商业化应用场景、项目实战、客户沟通、变现策略等核心内容，帮助你从技术创作者进阶为商业视频制作人。
 
-### 35. 02 安装与配置
-
-- URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/02-installation-and-setup/
-- Date: 2026-01-05
-- Tags: AI, Claude Code, 开发工具, 安装教程, 环境配置
-- Categories: claude-code
-- Description: 详细介绍如何在 macOS、Linux 和 Windows 上安装 Claude Code，包括环境配置、API 密钥设置和常见问题排查。
-
-### 36. 01 Claude Code 是什么
+### 35. 01 Claude Code 是什么
 
 - URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/01-what-is-claude-code/
 - Date: 2026-01-05
@@ -315,21 +307,29 @@
 - Categories: claude-code
 - Description: Claude Code 是 Anthropic 推出的 AI 编程助手，能够在终端中与开发者自然对话，帮助编写、理解和优化代码。本文介绍 Claude Code 的核心概念、特点和适用场景。
 
-### 37. 04 代码生成
-
-- URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/04-code-generation/
-- Date: 2026-01-05
-- Tags: AI, Claude Code, 开发工具, 代码生成, 编程
-- Categories: claude-code
-- Description: 深入学习如何使用 Claude Code 生成高质量代码，包括函数、类、模块和完整应用，以及代码生成的最佳实践。
-
-### 38. 03 基础使用
+### 36. 03 基础使用
 
 - URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/03-basic-usage/
 - Date: 2026-01-05
 - Tags: AI, 提示词, Claude Code, 开发工具, 基础教程
 - Categories: claude-code
 - Description: 学习 Claude Code 的基础使用方法，包括第一个命令、基本交互模式、提示词编写技巧和常用命令。
+
+### 37. 02 安装与配置
+
+- URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/02-installation-and-setup/
+- Date: 2026-01-05
+- Tags: AI, Claude Code, 开发工具, 安装教程, 环境配置
+- Categories: claude-code
+- Description: 详细介绍如何在 macOS、Linux 和 Windows 上安装 Claude Code，包括环境配置、API 密钥设置和常见问题排查。
+
+### 38. 04 代码生成
+
+- URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/04-code-generation/
+- Date: 2026-01-05
+- Tags: AI, Claude Code, 开发工具, 代码生成, 编程
+- Categories: claude-code
+- Description: 深入学习如何使用 Claude Code 生成高质量代码，包括函数、类、模块和完整应用，以及代码生成的最佳实践。
 
 ### 39. 05 代码理解
 
@@ -355,23 +355,7 @@
 - Categories: claude-code
 - Description: 学习如何使用 Claude Code 高效处理项目文件，包括文件读取、修改、创建以及上下文管理和 .claudeignore 配置。
 
-### 42. 09 AI Agent 基础
-
-- URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/09-ai-agent-basics/
-- Date: 2026-01-05
-- Tags: AI, Claude Code, 自动化, 开发工具, AI Agents
-- Categories: claude-code
-- Description: 了解 Claude Code 的 AI Agent 系统,学习如何使用和配置 Agents 来自动化复杂的多步骤开发任务。
-
-### 43. 10 最佳实践
-
-- URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/10-best-practices/
-- Date: 2026-01-05
-- Tags: AI, Claude Code, 开发工具, 最佳实践, 工作流
-- Categories: claude-code
-- Description: 总结使用 Claude Code 的最佳实践,包括高效技巧、常见陷阱、工作流优化和安全注意事项。
-
-### 44. 08 命令行集成
+### 42. 08 命令行集成
 
 - URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/08-command-line-basics/
 - Date: 2026-01-05
@@ -379,7 +363,15 @@
 - Categories: claude-code
 - Description: 学习如何将 Claude Code 与 Git、Docker 等命令行工具深度集成,构建高效的开发工作流。
 
-### 45. 11 故障排查
+### 43. 09 AI Agent 基础
+
+- URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/09-ai-agent-basics/
+- Date: 2026-01-05
+- Tags: AI, Claude Code, 自动化, 开发工具, AI Agents
+- Categories: claude-code
+- Description: 了解 Claude Code 的 AI Agent 系统,学习如何使用和配置 Agents 来自动化复杂的多步骤开发任务。
+
+### 44. 11 故障排查
 
 - URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/11-troubleshooting/
 - Date: 2026-01-05
@@ -387,21 +379,29 @@
 - Categories: claude-code
 - Description: 学习如何诊断和解决使用 Claude Code 时遇到的常见问题,包括安装错误、API 问题、性能瓶颈和调试技巧。
 
-### 46. 13 上下文管理的进阶实践
+### 45. 10 最佳实践
 
-- URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/13-context-management/
+- URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/10-best-practices/
 - Date: 2026-01-05
-- Tags: AI, Claude Code, 开发工具, 上下文管理, 进阶教程
+- Tags: AI, Claude Code, 开发工具, 最佳实践, 工作流
 - Categories: claude-code
-- Description: 深入理解Claude Code的上下文管理机制，掌握项目上下文自动加载、.claudeignore高级配置、Token优化策略，提升大型项目的AI辅助开发效率。
+- Description: 总结使用 Claude Code 的最佳实践,包括高效技巧、常见陷阱、工作流优化和安全注意事项。
 
-### 47. 12 下一步：我的进阶学习之路
+### 46. 12 下一步：我的进阶学习之路
 
 - URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/12-next-steps/
 - Date: 2026-01-05
-- Tags: AI, Claude Code, 开发工具, 进阶教程, 学习路径
+- Tags: AI, Claude Code, 开发工具, 学习路径, 进阶教程
 - Categories: claude-code
 - Description: 回顾Claude Code基础教程的学习成果，规划进阶学习路径，探索实战项目和高级特性，开启AI辅助编程的进阶之旅。
+
+### 47. 13 上下文管理的进阶实践
+
+- URL: https://cuizhenjie.github.io/2026/01/05/claude-code-tutorial/13-context-management/
+- Date: 2026-01-05
+- Tags: AI, Claude Code, 开发工具, 进阶教程, 上下文管理
+- Categories: claude-code
+- Description: 深入理解Claude Code的上下文管理机制，掌握项目上下文自动加载、.claudeignore高级配置、Token优化策略，提升大型项目的AI辅助开发效率。
 
 ### 48. 15 多语言编程的实战对比
 
@@ -590,7 +590,7 @@
 
 - URL: https://cuizhenjie.github.io/2025/11/26/3d-coding-prompt/
 - Date: 2025-11-26
-- Tags: prompt, 3d, 手势, 圣诞树, webgl, threejs
+- Tags: 3d, 手势, 圣诞树, prompt, webgl, threejs
 - Categories: AIGC
 - Description: 详细介绍3D手势跟随圣诞树Prompt，包括角色设定、任务目标、核心技术栈约束等。
 
@@ -1041,20 +1041,20 @@
 
 ## Site Pages
 
+- 相册集: https://cuizhenjie.github.io/album/
 - 关于: https://cuizhenjie.github.io/about/
 - Prompt常用提示词: https://cuizhenjie.github.io/categories/
 - 追番页: https://cuizhenjie.github.io/bangumi/
-- contact: https://cuizhenjie.github.io/contact/
-- 相册集: https://cuizhenjie.github.io/album/
 - 友链: https://cuizhenjie.github.io/friends/
-- 我的音乐馆: https://cuizhenjie.github.io/music/
+- contact: https://cuizhenjie.github.io/contact/
 - 标签: https://cuizhenjie.github.io/tags/
+- AI视频: https://cuizhenjie.github.io/categories/AI视频/
+- 开发 相关: https://cuizhenjie.github.io/categories/develop/
+- 我的音乐馆: https://cuizhenjie.github.io/music/
 - Claude Code 教程: https://cuizhenjie.github.io/categories/claude-code/
 - 开发 相关: https://cuizhenjie.github.io/categories/prompt/
-- 营销运营相关: https://cuizhenjie.github.io/categories/operation/
 - AIGC 相关: https://cuizhenjie.github.io/categories/aigc/
-- 开发 相关: https://cuizhenjie.github.io/categories/develop/
-- AI视频: https://cuizhenjie.github.io/categories/AI视频/
+- 营销运营相关: https://cuizhenjie.github.io/categories/operation/
 
 ---
 
