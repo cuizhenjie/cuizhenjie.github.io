@@ -1,7 +1,8 @@
 User-agent: *
 Allow: /
-# Allow /categories/ and /tags/ for SEO — important content aggregation pages
+Disallow: /categories/
+Disallow: /tags/
 Disallow: /api/
 Disallow: /admin/
 
-Sitemap: https://cuizhenjie.github.io/sitemap.xml
+Sitemap: http://cuizhenjie.github.io/sitemap.xml
