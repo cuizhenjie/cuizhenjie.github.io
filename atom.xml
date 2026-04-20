@@ -120,13 +120,13 @@
     
     <category term="RAG" scheme="https://cuizhenjie.github.io/tags/RAG/"/>
     
-    <category term="语义检索" scheme="https://cuizhenjie.github.io/tags/%E8%AF%AD%E4%B9%89%E6%A3%80%E7%B4%A2/"/>
-    
-    <category term="AI知识库" scheme="https://cuizhenjie.github.io/tags/AI%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
-    
     <category term="Chunk" scheme="https://cuizhenjie.github.io/tags/Chunk/"/>
     
     <category term="数据分块" scheme="https://cuizhenjie.github.io/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E5%9D%97/"/>
+    
+    <category term="语义检索" scheme="https://cuizhenjie.github.io/tags/%E8%AF%AD%E4%B9%89%E6%A3%80%E7%B4%A2/"/>
+    
+    <category term="AI知识库" scheme="https://cuizhenjie.github.io/tags/AI%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
     
   </entry>
   
@@ -176,13 +176,13 @@
     
     <category term="RAG" scheme="https://cuizhenjie.github.io/tags/RAG/"/>
     
-    <category term="Embedding" scheme="https://cuizhenjie.github.io/tags/Embedding/"/>
-    
-    <category term="向量化" scheme="https://cuizhenjie.github.io/tags/%E5%90%91%E9%87%8F%E5%8C%96/"/>
-    
     <category term="语义检索" scheme="https://cuizhenjie.github.io/tags/%E8%AF%AD%E4%B9%89%E6%A3%80%E7%B4%A2/"/>
     
     <category term="AI知识库" scheme="https://cuizhenjie.github.io/tags/AI%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
+    
+    <category term="Embedding" scheme="https://cuizhenjie.github.io/tags/Embedding/"/>
+    
+    <category term="向量化" scheme="https://cuizhenjie.github.io/tags/%E5%90%91%E9%87%8F%E5%8C%96/"/>
     
   </entry>
   
@@ -355,52 +355,6 @@
   </entry>
   
   <entry>
-    <title>创作病毒性传播的视频剧本的Prompt</title>
-    <link href="https://cuizhenjie.github.io/2026/01/26/ai-create-video-prompt/"/>
-    <id>https://cuizhenjie.github.io/2026/01/26/ai-create-video-prompt/</id>
-    <published>2026-01-25T16:00:00.000Z</published>
-    <updated>2026-04-20T00:49:55.691Z</updated>
-    
-    
-    <summary type="html">创作专业视频剧本的Prompt。</summary>
-    
-    
-    
-    <category term="AIGC" scheme="https://cuizhenjie.github.io/categories/AIGC/"/>
-    
-    
-    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
-    
-    <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
-    
-    <category term="视频剧本" scheme="https://cuizhenjie.github.io/tags/%E8%A7%86%E9%A2%91%E5%89%A7%E6%9C%AC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PBL项目创意的Prompt</title>
-    <link href="https://cuizhenjie.github.io/2026/01/26/ai-pbl-prompt/"/>
-    <id>https://cuizhenjie.github.io/2026/01/26/ai-pbl-prompt/</id>
-    <published>2026-01-25T16:00:00.000Z</published>
-    <updated>2026-04-20T00:49:55.693Z</updated>
-    
-    
-    <summary type="html">PBL项目创意的Prompt。</summary>
-    
-    
-    
-    <category term="AIGC" scheme="https://cuizhenjie.github.io/categories/AIGC/"/>
-    
-    
-    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
-    
-    <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
-    
-    <category term="视频剧本" scheme="https://cuizhenjie.github.io/tags/%E8%A7%86%E9%A2%91%E5%89%A7%E6%9C%AC/"/>
-    
-  </entry>
-  
-  <entry>
     <title>企业HR助手相关的的Prompt</title>
     <link href="https://cuizhenjie.github.io/2026/01/26/ai-hr-prompt/"/>
     <id>https://cuizhenjie.github.io/2026/01/26/ai-hr-prompt/</id>
@@ -415,11 +369,34 @@
     <category term="AIGC" scheme="https://cuizhenjie.github.io/categories/AIGC/"/>
     
     
+    <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
+    
     <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
+    
+    <category term="HR" scheme="https://cuizhenjie.github.io/tags/HR/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>创作病毒性传播的视频剧本的Prompt</title>
+    <link href="https://cuizhenjie.github.io/2026/01/26/ai-create-video-prompt/"/>
+    <id>https://cuizhenjie.github.io/2026/01/26/ai-create-video-prompt/</id>
+    <published>2026-01-25T16:00:00.000Z</published>
+    <updated>2026-04-20T00:49:55.691Z</updated>
+    
+    
+    <summary type="html">创作专业视频剧本的Prompt。</summary>
+    
+    
+    
+    <category term="AIGC" scheme="https://cuizhenjie.github.io/categories/AIGC/"/>
+    
     
     <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
     
-    <category term="HR" scheme="https://cuizhenjie.github.io/tags/HR/"/>
+    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
+    
+    <category term="视频剧本" scheme="https://cuizhenjie.github.io/tags/%E8%A7%86%E9%A2%91%E5%89%A7%E6%9C%AC/"/>
     
   </entry>
   
@@ -438,11 +415,34 @@
     <category term="AIGC" scheme="https://cuizhenjie.github.io/categories/AIGC/"/>
     
     
+    <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
+    
     <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
+    
+    <category term="新闻作者" scheme="https://cuizhenjie.github.io/tags/%E6%96%B0%E9%97%BB%E4%BD%9C%E8%80%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PBL项目创意的Prompt</title>
+    <link href="https://cuizhenjie.github.io/2026/01/26/ai-pbl-prompt/"/>
+    <id>https://cuizhenjie.github.io/2026/01/26/ai-pbl-prompt/</id>
+    <published>2026-01-25T16:00:00.000Z</published>
+    <updated>2026-04-20T00:49:55.693Z</updated>
+    
+    
+    <summary type="html">PBL项目创意的Prompt。</summary>
+    
+    
+    
+    <category term="AIGC" scheme="https://cuizhenjie.github.io/categories/AIGC/"/>
+    
     
     <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
     
-    <category term="新闻作者" scheme="https://cuizhenjie.github.io/tags/%E6%96%B0%E9%97%BB%E4%BD%9C%E8%80%85/"/>
+    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
+    
+    <category term="视频剧本" scheme="https://cuizhenjie.github.io/tags/%E8%A7%86%E9%A2%91%E5%89%A7%E6%9C%AC/"/>
     
   </entry>
   
@@ -461,9 +461,9 @@
     <category term="AIGC" scheme="https://cuizhenjie.github.io/categories/AIGC/"/>
     
     
-    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
-    
     <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
+    
+    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
     
     <category term="PPT" scheme="https://cuizhenjie.github.io/tags/PPT/"/>
     
@@ -486,9 +486,9 @@
     <category term="AIGC" scheme="https://cuizhenjie.github.io/categories/AIGC/"/>
     
     
-    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
-    
     <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
+    
+    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
     
     <category term="书籍" scheme="https://cuizhenjie.github.io/tags/%E4%B9%A6%E7%B1%8D/"/>
     
@@ -511,9 +511,9 @@
     <category term="AIGC" scheme="https://cuizhenjie.github.io/categories/AIGC/"/>
     
     
-    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
-    
     <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
+    
+    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
     
     <category term="文案" scheme="https://cuizhenjie.github.io/tags/%E6%96%87%E6%A1%88/"/>
     
@@ -522,27 +522,27 @@
   </entry>
   
   <entry>
-    <title>生成专业知识卡片的Prompt</title>
-    <link href="https://cuizhenjie.github.io/2026/01/26/gen-card-prompt/"/>
-    <id>https://cuizhenjie.github.io/2026/01/26/gen-card-prompt/</id>
+    <title>通过文档生成网页的Prompt</title>
+    <link href="https://cuizhenjie.github.io/2026/01/26/document-to-website/"/>
+    <id>https://cuizhenjie.github.io/2026/01/26/document-to-website/</id>
     <published>2026-01-25T16:00:00.000Z</published>
-    <updated>2026-04-20T00:49:55.712Z</updated>
+    <updated>2026-04-20T00:49:55.710Z</updated>
     
     
-    <summary type="html">生成专业知识卡片的Prompt。</summary>
+    <summary type="html">通过文档生成美观漂亮的中文可视化网页的Prompt。</summary>
     
     
     
     <category term="AIGC" scheme="https://cuizhenjie.github.io/categories/AIGC/"/>
     
     
-    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
-    
     <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
     
-    <category term="知识卡片" scheme="https://cuizhenjie.github.io/tags/%E7%9F%A5%E8%AF%86%E5%8D%A1%E7%89%87/"/>
+    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
     
-    <category term="设计风格" scheme="https://cuizhenjie.github.io/tags/%E8%AE%BE%E8%AE%A1%E9%A3%8E%E6%A0%BC/"/>
+    <category term="文档" scheme="https://cuizhenjie.github.io/tags/%E6%96%87%E6%A1%A3/"/>
+    
+    <category term="生成网页" scheme="https://cuizhenjie.github.io/tags/%E7%94%9F%E6%88%90%E7%BD%91%E9%A1%B5/"/>
     
   </entry>
   
