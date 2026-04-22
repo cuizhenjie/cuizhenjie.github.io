@@ -1,0 +1,971 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>AI视频进阶技巧：从提示词工程到叙事创作 | cuizhenjie blog</title><meta name="keywords" content="AI视频,可灵,文生视频,提示词工程,多镜头叙事,视频连续性,ai视频进阶,视频创作技巧"><meta name="author" content="cuizhenjie"><meta name="copyright" content="cuizhenjie"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="AI视频进阶技巧：从提示词工程到叙事创作"><meta name="application-name" content="AI视频进阶技巧：从提示词工程到叙事创作"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="AI视频进阶技巧：从提示词工程到叙事创作"><meta property="og:url" content="https://cuizhenjie.github.io/posts/3460cfe2/index.html"><meta property="og:site_name" content="cuizhenjie blog"><meta property="og:description" content="深入讲解AI视频进阶技巧，包括高级提示词工程、多镜头组合叙事、视频连续性控制、复杂场景构建、角色一致性保持等核心技术，帮助你从单镜头视频升级到完整叙事短片创作。"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://cuizhenjie.github.io/img/default_cover.jpg"><meta property="article:author" content="cuizhenjie"><meta property="article:tag" content="技术博客,编程教程,Python,Docker,CentOS,Java,Linux,DevOps,AI,LangChain,运维开发,cuizhenjie,振长策"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://cuizhenjie.github.io/img/default_cover.jpg"><meta name="description" content="深入讲解AI视频进阶技巧，包括高级提示词工程、多镜头组合叙事、视频连续性控制、复杂场景构建、角色一致性保持等核心技术，帮助你从单镜头视频升级到完整叙事短片创作。"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://cuizhenjie.github.io/posts/3460cfe2/"><link rel="preconnect" href="//cdn.cbd.int"/><link rel="preconnect" href="//bsz.dusays.com:9001"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@6.1.6/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2024/07/27/125766904/ba62475f396df9de3316a08ed9e65d86_5680958632268053399..png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好鸭👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋, 宝贝","startTime":12,"endTime":14},{"greeting":"🌈充实的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19点喽, 奖励一顿丰盛的大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚上好👋, 在属于自己的时间好好放松😌~","startTime":20,"endTime":24}]},
+  twikooEnvId: '',
+  commentBarrageConfig:{"enable":true,"maxBarrage":1,"barrageTime":4000,"accessToken":"","mailMd5":""},
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: {"apiurl":"https://puquan.wudl.cn/"},
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: {"skills":["🤖️ 数码科技爱好者","🔍 分享与热心帮助","🏠 AiCoding小能手","🔨 产品研发一条龙","🏃 脚踏实地行动派","💢 壮汉人狠话不多"]},
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: cuizhenjie","link":"链接: ","source":"来源: cuizhenjie blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.2.0/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.2.0/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: {"enable":true,"delay":100,"shiftDelay":200},
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'cuizhenjie blog',
+  title: 'AI视频进阶技巧：从提示词工程到叙事创作',
+  postAI: '',
+  pageFillDescription: 'AI视频进阶技巧：从提示词工程到叙事创作, 提示词工程实战, 结构化公式, 负面提示词, 权重控制, 情感场景模板库, 多镜头叙事技巧, 三幕式结构, 实战案例：悬疑短片《午夜追击》, 视频连续性控制, 保持角色一致, 保持场景一致, 连续性检查清单, 复杂场景构建, 多层景深设计, 光影氛围营造, 色彩心理学应用, 完整创作工作流, 从脚本到视频, 常见问题解决方案, 角色不稳定怎么办？, 场景不连贯怎么办？, 运动不自然怎么办？, 实战项目分析, 15秒产品广告, 30秒旅行Vlog, 写在最后视频进阶技巧从提示词工程到叙事创作本系列教程将带你从零开始学习视频创作掌握专业的镜头语言和运镜技巧上一篇我们聊了单个镜头的运用技巧但说实话真正的视频创作不仅仅是生成漂亮的单个镜头更重要的是要用多个镜头讲一个完整的故事这篇进阶教程我想分享一些我实战中总结的经验提示词工程实战结构化公式刚开始写提示词的时候我就在那堆文字结果生成的画面总是差点意思后来我发现提示词其实需要结构化思维我总结了一个黄金公式镜头类型主体描述动作细节环境场景光影氛围情感基调技术参数举个例子看看区别基础版本一个人在雨中走进阶版本低角度跟随镜头一个穿着黑色风衣的中年男人在大雨中孤独前行雨水打湿了他的头发和风衣霓虹灯闪烁的东京街头路面积水反射着彩光蓝色和粉色的霓虹灯光侧逆光照明忧郁孤独电影感的氛围画质电影级调色慢动作效果对比特别明显基础版本可能就生成个普通的雨中行走进阶版本直接是电影质感的赛博朋克风格负面提示词我发现告诉不想要什么往往比告诉它想要什么更重要常用负面提示词质量问题模糊失焦低分辨率噪点颗粒感变形问题扭曲变形多余的手指面部不对称风格问题卡通插画动漫油画风格如果想要写实构图问题裁剪边缘缺失构图不平衡运动问题抖动跳跃不流畅的运动实战示例正面提示词一个美丽的女人在花园里微笑阳光明媚电影质感负面提示词模糊失焦面部扭曲多余手指过度美颜不自然的表情光线过曝权重控制不同的工具支持不同的权重语法可灵的语法是这样的非常重要重要普通不太重要示例特写镜头一位年轻女性穿着红色连衣裙在雨中行走背景虚化权重分配原则我总结了一下主体视频的核心焦点关键动作表达故事内容环境细节辅助叙事背景元素不应喧宾夺主情感场景模板库我实战中积累了一些好用的模板直接改改就能用温馨治愈柔焦镜头一位祖母和孙子坐在老房子的木质门廊上祖母在织毛衣孙子在看书阳光透过树叶洒下斑驳光影温暖的金色光线宁静温馨怀旧的氛围胶片质感紧张悬疑手持摇晃镜头一个侦探在废弃的工厂里缓慢前行手电筒的光束在黑暗中扫视阴影尘埃生锈的机器冷色调高对比度紧张悬疑危险的氛围浪漫唯美无人机俯拍镜头一对情侣在巴黎埃菲尔铁塔下的草坪上依偎着看夕阳金色的夕阳远处的城市轮廓梦幻的光晕柔焦浪漫唯美感人的氛围多镜头叙事技巧三幕式结构电影里常用的三幕式结构在视频里也很好用我一般是这么安排的开场个镜头建立世界观介绍角色用环境空镜角色特写发展个镜头展开冲突推进情节用动作镜头跟随镜头高潮与结局个镜头情感释放故事收尾用推镜头特写镜头实战案例悬疑短片午夜追击脚本大纲侦探收到匿名信追踪线索到废弃工厂发现惊人真相镜头序列镜头镜头类型提示词时长特写镜头一封信封静静躺在桌上台灯的暖光打在信封上神秘感秒推镜头镜头缓慢推进到信封聚焦到邮戳日期秒过肩镜头侦探的手伸入画面拿起信封秒特写镜头侦探打开信封抽出信纸秒浅焦镜头从模糊的信纸内容聚焦到侦探震惊的表情秒跟随镜头侦探快速走出房间镜头跟随他的背影秒车载镜头从车内视角看雨夜的街道雨刷来回摆动秒无人机视角废弃工厂的全景闪电划过夜空秒窥视镜头从窗户缝隙拍摄工厂内部神秘的光影秒推镜头侦探推开门镜头推进到黑暗的内部秒动作镜头手电筒光束快速扫过工厂内部秒旋转镜头发现重要线索时镜头围绕线索旋转秒特写镜头侦探震惊的脸部特写秒拉镜头从侦探脸部拉远展示他孤独的背影秒视频连续性控制这个是我踩过最多坑的地方角色长相变了场景对不上这些连续性问题太常见了保持角色一致我实战中总结的经验第一步创建角色档案固定年龄发型服装风格身体特征描述服装的颜色材质款式眼镜首饰道具等配饰典型的站姿坐姿手势第二步每次都用完整描述第一次出现特写镜头一位岁的亚洲女性短发整齐戴金丝边眼镜穿着米色针织衫背景是温馨的客厅正在阅读一封信柔和的窗光照明后续出现中景镜头同一位岁亚洲女性短发金丝边眼镜米色针织衫在温馨的客厅放下手中的信表情复杂柔和窗光关键技巧使用同一位强调用权重强化识别特征保持环境描述一致保持场景一致我习惯创建场景圣经把每个场景的固定元素都写清楚场景名称老书房时间黄昏天气雨天光线暖色台灯窗外冷色天光色调怀旧棕黄色调关键物品老式木质书桌青铜台灯墙上的老照片满架的书古董闹钟每个镜头都包含核心场景元素至少个统一的光源描述一致的色调描述连续性检查清单生成视频后我习惯这样检查角色连续性发型是否一致服装是否相同配饰是否统一年龄是否匹配动作是否流畅衔接位置是否合理变化情绪是否有逻辑递进场景连续性光源方向是否一致色调是否统一关键物品是否保持在场景中时间白天黑夜是否匹配物品位置是否合理空间关系是否正确复杂场景构建多层景深设计情感场景示例前景虚化的室内植物叶子暗示从室内向外看中景阳台上的两人背影背景远处的城市天际线和夕阳效果层次丰富有深度感提示词过肩镜头从室内向外拍摄前景是虚化的绿色植物叶子中景是阳台上的两个人背对镜头坐着背景是远处的城市天际线和金色的夕阳前景虚化中景清晰远景朦胧电影质感光影氛围营造光源类型表光源类型情感基调适用场景提示词关键词自然光自然清新温暖日常场景阳光天光窗光人工暖光温馨怀旧亲密室内情感戏台灯蜡烛壁灯人工冷光冷酷科技疏离科幻悬疑霓虹灯灯荧光灯混合光冲突复杂戏剧性高潮场景暖光冷光对比背光逆光神秘神圣剪影情绪高潮逆光轮廓光夕阳色彩心理学应用色彩情感映射蓝色冷静孤独忧郁适合悲伤思考场景参考银翼杀手雨夜橙色金色温暖希望怀旧适合温情回忆场景参考爱乐之城夕阳红色激情危险警告适合紧张高潮场景参考黑客帝国红药丸绿色自然诡异科技适合自然科幻场景参考黑客帝国矩阵代码紫色神秘幻想梦境适合梦境奇幻场景参考银翼杀手黑白经典严肃怀旧适合纪录回忆场景参考辛德勒的名单完整创作工作流从脚本到视频我做过一个情感短片那封信分享一下完整流程脚本标题那封信类型情感短片时长约秒场景老书房黄昏全景老式书房暖色灯光特写桌上的老照片中景老妇人从书架上取下一封信特写信封上的邮戳年浅焦从信封聚焦到老妇人的脸特写老妇人的眼角有泪水拉远老妇人坐在桌前读信孤独的背影场景回忆明亮闪回年轻的女子在阳光下写信特写信纸上的一行字场景老书房黄昏回到现实老妇人放下信特写老妇人微笑着看向窗外全景窗外的夕阳镜头拆解镜头类型提示词全景全景镜头老式书房深色木质墙板满架的书靠墙的木质书桌桌上有一盏青铜台灯发出暖光墙上挂着黑白老照片窗外是黄昏的暖光射入怀旧的棕黄色调电影质感特写特写镜头书桌上的老照片照片上是年轻时的夫妇照片边缘泛黄台灯的暖光打在照片上有尘埃在光中飞舞怀旧氛围中景中景镜头同一位岁亚洲女性银发米色针织衫在老式书房从书架上取下一封信动作缓慢温柔暖色台灯照明特写极特写镜头信封上的邮戳清晰显示年纸张泛黄有折痕暖光照明怀旧质感浅焦浅焦镜头从手中的信封开始焦点慢慢转移到同一位岁女性的脸她的眼神温柔而感伤暖光侧光照明米色针织衫特写面部特写同一位岁女性的眼角有一滴泪水缓缓滑落暖光照亮泪珠真实感人的细节拉远缓慢拉远镜头从同一位岁女性的面部拉远到中景展示她坐在老式书房的桌前读信孤独而温暖的背影窗外黄昏的暖光生成流程按顺序生成每个镜头检查角色连续性检查场景一致性不满意则调整提示词重新生成保存所有满意的镜头素材剪辑与配乐转场交叉叠化回忆与现实的切换节奏前慢营造氛围中快回忆片段后慢情感沉淀总时长秒配乐前半段钢琴独奏缓慢忧伤回忆段加入弦乐温暖明亮结尾回归钢琴渐弱结束常见问题解决方案角色不稳定怎么办问题表现同一个角色在不同镜头中长得不一样年龄忽大忽小服装颜色不一致解决方案固定角色描述创建一个角色卡每次都完整复制角色林奶奶年龄岁左右性别亚洲女性发型银色短发整齐眼镜金丝边眼镜服装米色针织衫特征温和的表情略带皱纹每次使用同一位岁亚洲女性银色短发金丝边眼镜米色针织衫温和表情解决方案使用参考图像先用图生视频生成一个满意的镜头然后在后续生成时使用该镜头的截图作为参考图提示词场景不连贯怎么办问题表现光源方向不一致物品位置随意变化时间白天黑夜不匹配解决方案创建场景圣经场景名称老书房固定物品深色木质书桌靠右墙青铜台灯桌上左侧老照片墙上正中央书架左侧墙窗户右侧墙光源设定主光源青铜台灯暖色辅光源窗外天光冷色黄昏光线方向台灯从左窗户从右色调设定整体怀旧棕黄调暖部台灯照明区冷部阴影区每个镜头都加上老式书房深色书桌靠右台灯在左窗外黄昏冷光解决方案统一光线描述每个镜头都明确说明光源台灯的暖光从左侧照射窗外的冷光从右侧形成轮廓光运动不自然怎么办问题表现人物运动僵硬不流畅镜头运动突兀速度不均匀解决方案明确运动方式模糊描述改成清晰描述模糊一个人走清晰缓慢优雅地走每一步都稳重模糊镜头移动清晰镜头缓慢平滑地向右移动常用速度词汇极慢慢动作缓慢缓慢正常快速快速极快迅速描述运动轨迹摄像机移动摄像机沿弧线轨迹从左向右移动保持主体在画面中心实战项目分析秒产品广告需求产品智能手表时长秒风格现代科技动感镜头脚本镜头时长提示词秒极特写镜头智能手表的表盘黑色金属质感屏幕亮起显示时间科幻蓝色光晕秒微距镜头手表的侧边按钮手指按下的特写金属质感细节清晰秒特写镜头手表屏幕显示心率数据数字变化动画效果流畅秒中景镜头年轻男性的手腕戴着黑色智能手表在健身房跑步汗珠滴落阳光射入秒快速剪辑手表跑步数据心率快速切换节奏感强秒特写镜头手表的背景虚化专业产品摄影质感关键技巧产品展示多用特写和微距使用场景结合实际使用环境节奏控制前慢后快最后收尾质感强调金属科技光泽秒旅行需求主题巴黎之旅时长秒风格浪漫唯美风格镜头脚本镜头时长提示词秒无人机俯拍镜头巴黎城市全景埃菲尔铁塔矗立中心蓝天白云清晨阳光秒低角度仰拍镜头埃菲尔铁塔的钢铁结构透空的天空蓝白色调秒跟随镜头年轻女性穿着白色连衣裙在香榭丽舍大道上行走阳光透过树叶洒下斑驳光影秒手持镜头街角的咖啡店露天咖啡座人们轻松交谈秒特写镜头法式牛角包和咖啡杯热气腾腾晨光照射秒过肩镜头女性在卢浮宫前背对镜头看着玻璃金字塔秒慢动作镜头塞纳河畔鸽子起飞慢动作展示翅膀扇动金色夕阳秒特写镜头女性微笑的脸庞头发被微风吹起背景是模糊的塞纳河秒拉远镜头从女性拉远到塞纳河全景游船缓缓驶过夕阳西下秒固定镜头埃菲尔铁塔夜晚亮灯闪烁浪漫的夜景字幕关键技巧开场震撼无人机大景细节丰富美食建筑人物节奏变化正常慢动作正常情感递进兴奋享受浪漫感动结尾升华夜景文字写在最后视频创作是技术与艺术的结合掌握了这些进阶技巧你就能精准控制视频效果讲述完整的故事创作电影级作品实现商业价值但我发现有几个心法特别重要少即是多不要在一个提示词里塞太多内容专注于一个核心目标其他的作为辅助元素迭代优化不要期望一次完美生成检查调整再生成这是必经之路学习经典大量观看经典电影分析镜头运用视频创作的本质是对传统电影语言的再现建立素材库整理自己满意的提示词和镜头形成个人素材库未来可以快速复用实践为王理论再多不如动手一试每周至少完成一个完整的短片项目工具再强大最终的创造力还是来自于你那个有故事要讲的创作者',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-04-22 15:56:00',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/custom/css/custom.css" media="defer" onload="this.media='all'"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/js-heo@1.0.11/poem/poem.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/js-heo@1.0.11/mainColor/heoMainColor.css"><meta name="generator" content="Hexo 7.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="cuizhenjie blog" type="application/atom+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://avatars.githubusercontent.com/u/2757261?v=4&amp;size=128"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image:url(/img/default_cover.jpg);background-size:cover;background-position:center"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">cuizhenjie blog</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"/><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 总览</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 教程</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/categories/claude-code/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> Claude Code</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/Python%E6%95%99%E7%A8%8B/"><i class="anzhiyufont anzhiyu-icon-book faa-tada" style="font-size: 0.9em;"></i><span> Python入门</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/LangChain%E6%95%99%E7%A8%8B/"><i class="anzhiyufont anzhiyu-icon-robot faa-tada" style="font-size: 0.9em;"></i><span> LangChain</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/contact/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/friends/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友链</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumi/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://hall.oss-cn-qingdao.aliyuncs.com/wechatpay.png" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hall.oss-cn-qingdao.aliyuncs.com/wechatpay.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://hall.oss-cn-qingdao.aliyuncs.com/alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hall.oss-cn-qingdao.aliyuncs.com/alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/3d/" style="font-size: 1.05rem;">3d<sup>1</sup></a><a href="/tags/AI/" style="font-size: 1.05rem;">AI<sup>39</sup></a><a href="/tags/AIGC/" style="font-size: 1.05rem;">AIGC<sup>14</sup></a><a href="/tags/AI%E8%A7%86%E9%A2%91/" style="font-size: 1.05rem;">AI视频<sup>5</sup></a><a href="/tags/HR/" style="font-size: 1.05rem;">HR<sup>1</sup></a><a href="/tags/Linux/" style="font-size: 1.05rem;">Linux<sup>6</sup></a><a href="/tags/PPT/" style="font-size: 1.05rem;">PPT<sup>1</sup></a><a href="/tags/Prompt/" style="font-size: 1.05rem;">Prompt<sup>6</sup></a><a href="/tags/Runway/" style="font-size: 1.05rem;">Runway<sup>1</sup></a><a href="/tags/ai/" style="font-size: 1.05rem;">ai<sup>2</sup></a><a href="/tags/centos/" style="font-size: 1.05rem;">centos<sup>5</sup></a><a href="/tags/date/" style="font-size: 1.05rem;">date<sup>1</sup></a><a href="/tags/prompt/" style="font-size: 1.05rem;">prompt<sup>13</sup></a><a href="/tags/rule/" style="font-size: 1.05rem;">rule<sup>2</sup></a><a href="/tags/threejs/" style="font-size: 1.05rem;">threejs<sup>1</sup></a><a href="/tags/webgl/" style="font-size: 1.05rem;">webgl<sup>1</sup></a><a href="/tags/%E4%B9%A6%E7%B1%8D/" style="font-size: 1.05rem;">书籍<sup>1</sup></a><a href="/tags/%E4%BF%AE%E6%94%B9%E6%97%B6%E5%8C%BA/" style="font-size: 1.05rem;">修改时区<sup>1</sup></a><a href="/tags/%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4/" style="font-size: 1.05rem;">修改时间<sup>1</sup></a><a href="/tags/%E5%8F%99%E4%BA%8B%E6%8A%80%E5%B7%A7/" style="font-size: 1.05rem;">叙事技巧<sup>1</sup></a><a href="/tags/%E5%8F%AF%E7%81%B5/" style="font-size: 1.05rem;">可灵<sup>4</sup></a><a href="/tags/%E5%9C%A3%E8%AF%9E%E6%A0%91/" style="font-size: 1.05rem;">圣诞树<sup>1</sup></a><a href="/tags/%E6%89%8B%E5%8A%BF/" style="font-size: 1.05rem;">手势<sup>1</sup></a><a href="/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D/" style="font-size: 1.05rem;">提示词<sup>5</sup></a><a href="/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B/" style="font-size: 1.05rem;">提示词工程<sup>3</sup></a><a href="/tags/%E6%96%B0%E9%97%BB%E4%BD%9C%E8%80%85/" style="font-size: 1.05rem;">新闻作者<sup>1</sup></a><a href="/tags/%E6%97%B6%E5%8C%BA/" style="font-size: 1.05rem;">时区<sup>1</sup></a><a href="/tags/%E6%B5%B7%E6%8A%A5/" style="font-size: 1.05rem;">海报<sup>1</sup></a><a href="/tags/%E6%BC%94%E7%A4%BA%E6%96%87%E7%A8%BF/" style="font-size: 1.05rem;">演示文稿<sup>1</sup></a><a href="/tags/%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C/" style="font-size: 1.05rem;">视频制作<sup>1</sup></a><a href="/tags/%E8%A7%86%E9%A2%91%E5%89%A7%E6%9C%AC/" style="font-size: 1.05rem;">视频剧本<sup>2</sup></a><a href="/tags/%E8%A7%86%E9%A2%91%E5%8F%98%E7%8E%B0/" style="font-size: 1.05rem;">视频变现<sup>1</sup></a><a href="/tags/%E8%A7%86%E9%A2%91%E5%95%86%E4%B8%9A%E5%8C%96/" style="font-size: 1.05rem;">视频商业化<sup>2</sup></a><a href="/tags/%E8%A7%86%E9%A2%91%E7%94%9F%E6%88%90/" style="font-size: 1.05rem;">视频生成<sup>2</sup></a><a href="/tags/%E8%BD%AC%E5%9C%BA/" style="font-size: 1.05rem;">转场<sup>1</sup></a><a href="/tags/%E8%BF%90%E9%95%9C/" style="font-size: 1.05rem;">运镜<sup>1</sup></a><a href="/tags/%E9%95%9C%E5%A4%B4%E6%8A%80%E5%B7%A7/" style="font-size: 1.05rem;">镜头技巧<sup>1</sup></a><a href="/tags/%E9%95%BF%E8%A7%86%E9%A2%91/" style="font-size: 1.05rem;">长视频<sup>1</sup></a><a href="/tags/%E9%95%BF%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C/" style="font-size: 1.05rem;">长视频制作<sup>1</sup></a><a href="/tags/%E9%9F%B3%E4%B9%90/" style="font-size: 1.05rem;">音乐<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/04/"><span class="card-archive-list-date">四月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">12</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/01/"><span class="card-archive-list-date">一月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">49</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/12/"><span class="card-archive-list-date">十二月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">9</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/11/"><span class="card-archive-list-date">十一月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/03/"><span class="card-archive-list-date">三月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/04/"><span class="card-archive-list-date">四月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/03/"><span class="card-archive-list-date">三月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">4</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/02/"><span class="card-archive-list-date">二月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="anzhiyu.switchCommentBarrage()" title="热评开关"><a class="commentBarrage"><i class="anzhiyufont anzhiyu-icon-message"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div><div class="console-btn-item" id="consoleKeyboard" onclick="anzhiyu.keyboardToggle()" title="快捷键开关"><a class="keyboard-switch"><i class="anzhiyufont anzhiyu-icon-keyboard"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/AIGC/" itemprop="url">AIGC</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/AI%E8%A7%86%E9%A2%91/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>AI视频</span></a><a class="article-meta__tags" href="/tags/AIGC/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>AIGC</span></a><a class="article-meta__tags" href="/tags/%E5%8F%AF%E7%81%B5/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>可灵</span></a><a class="article-meta__tags" href="/tags/%E8%A7%86%E9%A2%91%E7%94%9F%E6%88%90/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>视频生成</span></a><a class="article-meta__tags" href="/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>提示词工程</span></a><a class="article-meta__tags" href="/tags/%E5%8F%99%E4%BA%8B%E6%8A%80%E5%B7%A7/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>叙事技巧</span></a></span></div></div><h1 class="post-title" itemprop="name headline">AI视频进阶技巧：从提示词工程到叙事创作</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2026-01-05T06:00:00.000Z" title="发表于 2026-01-05 14:00:00">2026-01-05</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2026-04-22T07:56:00.973Z" title="更新于 2026-04-22 15:56:00">2026-04-22</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-pv-cv" id="" data-flag-title="AI视频进阶技巧：从提示词工程到叙事创作"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">阅读量:</span><span id="busuanzi_page_pv"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为Beijing"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>Beijing</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="/img/default_cover.jpg"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://cuizhenjie.github.io/posts/3460cfe2/"><header><a class="post-meta-categories" href="/categories/AIGC/" itemprop="url">AIGC</a><a href="/tags/AI%E8%A7%86%E9%A2%91/" tabindex="-1" itemprop="url">AI视频</a><a href="/tags/AIGC/" tabindex="-1" itemprop="url">AIGC</a><a href="/tags/%E5%8F%AF%E7%81%B5/" tabindex="-1" itemprop="url">可灵</a><a href="/tags/%E8%A7%86%E9%A2%91%E7%94%9F%E6%88%90/" tabindex="-1" itemprop="url">视频生成</a><a href="/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B/" tabindex="-1" itemprop="url">提示词工程</a><a href="/tags/%E5%8F%99%E4%BA%8B%E6%8A%80%E5%B7%A7/" tabindex="-1" itemprop="url">叙事技巧</a><h1 id="CrawlerTitle" itemprop="name headline">AI视频进阶技巧：从提示词工程到叙事创作</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">cuizhenjie</span><time itemprop="dateCreated datePublished" datetime="2026-01-05T06:00:00.000Z" title="发表于 2026-01-05 14:00:00">2026-01-05</time><time itemprop="dateCreated datePublished" datetime="2026-04-22T07:56:00.973Z" title="更新于 2026-04-22 15:56:00">2026-04-22</time></header><h1 id="AI视频进阶技巧：从提示词工程到叙事创作"><a href="#AI视频进阶技巧：从提示词工程到叙事创作" class="headerlink" title="AI视频进阶技巧：从提示词工程到叙事创作"></a>AI视频进阶技巧：从提示词工程到叙事创作</h1><blockquote>
+<p>本系列教程将带你从零开始学习AI视频创作，掌握专业的镜头语言和运镜技巧。</p>
+</blockquote>
+<p>上一篇我们聊了单个镜头的运用技巧。但说实话，真正的AI视频创作不仅仅是生成漂亮的单个镜头，更重要的是要用多个镜头讲一个完整的故事。</p>
+<p>这篇进阶教程，我想分享一些我实战中总结的经验。</p>
+<h2 id="提示词工程实战"><a href="#提示词工程实战" class="headerlink" title="提示词工程实战"></a>提示词工程实战</h2><h3 id="结构化公式"><a href="#结构化公式" class="headerlink" title="结构化公式"></a>结构化公式</h3><p>刚开始写提示词的时候，我就在那堆文字，结果生成的画面总是差点意思。后来我发现，提示词其实需要结构化思维。</p>
+<p>我总结了一个黄金公式：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[镜头类型] + [主体描述] + [动作细节] + [环境场景] + [光影氛围] + [情感基调] + [技术参数]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>举个例子看看区别。</p>
+<p><strong>基础版本：</strong></p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">一个人在雨中走</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>进阶版本：</strong></p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">低角度跟随镜头 + 一个穿着黑色风衣的中年男人 + 在大雨中孤独前行，雨水打湿了他的头发和风衣 + 霓虹灯闪烁的东京街头，路面积水反射着彩光 + 蓝色和粉色的霓虹灯光，侧逆光照明 + 忧郁、孤独、电影感的氛围 + 4K画质，电影级调色，慢动作</span><br></pre></td></tr></tbody></table></figure>
+
+<p>效果对比特别明显。基础版本可能就生成个普通的雨中行走，进阶版本直接是电影质感的赛博朋克风格。</p>
+<h3 id="负面提示词"><a href="#负面提示词" class="headerlink" title="负面提示词"></a>负面提示词</h3><p>我发现告诉AI”不想要什么”，往往比告诉它”想要什么”更重要。</p>
+<p>常用负面提示词：</p>
+<ul>
+<li><strong>质量问题</strong>：模糊、失焦、低分辨率、噪点、颗粒感</li>
+<li><strong>变形问题</strong>：扭曲、变形、多余的手指、面部不对称</li>
+<li><strong>风格问题</strong>：卡通、插画、动漫、油画风格（如果想要写实）</li>
+<li><strong>构图问题</strong>：裁剪、边缘缺失、构图不平衡</li>
+<li><strong>运动问题</strong>：抖动、跳跃、不流畅的运动</li>
+</ul>
+<p><strong>实战示例：</strong></p>
+<p>正面提示词：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">一个美丽的女人在花园里微笑，阳光明媚，电影质感</span><br></pre></td></tr></tbody></table></figure>
+
+<p>负面提示词：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">模糊、失焦、面部扭曲、多余手指、过度美颜、不自然的表情、光线过曝</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="权重控制"><a href="#权重控制" class="headerlink" title="权重控制"></a>权重控制</h3><p>不同的AI工具支持不同的权重语法。</p>
+<p>可灵（Keling）的语法是这样的：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(非常重要:1.5) + (重要:1.2) + (普通:1.0) + (不太重要:0.8)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>示例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(特写镜头:1.3) + 一位(年轻女性:1.2) + 穿着(红色连衣裙:1.1) + 在(雨中:1.0) + 行走，(背景虚化:0.8)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>权重分配原则我总结了一下：</p>
+<ul>
+<li><strong>主体</strong>：1.2-1.5（视频的核心焦点）</li>
+<li><strong>关键动作</strong>：1.1-1.3（表达故事内容）</li>
+<li><strong>环境细节</strong>：0.8-1.0（辅助叙事）</li>
+<li><strong>背景元素</strong>：0.6-0.8（不应喧宾夺主）</li>
+</ul>
+<h3 id="情感场景模板库"><a href="#情感场景模板库" class="headerlink" title="情感场景模板库"></a>情感场景模板库</h3><p>我实战中积累了一些好用的模板，直接改改就能用。</p>
+<p><strong>温馨治愈：</strong></p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">柔焦镜头 + 一位祖母和孙子 + 坐在老房子的木质门廊上 + 祖母在织毛衣，孙子在看书 + 阳光透过树叶洒下斑驳光影 + 温暖的金色光线 + 宁静、温馨、怀旧的氛围 + 胶片质感</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>紧张悬疑：</strong></p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">手持摇晃镜头 + 一个侦探 + 在废弃的工厂里 + 缓慢前行，手电筒的光束在黑暗中扫视 + 阴影、尘埃、生锈的机器 + 冷色调、高对比度 + 紧张、悬疑、危险的氛围</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>浪漫唯美：</strong></p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">无人机俯拍镜头 + 一对情侣 + 在巴黎埃菲尔铁塔下的草坪上 + 依偎着看夕阳 + 金色的夕阳、远处的城市轮廓 + 梦幻的光晕、柔焦 + 浪漫、唯美、感人的氛围</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="多镜头叙事技巧"><a href="#多镜头叙事技巧" class="headerlink" title="多镜头叙事技巧"></a>多镜头叙事技巧</h2><h3 id="三幕式结构"><a href="#三幕式结构" class="headerlink" title="三幕式结构"></a>三幕式结构</h3><p>电影里常用的三幕式结构，在AI视频里也很好用。</p>
+<p>我一般是这么安排的：</p>
+<ul>
+<li><strong>开场（2-3个镜头）</strong>：建立世界观、介绍角色，用环境空镜、角色特写</li>
+<li><strong>发展（4-6个镜头）</strong>：展开冲突、推进情节，用动作镜头、跟随镜头</li>
+<li><strong>高潮与结局（2-4个镜头）</strong>：情感释放、故事收尾，用推镜头、特写镜头</li>
+</ul>
+<h3 id="实战案例：悬疑短片《午夜追击》"><a href="#实战案例：悬疑短片《午夜追击》" class="headerlink" title="实战案例：悬疑短片《午夜追击》"></a>实战案例：悬疑短片《午夜追击》</h3><p><strong>脚本大纲：</strong></p>
+<ul>
+<li>侦探收到匿名信</li>
+<li>追踪线索到废弃工厂</li>
+<li>发现惊人真相</li>
+</ul>
+<p><strong>镜头序列：</strong></p>
+<table>
+<thead>
+<tr>
+<th>镜头</th>
+<th>镜头类型</th>
+<th>提示词</th>
+<th>时长</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>特写镜头</td>
+<td>一封信封静静躺在桌上，台灯的暖光打在信封上，神秘感</td>
+<td>3秒</td>
+</tr>
+<tr>
+<td>2</td>
+<td>推镜头</td>
+<td>镜头缓慢推进到信封，聚焦到邮戳日期</td>
+<td>2秒</td>
+</tr>
+<tr>
+<td>3</td>
+<td>过肩镜头</td>
+<td>侦探的手伸入画面，拿起信封</td>
+<td>2秒</td>
+</tr>
+<tr>
+<td>4</td>
+<td>特写镜头</td>
+<td>侦探打开信封，抽出信纸</td>
+<td>2秒</td>
+</tr>
+<tr>
+<td>5</td>
+<td>浅焦镜头</td>
+<td>从模糊的信纸内容聚焦到侦探震惊的表情</td>
+<td>3秒</td>
+</tr>
+<tr>
+<td>6</td>
+<td>跟随镜头</td>
+<td>侦探快速走出房间，镜头跟随他的背影</td>
+<td>3秒</td>
+</tr>
+<tr>
+<td>7</td>
+<td>车载镜头</td>
+<td>从车内视角看雨夜的街道，雨刷来回摆动</td>
+<td>3秒</td>
+</tr>
+<tr>
+<td>8</td>
+<td>无人机视角</td>
+<td>废弃工厂的全景，闪电划过夜空</td>
+<td>4秒</td>
+</tr>
+<tr>
+<td>9</td>
+<td>窥视镜头</td>
+<td>从窗户缝隙拍摄工厂内部，神秘的光影</td>
+<td>3秒</td>
+</tr>
+<tr>
+<td>10</td>
+<td>推镜头</td>
+<td>侦探推开门，镜头推进到黑暗的内部</td>
+<td>3秒</td>
+</tr>
+<tr>
+<td>11</td>
+<td>动作镜头</td>
+<td>手电筒光束快速扫过工厂内部</td>
+<td>2秒</td>
+</tr>
+<tr>
+<td>12</td>
+<td>旋转镜头</td>
+<td>发现重要线索时，镜头围绕线索旋转</td>
+<td>3秒</td>
+</tr>
+<tr>
+<td>13</td>
+<td>特写镜头</td>
+<td>侦探震惊的脸部特写</td>
+<td>2秒</td>
+</tr>
+<tr>
+<td>14</td>
+<td>拉镜头</td>
+<td>从侦探脸部拉远，展示他孤独的背影</td>
+<td>3秒</td>
+</tr>
+</tbody></table>
+<h2 id="视频连续性控制"><a href="#视频连续性控制" class="headerlink" title="视频连续性控制"></a>视频连续性控制</h2><p>这个是我踩过最多坑的地方。角色长相变了、场景对不上，这些连续性问题太常见了。</p>
+<h3 id="保持角色一致"><a href="#保持角色一致" class="headerlink" title="保持角色一致"></a>保持角色一致</h3><p>我实战中总结的经验：</p>
+<p><strong>第一步，创建角色档案：</strong></p>
+<ul>
+<li>固定年龄、发型、服装风格、身体特征</li>
+<li>描述服装的颜色、材质、款式</li>
+<li>眼镜、首饰、道具等配饰</li>
+<li>典型的站姿、坐姿、手势</li>
+</ul>
+<p><strong>第二步，每次都用完整描述：</strong></p>
+<p>第一次出现：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">特写镜头，一位50岁的亚洲女性，短发整齐，戴金丝边眼镜，穿着米色针织衫，背景是温馨的客厅，正在阅读一封信，柔和的窗光照明</span><br></pre></td></tr></tbody></table></figure>
+
+<p>后续出现：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">中景镜头，同一位(50岁亚洲女性:1.2)，(短发:1.1)，(金丝边眼镜:1.1)，(米色针织衫:1.1)，在(温馨的客厅:1.0)，放下手中的信，表情复杂，(柔和窗光:1.0)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>关键技巧：</p>
+<ul>
+<li>使用”同一位”强调</li>
+<li>用权重强化识别特征</li>
+<li>保持环境描述一致</li>
+</ul>
+<h3 id="保持场景一致"><a href="#保持场景一致" class="headerlink" title="保持场景一致"></a>保持场景一致</h3><p>我习惯创建”场景圣经”，把每个场景的固定元素都写清楚。</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">场景名称:</span> <span class="string">老书房</span></span><br><span class="line"><span class="string">时间:</span> <span class="string">黄昏</span></span><br><span class="line"><span class="string">天气:</span> <span class="string">雨天</span></span><br><span class="line"><span class="string">光线:</span> <span class="string">暖色台灯</span> <span class="string">+</span> <span class="string">窗外冷色天光</span></span><br><span class="line"><span class="string">色调:</span> <span class="string">怀旧棕黄色调</span></span><br><span class="line"><span class="string">关键物品:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">老式木质书桌</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">青铜台灯</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">墙上的老照片</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">满架的书</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">古董闹钟</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>每个镜头都包含：</p>
+<ul>
+<li>核心场景元素（至少3个）</li>
+<li>统一的光源描述</li>
+<li>一致的色调描述</li>
+</ul>
+<h3 id="连续性检查清单"><a href="#连续性检查清单" class="headerlink" title="连续性检查清单"></a>连续性检查清单</h3><p>生成视频后，我习惯这样检查：</p>
+<p><strong>角色连续性：</strong></p>
+<ul>
+<li>发型是否一致？</li>
+<li>服装是否相同？</li>
+<li>配饰是否统一？</li>
+<li>年龄是否匹配？</li>
+<li>动作是否流畅衔接？</li>
+<li>位置是否合理变化？</li>
+<li>情绪是否有逻辑递进？</li>
+</ul>
+<p><strong>场景连续性：</strong></p>
+<ul>
+<li>光源方向是否一致？</li>
+<li>色调是否统一？</li>
+<li>关键物品是否保持在场景中？</li>
+<li>时间（白天/黑夜）是否匹配？</li>
+<li>物品位置是否合理？</li>
+<li>空间关系是否正确？</li>
+</ul>
+<h2 id="复杂场景构建"><a href="#复杂场景构建" class="headerlink" title="复杂场景构建"></a>复杂场景构建</h2><h3 id="多层景深设计"><a href="#多层景深设计" class="headerlink" title="多层景深设计"></a>多层景深设计</h3><p><strong>情感场景示例：</strong></p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">前景：虚化的室内植物叶子（暗示从室内向外看）</span><br><span class="line">中景：阳台上的两人背影</span><br><span class="line">背景：远处的城市天际线和夕阳</span><br><span class="line">效果：层次丰富，有深度感</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>提示词：</strong></p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">过肩镜头，从室内向外拍摄，前景是虚化的绿色植物叶子，中景是阳台上的两个人背对镜头坐着，背景是远处的城市天际线和金色的夕阳，前景虚化，中景清晰，远景朦胧，电影质感</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="光影氛围营造"><a href="#光影氛围营造" class="headerlink" title="光影氛围营造"></a>光影氛围营造</h3><p><strong>光源类型表：</strong></p>
+<table>
+<thead>
+<tr>
+<th>光源类型</th>
+<th>情感基调</th>
+<th>适用场景</th>
+<th>提示词关键词</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>自然光</td>
+<td>自然、清新、温暖</td>
+<td>日常场景</td>
+<td>阳光、天光、窗光</td>
+</tr>
+<tr>
+<td>人工暖光</td>
+<td>温馨、怀旧、亲密</td>
+<td>室内情感戏</td>
+<td>台灯、蜡烛、壁灯</td>
+</tr>
+<tr>
+<td>人工冷光</td>
+<td>冷酷、科技、疏离</td>
+<td>科幻、悬疑</td>
+<td>霓虹灯、LED灯、荧光灯</td>
+</tr>
+<tr>
+<td>混合光</td>
+<td>冲突、复杂、戏剧性</td>
+<td>高潮场景</td>
+<td>暖光+冷光对比</td>
+</tr>
+<tr>
+<td>背光/逆光</td>
+<td>神秘、神圣、剪影</td>
+<td>情绪高潮</td>
+<td>逆光、轮廓光、夕阳</td>
+</tr>
+</tbody></table>
+<h3 id="色彩心理学应用"><a href="#色彩心理学应用" class="headerlink" title="色彩心理学应用"></a>色彩心理学应用</h3><p><strong>色彩情感映射：</strong></p>
+<ul>
+<li><strong>蓝色</strong>：冷静、孤独、忧郁。适合悲伤、思考场景。参考《银翼杀手》雨夜</li>
+<li><strong>橙色/金色</strong>：温暖、希望、怀旧。适合温情、回忆场景。参考《爱乐之城》夕阳</li>
+<li><strong>红色</strong>：激情、危险、警告。适合紧张、高潮场景。参考《黑客帝国》红药丸</li>
+<li><strong>绿色</strong>：自然、诡异、科技。适合自然、科幻场景。参考《黑客帝国》矩阵代码</li>
+<li><strong>紫色</strong>：神秘、幻想、梦境。适合梦境、奇幻场景。参考《银翼杀手2049》</li>
+<li><strong>黑白</strong>：经典、严肃、怀旧。适合纪录、回忆场景。参考《辛德勒的名单》</li>
+</ul>
+<h2 id="完整创作工作流"><a href="#完整创作工作流" class="headerlink" title="完整创作工作流"></a>完整创作工作流</h2><h3 id="从脚本到视频"><a href="#从脚本到视频" class="headerlink" title="从脚本到视频"></a>从脚本到视频</h3><p>我做过一个情感短片《那封信》，分享一下完整流程。</p>
+<p><strong>脚本：</strong></p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">标题：那封信</span><br><span class="line">类型：情感短片</span><br><span class="line">时长：约30秒</span><br><span class="line"></span><br><span class="line">场景1：老书房 - 黄昏</span><br><span class="line">1. 全景：老式书房，暖色灯光</span><br><span class="line">2. 特写：桌上的老照片</span><br><span class="line">3. 中景：老妇人从书架上取下一封信</span><br><span class="line">4. 特写：信封上的邮戳：1995年</span><br><span class="line">5. 浅焦：从信封聚焦到老妇人的脸</span><br><span class="line">6. 特写：老妇人的眼角有泪水</span><br><span class="line">7. 拉远：老妇人坐在桌前读信，孤独的背影</span><br><span class="line"></span><br><span class="line">场景2：回忆 - 明亮</span><br><span class="line">8. 闪回：年轻的女子在阳光下写信</span><br><span class="line">9. 特写：信纸上的一行字</span><br><span class="line"></span><br><span class="line">场景3：老书房 - 黄昏</span><br><span class="line">10. 回到现实：老妇人放下信</span><br><span class="line">11. 特写：老妇人微笑着看向窗外</span><br><span class="line">12. 全景：窗外的夕阳</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>镜头拆解：</strong></p>
+<table>
+<thead>
+<tr>
+<th>镜头</th>
+<th>类型</th>
+<th>提示词</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>全景</td>
+<td><code>全景镜头，老式书房，深色木质墙板，满架的书，靠墙的木质书桌，桌上有一盏青铜台灯发出暖光，墙上挂着黑白老照片，窗外是黄昏的暖光射入，怀旧的棕黄色调，电影质感</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td>特写</td>
+<td><code>特写镜头，书桌上的老照片，照片上是年轻时的夫妇，照片边缘泛黄，台灯的暖光打在照片上，有尘埃在光中飞舞，怀旧氛围</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td>中景</td>
+<td><code>中景镜头，(同一位65岁亚洲女性:1.2)，(银发:1.1)，(米色针织衫:1.1)，在(老式书房:1.2)，从书架上取下一封信，动作缓慢温柔，(暖色台灯照明:1.0)</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td>特写</td>
+<td><code>极特写镜头，信封上的邮戳，清晰显示"1995年"，纸张泛黄，有折痕，暖光照明，怀旧质感</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td>浅焦</td>
+<td><code>浅焦镜头，从手中的信封开始，焦点慢慢转移到(同一位65岁女性:1.2)的脸，她的眼神温柔而感伤，(暖光:1.0)侧光照明，(米色针织衫:1.1)</code></td>
+</tr>
+<tr>
+<td>6</td>
+<td>特写</td>
+<td><code>面部特写，(同一位65岁女性:1.2)的眼角，有一滴泪水缓缓滑落，(暖光:1.0)照亮泪珠，真实感人的细节</code></td>
+</tr>
+<tr>
+<td>7</td>
+<td>拉远</td>
+<td><code>缓慢拉远镜头，从(同一位65岁女性:1.2)的面部拉远到中景，展示她坐在(老式书房:1.2)的桌前读信，孤独而温暖的背影，(窗外黄昏:1.0)的暖光</code></td>
+</tr>
+</tbody></table>
+<p><strong>生成流程：</strong></p>
+<ol>
+<li>按顺序生成每个镜头</li>
+<li>检查角色连续性</li>
+<li>检查场景一致性</li>
+<li>不满意则调整提示词重新生成</li>
+<li>保存所有满意的镜头素材</li>
+</ol>
+<p><strong>剪辑与配乐：</strong></p>
+<ul>
+<li>转场：交叉叠化（回忆与现实的切换）</li>
+<li>节奏：前慢（营造氛围）- 中快（回忆片段）- 后慢（情感沉淀）</li>
+<li>总时长：30-45秒</li>
+<li>配乐：前半段钢琴独奏缓慢忧伤，回忆段加入弦乐温暖明亮，结尾回归钢琴渐弱结束</li>
+</ul>
+<h2 id="常见问题解决方案"><a href="#常见问题解决方案" class="headerlink" title="常见问题解决方案"></a>常见问题解决方案</h2><h3 id="角色不稳定怎么办？"><a href="#角色不稳定怎么办？" class="headerlink" title="角色不稳定怎么办？"></a>角色不稳定怎么办？</h3><p><strong>问题表现：</strong><br>同一个角色在不同镜头中长得不一样，年龄忽大忽小，服装颜色不一致</p>
+<p><strong>解决方案1：固定角色描述</strong><br>创建一个”角色卡”，每次都完整复制：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">角色：林奶奶</span><br><span class="line">年龄：65岁左右</span><br><span class="line">性别：亚洲女性</span><br><span class="line">发型：银色短发，整齐</span><br><span class="line">眼镜：金丝边眼镜</span><br><span class="line">服装：米色针织衫</span><br><span class="line">特征：温和的表情，略带皱纹</span><br><span class="line"></span><br><span class="line">每次使用：</span><br><span class="line">(同一位65岁亚洲女性:1.3)，(银色短发:1.2)，(金丝边眼镜:1.2)，(米色针织衫:1.2)，(温和表情:1.1)</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>解决方案2：使用参考图像</strong><br>先用图生视频生成一个满意的镜头，然后在后续生成时使用该镜头的截图作为参考图，提示词：”Same character as reference image”</p>
+<h3 id="场景不连贯怎么办？"><a href="#场景不连贯怎么办？" class="headerlink" title="场景不连贯怎么办？"></a>场景不连贯怎么办？</h3><p><strong>问题表现：</strong><br>光源方向不一致，物品位置随意变化，时间（白天/黑夜）不匹配</p>
+<p><strong>解决方案1：创建场景圣经</strong></p>
+<figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">场景名称:</span> <span class="string">老书房</span></span><br><span class="line"><span class="string">固定物品:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">深色木质书桌：靠右墙</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">青铜台灯：桌上左侧</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">老照片：墙上正中央</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">书架：左侧墙</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">窗户：右侧墙</span></span><br><span class="line"></span><br><span class="line"><span class="string">光源设定:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">主光源：青铜台灯（暖色）</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">辅光源：窗外天光（冷色，黄昏）</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">光线方向：台灯从左，窗户从右</span></span><br><span class="line"></span><br><span class="line"><span class="string">色调设定:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">整体：怀旧棕黄调</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">暖部：台灯照明区</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">冷部：阴影区</span></span><br><span class="line"></span><br><span class="line"><span class="string">每个镜头都加上：</span></span><br><span class="line"><span class="string">(老式书房:1.2)，(深色书桌靠右:1.1)，(台灯在左:1.1)，(窗外黄昏冷光:1.1)</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>解决方案2：统一光线描述</strong><br>每个镜头都明确说明光源：”台灯的暖光从左侧照射，窗外的冷光从右侧形成轮廓光”</p>
+<h3 id="运动不自然怎么办？"><a href="#运动不自然怎么办？" class="headerlink" title="运动不自然怎么办？"></a>运动不自然怎么办？</h3><p><strong>问题表现：</strong><br>人物运动僵硬、不流畅，镜头运动突兀，速度不均匀</p>
+<p><strong>解决方案：</strong><br>明确运动方式，模糊描述改成清晰描述：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">❌ 模糊：一个人走</span><br><span class="line">✅ 清晰：缓慢、优雅地走，每一步都稳重</span><br><span class="line"></span><br><span class="line">❌ 模糊：镜头移动</span><br><span class="line">✅ 清晰：镜头缓慢、平滑地向右移动</span><br></pre></td></tr></tbody></table></figure>
+
+<p>常用速度词汇：</p>
+<ul>
+<li>极慢：slow motion, 慢动作</li>
+<li>缓慢：slowly, 缓慢</li>
+<li>正常：normal speed</li>
+<li>快速：quickly, 快速</li>
+<li>极快：rapidly, 迅速</li>
+</ul>
+<p>描述运动轨迹：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">❌ 摄像机移动</span><br><span class="line">✅ 摄像机沿弧线轨迹从左向右移动，保持主体在画面中心</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="实战项目分析"><a href="#实战项目分析" class="headerlink" title="实战项目分析"></a>实战项目分析</h2><h3 id="15秒产品广告"><a href="#15秒产品广告" class="headerlink" title="15秒产品广告"></a>15秒产品广告</h3><p><strong>需求：</strong></p>
+<ul>
+<li>产品：智能手表</li>
+<li>时长：15秒</li>
+<li>风格：现代、科技、动感</li>
+</ul>
+<p><strong>镜头脚本：</strong></p>
+<table>
+<thead>
+<tr>
+<th>镜头</th>
+<th>时长</th>
+<th>提示词</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>2秒</td>
+<td><code>极特写镜头，智能手表的表盘，黑色金属质感，屏幕亮起显示时间，科幻蓝色光晕，4K</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td>3秒</td>
+<td><code>微距镜头，手表的侧边按钮，手指按下的特写，金属质感，细节清晰</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td>3秒</td>
+<td><code>特写镜头，手表屏幕显示心率数据，数字变化，动画效果流畅</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td>3秒</td>
+<td><code>中景镜头，年轻男性的手腕戴着黑色智能手表，在健身房跑步，汗珠滴落，阳光射入</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td>2秒</td>
+<td><code>快速剪辑，手表、跑步、数据、心率，快速切换，节奏感强</code></td>
+</tr>
+<tr>
+<td>6</td>
+<td>2秒</td>
+<td><code>特写镜头，手表的Logo，背景虚化，专业产品摄影质感</code></td>
+</tr>
+</tbody></table>
+<p><strong>关键技巧：</strong></p>
+<ul>
+<li>产品展示：多用特写和微距</li>
+<li>使用场景：结合实际使用环境</li>
+<li>节奏控制：前慢后快，最后收尾</li>
+<li>质感强调：金属、科技、光泽</li>
+</ul>
+<h3 id="30秒旅行Vlog"><a href="#30秒旅行Vlog" class="headerlink" title="30秒旅行Vlog"></a>30秒旅行Vlog</h3><p><strong>需求：</strong></p>
+<ul>
+<li>主题：巴黎之旅</li>
+<li>时长：30秒</li>
+<li>风格：浪漫、唯美、vlog风格</li>
+</ul>
+<p><strong>镜头脚本：</strong></p>
+<table>
+<thead>
+<tr>
+<th>镜头</th>
+<th>时长</th>
+<th>提示词</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>3秒</td>
+<td><code>无人机俯拍镜头，巴黎城市全景，埃菲尔铁塔矗立中心，蓝天白云，清晨阳光，4K</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td>2秒</td>
+<td><code>低角度仰拍镜头，埃菲尔铁塔的钢铁结构，透空的天空，蓝白色调</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td>3秒</td>
+<td><code>跟随镜头，年轻女性穿着白色连衣裙，在香榭丽舍大道上行走，阳光透过树叶洒下斑驳光影</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td>2秒</td>
+<td><code>手持镜头，街角的咖啡店，露天咖啡座，人们轻松交谈</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td>3秒</td>
+<td><code>特写镜头，法式牛角包和咖啡杯，热气腾腾，晨光照射</code></td>
+</tr>
+<tr>
+<td>6</td>
+<td>3秒</td>
+<td><code>过肩镜头，女性在卢浮宫前，背对镜头，看着玻璃金字塔</code></td>
+</tr>
+<tr>
+<td>7</td>
+<td>3秒</td>
+<td><code>慢动作镜头，塞纳河畔，鸽子起飞，慢动作展示翅膀扇动，金色夕阳</code></td>
+</tr>
+<tr>
+<td>8</td>
+<td>3秒</td>
+<td><code>特写镜头，女性微笑的脸庞，头发被微风吹起，背景是模糊的塞纳河</code></td>
+</tr>
+<tr>
+<td>9</td>
+<td>3秒</td>
+<td><code>拉远镜头，从女性拉远到塞纳河全景，游船缓缓驶过，夕阳西下</code></td>
+</tr>
+<tr>
+<td>10</td>
+<td>5秒</td>
+<td><code>固定镜头，埃菲尔铁塔夜晚亮灯，闪烁，浪漫的夜景，字幕：Paris, Je t'aime</code></td>
+</tr>
+</tbody></table>
+<p><strong>关键技巧：</strong></p>
+<ul>
+<li>开场震撼：无人机大景</li>
+<li>细节丰富：美食、建筑、人物</li>
+<li>节奏变化：正常-慢动作-正常</li>
+<li>情感递进：兴奋-享受-浪漫-感动</li>
+<li>结尾升华：夜景+文字</li>
+</ul>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>AI视频创作是技术与艺术的结合。掌握了这些进阶技巧，你就能：</p>
+<ul>
+<li>精准控制视频效果</li>
+<li>讲述完整的故事</li>
+<li>创作电影级作品</li>
+<li>实现商业价值</li>
+</ul>
+<p>但我发现有几个心法特别重要：</p>
+<p><strong>少即是多</strong><br>不要在一个提示词里塞太多内容。专注于一个核心目标，其他的作为辅助元素。</p>
+<p><strong>迭代优化</strong><br>不要期望一次完美。生成-检查-调整-再生成，这是必经之路。</p>
+<p><strong>学习经典</strong><br>大量观看经典电影，分析镜头运用。AI视频创作的本质是对传统电影语言的再现。</p>
+<p><strong>建立素材库</strong><br>整理自己满意的提示词和镜头，形成个人素材库。未来可以快速复用。</p>
+<p><strong>实践为王</strong><br>理论再多，不如动手一试。每周至少完成一个完整的短片项目。</p>
+<p>工具再强大，最终的创造力还是来自于你——那个有故事要讲的创作者。</p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hall.oss-cn-qingdao.aliyuncs.com/avatar.png" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hall.oss-cn-qingdao.aliyuncs.com/avatar.png" title="头像" alt="头像"></a><div class="post-copyright__author_name">cuizhenjie</div><div class="post-copyright__author_desc">学而不思则罔，思而不学则殆！</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://cuizhenjie.github.io/posts/3460cfe2/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://cuizhenjie.github.io/posts/3460cfe2/')">AI视频进阶技巧：从提示词工程到叙事创作</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://hall.oss-cn-qingdao.aliyuncs.com/wechatpay.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hall.oss-cn-qingdao.aliyuncs.com/wechatpay.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://hall.oss-cn-qingdao.aliyuncs.com/alipay.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hall.oss-cn-qingdao.aliyuncs.com/alipay.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://cuizhenjie.github.io/posts/3460cfe2/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=AI视频进阶技巧：从提示词工程到叙事创作&amp;url=https://cuizhenjie.github.io/posts/3460cfe2/&amp;pic=/img/default_cover.jpg" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">MIT</a> 许可协议。转载请注明来自 <a href="https://cuizhenjie.github.io" target="_blank">cuizhenjie blog</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/AI%E8%A7%86%E9%A2%91/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>AI视频<span class="tagsPageCount">5</span></a><a class="post-meta__box__tags" href="/tags/AIGC/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>AIGC<span class="tagsPageCount">14</span></a><a class="post-meta__box__tags" href="/tags/%E5%8F%AF%E7%81%B5/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>可灵<span class="tagsPageCount">4</span></a><a class="post-meta__box__tags" href="/tags/%E8%A7%86%E9%A2%91%E7%94%9F%E6%88%90/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>视频生成<span class="tagsPageCount">2</span></a><a class="post-meta__box__tags" href="/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>提示词工程<span class="tagsPageCount">3</span></a><a class="post-meta__box__tags" href="/tags/%E5%8F%99%E4%BA%8B%E6%8A%80%E5%B7%A7/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>叙事技巧<span class="tagsPageCount">1</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="/album/rag-retrieval-cover.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/5d069060/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/default_cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">一看就懂的22个AI视频镜头技巧</div></div></a></div><div class="next-post pull-right"><a href="/posts/c9579f45/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/default_cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">从零开始学Python（八）：异常处理</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/posts/5d069060/" title="一看就懂的22个AI视频镜头技巧"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/default_cover.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-01-05</div><div class="title">一看就懂的22个AI视频镜头技巧</div></div></a></div><div><a href="/posts/4ffde6c5/" title="AI视频长视频制作与商业化完全指南"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/default_cover.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-01-05</div><div class="title">AI视频长视频制作与商业化完全指南</div></div></a></div><div><a href="/posts/fa19dac1/" title="AI视频编剧Prompt"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/default_cover.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-01-05</div><div class="title">AI视频编剧Prompt</div></div></a></div><div><a href="/posts/d9f94e95/" title="FastAPI项目模板Prompt"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/default_cover.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-12-30</div><div class="title">FastAPI项目模板Prompt</div></div></a></div><div><a href="/posts/e96525cd/" title="博物馆图鉴式信息图生成指南：AI绘图提示词的完整设计手册"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&h=630&fit=crop" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-04-20</div><div class="title">博物馆图鉴式信息图生成指南：AI绘图提示词的完整设计手册</div></div></a></div><div><a href="/posts/f87d323c/" title="AI视频转场提示词大全：6大类19种技巧，从&quot;硬切&quot;到&quot;大片感&quot;"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&h=630&fit=crop" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-04-20</div><div class="title">AI视频转场提示词大全：6大类19种技巧，从&quot;硬切&quot;到&quot;大片感&quot;</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hall.oss-cn-qingdao.aliyuncs.com/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/zc998800/cdn/face/gif/p045.gif" alt="status"/></div></div><div class="author-info__description">我不是知识的创造者，我只是知识搬运工</div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">cuizhenjie</h1><div class="author-info__desc">学而不思则罔，思而不学则殆！</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/cuizhenjie" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a></div></div></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bullhorn anzhiyu-shake"></i><span>公告</span></div><div class="announcement_content">🍧今天也是元气满满的一天呢~ 开心一点！🍧</div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://hall.oss-cn-qingdao.aliyuncs.com/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://hall.oss-cn-qingdao.aliyuncs.com/63c02edf44033.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#AI%E8%A7%86%E9%A2%91%E8%BF%9B%E9%98%B6%E6%8A%80%E5%B7%A7%EF%BC%9A%E4%BB%8E%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%88%B0%E5%8F%99%E4%BA%8B%E5%88%9B%E4%BD%9C"><span class="toc-number">1.</span> <span class="toc-text">AI视频进阶技巧：从提示词工程到叙事创作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%AE%9E%E6%88%98"><span class="toc-number">1.1.</span> <span class="toc-text">提示词工程实战</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%84%E5%8C%96%E5%85%AC%E5%BC%8F"><span class="toc-number">1.1.1.</span> <span class="toc-text">结构化公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%9F%E9%9D%A2%E6%8F%90%E7%A4%BA%E8%AF%8D"><span class="toc-number">1.1.2.</span> <span class="toc-text">负面提示词</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%83%E9%87%8D%E6%8E%A7%E5%88%B6"><span class="toc-number">1.1.3.</span> <span class="toc-text">权重控制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%83%85%E6%84%9F%E5%9C%BA%E6%99%AF%E6%A8%A1%E6%9D%BF%E5%BA%93"><span class="toc-number">1.1.4.</span> <span class="toc-text">情感场景模板库</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E9%95%9C%E5%A4%B4%E5%8F%99%E4%BA%8B%E6%8A%80%E5%B7%A7"><span class="toc-number">1.2.</span> <span class="toc-text">多镜头叙事技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E5%B9%95%E5%BC%8F%E7%BB%93%E6%9E%84"><span class="toc-number">1.2.1.</span> <span class="toc-text">三幕式结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%EF%BC%9A%E6%82%AC%E7%96%91%E7%9F%AD%E7%89%87%E3%80%8A%E5%8D%88%E5%A4%9C%E8%BF%BD%E5%87%BB%E3%80%8B"><span class="toc-number">1.2.2.</span> <span class="toc-text">实战案例：悬疑短片《午夜追击》</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%86%E9%A2%91%E8%BF%9E%E7%BB%AD%E6%80%A7%E6%8E%A7%E5%88%B6"><span class="toc-number">1.3.</span> <span class="toc-text">视频连续性控制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%9D%E6%8C%81%E8%A7%92%E8%89%B2%E4%B8%80%E8%87%B4"><span class="toc-number">1.3.1.</span> <span class="toc-text">保持角色一致</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%9D%E6%8C%81%E5%9C%BA%E6%99%AF%E4%B8%80%E8%87%B4"><span class="toc-number">1.3.2.</span> <span class="toc-text">保持场景一致</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E7%BB%AD%E6%80%A7%E6%A3%80%E6%9F%A5%E6%B8%85%E5%8D%95"><span class="toc-number">1.3.3.</span> <span class="toc-text">连续性检查清单</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%8D%E6%9D%82%E5%9C%BA%E6%99%AF%E6%9E%84%E5%BB%BA"><span class="toc-number">1.4.</span> <span class="toc-text">复杂场景构建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E5%B1%82%E6%99%AF%E6%B7%B1%E8%AE%BE%E8%AE%A1"><span class="toc-number">1.4.1.</span> <span class="toc-text">多层景深设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%89%E5%BD%B1%E6%B0%9B%E5%9B%B4%E8%90%A5%E9%80%A0"><span class="toc-number">1.4.2.</span> <span class="toc-text">光影氛围营造</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%89%B2%E5%BD%A9%E5%BF%83%E7%90%86%E5%AD%A6%E5%BA%94%E7%94%A8"><span class="toc-number">1.4.3.</span> <span class="toc-text">色彩心理学应用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E5%88%9B%E4%BD%9C%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="toc-number">1.5.</span> <span class="toc-text">完整创作工作流</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%8E%E8%84%9A%E6%9C%AC%E5%88%B0%E8%A7%86%E9%A2%91"><span class="toc-number">1.5.1.</span> <span class="toc-text">从脚本到视频</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-number">1.6.</span> <span class="toc-text">常见问题解决方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%92%E8%89%B2%E4%B8%8D%E7%A8%B3%E5%AE%9A%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F"><span class="toc-number">1.6.1.</span> <span class="toc-text">角色不稳定怎么办？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%BA%E6%99%AF%E4%B8%8D%E8%BF%9E%E8%B4%AF%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F"><span class="toc-number">1.6.2.</span> <span class="toc-text">场景不连贯怎么办？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E5%8A%A8%E4%B8%8D%E8%87%AA%E7%84%B6%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F"><span class="toc-number">1.6.3.</span> <span class="toc-text">运动不自然怎么办？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE%E5%88%86%E6%9E%90"><span class="toc-number">1.7.</span> <span class="toc-text">实战项目分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#15%E7%A7%92%E4%BA%A7%E5%93%81%E5%B9%BF%E5%91%8A"><span class="toc-number">1.7.1.</span> <span class="toc-text">15秒产品广告</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#30%E7%A7%92%E6%97%85%E8%A1%8CVlog"><span class="toc-number">1.7.2.</span> <span class="toc-text">30秒旅行Vlog</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="toc-number">1.8.</span> <span class="toc-text">写在最后</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/27238120/" title="混合检索与重排序：让 RAG 召回更精准"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/album/rag-retrieval-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="混合检索与重排序：让 RAG 召回更精准"/></a><div class="content"><a class="title" href="/posts/27238120/" title="混合检索与重排序：让 RAG 召回更精准">混合检索与重排序：让 RAG 召回更精准</a><time datetime="2026-04-26T16:00:00.000Z" title="发表于 2026-04-27 00:00:00">2026-04-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/2d47ac79/" title="元数据管理：让 RAG 答案可引用、可追溯"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/album/rag-metadata-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="元数据管理：让 RAG 答案可引用、可追溯"/></a><div class="content"><a class="title" href="/posts/2d47ac79/" title="元数据管理：让 RAG 答案可引用、可追溯">元数据管理：让 RAG 答案可引用、可追溯</a><time datetime="2026-04-25T16:00:00.000Z" title="发表于 2026-04-26 00:00:00">2026-04-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/87fede9a/" title="Apache Tika：RAG 数据管道的入口"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/album/rag-tika-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Apache Tika：RAG 数据管道的入口"/></a><div class="content"><a class="title" href="/posts/87fede9a/" title="Apache Tika：RAG 数据管道的入口">Apache Tika：RAG 数据管道的入口</a><time datetime="2026-04-24T16:00:00.000Z" title="发表于 2026-04-25 00:00:00">2026-04-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/f31839f8/" title="数据分块：让 RAG 检索更精准的 Chunk 策略"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/album/rag-chunk-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据分块：让 RAG 检索更精准的 Chunk 策略"/></a><div class="content"><a class="title" href="/posts/f31839f8/" title="数据分块：让 RAG 检索更精准的 Chunk 策略">数据分块：让 RAG 检索更精准的 Chunk 策略</a><time datetime="2026-04-23T16:00:00.000Z" title="发表于 2026-04-24 00:00:00">2026-04-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/ac6e998d/" title="向量数据库：Milvus 原理与实战"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/album/rag-milvus-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="向量数据库：Milvus 原理与实战"/></a><div class="content"><a class="title" href="/posts/ac6e998d/" title="向量数据库：Milvus 原理与实战">向量数据库：Milvus 原理与实战</a><time datetime="2026-04-22T16:00:00.000Z" title="发表于 2026-04-23 00:00:00">2026-04-23</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="footer_deal"><a class="deal_link" href="mailto:cuizhenjie@gmail.com" title="email"><i class="anzhiyufont anzhiyu-icon-envelope"></i></a><a class="deal_link" href="https://weibo.com/u/7888758278" title="微博"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a><a class="deal_link" href="/atom.xml" title="RSS"><i class="anzhiyufont anzhiyu-icon-rss"></i></a><img class="footer_mini_logo" title="返回顶部" alt="返回顶部" onclick="anzhiyu.scrollToDest(0, 500)" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hall.oss-cn-qingdao.aliyuncs.com/avatar.png" size="50px"/><a class="deal_link" href="https://github.com/cuizhenjie" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="deal_link" href="https://www.youtube.com/@cuizhenjie" title="Youtube"><i class="anzhiyufont anzhiyu-icon-fire"></i></a><a class="deal_link" href="/copyright" title="CC"><i class="anzhiyufont anzhiyu-icon-copyright-line"></i></a></div><div id="workboard"><img class="workSituationImg boardsign" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.shields.io/badge/Czj-Working-yellow" alt="智者不入爱河，牛马不知死活~" title="智者不入爱河，牛马不知死活~"/><div id="runtimeTextTip"></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2025 - 2026 By <a class="footer-bar-link" href="/" title="cuizhenjie" target="_blank">cuizhenjie</a></div></div><div id="footer-type-tips"></div><div class="js-pjax"><script>function subtitleType () {
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      if (true) {
+        const from = '出自 ' + data.from
+        const sub = ["生活明朗&#44; 万物可爱&#44; 人间值得&#44; 未来可期.","以欢喜心&#44; 慢度日常&#44; 四季清宁&#44; 万物可爱."]
+        sub.unshift(data.hitokoto, from)
+        window.typed = new Typed('#footer-type-tips', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('footer-type-tips').innerHTML = data.hitokoto
+      }
+    })
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.cbd.int/typed.js@2.1.0/dist/typed.umd.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}
+</script></div></div><div class="footer-bar-right"><a class="footer-bar-link" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="Theme">Theme</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">99</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">223</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">25</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://cuizhenjie.github.io/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 总览</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 教程</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/categories/claude-code/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> Claude Code</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/Python%E6%95%99%E7%A8%8B/"><i class="anzhiyufont anzhiyu-icon-book faa-tada" style="font-size: 0.9em;"></i><span> Python入门</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/LangChain%E6%95%99%E7%A8%8B/"><i class="anzhiyufont anzhiyu-icon-robot faa-tada" style="font-size: 0.9em;"></i><span> LangChain</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/contact/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/friends/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友链</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumi/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/3d/" style="font-size: 0.88rem;">3d<sup>1</sup></a><a href="/tags/AI/" style="font-size: 0.88rem;">AI<sup>39</sup></a><a href="/tags/AIGC/" style="font-size: 0.88rem;">AIGC<sup>14</sup></a><a href="/tags/AI%E8%A7%86%E9%A2%91/" style="font-size: 0.88rem;">AI视频<sup>5</sup></a><a href="/tags/HR/" style="font-size: 0.88rem;">HR<sup>1</sup></a><a href="/tags/Linux/" style="font-size: 0.88rem;">Linux<sup>6</sup></a><a href="/tags/PPT/" style="font-size: 0.88rem;">PPT<sup>1</sup></a><a href="/tags/Prompt/" style="font-size: 0.88rem;">Prompt<sup>6</sup></a><a href="/tags/Runway/" style="font-size: 0.88rem;">Runway<sup>1</sup></a><a href="/tags/ai/" style="font-size: 0.88rem;">ai<sup>2</sup></a><a href="/tags/centos/" style="font-size: 0.88rem;">centos<sup>5</sup></a><a href="/tags/date/" style="font-size: 0.88rem;">date<sup>1</sup></a><a href="/tags/prompt/" style="font-size: 0.88rem;">prompt<sup>13</sup></a><a href="/tags/rule/" style="font-size: 0.88rem;">rule<sup>2</sup></a><a href="/tags/threejs/" style="font-size: 0.88rem;">threejs<sup>1</sup></a><a href="/tags/webgl/" style="font-size: 0.88rem;">webgl<sup>1</sup></a><a href="/tags/%E4%B9%A6%E7%B1%8D/" style="font-size: 0.88rem;">书籍<sup>1</sup></a><a href="/tags/%E4%BF%AE%E6%94%B9%E6%97%B6%E5%8C%BA/" style="font-size: 0.88rem;">修改时区<sup>1</sup></a><a href="/tags/%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4/" style="font-size: 0.88rem;">修改时间<sup>1</sup></a><a href="/tags/%E5%8F%99%E4%BA%8B%E6%8A%80%E5%B7%A7/" style="font-size: 0.88rem;">叙事技巧<sup>1</sup></a><a href="/tags/%E5%8F%AF%E7%81%B5/" style="font-size: 0.88rem;">可灵<sup>4</sup></a><a href="/tags/%E5%9C%A3%E8%AF%9E%E6%A0%91/" style="font-size: 0.88rem;">圣诞树<sup>1</sup></a><a href="/tags/%E6%89%8B%E5%8A%BF/" style="font-size: 0.88rem;">手势<sup>1</sup></a><a href="/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D/" style="font-size: 0.88rem;">提示词<sup>5</sup></a><a href="/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B/" style="font-size: 0.88rem;">提示词工程<sup>3</sup></a><a href="/tags/%E6%96%B0%E9%97%BB%E4%BD%9C%E8%80%85/" style="font-size: 0.88rem;">新闻作者<sup>1</sup></a><a href="/tags/%E6%97%B6%E5%8C%BA/" style="font-size: 0.88rem;">时区<sup>1</sup></a><a href="/tags/%E6%B5%B7%E6%8A%A5/" style="font-size: 0.88rem;">海报<sup>1</sup></a><a href="/tags/%E6%BC%94%E7%A4%BA%E6%96%87%E7%A8%BF/" style="font-size: 0.88rem;">演示文稿<sup>1</sup></a><a href="/tags/%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C/" style="font-size: 0.88rem;">视频制作<sup>1</sup></a><a href="/tags/%E8%A7%86%E9%A2%91%E5%89%A7%E6%9C%AC/" style="font-size: 0.88rem;">视频剧本<sup>2</sup></a><a href="/tags/%E8%A7%86%E9%A2%91%E5%8F%98%E7%8E%B0/" style="font-size: 0.88rem;">视频变现<sup>1</sup></a><a href="/tags/%E8%A7%86%E9%A2%91%E5%95%86%E4%B8%9A%E5%8C%96/" style="font-size: 0.88rem;">视频商业化<sup>2</sup></a><a href="/tags/%E8%A7%86%E9%A2%91%E7%94%9F%E6%88%90/" style="font-size: 0.88rem;">视频生成<sup>2</sup></a><a href="/tags/%E8%BD%AC%E5%9C%BA/" style="font-size: 0.88rem;">转场<sup>1</sup></a><a href="/tags/%E8%BF%90%E9%95%9C/" style="font-size: 0.88rem;">运镜<sup>1</sup></a><a href="/tags/%E9%95%9C%E5%A4%B4%E6%8A%80%E5%B7%A7/" style="font-size: 0.88rem;">镜头技巧<sup>1</sup></a><a href="/tags/%E9%95%BF%E8%A7%86%E9%A2%91/" style="font-size: 0.88rem;">长视频<sup>1</sup></a><a href="/tags/%E9%95%BF%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C/" style="font-size: 0.88rem;">长视频制作<sup>1</sup></a><a href="/tags/%E9%9F%B3%E4%B9%90/" style="font-size: 0.88rem;">音乐<sup>1</sup></a></div></div><hr/></div></div><div id="keyboard-tips"><div class="keyboardTitle">博客快捷键</div><div class="keybordList"><div class="keybordItem"><div class="keyGroup"><div class="key">shift K</div></div><div class="keyContent"><div class="content">关闭快捷键功能</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift A</div></div><div class="keyContent"><div class="content">打开/关闭中控台</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift M</div></div><div class="keyContent"><div class="content">播放/暂停音乐</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift D</div></div><div class="keyContent"><div class="content">深色/浅色显示模式</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift S</div></div><div class="keyContent"><div class="content">站内搜索</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift R</div></div><div class="keyContent"><div class="content">随机访问</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift H</div></div><div class="keyContent"><div class="content">返回首页</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift F</div></div><div class="keyContent"><div class="content">友链鱼塘</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift L</div></div><div class="keyContent"><div class="content">友链页面</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift P</div></div><div class="keyContent"><div class="content">关于本站</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift I</div></div><div class="keyContent"><div class="content">原版/本站右键菜单</div></div></div></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="switch-commentBarrage" href="javascript:anzhiyu.switchCommentBarrage();" title="开关弹幕"><i class="anzhiyufont anzhiyu-icon-danmu"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@6.1.6/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("03/01/2017 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2025 By 安知鱼 V1.7.1",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 cuizhenjie 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script async="async">(function () {
+  var grt = new Date("03/01/2017 00:00:00"); //设置网站上线时间
+  var now = new Date();
+  var dnum;
+  var hnum;
+  var mnum;
+  var snum;
+  var nowHour;
+
+  // 计算并更新天数、小时数、分钟数和秒数
+  function updateTime() {
+    now = new Date(); // 更新 now 的值
+    nowHour = now.getHours(); // 更新 nowHour 的值
+    var days = (now - grt) / 1000 / 60 / 60 / 24;
+    dnum = Math.floor(days);
+    var hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+    hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+      hnum = "0" + hnum;
+    }
+    var minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+      mnum = "0" + mnum;
+    }
+    var seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+    snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+      snum = "0" + snum;
+    }
+  }
+
+  // 更新网页中显示的网站运行时间
+  function updateHtml() {
+    const footer = document.getElementById("footer");
+    if (!footer) return
+    let currentTimeHtml = "";
+    if (nowHour < 18 && nowHour >= 9) {
+      // 如果是上班时间，默认就是"安知鱼-上班摸鱼中.svg"图片，不需要更改
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    } else {
+      // 如果是下班时间，插入"安知鱼-下班啦.svg"图片
+      let img = document.querySelector("#workboard .workSituationImg");
+      if (img != null) {
+        img.src = "https://img.shields.io/badge/Czj-Offduty-red";
+        img.title = "有惊无险，又到6点~";
+        img.alt = "有惊无险，又到6点~";
+      }
+
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    }
+
+    if (document.getElementById("runtimeTextTip")) {
+      document.getElementById("runtimeTextTip").innerHTML = currentTimeHtml;
+    }
+  }
+
+  setInterval(() => {
+    updateTime();
+    updateHtml();
+  }, 1000);
+})();</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.1/bubble/bubble.js"></script><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://cdn.cbd.int/qrcodejs@1.0.0/qrcode.min.js"></script><script src="/js/anzhiyu/right_click_menu.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><script src="/custom/js/schedule.js"></script><script src="/custom/js/chineselunar.js"></script><script defer="defer" id="ribbon" src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/canvas-fluttering-ribbon.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//npm.elemecdn.com/penndu@1.0.0/bsz.js"></script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>

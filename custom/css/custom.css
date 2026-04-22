@@ -1,0 +1,615 @@
+/* ================================================================
+   Anzhiyu Theme — Restrained Cyberpunk Override
+   科技感 · 可读性优先 · 移动端安全
+   ================================================================ */
+
+/* === 0. Color Palette (CSS Variables) === */
+
+:root {
+  /* accent */
+  --cb-accent: #00b4d8;
+  --cb-accent-op: rgba(0, 180, 216, 0.08);
+  --cb-accent-mid: rgba(0, 180, 216, 0.18);
+  --cb-purple: #7b2ff7;
+  --cb-green: #06d6a0;
+
+  /* surface */
+  --cb-bg: #f8f9fc;
+  --cb-card: #ffffff;
+  --cb-card-hover: #f8fafb;
+  --cb-border: #e0e4f0;
+  --cb-border-accent: rgba(0, 180, 216, 0.25);
+
+  /* text */
+  --cb-text: #1a1d2e;
+  --cb-text-muted: #5a5e72;
+  --cb-heading: #0f1225;
+
+  /* scrollbar */
+  --cb-scrollbar: rgba(0, 180, 216, 0.25);
+  --cb-scrollbar-track: transparent;
+
+  /* gradient */
+  --cb-grad-accent: linear-gradient(135deg, var(--cb-accent), var(--cb-purple));
+  --cb-grad-subtle: linear-gradient(135deg, var(--cb-accent-op), rgba(123, 47, 247, 0.04));
+}
+
+[data-theme="dark"] {
+  --cb-accent: #00d4ff;
+  --cb-accent-op: rgba(0, 212, 255, 0.06);
+  --cb-accent-mid: rgba(0, 212, 255, 0.14);
+  --cb-purple: #b14eff;
+  --cb-green: #00ff9f;
+
+  --cb-bg: #0f1119;
+  --cb-card: #181b27;
+  --cb-card-hover: #1e2233;
+  --cb-border: rgba(0, 212, 255, 0.08);
+  --cb-border-accent: rgba(0, 212, 255, 0.2);
+
+  --cb-text: #c8cad8;
+  --cb-text-muted: #6e7191;
+  --cb-heading: #eaecf4;
+
+  --cb-scrollbar: rgba(0, 212, 255, 0.3);
+  --cb-grad-accent: linear-gradient(135deg, #00d4ff, #b14eff);
+  --cb-grad-subtle: linear-gradient(135deg, rgba(0, 212, 255, 0.06), rgba(177, 78, 255, 0.04));
+}
+
+
+/* === 1. Global Basics === */
+
+#web_bg {
+  background: var(--cb-bg) !important;
+}
+
+::selection {
+  background: var(--cb-accent-mid);
+  color: var(--cb-heading);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--cb-scrollbar);
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--cb-scrollbar-track);
+}
+
+
+/* === 2. Top Navigation === */
+
+#nav {
+  border-bottom: 1px solid var(--cb-border);
+  transition: border-color 0.3s;
+}
+
+#site-name a {
+  background: var(--cb-grad-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#nav .menus_items .menus_item a:hover {
+  color: var(--cb-accent);
+  text-decoration: none;
+}
+
+/* 文章页导航栏滚动固定后，浅色模式下确保文字深色 */
+.post .nav-fixed #nav .menus_items .menus_item > a.site-page,
+.post .nav-fixed #nav #nav-right .nav-button a,
+.post .nav-fixed #nav #nav-right #toggle-menu a,
+.post .nav-fixed #nav .back-home-button {
+  color: var(--cb-heading);
+}
+
+[data-theme="dark"] #nav {
+  background: rgba(15, 17, 25, 0.95);
+  backdrop-filter: saturate(180%) blur(8px);
+  -webkit-backdrop-filter: saturate(180%) blur(8px);
+}
+
+
+/* === 3. Homepage Article Cards === */
+
+#recent-posts > .recent-post-item {
+  border: 1px solid var(--cb-border);
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+#recent-posts > .recent-post-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--cb-border-accent);
+  box-shadow: 0 2px 12px -2px rgba(0, 180, 216, 0.08);
+}
+
+[data-theme="dark"] #recent-posts > .recent-post-item {
+  background: var(--cb-card);
+}
+
+[data-theme="dark"] #recent-posts > .recent-post-item:hover {
+  box-shadow: 0 2px 14px -2px rgba(0, 212, 255, 0.06);
+}
+
+.recent-post-info .article-title {
+  color: var(--cb-heading);
+}
+
+.recent-post-info .article-title:hover {
+  color: var(--cb-accent);
+}
+
+.recent-post-info .content {
+  color: var(--cb-text-muted);
+  opacity: 1 !important;
+  height: auto !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+  line-height: 1.4;
+  margin-top: 0.5rem;
+  font-size: 14px;
+  padding: 0 32px;
+}
+
+
+/* === 4. Sidebar Cards === */
+
+.card-widget {
+  border: 1px solid var(--cb-border);
+  border-radius: 12px;
+  transition: border-color 0.3s ease;
+}
+
+.card-widget:hover {
+  border-color: var(--cb-border-accent);
+}
+
+.item-headline i {
+  color: var(--cb-accent);
+}
+
+[data-theme="dark"] .card-widget {
+  background: var(--cb-card);
+}
+
+
+/* === 5. Tags & Category Pages === */
+
+#tag #tag-page-tags a {
+  border: 1px solid var(--cb-border);
+  border-radius: 8px;
+  transition: border-color 0.25s, color 0.25s, background 0.25s;
+}
+
+#tag #tag-page-tags a:hover {
+  border-color: var(--cb-accent);
+  color: var(--cb-accent);
+  background: var(--cb-accent-op);
+}
+
+.category-list a:hover {
+  color: var(--cb-accent);
+}
+
+
+/* === 6. Buttons & Pagination === */
+
+#pagination .page-number {
+  border: 1px solid var(--cb-border);
+  border-radius: 8px;
+  transition: border-color 0.25s, color 0.25s;
+}
+
+#pagination .page-number:hover,
+#pagination .page-number.current {
+  border-color: var(--cb-accent);
+  color: var(--cb-accent);
+  background: var(--cb-accent-op);
+}
+
+.btn-anzhiyu {
+  border-color: var(--cb-accent);
+  color: var(--cb-accent);
+}
+
+.btn-anzhiyu:hover {
+  background: var(--cb-accent);
+  border-color: var(--cb-accent);
+  color: #fff;
+}
+
+
+/* === 7. Code Blocks === */
+
+figure.highlight {
+  border: 1px solid var(--cb-border);
+  border-radius: 8px;
+}
+
+.highlight-tools {
+  border-bottom: 1px solid var(--cb-border);
+}
+
+.code-lang {
+  background: var(--cb-grad-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+[data-theme="dark"] figure.highlight {
+  border-color: rgba(0, 212, 255, 0.1);
+}
+
+[data-theme="dark"] .highlight-tools {
+  background: rgba(0, 0, 0, 0.2);
+  border-bottom-color: rgba(0, 212, 255, 0.08);
+}
+
+
+/* === 8. Article Page Content === */
+
+#article-container {
+  line-height: 1.8;
+}
+
+#article-container h2 {
+  border-bottom: none;
+  position: relative;
+  padding-left: 1.1rem;
+}
+
+#article-container h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 55%;
+  border-radius: 2px;
+  background: var(--cb-grad-accent);
+}
+
+#article-container a {
+  color: var(--cb-accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+#article-container a:hover {
+  border-bottom-color: var(--cb-accent);
+}
+
+#article-container blockquote {
+  border-left: 3px solid var(--cb-accent);
+  background: var(--cb-grad-subtle);
+  border-radius: 0 8px 8px 0;
+}
+
+#article-container table th {
+  background: var(--cb-accent-op);
+  border-bottom: 2px solid var(--cb-border-accent);
+}
+
+#article-container img {
+  border-radius: 8px;
+  border: 1px solid var(--cb-border);
+}
+
+.post-copyright {
+  border: 1px solid var(--cb-border);
+  border-radius: 12px;
+}
+
+
+/* === 9. Page Header Cover === */
+
+#page-header.not-home-page #page-site-info h1 {
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="dark"] #page-header.not-home-page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+}
+
+
+/* === 9b. About Page Fixes === */
+
+.hello-about h1 {
+  font-size: min(calc(0.0989119683 * 100vw + 58.5558852621px), 200px) !important;
+}
+
+@media (min-width: 1400px) {
+  .hello-about .shapes {
+    height: 350px;
+  }
+  .hello-about .content {
+    height: 350px;
+  }
+}
+
+.search-dialog {
+  border: 1px solid var(--cb-border);
+  border-radius: 12px;
+}
+
+#footer {
+  background: var(--cb-bg);
+  border-top: 1px solid var(--cb-border);
+}
+
+[data-theme="dark"] .search-dialog {
+  border-color: rgba(0, 212, 255, 0.1);
+}
+
+
+/* === 10. Mobile Noise Reduction (<=768px) === */
+
+@media screen and (max-width: 768px) {
+
+  /* 10a. 背景纹理降噪 */
+  #web_bg::before,
+  #web_bg::after {
+    opacity: 0.3 !important;
+  }
+
+  /* 10b. 禁用卡片 hover 装饰 */
+  #recent-posts > .recent-post-item:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: var(--cb-border);
+  }
+
+  /* 10c. 卡片触控反馈 */
+  #recent-posts > .recent-post-item:active {
+    transform: scale(0.985);
+    transition: transform 0.1s ease;
+  }
+
+  /* 10d. 导航栏去除 blur */
+  [data-theme="dark"] #nav {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  /* 10e. 侧栏卡片 hover 降噪 */
+  .card-widget:hover {
+    border-color: var(--cb-border);
+  }
+
+  /* 10f. h2 左侧条缩窄 */
+  #article-container h2::before {
+    width: 3px;
+  }
+
+  /* 10g. 文章阅读体验 */
+  #article-container {
+    font-size: 16px;
+    line-height: 1.8;
+    word-break: break-word;
+  }
+
+  #article-container p {
+    margin: 0 0 1.2em;
+  }
+
+  #article-container h2 {
+    font-size: 1.35em;
+    margin-top: 1.8em;
+    margin-bottom: 0.8em;
+  }
+
+  #article-container h3 {
+    font-size: 1.15em;
+    margin-top: 1.4em;
+    margin-bottom: 0.6em;
+  }
+
+  #article-container blockquote {
+    margin: 1em 0;
+    padding: 0.8em 1em;
+    font-size: 0.95em;
+  }
+
+  /* 10h. 代码块小屏滚动 */
+  figure.highlight {
+    border-radius: 6px;
+    margin-left: -4px;
+    margin-right: -4px;
+  }
+
+  figure.highlight pre,
+  figure.highlight table {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  figure.highlight td.code {
+    padding-right: 12px;
+  }
+
+  /* 10i. 表格横向滚动容器 */
+  #article-container table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* 10j. 导航触控目标 */
+  #nav .menus_items .menus_item a {
+    padding: 8px 4px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  #pagination .page-number {
+    min-width: 36px;
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+/* === 11. Reduced Motion === */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+/* === 12. Calendar Widget === */
+
+#card-widget-calendar .item-content {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+#calendar-area-left {
+  flex-shrink: 0;
+  text-align: center;
+  padding: 4px 0;
+}
+
+#calendar-area-left #calendar-week {
+  font-size: 0.8rem;
+  color: var(--cb-text-muted);
+  margin-bottom: 2px;
+}
+
+#calendar-area-left #calendar-date {
+  font-weight: 700;
+  color: var(--cb-accent);
+  line-height: 1.1;
+}
+
+#calendar-area-left #calendar-solar {
+  font-size: 0.75rem;
+  color: var(--cb-text-muted);
+  margin-top: 2px;
+}
+
+#calendar-area-left #calendar-lunar {
+  font-size: 0.7rem;
+  color: var(--cb-text-muted);
+}
+
+#calendar-area-right {
+  flex: 1;
+  min-width: 0;
+}
+
+#calendar-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+#calendar-main [class^="calendar-r"] {
+  display: flex;
+  gap: 0;
+}
+
+#calendar-main [class^="calendar-d"] {
+  flex: 1;
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 1.8;
+  color: var(--cb-text-muted);
+}
+
+#calendar-main [class^="calendar-d"] a.now {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  border-radius: 50%;
+  background: var(--cb-accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+#calendar-main [class^="calendar-d"] a:empty {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  #card-widget-calendar .item-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  #calendar-area-left {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0 10px;
+  }
+
+  #calendar-area-left #calendar-date {
+    font-size: 28px !important;
+    width: 100%;
+  }
+}
+
+
+/* === 13. AI Summary Card === */
+
+.post-ai-description {
+  background: var(--cb-grad-subtle);
+  border-radius: 12px;
+  border: 1px solid var(--cb-border);
+  padding: 1rem 1.2rem;
+  margin: 1rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.post-ai-description::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--cb-grad-accent);
+  border-radius: 3px 0 0 3px;
+}
+
+.post-ai-description .ai-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--cb-accent);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+[data-theme="dark"] .post-ai-description {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.06), rgba(177, 78, 255, 0.03));
+  border-color: rgba(0, 212, 255, 0.12);
+}

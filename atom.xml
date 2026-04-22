@@ -6,7 +6,7 @@
   <link href="https://cuizhenjie.github.io/atom.xml" rel="self"/>
   
   <link href="https://cuizhenjie.github.io/"/>
-  <updated>2026-04-20T00:49:51.024Z</updated>
+  <updated>2026-04-22T07:56:00.995Z</updated>
   <id>https://cuizhenjie.github.io/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>混合检索与重排序：让 RAG 召回更精准</title>
-    <link href="https://cuizhenjie.github.io/2026/04/27/rag-retrieval/"/>
-    <id>https://cuizhenjie.github.io/2026/04/27/rag-retrieval/</id>
+    <link href="https://cuizhenjie.github.io/posts/27238120/"/>
+    <id>https://cuizhenjie.github.io/posts/27238120/</id>
     <published>2026-04-26T16:00:00.000Z</published>
-    <updated>2026-04-20T00:49:51.024Z</updated>
+    <updated>2026-04-22T07:56:00.995Z</updated>
     
     
     <summary type="html">纯向量检索的致命短板：精确关键词丢失。订单号、缩写、数字——这些向量算不出来。混合检索（向量+关键词） + RRF融合 + Reranker重排序，让召回率从60%提升到95%以上。</summary>
@@ -49,10 +49,10 @@
   
   <entry>
     <title>元数据管理：让 RAG 答案可引用、可追溯</title>
-    <link href="https://cuizhenjie.github.io/2026/04/26/rag-metadata/"/>
-    <id>https://cuizhenjie.github.io/2026/04/26/rag-metadata/</id>
+    <link href="https://cuizhenjie.github.io/posts/2d47ac79/"/>
+    <id>https://cuizhenjie.github.io/posts/2d47ac79/</id>
     <published>2026-04-25T16:00:00.000Z</published>
-    <updated>2026-04-20T00:49:51.024Z</updated>
+    <updated>2026-04-22T07:56:00.994Z</updated>
     
     
     <summary type="html">RAG系统光能回答问题还不够，还得能告诉用户答案是从哪个文档来的、哪一页来的。元数据就是给每个chunk贴标签——文档来源、页码、权限级别，让AI的回答有据可查。</summary>
@@ -76,10 +76,10 @@
   
   <entry>
     <title>Apache Tika：RAG 数据管道的入口</title>
-    <link href="https://cuizhenjie.github.io/2026/04/25/rag-tika/"/>
-    <id>https://cuizhenjie.github.io/2026/04/25/rag-tika/</id>
+    <link href="https://cuizhenjie.github.io/posts/87fede9a/"/>
+    <id>https://cuizhenjie.github.io/posts/87fede9a/</id>
     <published>2026-04-24T16:00:00.000Z</published>
-    <updated>2026-04-20T00:49:51.025Z</updated>
+    <updated>2026-04-22T07:56:00.996Z</updated>
     
     
     <summary type="html">RAG系统的第一步不是分块，是文档解析。PDF扫描件、Word表格、Excel公式——这些脏数据不进清洗，Embedding 就是白做。Apache Tika 一站式解决 140+ 格式的文档解析问题。</summary>
@@ -105,10 +105,10 @@
   
   <entry>
     <title>数据分块：让 RAG 检索更精准的 Chunk 策略</title>
-    <link href="https://cuizhenjie.github.io/2026/04/24/rag-chunk/"/>
-    <id>https://cuizhenjie.github.io/2026/04/24/rag-chunk/</id>
+    <link href="https://cuizhenjie.github.io/posts/f31839f8/"/>
+    <id>https://cuizhenjie.github.io/posts/f31839f8/</id>
     <published>2026-04-23T16:00:00.000Z</published>
-    <updated>2026-04-20T00:49:51.023Z</updated>
+    <updated>2026-04-22T07:56:00.993Z</updated>
     
     
     <summary type="html">文档切片的大小和方式直接影响 RAG 效果。chunkSize 太大检索不精准，太小语义不完整。本文详解固定分块、递归分块、语义分块5种策略及调参经验。</summary>
@@ -132,10 +132,10 @@
   
   <entry>
     <title>向量数据库：Milvus 原理与实战</title>
-    <link href="https://cuizhenjie.github.io/2026/04/23/rag-milvus/"/>
-    <id>https://cuizhenjie.github.io/2026/04/23/rag-milvus/</id>
+    <link href="https://cuizhenjie.github.io/posts/ac6e998d/"/>
+    <id>https://cuizhenjie.github.io/posts/ac6e998d/</id>
     <published>2026-04-22T16:00:00.000Z</published>
-    <updated>2026-04-20T00:49:51.024Z</updated>
+    <updated>2026-04-22T07:56:00.995Z</updated>
     
     
     <summary type="html">普通数据库为什么查不了向量？Milvus 是最流行的开源向量数据库，支持百万到亿级向量检索。详解 ANN 索引原理、HNSW 算法，以及 Milvus 核心概念与选型对比。</summary>
@@ -161,10 +161,10 @@
   
   <entry>
     <title>Embedding：让计算机理解语义的原理</title>
-    <link href="https://cuizhenjie.github.io/2026/04/22/rag-embedding-intro/"/>
-    <id>https://cuizhenjie.github.io/2026/04/22/rag-embedding-intro/</id>
+    <link href="https://cuizhenjie.github.io/posts/a28c348f/"/>
+    <id>https://cuizhenjie.github.io/posts/a28c348f/</id>
     <published>2026-04-21T16:00:00.000Z</published>
-    <updated>2026-04-20T00:49:51.024Z</updated>
+    <updated>2026-04-22T07:56:00.994Z</updated>
     
     
     <summary type="html">为什么关键词搜索不够用了？Embedding 通过将文本映射到高维向量空间，让语义相近的内容在空间中距离相近。详解余弦相似度原理与主流 Embedding 模型选型。</summary>
@@ -188,10 +188,10 @@
   
   <entry>
     <title>RAG技术入门：先查资料，再回答</title>
-    <link href="https://cuizhenjie.github.io/2026/04/21/rag-tech-intro/"/>
-    <id>https://cuizhenjie.github.io/2026/04/21/rag-tech-intro/</id>
+    <link href="https://cuizhenjie.github.io/posts/88daf630/"/>
+    <id>https://cuizhenjie.github.io/posts/88daf630/</id>
     <published>2026-04-20T16:00:00.000Z</published>
-    <updated>2026-04-20T00:49:51.024Z</updated>
+    <updated>2026-04-22T07:56:00.995Z</updated>
     
     
     <summary type="html">RAG（检索增强生成）解决大模型幻觉问题的核心技术。本文介绍大模型五大局限性、RAG架构原理、离线准备与在线检索流程，以及企业落地的四大典型场景。</summary>
@@ -215,10 +215,10 @@
   
   <entry>
     <title>AI视频转场提示词大全：6大类19种技巧，从&quot;硬切&quot;到&quot;大片感&quot;</title>
-    <link href="https://cuizhenjie.github.io/2026/04/20/ai-video-transition-prompts-guide/"/>
-    <id>https://cuizhenjie.github.io/2026/04/20/ai-video-transition-prompts-guide/</id>
+    <link href="https://cuizhenjie.github.io/posts/f87d323c/"/>
+    <id>https://cuizhenjie.github.io/posts/f87d323c/</id>
     <published>2026-04-19T20:00:00.000Z</published>
-    <updated>2026-04-19T22:38:51.088Z</updated>
+    <updated>2026-04-22T07:56:00.976Z</updated>
     
     
     <summary type="html">6大类19种AI视频转场技巧完全指南：相似性转场、反差型、遮挡类、视线引导、特效型、叙事型，每种附完整提示词模板和套用示例。</summary>
@@ -246,10 +246,10 @@
   
   <entry>
     <title>AI 生图风格速查表：我见过最实用的 Stable Diffusion 提示词词典</title>
-    <link href="https://cuizhenjie.github.io/2026/04/20/stable-diffusion-style-cheatsheet-guide/"/>
-    <id>https://cuizhenjie.github.io/2026/04/20/stable-diffusion-style-cheatsheet-guide/</id>
+    <link href="https://cuizhenjie.github.io/posts/756ad000/"/>
+    <id>https://cuizhenjie.github.io/posts/756ad000/</id>
     <published>2026-04-19T19:10:00.000Z</published>
-    <updated>2026-04-19T22:38:51.073Z</updated>
+    <updated>2026-04-22T07:56:00.996Z</updated>
     
     
     <summary type="html">介绍 stable-diffusion-style-cheatsheet 开源工具——一张在本地运行的速查表，同时对比 SDXL 和 FLUX 两大模型在同一风格上的效果，即用即查。</summary>
@@ -273,10 +273,10 @@
   
   <entry>
     <title>博物馆图鉴式信息图生成指南：AI绘图提示词的完整设计手册</title>
-    <link href="https://cuizhenjie.github.io/2026/04/20/museum-infographic-prompt-guide/"/>
-    <id>https://cuizhenjie.github.io/2026/04/20/museum-infographic-prompt-guide/</id>
+    <link href="https://cuizhenjie.github.io/posts/e96525cd/"/>
+    <id>https://cuizhenjie.github.io/posts/e96525cd/</id>
     <published>2026-04-19T16:00:00.000Z</published>
-    <updated>2026-04-19T22:40:41.867Z</updated>
+    <updated>2026-04-22T07:56:00.990Z</updated>
     
     
     <summary type="html">完整解析「博物馆图鉴式中文拆解信息图」的AI绘图提示词设计方法，涵盖主体判断、版式结构、文字规范、材质工艺说明与文化寓意解析。</summary>
@@ -300,10 +300,10 @@
   
   <entry>
     <title>GPT-Image-2 提示词库大全：50+实战案例分类整理</title>
-    <link href="https://cuizhenjie.github.io/2026/04/19/gpt-image-2-prompts-library/"/>
-    <id>https://cuizhenjie.github.io/2026/04/19/gpt-image-2-prompts-library/</id>
+    <link href="https://cuizhenjie.github.io/posts/3fd1f92a/"/>
+    <id>https://cuizhenjie.github.io/posts/3fd1f92a/</id>
     <published>2026-04-19T14:00:00.000Z</published>
-    <updated>2026-04-19T21:04:45.070Z</updated>
+    <updated>2026-04-22T07:56:00.984Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -319,9 +319,9 @@
     
     <category term="提示词" scheme="https://cuizhenjie.github.io/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D/"/>
     
-    <category term="GPT-Image-2" scheme="https://cuizhenjie.github.io/tags/GPT-Image-2/"/>
-    
     <category term="AI绘图" scheme="https://cuizhenjie.github.io/tags/AI%E7%BB%98%E5%9B%BE/"/>
+    
+    <category term="GPT-Image-2" scheme="https://cuizhenjie.github.io/tags/GPT-Image-2/"/>
     
     <category term="Midjourney替代" scheme="https://cuizhenjie.github.io/tags/Midjourney%E6%9B%BF%E4%BB%A3/"/>
     
@@ -329,10 +329,10 @@
   
   <entry>
     <title>用GPT-Image-2秒变插画师：17种风格一库搞定</title>
-    <link href="https://cuizhenjie.github.io/2026/04/18/gpt-image-2-illustration-style-library/"/>
-    <id>https://cuizhenjie.github.io/2026/04/18/gpt-image-2-illustration-style-library/</id>
+    <link href="https://cuizhenjie.github.io/posts/b189273a/"/>
+    <id>https://cuizhenjie.github.io/posts/b189273a/</id>
     <published>2026-04-17T16:00:00.000Z</published>
-    <updated>2026-04-19T22:40:41.862Z</updated>
+    <updated>2026-04-22T07:56:00.983Z</updated>
     
     
     <summary type="html">GPT-Image-2重磅发布，文字渲染终于解决中文乱码问题。本文深度解读preangelleo/illustration-style-samples开源项目，17种插画风格横向测评，手把手教你构建个人专属风格库。</summary>
@@ -344,9 +344,9 @@
     
     <category term="提示词" scheme="https://cuizhenjie.github.io/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D/"/>
     
-    <category term="AI图像" scheme="https://cuizhenjie.github.io/tags/AI%E5%9B%BE%E5%83%8F/"/>
-    
     <category term="GPT-Image-2" scheme="https://cuizhenjie.github.io/tags/GPT-Image-2/"/>
+    
+    <category term="AI图像" scheme="https://cuizhenjie.github.io/tags/AI%E5%9B%BE%E5%83%8F/"/>
     
     <category term="插画风格" scheme="https://cuizhenjie.github.io/tags/%E6%8F%92%E7%94%BB%E9%A3%8E%E6%A0%BC/"/>
     
@@ -356,10 +356,10 @@
   
   <entry>
     <title>创作病毒性传播的视频剧本的Prompt</title>
-    <link href="https://cuizhenjie.github.io/2026/01/26/ai-create-video-prompt/"/>
-    <id>https://cuizhenjie.github.io/2026/01/26/ai-create-video-prompt/</id>
+    <link href="https://cuizhenjie.github.io/posts/cb83bc4e/"/>
+    <id>https://cuizhenjie.github.io/posts/cb83bc4e/</id>
     <published>2026-01-25T16:00:00.000Z</published>
-    <updated>2026-04-20T00:49:55.691Z</updated>
+    <updated>2026-04-22T07:56:00.967Z</updated>
     
     
     <summary type="html">创作专业视频剧本的Prompt。</summary>
@@ -378,34 +378,11 @@
   </entry>
   
   <entry>
-    <title>科技类新闻作者的Prompt</title>
-    <link href="https://cuizhenjie.github.io/2026/01/26/ai-news-prompt/"/>
-    <id>https://cuizhenjie.github.io/2026/01/26/ai-news-prompt/</id>
-    <published>2026-01-25T16:00:00.000Z</published>
-    <updated>2026-04-20T00:49:55.693Z</updated>
-    
-    
-    <summary type="html">创作专业新闻文章的Prompt。</summary>
-    
-    
-    
-    <category term="AIGC" scheme="https://cuizhenjie.github.io/categories/AIGC/"/>
-    
-    
-    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
-    
-    <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
-    
-    <category term="新闻作者" scheme="https://cuizhenjie.github.io/tags/%E6%96%B0%E9%97%BB%E4%BD%9C%E8%80%85/"/>
-    
-  </entry>
-  
-  <entry>
     <title>企业HR助手相关的的Prompt</title>
-    <link href="https://cuizhenjie.github.io/2026/01/26/ai-hr-prompt/"/>
-    <id>https://cuizhenjie.github.io/2026/01/26/ai-hr-prompt/</id>
+    <link href="https://cuizhenjie.github.io/posts/bc344287/"/>
+    <id>https://cuizhenjie.github.io/posts/bc344287/</id>
     <published>2026-01-25T16:00:00.000Z</published>
-    <updated>2026-04-20T00:49:55.692Z</updated>
+    <updated>2026-04-22T07:56:00.969Z</updated>
     
     
     <summary type="html">企业HR助手相关的Prompt。</summary>
@@ -424,11 +401,57 @@
   </entry>
   
   <entry>
-    <title>生成专业演示文稿的Prompt</title>
-    <link href="https://cuizhenjie.github.io/2026/01/26/ai-ppt-prompt/"/>
-    <id>https://cuizhenjie.github.io/2026/01/26/ai-ppt-prompt/</id>
+    <title>科技类新闻作者的Prompt</title>
+    <link href="https://cuizhenjie.github.io/posts/4e0af81/"/>
+    <id>https://cuizhenjie.github.io/posts/4e0af81/</id>
     <published>2026-01-25T16:00:00.000Z</published>
-    <updated>2026-04-20T00:49:55.694Z</updated>
+    <updated>2026-04-22T07:56:00.968Z</updated>
+    
+    
+    <summary type="html">创作专业新闻文章的Prompt。</summary>
+    
+    
+    
+    <category term="AIGC" scheme="https://cuizhenjie.github.io/categories/AIGC/"/>
+    
+    
+    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
+    
+    <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
+    
+    <category term="新闻作者" scheme="https://cuizhenjie.github.io/tags/%E6%96%B0%E9%97%BB%E4%BD%9C%E8%80%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PBL项目创意的Prompt</title>
+    <link href="https://cuizhenjie.github.io/posts/2bb27b99/"/>
+    <id>https://cuizhenjie.github.io/posts/2bb27b99/</id>
+    <published>2026-01-25T16:00:00.000Z</published>
+    <updated>2026-04-22T07:56:00.970Z</updated>
+    
+    
+    <summary type="html">PBL项目创意的Prompt。</summary>
+    
+    
+    
+    <category term="AIGC" scheme="https://cuizhenjie.github.io/categories/AIGC/"/>
+    
+    
+    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
+    
+    <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
+    
+    <category term="视频剧本" scheme="https://cuizhenjie.github.io/tags/%E8%A7%86%E9%A2%91%E5%89%A7%E6%9C%AC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>生成专业演示文稿的Prompt</title>
+    <link href="https://cuizhenjie.github.io/posts/6abab4ec/"/>
+    <id>https://cuizhenjie.github.io/posts/6abab4ec/</id>
+    <published>2026-01-25T16:00:00.000Z</published>
+    <updated>2026-04-22T07:56:00.969Z</updated>
     
     
     <summary type="html">生成专业演示文稿的Prompt。</summary>
@@ -449,34 +472,11 @@
   </entry>
   
   <entry>
-    <title>PBL项目创意的Prompt</title>
-    <link href="https://cuizhenjie.github.io/2026/01/26/ai-pbl-prompt/"/>
-    <id>https://cuizhenjie.github.io/2026/01/26/ai-pbl-prompt/</id>
-    <published>2026-01-25T16:00:00.000Z</published>
-    <updated>2026-04-20T00:49:55.693Z</updated>
-    
-    
-    <summary type="html">PBL项目创意的Prompt。</summary>
-    
-    
-    
-    <category term="AIGC" scheme="https://cuizhenjie.github.io/categories/AIGC/"/>
-    
-    
-    <category term="prompt" scheme="https://cuizhenjie.github.io/tags/prompt/"/>
-    
-    <category term="AI" scheme="https://cuizhenjie.github.io/tags/AI/"/>
-    
-    <category term="视频剧本" scheme="https://cuizhenjie.github.io/tags/%E8%A7%86%E9%A2%91%E5%89%A7%E6%9C%AC/"/>
-    
-  </entry>
-  
-  <entry>
     <title>生成书籍精华海报的Prompt</title>
-    <link href="https://cuizhenjie.github.io/2026/01/26/book-cover-prompt/"/>
-    <id>https://cuizhenjie.github.io/2026/01/26/book-cover-prompt/</id>
+    <link href="https://cuizhenjie.github.io/posts/45ac7fca/"/>
+    <id>https://cuizhenjie.github.io/posts/45ac7fca/</id>
     <published>2026-01-25T16:00:00.000Z</published>
-    <updated>2026-04-20T00:49:55.699Z</updated>
+    <updated>2026-04-22T07:56:00.976Z</updated>
     
     
     <summary type="html">生成书籍精华海报的Prompt。</summary>
@@ -498,10 +498,10 @@
   
   <entry>
     <title>去除AI味的Prompt</title>
-    <link href="https://cuizhenjie.github.io/2026/01/26/clean-ai/"/>
-    <id>https://cuizhenjie.github.io/2026/01/26/clean-ai/</id>
+    <link href="https://cuizhenjie.github.io/posts/ced08fae/"/>
+    <id>https://cuizhenjie.github.io/posts/ced08fae/</id>
     <published>2026-01-25T16:00:00.000Z</published>
-    <updated>2026-04-20T00:49:55.708Z</updated>
+    <updated>2026-04-22T07:56:00.979Z</updated>
     
     
     <summary type="html">去除AI味的Prompt。</summary>
@@ -523,10 +523,10 @@
   
   <entry>
     <title>通过文档生成网页的Prompt</title>
-    <link href="https://cuizhenjie.github.io/2026/01/26/document-to-website/"/>
-    <id>https://cuizhenjie.github.io/2026/01/26/document-to-website/</id>
+    <link href="https://cuizhenjie.github.io/posts/1d93cbc8/"/>
+    <id>https://cuizhenjie.github.io/posts/1d93cbc8/</id>
     <published>2026-01-25T16:00:00.000Z</published>
-    <updated>2026-04-20T00:49:55.710Z</updated>
+    <updated>2026-04-22T07:56:00.981Z</updated>
     
     
     <summary type="html">通过文档生成美观漂亮的中文可视化网页的Prompt。</summary>
